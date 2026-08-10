@@ -312,9 +312,6 @@ pre {
   top: 10px;
   left: 10px;
   z-index: 10;
-  font-size: 18px;
-  background-color: rgba(255,247,243, 0.4);
-  border-radius: 4px;
 }
 
 .lazy-img {
@@ -383,17 +380,33 @@ pre {
   text-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
 
-.lightbox-link {
+.lightbox-controls {
   position: absolute;
   top: 30px;
   right: 30px;
   transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 1010;
+}
+
+.lightbox-btn, .toggle-btn {
   color: white;
   text-decoration: none;
   background: rgba(0,0,0,0.5);
   padding: 8px 15px;
   border-radius: 20px;
   font-size: 14px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-btn:hover, .toggle-btn:hover {
+  background: rgba(0,0,0,0.8);
 }
 
 @media (max-width: 1000px) {

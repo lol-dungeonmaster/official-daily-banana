@@ -70,7 +70,10 @@
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close">&times;</span>
   <img id="lightbox-img" src="" alt="Fullscreen view">
-  <a href="" id="lightbox-link" target="_blank" class="lightbox-link">View Original Image</a>
+  <div class="lightbox-controls">
+    <button id="lightbox-next-btn" class="lightbox-btn" style="display: none;">Next Image</button>
+    <a href="" id="lightbox-link" target="_blank" class="lightbox-btn">View Original</a>
+  </div>
 </div>
 
 <script>
