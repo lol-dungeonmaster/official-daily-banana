@@ -261,7 +261,8 @@ header .container {
 
 pre {
   background: rgba(0, 0, 0, 0.3);
-  overflow-x: auto;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .collapsible-code {
@@ -283,6 +284,7 @@ pre {
   padding: 4px 8px;
   font-family: inherit;
   cursor: pointer;
+  font-size: 20px;
 }
 
 .collapsible-code button::after {
