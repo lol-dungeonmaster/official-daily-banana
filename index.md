@@ -2,8 +2,20 @@
 {% include nav.html %}
 <div class="container">
 
+<h2 id="aug-10">Aug 10 // World Lion Day</h2>
+<div class="gallery-frame">
+  <img id="lion_v1" data-src="generated-artwork/official-daily-banana-lion-prompt2_ethereal/v3-imagen-ultra-Ethereal___Artistic_.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="World Lion Day 1" class="lion-img lazy-img gallery-img active">
+  <img id="lion_v2" data-src="generated-artwork/official-daily-banana-lion-prompt2_ethereal/v4-imagen-ultra-Ethereal___Artistic_.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="World Lion Day 2" class="lion-img lazy-img gallery-img">
+  <img id="lion_v3" data-src="generated-artwork/official-daily-banana-lion-journalistic-v2-cubs_leaping/v5-nano-banana-An_atmospheric__wide.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="World Lion Day 3" class="lion-img lazy-img gallery-img">
+  
+  <button onclick="switchLion()" class="toggle-btn">Next Image</button>
+</div>
+<div class="collapsible-code">
+<button type="button">World Lion Day</button>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><ul><li><strong>Prompt 1 (Cinematic)</strong>: A cinematic, 8k RAW photo of a female Asiatic lion and her two young cubs nestled together in the dry deciduous teak forest of Gir National Park, Gujarat. The scene is captured during the golden hour, with warm, low-angle sunlight filtering through the branches of a nearby acacia tree, creating a dramatic interplay of light and shadow. The lions are depicted with absolute anatomical authenticity, prominently featuring the distinct longitudinal fold of skin running along their bellies that is unique to the Asiatic subspecies. Extreme detail on the texture of the tawny fur, the moisture on their noses, and the dusty laterite soil. Shallow depth of field with a soft, blurred background of rugged scrubland and teak trees, emphasizing the intimate family bond.</li><li><strong>Prompt 2 (Ethereal)</strong>: An atmospheric, wide-angle shot of a small Asiatic lion pride emerging from a thick, silvery morning mist in the rugged Kathiawar peninsula scrublands of Gujarat. The lighting is soft and diffused, giving the scene a timeless, painterly quality while maintaining photorealistic textures. The composition focuses on a mother lion with a characteristic leaner build and visible belly fold, leading her cubs through the fog, with the silhouettes of dry teak trees fading into the white background. The color palette is muted, focusing on earthy ochres, soft greys, and pale greens, evoking a sense of quiet majesty and familial protection.</li><li><strong>Prompt 3 (Journalistic,Social Bonding)</strong>: A candid, National Geographic-style telephoto shot using a 600mm lens, capturing an intimate moment of social bonding in the Gir Forest. The focus is a tight, detailed shot of a female Asiatic lion gently grooming her cub, with the cub leaning into her with closed eyes. In the soft-focus background, another female from the small pride watches over them, creating a sense of communal protection. Natural, dappled sunlight filters through the teak leaves, highlighting the fine textures of the fur and the moisture of the lions' noses. Realistic dust motes dance in the light beams, with the arid, scrubby terrain of Gujarat providing an authentic, earthy backdrop. The lions are depicted with absolute anatomical authenticity for the Asiatic subspecies, featuring the distinct longitudinal fold of skin running along their bellies.</li><li><strong>Prompt 4 (Journalistic,Leaping)</strong>: An atmospheric, wide-angle shot of two Asiatic lion cubs mid-leap, wrestling playfully in the silvery morning mist of the Gujarat scrublands. The lighting is soft and diffused, creating a dreamlike, painterly quality while retaining photorealistic fur textures. The composition captures the kinetic energy of the pounce, with tiny droplets of dew spraying from the grass. In the background, the blurred silhouette of the mother lion watches with a protective, indulgent gaze, her form partially dissolved into the fog and the pale outlines of distant teak trees. The color palette is muted, focusing on earthy ochres and soft, luminous greys. The lions are depicted with absolute anatomical authenticity for the Asiatic subspecies, featuring the distinct longitudinal fold of skin running along their bellies.</li><li><strong>Prompt 5 (Journalistic,The Hunt)</strong>: A high-tension, National Geographic-style telephoto shot using a 600mm lens, capturing a coordinated stalk in the Gir Forest. The frame focuses on the intense, gold-colored eyes of a female Asiatic lion, her body pressed low against the earth, muscles coiled for a spring. Beside her, another female from the pride is partially visible through the tall, yellow grass, their teamwork evident in their mirrored, low-profile posture. High-contrast midday lighting emphasizes the grit of the arid terrain and the individual hairs of their tawny coats. The shot is captured at the precise moment of maximum tension, with the focus razor-sharp on the predator's gaze and a shallow depth of field blurring the scrubland behind them. The lions are depicted with absolute anatomical authenticity for the Asiatic subspecies, featuring the distinct longitudinal fold of skin running along their bellies.</li></ul></code></pre></div></div>
+
 <h2 id="aug-09">Aug 09 // Animal Migration</h2>
-<div class="gallery-frame"><img src="generated-artwork/animal-migration-prompt3_journalistic/v4-nano-banana-pro-A_raw__National_Geog.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Animal Migration" /></div>
+<div class="gallery-frame"><img data-src="generated-artwork/animal-migration-prompt3_journalistic/v4-nano-banana-pro-A_raw__National_Geog.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Animal Migration" /></div>
 <div class="collapsible-code">
 <button type="button">Animal Migration</button>
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Prompt 3 (Journalistic)</strong>: A raw, National Geographic-style macro shot. The focus is a sharp, high-detail close-up of a Painted Lady Butterfly perched on a wild desert wildflower, showing the microscopic scales of its wings. The background is a wide, deep-focus shot of the rugged, arid landscape of the Guera Mountains under a harsh, clear midday sun. Beside the flower, a dusty, rusted metal road sign is visible, pointing toward "Mongo" (منغو) in faded white Arabic lettering. For a contrast in scale and temperament, a large African Spurred Tortoise is captured in the lower third of the frame, moving slowly through the scrubland beneath the fluttering butterflies. Shot on 35mm lens, f/8 aperture, natural saturation, documentary realism, high shutter speed to freeze the butterfly's wing movement.</p></code></pre></div></div>
@@ -58,8 +70,8 @@
 
 <h2 id="jul-31">Jul 31 // Fortifications</h2>
 <div class="gallery-frame">
-  <img id="v1" data-src="generated-artwork/fortifications/v11-nano-banana-A_highly_detailed__p.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Fortifications_1" class="lazy-img gallery-img active">
-  <img id="v2" data-src="generated-artwork/fortifications-v2/v5-nano-banana-2-A_breathtaking__edge.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Fortifications_2" class="lazy-img gallery-img">
+  <img id="fort_v1" data-src="generated-artwork/fortifications/v11-nano-banana-A_highly_detailed__p.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Fortifications_1" class="fort-img lazy-img gallery-img active">
+  <img id="fort_v2" data-src="generated-artwork/fortifications-v2/v5-nano-banana-2-A_breathtaking__edge.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Fortifications_2" class="fort-img lazy-img gallery-img">
   
   <button onclick="switchFort()" class="toggle-btn">Next Image</button>
 </div>
@@ -78,11 +90,19 @@
 
 <script>
     function switchFort() {
-        const img1 = document.getElementById('v1');
-        const img2 = document.getElementById('v2');
+      const img1 = document.getElementById('fort_v1');
+      const img2 = document.getElementById('fort_v2');
 
-        img1.classList.toggle('active');
-        img2.classList.toggle('active');
+      img1.classList.toggle('active');
+      img2.classList.toggle('active');
+    }
+
+    let lionIndex = 0;
+    function switchLion() {
+      const imgs = document.querySelectorAll('.lion-img');
+      imgs[lionIndex].classList.remove('active'); // 1. Remove the active class
+      lionIndex = (lionIndex + 1) % imgs.length;  // 2. Move to the next index
+      imgs[lionIndex].classList.add('active');    // 3. Add the active class to the new current image
     }
 </script>
 
