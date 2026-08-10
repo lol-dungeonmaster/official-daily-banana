@@ -67,6 +67,12 @@
 <button type="button">Fortifications</button>
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><ul><li><strong>Prompt 1 (interpretive)</strong>: A highly detailed, photo-realistic, cinematic studio-quality presentation poster of the vernacular architecture of the Moroccan desert. The architecture specifically incorporates elements of The Kasbah (Fortress-Home) and The Ksar (Fortified Village). The majestic, sprawling fortress is built onto a prominent mountain or steep hill, showcasing how the intricate mud-brick and stone fortress design adapts, layers, and changes by altitude. {lighting} High-end lens effects, depth of field, breathtaking environment, masterpiece.</li><li><strong>Prompt 2 (detail)</strong>: A breathtaking, edge-to-edge, full-bleed photograph (absolutely no borders, no picture frames, no white margins). Ultra HD 8k resolution, hyper-realistic cinematic presentation of the vernacular architecture of the Moroccan desert, specifically incorporating elements of The Kasbah (Fortress-Home) and The Ksar (Fortified Village). The majestic, sprawling fortress is built onto a prominent mountain or steep hill, showcasing how the intricate mud-brick and stone fortress design adapts, layers, and changes by altitude. {lighting} Shot on a premium 35mm lens at f/1.8, exhibiting flawless depth of field, sharp focus, and photorealistic volumetric lighting with intricate environmental textures. Masterpiece, National Geographic award-winning photography.</li></ul><p>(Lighting Variants)</p><ul><li>Golden Hour: The environment is bathed in breathtaking golden-hour sunlight, casting long, dramatic shadows and highlighting the rich earthen tones of the architecture.</li><li>Blue Hour: The environment is captured during blue-hour twilight, with the deep blue desert sky contrasting against warm, inviting, realistic night-time fortress lighting glowing brightly from the windows, walls, and courtyards.</li></ul></code></pre></div></div>
 
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt="Fullscreen view">
+  <a href="" id="lightbox-link" target="_blank" class="lightbox-link">View Original Image</a>
+</div>
+
 <script>
     function switchFort() {
         const img1 = document.getElementById('v1');
