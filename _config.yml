@@ -1,0 +1,5 @@
+theme: jekyll-theme-hacker
+layout: agents
+show_downloads: false
+title: Official Daily Banana
+description: "Daily prompts to inspire nano banana generation"
