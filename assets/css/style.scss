@@ -120,7 +120,7 @@ header {
   border-bottom: 1px dashed #cbcbcb;
   background: rgba(0, 0, 0, 0.3);
   margin: 0 0 0 0;
-  padding: 20px 0rem 0rem 0rem;
+  padding: 20px 0rem 0rem 2.5rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -343,12 +343,19 @@ pre {
   pointer-events: auto;
 }
 
+@media (max-width: 1000px) {
+  header {
+    padding: 20px 0rem 0rem 0.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .wrapper {
     flex-direction: column;
   }
   .wrapper .container {
     width: 85%;
+    padding: 2rem 3rem 3rem 2.3rem;
   }
   .main-nav {
     width: 100vw;
