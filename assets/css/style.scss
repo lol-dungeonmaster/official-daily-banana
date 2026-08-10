@@ -329,6 +329,15 @@ pre {
   border-radius: 4px;
 }
 
+.lazy-img {
+  opacity: 0;             /* Start the image invisible for a smooth fade-in */
+  transition: opacity 0.5s ease-in;
+}
+
+.lazy-img.loaded {
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .wrapper {
     flex-direction: column;
