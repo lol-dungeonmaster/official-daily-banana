@@ -308,17 +308,6 @@ pre {
   padding-bottom: 1.0rem;
 }
 
-.gallery-img {
-  grid-area: stack;       /* Forces both images into the same 'stack' area */
-  width: auto;            /* Allows images to keep their natural width */
-  height: auto;           /* Allows images to keep their natural height */
-  display: none;
-}
-
-.gallery-img.active {
-  display: block;
-}
-
 .toggle-btn {
   position: absolute;     /* Keep the button absolute so it floats on top */
   top: 10px;
@@ -336,6 +325,22 @@ pre {
 
 .lazy-img.loaded {
   opacity: 1;
+}
+
+.gallery-img.lazy-img {
+  width: auto;            /* Allows images to keep their natural width */
+  height: auto;           /* Allows images to keep their natural height */
+  position: absolute;     /* Removes the image from the layout flow */
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gallery-img.lazy-img.active {
+  position: relative;     /* Adds the image back into the layout flow */
+  opacity: 1;
+  pointer-events: auto;
 }
 
 @media (max-width: 768px) {
