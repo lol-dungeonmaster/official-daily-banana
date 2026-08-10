@@ -203,6 +203,23 @@ header h2 {
   text-shadow: 0 0 10px #b5e853;
 }
 
+.main-nav li a.nav-top-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 3rem 1.5rem 0; /* Use 3rem right padding to perfectly center relative to the text column */
+}
+
+.nav-icon {
+  width: 64px;
+  height: 64px;
+  transition: filter 0.2s;
+}
+
+.main-nav li a.nav-top-link:hover .nav-icon {
+  filter: drop-shadow(0 0 4px rgba(181, 232, 83, 0.7)); /* Softer blur and opacity to match the text glow */
+}
+
 #main_content h1 {
   font-size: 37px;
 }
@@ -427,5 +444,8 @@ pre {
     width: 100vw;
     position: static;
     height: fit-content;
+  }
+  .main-nav li a.nav-top-link {
+    justify-content: flex-start;
   }
 }

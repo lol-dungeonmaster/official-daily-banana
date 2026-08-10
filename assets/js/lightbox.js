@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let currentGalleryBtn = null;
 
-    // 1. Attach click event to all images (including gallery and lazy images)
-    document.querySelectorAll('img:not(#lightbox-img)').forEach(img => {
+    // 1. Attach click event to all images (including gallery and lazy images, excluding nav/UI icons)
+    document.querySelectorAll('img:not(#lightbox-img):not(.no-lightbox)').forEach(img => {
         img.style.cursor = 'zoom-in'; // Visual hint that image is clickable
         
         img.addEventListener('click', () => {
