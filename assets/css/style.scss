@@ -257,7 +257,7 @@ header h2 {
 .wrapper .container {
   flex: 1 4 auto;
   width: 60%;
-  padding: 2rem 3rem 3rem 3rem;
+  padding: 2rem 3rem 80vh 3rem; /* Huge bottom padding allows the final anchor to reach the top of the screen */
 }
 
 body .container {
@@ -317,11 +317,15 @@ pre {
 }
 
 .gallery-frame {
-  display: grid;          /* Enables grid layout */
-  grid-template-areas: "stack"; /* Creates one single area called 'stack' */
-  width: fit-content;     /* Tells the frame to be only as wide as its content */
   position: relative;
   padding-bottom: 1.0rem;
+  width: 100%;            /* Ensure it fills its container */
+}
+
+.gallery-frame img {
+  max-width: 100%;
+  height: auto !important;
+  object-fit: contain;
 }
 
 .toggle-btn {
@@ -334,6 +338,9 @@ pre {
 .lazy-img {
   opacity: 0;             /* Start the image invisible for a smooth fade-in */
   transition: opacity 0.5s ease-in;
+  max-width: 100%;
+  height: auto !important;
+  object-fit: contain;
 }
 
 .lazy-img.loaded {
@@ -341,8 +348,8 @@ pre {
 }
 
 .gallery-img.lazy-img {
-  width: auto;            /* Allows images to keep their natural width */
-  height: auto;           /* Allows images to keep their natural height */
+  max-width: 100%;        /* Bound by container */
+  height: auto;           /* Keep aspect ratio */
   position: absolute;     /* Removes the image from the layout flow */
   top: 0;
   left: 0;
@@ -438,7 +445,7 @@ pre {
   }
   .wrapper .container {
     width: 85%;
-    padding: 2rem 3rem 3rem 2.3rem;
+    padding: 2rem 3rem 80vh 2.3rem;
   }
   .main-nav {
     width: 100vw;
