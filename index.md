@@ -79,6 +79,27 @@
 <button type="button">Fortifications</button>
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><ul><li><strong>Prompt 1 (interpretive)</strong>: A highly detailed, photo-realistic, cinematic studio-quality presentation poster of the vernacular architecture of the Moroccan desert. The architecture specifically incorporates elements of The Kasbah (Fortress-Home) and The Ksar (Fortified Village). The majestic, sprawling fortress is built onto a prominent mountain or steep hill, showcasing how the intricate mud-brick and stone fortress design adapts, layers, and changes by altitude. {lighting} High-end lens effects, depth of field, breathtaking environment, masterpiece.</li><li><strong>Prompt 2 (detail)</strong>: A breathtaking, edge-to-edge, full-bleed photograph (absolutely no borders, no picture frames, no white margins). Ultra HD 8k resolution, hyper-realistic cinematic presentation of the vernacular architecture of the Moroccan desert, specifically incorporating elements of The Kasbah (Fortress-Home) and The Ksar (Fortified Village). The majestic, sprawling fortress is built onto a prominent mountain or steep hill, showcasing how the intricate mud-brick and stone fortress design adapts, layers, and changes by altitude. {lighting} Shot on a premium 35mm lens at f/1.8, exhibiting flawless depth of field, sharp focus, and photorealistic volumetric lighting with intricate environmental textures. Masterpiece, National Geographic award-winning photography.</li></ul><p>(Lighting Variants)</p><ul><li>Golden Hour: The environment is bathed in breathtaking golden-hour sunlight, casting long, dramatic shadows and highlighting the rich earthen tones of the architecture.</li><li>Blue Hour: The environment is captured during blue-hour twilight, with the deep blue desert sky contrasting against warm, inviting, realistic night-time fortress lighting glowing brightly from the windows, walls, and courtyards.</li></ul></code></pre></div></div>
 
+<h2 id="jul-30">Jul 30 // Alternative Human</h2>
+<div class="gallery-frame"><img data-src="generated-artwork/alien-alley-spoof-v3/v8-nano-banana-pro-A_hyper_realistic__s.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Alternative Human" /></div>
+<div class="collapsible-code">
+<button type="button">Alternative Human</button>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><p>A hyper-realistic, studio quality photograph spoofing the King of the Hill alley scene. The camera is in the alleyway, looking over a wooden privacy fence at a suburban 1-story Texas ranch-style house. Standing in the alley leaning against the fence are four classic grey extraterrestrial aliens, each wearing a distinctly different casual outfit (e.g., one in a plain white t-shirt, one in a trucker hat and sunglasses, one in an open button-down shirt, one in a tank top). It is a beautiful golden hour sunset with warm cinematic lighting. Every alien holds a green glass bottle. The camera depth of field focuses slightly on the nearest alien's bottle, where the label clearly and legibly reads 'Soylent Green'. Above the aliens' heads are clear speech bubbles: three say 'Yep.' and the fourth on the far right says 'Mmhmm.' There are absolutely no humans in the image. Masterpiece, highly detailed.</p></code></pre></div></div>
+
+<h2 id="jul-29">Jul 29 // Games</h2>
+<div class="gallery-frame">
+  <img id="games_v1" data-src="generated-artwork/mario-search/v3-nano-banana-A_breathtaking__stud.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Games 1" class="game-img lazy-img gallery-img active">
+  <img id="games_v2" data-src="generated-artwork/mario-search/v16-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Games 2" class="game-img lazy-img gallery-img">
+  <img id="games_v3" data-src="generated-artwork/mario-search-2.5D/v5-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Games 3" class="game-img lazy-img gallery-img">
+  <img id="games_v4" data-src="generated-artwork/mario-search-2.5D/v7-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Games 4" class="game-img lazy-img gallery-img">
+  <img id="games_v5" data-src="generated-artwork/mario-search-bowser/v7-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Games 5" class="game-img lazy-img gallery-img">
+  <img id="games_v6" data-src="generated-artwork/mario-search-bowser/v11-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Games 6" class="game-img lazy-img gallery-img">
+  
+  <button onclick="switchGame()" class="toggle-btn">Next Image</button>
+</div>
+<div class="collapsible-code">
+<button type="button">Games</button>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><ul><li><strong>Prompt 1</strong>: A breathtaking, studio quality, awe-inspiring illustration: A sprawling, incredibly wide panoramic 16:9 view of a Super Mario Bros level done in authentic 16-bit SNES style but rendered with hyper-realistic, intricate, breathtaking detail. The scene is a massive, sprawling landscape filled with towering green pipes, floating brick blocks, and detailed Goombas. Hidden within the unbelievable density and intricate detail-like a 'Where's Waldo' illustration-are tiny but photo-realistic depictions of Mario, Luigi, Princess Peach, and Yoshi. The viewer has to search through the sprawling, hyper-detailed mushroom kingdom to find them. The image MUST contain NO TEXT, NO LOGO, AND NO TITLES. Purely the background artwork.</li><li><strong>Prompt 2 (2.5D Diorama)</strong>: A breathtaking, studio quality, awe-inspiring 2.5D illustration: A sprawling, incredibly wide panoramic 16:9 view of a massive Super Mario Bros environment. The art style should be a hyper-realistic, highly detailed 2.5D diorama that authentically mimics realistic, playable SNES-era level design. The layout must feature clear, structured platforming paths, floating brick blocks, and distinct, logically connected biomes (overworld, aquatic, and subterranean). Populate the level with a realistic, playable number of non-main-character enemies (Goombas, Koopas) spaced out naturally along the paths-do not swarm the screen. Hidden within this beautifully structured 2.5D landscape-like a 'Where's Waldo' illustration-are tiny but photo-realistic depictions of the main heroes. CRITICAL INSTRUCTION: Mario, Luigi, Princess Peach, Toad, and Yoshi must each appear EXACTLY ONCE in the entire image. The viewer has to search through the sprawling, realistic level to find their single hiding spot. The image MUST contain NO TEXT, NO LOGO, AND NO TITLES. Purely the background artwork.</li><li><strong>Prompt 3 (Outside the Castle)</strong>: A breathtaking, studio quality, awe-inspiring 2.5D illustration: A sprawling, incredibly wide panoramic 16:9 view of a massive Super Mario Bros environment. The art style should be a hyper-realistic, highly detailed 2.5D diorama that authentically mimics realistic, playable SNES-era level design. The layout must feature clear, structured platforming paths, floating brick blocks, and distinct, logically connected biomes leading toward a massive, imposing depiction of Bowser's Castle at the end of the level. Populate the level with a realistic, playable number of non-main-character enemies (Goombas, Koopas) spaced out naturally along the paths. In or near the castle, depict a massive Bowser holding Princess Peach captive. Hidden within the rest of this beautifully structured 2.5D landscape-like a 'Where's Waldo' illustration-are tiny but photo-realistic depictions of Mario, Luigi, Toad, and Yoshi. CRITICAL INSTRUCTION: Mario, Luigi, Toad, Yoshi, Bowser, and Princess Peach must each appear EXACTLY ONCE in the entire image. The viewer has to search through the sprawling, realistic level to find where the heroes are hiding as they make their way to the castle. The image MUST contain NO TEXT, NO LOGO, AND NO TITLES. Purely the background artwork.</li></ul></code></pre></div></div>
+
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close">&times;</span>
   <img id="lightbox-img" src="" alt="Fullscreen view">
@@ -97,12 +118,20 @@
       img2.classList.toggle('active');
     }
 
-    let lionIndex = 0;
+    let lionIndex = 0; // '.lion-img'
+    let gameIndex = 0; // '.game-img'
+    function switchGallery(currentIndex, className) {
+      const imgs = document.querySelectorAll(className);
+      imgs[currentIndex].classList.remove('active');    // 1. Remove the active class
+      currentIndex = (currentIndex + 1) % imgs.length;  // 2. Move to the next index
+      imgs[currentIndex].classList.add('active');       // 3. Add the active class to the new current image
+      return currentIndex;
+    }
     function switchLion() {
-      const imgs = document.querySelectorAll('.lion-img');
-      imgs[lionIndex].classList.remove('active'); // 1. Remove the active class
-      lionIndex = (lionIndex + 1) % imgs.length;  // 2. Move to the next index
-      imgs[lionIndex].classList.add('active');    // 3. Add the active class to the new current image
+      lionIndex = switchGallery(lionIndex, '.lion-img');
+    }
+    function switchGame() {
+      gameIndex = switchGallery(gameIndex, '.game-img');
     }
 </script>
 
