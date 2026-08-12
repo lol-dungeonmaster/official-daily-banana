@@ -160,6 +160,21 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 Variant 1 (Morning): Lighting/Environment: Bright, crisp morning sunlight piercing through the atmosphere, vibrant colors, clear visibility.
 Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golden-hour, or overcast skies with soft, diffused atmospheric shadows.</p></code></pre></div></div>
 
+<h2 id="jul-24">Jul 24 // Time-traveling Animals</h2>
+<div class="gallery-frame">
+  <img id="ttp_v1" data-src="generated-artwork/time-traveling-pets/v23-imagen-A_photorealistic_stu.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Time-traveling Pets 1" class="ttp-img lazy-img gallery-img active">
+  <img id="ttp_v2" data-src="generated-artwork/time-traveling-pets/v19-imagen-ultra-A_photorealistic_stu.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Time-traveling Pets 2" class="ttp-img lazy-img gallery-img">
+  <img id="ttp_v3" data-src="generated-artwork/time-traveling-pets/v10-nano-banana-2-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Time-traveling Pets 3" class="ttp-img lazy-img gallery-img">
+  <img id="ttp_v4" data-src="generated-artwork/time-traveling-pets/v13-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Time-traveling Pets 4" class="ttp-img lazy-img gallery-img">
+  <img id="ttp_v5" data-src="generated-artwork/time-traveling-pets/v14-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Time-traveling Pets 5" class="ttp-img lazy-img gallery-img">
+  <img id="ttp_v6" data-src="generated-artwork/time-traveling-pets/v15-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Time-traveling Pets 6" class="ttp-img lazy-img gallery-img">
+  
+  <button onclick="switchTTP()" class="toggle-btn">Next Image</button>
+</div>
+<div class="collapsible-code">
+<button type="button">Time-traveling Animals</button>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><p>A photorealistic studio quality image of a bearded dragon riding a time-traveling cat to find this mornings fresh tasty kale. No people, but add subtitles if they add flair. Make it look inspiring to impress. The cat and bearded dragon are time-traveling pets.</p></code></pre></div></div>
+
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close">&times;</span>
   <img id="lightbox-img" src="" alt="Fullscreen view">
@@ -184,6 +199,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let quetzIndex = 0;
     let archaIndex = 0;
     let tyranIndex = 0;
+    let ttpIndex = 0;
     function switchGallery(currentIndex, className) {
       const imgs = document.querySelectorAll(className);
       imgs[currentIndex].classList.remove('active');    // 1. Remove the active class
@@ -198,16 +214,19 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
       gameIndex = switchGallery(gameIndex, '.game-img');
     }
     function switchBot() {
-      botIndex = switchGallery(botIndex, '.bot-img')
+      botIndex = switchGallery(botIndex, '.bot-img');
     }
     function switchQuetz() {
-      quetzIndex = switchGallery(quetzIndex, '.quetz-img')
+      quetzIndex = switchGallery(quetzIndex, '.quetz-img');
     }
     function switchArcha() {
-      archaIndex = switchGallery(archaIndex, '.archa-img')
+      archaIndex = switchGallery(archaIndex, '.archa-img');
     }
     function switchTyran() {
-      tyranIndex = switchGallery(tyranIndex, '.tyran-img')
+      tyranIndex = switchGallery(tyranIndex, '.tyran-img');
+    }
+    function switchTTP() {
+      ttpIndex = switchGallery(ttpIndex, '.ttp-img');
     }
 </script>
 
