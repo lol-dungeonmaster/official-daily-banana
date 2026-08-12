@@ -2,6 +2,12 @@
 {% include nav.html %}
 <div class="container">
 
+<h2 id="aug-11">Aug 11 // Hero Poses</h2>
+<div class="gallery-frame"><img data-src="generated-artwork/official-daily-banana-hero-poses-cinematic-v2/v10-nano-banana-2-A_dramatic__low_angl.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Hero Poses" /></div>
+<div class="collapsible-code">
+<button type="button">Hero Poses</button>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><p>A dramatic, low-angle 8k cinematic shot of Babe Ruth at the moment of follow-through after hitting his 500th home run. The camera is positioned near the batter's box, looking up to make Ruth appear larger than life. He is wearing the authentic 1929 heavy wool pinstripe Yankees uniform (as the visiting team), with visible sweat stains and coarse fabric texture. The setting is explicitly League Park in Cleveland, Ohio. In the background, the crowd in the wooden bleachers of League Park is a blur of motion, men in fedoras rising in a wave of excitement. Dust motes dance in sharp beams of afternoon sunlight cutting through the historic Cleveland stadium. The focus is razor-sharp on Ruth's determined expression and the grit on his hands, with a shallow depth of field that makes League Park's iconic 40-foot right-field wall loom in the distance. In the bottom corner, unobtrusive but clearly readable, is a sleek text overlay that says 'Official Daily Banana', with a subtitle 'Hero Poses'.</p></code></pre></div></div>
+
 <h2 id="aug-10">Aug 10 // World Lion Day</h2>
 <div class="gallery-frame">
   <img id="lion_v1" data-src="generated-artwork/official-daily-banana-lion-prompt2_ethereal/v3-imagen-ultra-Ethereal___Artistic_.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="World Lion Day 1" class="lion-img lazy-img gallery-img active">
