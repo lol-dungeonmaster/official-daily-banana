@@ -14,5 +14,29 @@
         <li><a href="#jul-31">Jul 31</a></li>
         <li><a href="#jul-30">Jul 30</a></li>
         <li><a href="#jul-29">Jul 29</a></li>
+        <li><a href="#jul-28">Jul 28</a></li>
+        <li><a href="#jul-27">Jul 27</a></li>
+        <li><a href="#jul-26">Jul 26</a></li>
+        <li><a href="#jul-25">Jul 25</a></li>
     </ul>
 </nav>
+
+<script>
+  function adjustNavHeight() {
+    var nav = document.querySelector('.main-nav');
+    var header = document.querySelector('header');
+    if(nav && header && window.innerWidth > 768) {
+      var headerBottom = header.getBoundingClientRect().bottom;
+      if (headerBottom > 0) {
+        nav.style.height = 'calc(100vh - ' + headerBottom + 'px)';
+      } else {
+        nav.style.height = '100vh';
+      }
+    } else if (nav) {
+      nav.style.height = ''; // Reset on mobile
+    }
+  }
+  window.addEventListener('scroll', adjustNavHeight, {passive: true});
+  window.addEventListener('resize', adjustNavHeight, {passive: true});
+  document.addEventListener('DOMContentLoaded', adjustNavHeight);
+</script>

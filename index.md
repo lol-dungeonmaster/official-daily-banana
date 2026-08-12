@@ -100,6 +100,66 @@
 <button type="button">Games</button>
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><ul><li><strong>Prompt 1</strong>: A breathtaking, studio quality, awe-inspiring illustration: A sprawling, incredibly wide panoramic 16:9 view of a Super Mario Bros level done in authentic 16-bit SNES style but rendered with hyper-realistic, intricate, breathtaking detail. The scene is a massive, sprawling landscape filled with towering green pipes, floating brick blocks, and detailed Goombas. Hidden within the unbelievable density and intricate detail-like a 'Where's Waldo' illustration-are tiny but photo-realistic depictions of Mario, Luigi, Princess Peach, and Yoshi. The viewer has to search through the sprawling, hyper-detailed mushroom kingdom to find them. The image MUST contain NO TEXT, NO LOGO, AND NO TITLES. Purely the background artwork.</li><li><strong>Prompt 2 (2.5D Diorama)</strong>: A breathtaking, studio quality, awe-inspiring 2.5D illustration: A sprawling, incredibly wide panoramic 16:9 view of a massive Super Mario Bros environment. The art style should be a hyper-realistic, highly detailed 2.5D diorama that authentically mimics realistic, playable SNES-era level design. The layout must feature clear, structured platforming paths, floating brick blocks, and distinct, logically connected biomes (overworld, aquatic, and subterranean). Populate the level with a realistic, playable number of non-main-character enemies (Goombas, Koopas) spaced out naturally along the paths-do not swarm the screen. Hidden within this beautifully structured 2.5D landscape-like a 'Where's Waldo' illustration-are tiny but photo-realistic depictions of the main heroes. CRITICAL INSTRUCTION: Mario, Luigi, Princess Peach, Toad, and Yoshi must each appear EXACTLY ONCE in the entire image. The viewer has to search through the sprawling, realistic level to find their single hiding spot. The image MUST contain NO TEXT, NO LOGO, AND NO TITLES. Purely the background artwork.</li><li><strong>Prompt 3 (Outside the Castle)</strong>: A breathtaking, studio quality, awe-inspiring 2.5D illustration: A sprawling, incredibly wide panoramic 16:9 view of a massive Super Mario Bros environment. The art style should be a hyper-realistic, highly detailed 2.5D diorama that authentically mimics realistic, playable SNES-era level design. The layout must feature clear, structured platforming paths, floating brick blocks, and distinct, logically connected biomes leading toward a massive, imposing depiction of Bowser's Castle at the end of the level. Populate the level with a realistic, playable number of non-main-character enemies (Goombas, Koopas) spaced out naturally along the paths. In or near the castle, depict a massive Bowser holding Princess Peach captive. Hidden within the rest of this beautifully structured 2.5D landscape-like a 'Where's Waldo' illustration-are tiny but photo-realistic depictions of Mario, Luigi, Toad, and Yoshi. CRITICAL INSTRUCTION: Mario, Luigi, Toad, Yoshi, Bowser, and Princess Peach must each appear EXACTLY ONCE in the entire image. The viewer has to search through the sprawling, realistic level to find where the heroes are hiding as they make their way to the castle. The image MUST contain NO TEXT, NO LOGO, AND NO TITLES. Purely the background artwork.</li></ul></code></pre></div></div>
 
+<h2 id="jul-28">Jul 28 // Botanical Robots</h2>
+<div class="gallery-frame">
+  <img id="bot_v1" data-src="generated-artwork/plant-mech-animals/v16-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Botanical Robots 1" class="bot-img lazy-img gallery-img active">
+  <img id="bot_v2" data-src="generated-artwork/plant-mech-animals/v14-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Botanical Robots 2" class="bot-img lazy-img gallery-img">
+  <img id="bot_v3" data-src="generated-artwork/silvan-guardians/v2-nano-banana-pro-This_image_is_a_phot.png" style="aspect-ratio: 1584 / 672;" width="1584" height="672" alt="Botanical Robots 3" class="bot-img lazy-img gallery-img">
+  <img id="bot_v4" data-src="generated-artwork/silvan-guardians/v3-nano-banana-pro-This_image_is_a_phot.png" style="aspect-ratio: 1584 / 672;" width="1584" height="672" alt="Botanical Robots 4" class="bot-img lazy-img gallery-img">
+  <img id="bot_v5" data-src="generated-artwork/dystopian-plant-mechs/v21-imagen-A_photorealistic_stu.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Botanical Robots 5" class="bot-img lazy-img gallery-img">
+  <img id="bot_v6" data-src="generated-artwork/dystopian-plant-mechs/v1-nano-banana-A_photorealistic_stu.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Botanical Robots 6" class="bot-img lazy-img gallery-img">
+  <img id="bot_v7" data-src="generated-artwork/dystopian-plant-mechs/v13-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Botanical Robots 7" class="bot-img lazy-img gallery-img">
+  <img id="bot_v8" data-src="generated-artwork/dystopian-plant-mechs/v16-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Botanical Robots 8" class="bot-img lazy-img gallery-img">
+  
+  <button onclick="switchBot()" class="toggle-btn">Next Image</button>
+</div>
+<div class="collapsible-code">
+<button type="button">Botanical Robots</button>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><ul><li><strong>Prompt 1 (Animals)</strong>: A photorealistic studio quality image of robot animals made of plants. The robots have no metal components, they are made of only parts of plants growing together symbiotically as appropriate to create a highly-realistic mech or robot depictions of animals (no metals). No people, but add subtitles if they add flair. Make it look inspiring with uncanny realism instead of other styles. Show the robot animal(s) in their natural settings at golden hour.</li><li><strong>Prompt 2 (Silvan Guardian)</strong>: This image is a photorealistic studio quality depiction of a plant-based robot animal. Use this image as a design guide, but create a high-resolution, ultra-detailed 1080p panoramic view depicting MULTIPLE of these creatures in their natural habitat at golden hour. The subtitle in the image currently says 'SYLVAN GUARDIAN'; you MUST change the spelling in the new subtitle to 'SILVAN GUARDIAN'. The creatures are completely made of symbiotic plants with zero metal parts. Make the details incredibly precise, sharp, and not blurry close up.</li><li><strong>Prompt 3 (Giants)</strong>: A photorealistic studio quality image of traditional giant mechs, but entirely plant-based and constructed of living, symbiotic flora with absolutely zero metal. They are depicted in nature, resembling a new biological lifeform existing at one with a lush, overgrown dystopian future where humans are only a legend. The image should evoke the theme: 'In harmony with nature, a new era of life emerges.' Include this phrase as a subtitle if it adds flair. Use cinematic studio-quality lighting, specifically golden hour or blue-hour lighting, with realistic lens effects (like bokeh or lens flare) to beautifully showcase these organic machines. Uncanny photo-realism, no humans.</li></ul></code></pre></div></div>
+
+<h2 id="jul-27">Jul 27 // Dinosaurs: Quetzalcoatlus</h2>
+<div class="gallery-frame">
+  <img id="Quetz_v1" data-src="generated-artwork/Quetzalcoatlus/v3-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Quetzalcoatlus 1" class="quetz-img lazy-img gallery-img active">
+  <img id="Quetz_v2" data-src="generated-artwork/Quetzalcoatlus/v5-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Quetzalcoatlus 2" class="quetz-img lazy-img gallery-img">
+  <img id="Quetz_v3" data-src="generated-artwork/Quetzalcoatlus/v8-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Quetzalcoatlus 3" class="quetz-img lazy-img gallery-img">
+  
+  <button onclick="switchQuetz()" class="toggle-btn">Next Image</button>
+</div>
+<div class="collapsible-code">
+<button type="button">Dinosaurs: Quetzalcoatlus</button>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><p>A breathtaking, studio quality, hyper-realistic depiction of a Quetzalcoatlus (standing tall like a massive stork in a prehistoric marsh). Full environmental effects, incredibly exquisite detail on the animal's textures, skin, and authentic prehistoric environment. Subtle, realistic camera and lens effects. CRITICAL INSTRUCTION: There must be absolutely NO predator-prey interaction, no hunting, and no feeding depicted. If this is a carnivore, it must be depicted isolated from any prey species. Masterpiece quality. {lighting_and_atmosphere}</p><p>Lighting Variants ({lighting_and_atmosphere}):
+Variant 1 (Morning): Lighting/Environment: Bright, crisp morning sunlight piercing through the atmosphere, vibrant colors, clear visibility.
+Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golden-hour, or overcast skies with soft, diffused atmospheric shadows.</p></code></pre></div></div>
+
+<h2 id="jul-26">Jul 26 // Dinosaurs: Archaeopteryx</h2>
+<div class="gallery-frame">
+  <img id="Archa_v1" data-src="generated-artwork/Archaeopteryx/v3-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Archaeopteryx 1" class="archa-img lazy-img gallery-img active">
+  <img id="Archa_v2" data-src="generated-artwork/Archaeopteryx/v4-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Archaeopteryx 2" class="archa-img lazy-img gallery-img">
+  <img id="Archa_v3" data-src="generated-artwork/Archaeopteryx/v7-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Archaeopteryx 3" class="archa-img lazy-img gallery-img">
+  <img id="Archa_v4" data-src="generated-artwork/Archaeopteryx/v8-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Archaeopteryx 4" class="archa-img lazy-img gallery-img">
+  
+  <button onclick="switchArcha()" class="toggle-btn">Next Image</button>
+</div>
+<div class="collapsible-code">
+<button type="button">Dinosaurs: Archaeopteryx</button>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><p>A breathtaking, studio quality, hyper-realistic depiction of a Archaeopteryx (perched on a cycad branch, macro lens focus). Full environmental effects, incredibly exquisite detail on the animal's textures, skin, and authentic prehistoric environment. Subtle, realistic camera and lens effects. CRITICAL INSTRUCTION: There must be absolutely NO predator-prey interaction, no hunting, and no feeding depicted. If this is a carnivore, it must be depicted isolated from any prey species. Masterpiece quality. {lighting_and_atmosphere}</p><p>Lighting Variants ({lighting_and_atmosphere}):
+Variant 1 (Morning): Lighting/Environment: Bright, crisp morning sunlight piercing through the atmosphere, vibrant colors, clear visibility.
+Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golden-hour, or overcast skies with soft, diffused atmospheric shadows.</p></code></pre></div></div>
+
+<h2 id="jul-25">Jul 25 // Dinosaurs: Tyrannosaurus Rex</h2>
+<div class="gallery-frame">
+  <img id="Tyran_v1" data-src="generated-artwork/Tyrannosaurus_Rex/v5-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Tyrannosaurus 1" class="tyran-img lazy-img gallery-img active">
+  <img id="Tyran_v2" data-src="generated-artwork/Tyrannosaurus_Rex/v6-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Tyrannosaurus 2" class="tyran-img lazy-img gallery-img">
+  <img id="Tyran_v3" data-src="generated-artwork/Tyrannosaurus_Rex/v8-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Tyrannosaurus 3" class="tyran-img lazy-img gallery-img">
+  
+  <button onclick="switchTyran()" class="toggle-btn">Next Image</button>
+</div>
+<div class="collapsible-code">
+<button type="button">Dinosaurs: Tyrannosaurus Rex</button>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><p>A breathtaking, studio quality, hyper-realistic depiction of a Tyrannosaurus Rex (dense misty redwood forest). Full environmental effects, incredibly exquisite detail on the animal’s textures, skin, and authentic prehistoric environment. Subtle, realistic camera and lens effects. CRITICAL INSTRUCTION: There must be absolutely NO predator-prey interaction, no hunting, and no feeding depicted. If this is a carnivore, it must be depicted isolated from any prey species. Masterpiece quality. {lighting_and_atmosphere}</p><p>Lighting Variants ({lighting_and_atmosphere}):
+Variant 1 (Morning): Lighting/Environment: Bright, crisp morning sunlight piercing through the atmosphere, vibrant colors, clear visibility.
+Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golden-hour, or overcast skies with soft, diffused atmospheric shadows.</p></code></pre></div></div>
+
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close">&times;</span>
   <img id="lightbox-img" src="" alt="Fullscreen view">
@@ -120,6 +180,10 @@
 
     let lionIndex = 0; // '.lion-img'
     let gameIndex = 0; // '.game-img'
+    let botIndex = 0;  // '.bot-img'
+    let quetzIndex = 0;
+    let archaIndex = 0;
+    let tyranIndex = 0;
     function switchGallery(currentIndex, className) {
       const imgs = document.querySelectorAll(className);
       imgs[currentIndex].classList.remove('active');    // 1. Remove the active class
@@ -132,6 +196,18 @@
     }
     function switchGame() {
       gameIndex = switchGallery(gameIndex, '.game-img');
+    }
+    function switchBot() {
+      botIndex = switchGallery(botIndex, '.bot-img')
+    }
+    function switchQuetz() {
+      quetzIndex = switchGallery(quetzIndex, '.quetz-img')
+    }
+    function switchArcha() {
+      archaIndex = switchGallery(archaIndex, '.archa-img')
+    }
+    function switchTyran() {
+      tyranIndex = switchGallery(tyranIndex, '.tyran-img')
     }
 </script>
 

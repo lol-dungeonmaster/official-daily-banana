@@ -180,6 +180,8 @@ header h2 {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 18px;
   color: #cbcbcb;
+  padding: 0;
+  margin: 0;
 }
 
 .main-nav ul ul {
@@ -192,7 +194,7 @@ header h2 {
 
 .main-nav li a {
   display: block;
-  padding: 0.75rem 3rem 0.75rem 0rem;
+  padding: 0.75rem 3rem 0.75rem 2.5rem; /* Moved the browser's 40px left padding directly into the links */
   color: inherit;
   text-decoration: none;
   text-shadow: none;
@@ -207,12 +209,12 @@ header h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 3rem 1.5rem 0; /* Use 3rem right padding to perfectly center relative to the text column */
+  padding: 1.5rem 0; /* Perfectly centers across the full width of the column */
 }
 
 .nav-icon {
-  width: 64px;
-  height: 64px;
+  width: 96px;
+  height: 96px;
   transition: filter 0.2s;
 }
 
