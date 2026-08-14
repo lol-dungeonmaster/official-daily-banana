@@ -2,6 +2,18 @@
 {% include nav.html %}
 <div class="container">
 
+<h2 id="aug-13">Aug 13 // Intl. Wolf Day</h2>
+<div class="gallery-frame">
+  <img id="wolf_v1" data-src="generated-artwork/official-daily-banana-wolf-day-carpathians/v4-nano-banana-pro-The_Carpathians__A_p.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl Wolf Day 1" class="wolf-img lazy-img gallery-img active">
+  <img id="wolf_v2" data-src="generated-artwork/official-daily-banana-wolf-day-mongolia/v5-nano-banana-2-Mongolia__Gobi_Sunse.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl Wolf Day 2" class="wolf-img lazy-img gallery-img">
+  <img id="wolf_v3" data-src="generated-artwork/official-daily-banana-wolf-day-northern_mexico/v6-nano-banana-2-Northern_Mexico__Sie.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl Wolf Day 3" class="wolf-img lazy-img gallery-img">
+  
+  <button onclick="switchWolf()" class="toggle-btn">Next Image</button>
+</div>
+<div class="collapsible-code">
+<button type="button">Intl. Wolf Day</button>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>North America</strong></p><ul><li><strong>Yellowstone (Lamar Valley):</strong> A cinematic wide shot of three <strong>Northwestern Gray Wolves</strong> in a coordinated flank formation, bodies low to the ground and muscles tensed, eyes locked on an unseen target off-screen. A slight puff of condensation from their breath is visible in the crisp morning air. Behind them, the golden Lamar Valley unfolds toward the jagged, snow-dusted peaks of the Rockies under a pale lavender sunrise. 8k, cinematic depth of field, National Geographic photography.</li><li><strong>Alaska/Arctic:</strong> A heartbreakingly beautiful shot of a pack of <strong>Arctic Wolves</strong> curled together in a tight, overlapping survival huddle for warmth amidst a swirling white blizzard. Their luminous white fur blends with the snow, with only their dark, intelligent eyes and frost-covered whiskers visible. Above, a shimmering emerald and violet aurora borealis casts an ethereal glow over the silhouettes of frozen black spruce trees. Hyper-detailed, otherworldly lighting, 8k.</li><li><strong>Northern Mexico (Sierra Madre):</strong> A hauntingly tender nocturnal shot of a <strong>Mexican Gray Wolf</strong> gently nuzzling a small, fluffy pup on a limestone cliff in the Sierra Madre Occidental. The scene is illuminated by a brilliant full moon, casting a silver glow over the charcoal-toned fur of the adult and the soft reddish-brown fur of the pup. Below the cliff, a deep canyon is filled with a sea of midnight-blue fog. Ethereal lighting, high contrast, 8k, mystical atmosphere.</li></ul><p><strong>Europe</strong></p><ul><li><strong>The Carpathians:</strong> A powerful, tiered composition of a pack of <strong>Eurasian Wolves</strong> howling in unison on a misty ridge. The Alpha wolf stands central and slightly elevated, chest out, leading the chorus. The surroundings are a moody, emerald-green forest with heavy, low-hanging mist and sharp, grey alpine peaks piercing through a sea of clouds in the background. Cinematic, volumetric lighting, 8k, epic scale.</li><li><strong>Iberian Peninsula:</strong> A hyper-realistic, intimate shot of two <strong>Iberian Wolves</strong> engaged in a "muzzle-kiss," rubbing their noses together in a gesture of greeting and bonding. They are positioned in a sun-dappled grove of cork oak trees with tiny golden motes of dust dancing in the light. In the soft-focus background, the limestone walls of a Spanish river gorge plunge into a turquoise stream. Soft bokeh, warm golden-hour light, 8k.</li><li><strong>Białowieża (Summer Primeval):</strong> A high-energy shot of two <strong>Eurasian Wolves</strong> engaged in a playful, leaping chase through the heart of the Białowieża Forest. They are weaving through oversized, deep-green ferns and wild forest flowers, with blades of grass and petals kicked up in the air. Above them, a natural cathedral of gnarled, ancient oaks filters dappled sunlight across their grey-and-ochre coats. Hyper-realistic, rich saturation, 8k, immersive nature photography.</li></ul><p><strong>Asia</strong></p><ul><li><strong>Mongolia (Gobi Sunset):</strong> A breathtaking wide shot of a <strong>Steppe Wolf</strong> acting as a sentinel, standing perfectly still and alert on a towering, wind-rippled sand dune. The wolf is silhouetted against a fiery red and magenta sunset, while the rest of the pack is visible as small, resting silhouettes in the valley below. In the distance, jagged granite formations break the horizon of the Gobi Desert. High contrast, epic scale, cinematic.</li><li><strong>Siberia (Deep Taiga Mist):</strong> A cinematic shot of two <strong>Eurasian Wolves</strong> walking shoulder-to-shoulder through the deep, emerald-green Siberian Taiga, showcasing a strong pack bond. A heavy silver morning mist weaves between towering Larch trees, with brilliant "god rays" of sunlight piercing the canopy to illuminate their pale-grey fur and the moisture in the air. Volumetric lighting, moody, hyper-detailed, 8k.</li><li><strong>Kamchatka (Autumn River):</strong> A raw, action-packed shot of a <strong>Eurasian Wolf</strong> captured in a powerful, mid-air leap, splashing through a crystal-clear river to snap up a bright red sockeye salmon. Crystalline water droplets are frozen in mid-air around the wolf. The surrounding valley is an explosion of crimson berry bushes and golden birch trees, with a distant, snow-capped volcano veiled in purple twilight haze. 8k, vivid autumn palette, National Geographic style.</li></ul></code></pre></div></div>
+
 <h2 id="aug-12">Aug 12 // World Hirola Day</h2>
 <div class="gallery-frame"><img data-src="generated-artwork/official-daily-banana-hirola-ethereal/v3-nano-banana-pro-An_ethereal_and_arti.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="World Hirola Day" /></div>
 <div class="collapsible-code">
@@ -174,7 +186,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 
 <h2 id="jul-24">Jul 24 // Time-traveling Animals</h2>
 <div class="gallery-frame">
-  <img id="ttp_v1" data-src="generated-artwork/time-traveling-pets/v23-imagen-A_photorealistic_stu.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Time-traveling Pets 1" class="ttp-img lazy-img gallery-img active">
+  <img id="ttp_v1" data-src="generated-artwork/time-traveling-pets/v23-imagen-A_photorealistic_stu.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Time-traveling Pets 1" class="ttp-img lazy-img gallery-img active">
   <img id="ttp_v2" data-src="generated-artwork/time-traveling-pets/v19-imagen-ultra-A_photorealistic_stu.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Time-traveling Pets 2" class="ttp-img lazy-img gallery-img">
   <img id="ttp_v3" data-src="generated-artwork/time-traveling-pets/v10-nano-banana-2-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Time-traveling Pets 3" class="ttp-img lazy-img gallery-img">
   <img id="ttp_v4" data-src="generated-artwork/time-traveling-pets/v13-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Time-traveling Pets 4" class="ttp-img lazy-img gallery-img">
@@ -212,6 +224,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let archaIndex = 0;
     let tyranIndex = 0;
     let ttpIndex = 0;
+    let wolfIndex = 0;
     function switchGallery(currentIndex, className) {
       const imgs = document.querySelectorAll(className);
       imgs[currentIndex].classList.remove('active');    // 1. Remove the active class
@@ -239,6 +252,9 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     }
     function switchTTP() {
       ttpIndex = switchGallery(ttpIndex, '.ttp-img');
+    }
+    function switchWolf() {
+      wolfIndex = switchGallery(wolfIndex, '.wolf-img');
     }
 </script>
 
