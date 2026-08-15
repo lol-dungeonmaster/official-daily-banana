@@ -2,6 +2,18 @@
 {% include nav.html %}
 <div class="container">
 
+<h2 id="aug-14">Aug 14 // Ring Design</h2>
+<div class="gallery-frame">
+  <img id="ring_v2" data-src="generated-artwork/odb-ring-design/v4-nano-banana-2-lite-The_Curator_s_Displa.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Ring Design 1" class="ring-img lazy-img gallery-img active">
+  <img id="ring_v1" data-src="generated-artwork/odb-ring-design/v1-nano-banana-The_Artifact_Study__.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Ring Design 2" class="ring-img lazy-img gallery-img">
+  <img id="ring_v3" data-src="generated-artwork/odb-ring-design/v4-nano-banana-2-lite-The_Obsidian_Plinth_.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Ring Design 3" class="ring-img lazy-img gallery-img">
+  
+  <button onclick="switchRing()" class="toggle-btn">Next Image</button>
+</div>
+<div class="collapsible-code">
+<button type="button">Ring Design</button>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>The Curator's Display</strong>A hyper-realistic macro photograph of three legendary rings displayed on a dark charcoal velvet cushion. Ring one (Narya): a wide, robust band of braided gold twisting like rising smoke, with a ruby carved into a flickering flame inset deeply into the metal, held by spark-shaped prongs that remain flush with the band's outer width. Ring two (Vilya): a substantial band of interwoven gold ribbons mimicking wind currents, with a sapphire carved into a wind-blown rose seamlessly integrated into the filigree, ensuring the stone does not protrude beyond the band's edges. Ring three (Nenya): a broad, heavy band of polished, rippled mithril with a liquid mirror finish, featuring a diamond carved into a glistening teardrop flush-set within a ripple-effect bezel that is carved directly into the width of the band. Cinematic museum lighting, sharp focus on gemstone facets, 8k resolution, extremely shallow depth of field.</p><p><strong>The Obsidian Plinth</strong>A professional jewelry exhibit shot of three ornate, heavy-gauge rings arranged in a triangle on a matte black obsidian surface. The first ring features a thick braided gold band twisting like smoke, with a flame-shaped ruby recessed into the metal and secured by prongs that stay within the band's perimeter. The second ring features bold swirling gold bands like wind currents, with a rose-shaped sapphire inset into a recessed filigree center, maintaining a consistent width across the ring. The third ring features a wide rippled mithril band with a liquid finish, with a teardrop diamond perfectly flush-set in a ripple-effect bezel that blends seamlessly into the band's surface. High-contrast studio lighting, ray-traced reflections on the mithril, 100mm macro lens, f/2.8, showing the weight and density of the metal.</p><p><strong>The Artifact Study</strong>An ultra-detailed close-up of three ancient rings of power viewed as priceless artifacts. Narya is composed of a heavy gold band braided like rising smoke, with a ruby gemstone carved into a flickering flame integrated flush into the band's architecture. Vilya is composed of thick gold ribbons swirling like atmospheric currents, with a sapphire gemstone carved into a wind-blown rose inset into the center of the band without protruding. Nenya is composed of a broad shimmering mithril band with deep liquid ripples, with a diamond gemstone carved into a glistening teardrop recessed into a ripple-style bezel that sits flush with the metal surface. Soft ambient gallery glow, emphasis on the seamless transition between stone and metal, photorealistic, 8k, incredibly sharp focus on the stone carvings.</p></code></pre></div></div>
+
 <h2 id="aug-13">Aug 13 // Intl. Wolf Day</h2>
 <div class="gallery-frame">
   <img id="wolf_v1" data-src="generated-artwork/official-daily-banana-wolf-day-carpathians/v4-nano-banana-pro-The_Carpathians__A_p.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl Wolf Day 1" class="wolf-img lazy-img gallery-img active">
@@ -225,6 +237,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let tyranIndex = 0;
     let ttpIndex = 0;
     let wolfIndex = 0;
+    let ringIndex = 0;
     function switchGallery(currentIndex, className) {
       const imgs = document.querySelectorAll(className);
       imgs[currentIndex].classList.remove('active');    // 1. Remove the active class
@@ -255,6 +268,9 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     }
     function switchWolf() {
       wolfIndex = switchGallery(wolfIndex, '.wolf-img');
+    }
+    function switchRing() {
+      ringIndex = switchGallery(ringIndex, '.ring-img');
     }
 </script>
 
