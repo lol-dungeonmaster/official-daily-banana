@@ -505,13 +505,14 @@ pre {
     width: 100vw;
     max-width: none;
     position: static;
-    height: fit-content;
+    height: auto; /* Ensures it grows fully */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 1.5rem;
     border-right: none;
+    overflow-y: visible; /* Disables the internal scrollbar inherited from desktop */
   }
   .nav-top-wrapper {
     width: 100%;
