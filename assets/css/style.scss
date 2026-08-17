@@ -251,6 +251,17 @@ header h2 {
   margin: 0 0 5px 0;
 }
 
+
+
+#main_content h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#main_content h2 a:hover {
+  text-decoration: underline;
+}
+
 #main_content section img {
   max-width: 100%;
   height: auto;

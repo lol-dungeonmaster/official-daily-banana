@@ -2,7 +2,7 @@
 {% include nav.html %}
 <div class="container">
 
-<h2 id="aug-16">Aug 16 // Some Assembly Required</h2>
+<h2 id="aug-16"><a href="#aug-16">Aug 16 // Some Assembly Required</a></h2>
 <div class="gallery-frame"><img data-src="generated-artwork/pizza_infographic/v4-nano-banana-pro-Generate_a_16_9_high.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Some Assembly Required" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -13,7 +13,7 @@
 <div id="discuss-aug-16" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-15" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Aug 15 // Dinosaurs: Stegosaurus <button onclick="switchStego()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<h2 id="aug-15" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-15">Aug 15 // Dinosaurs: Stegosaurus</a> <button onclick="switchStego()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="stego_v1" data-src="generated-artwork/Stegosaurus/v4-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Stegosaurus 1" class="stego-img lazy-img gallery-img active">
   <img id="stego_v2" data-src="generated-artwork/Stegosaurus/v6-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Stegosaurus 2" class="stego-img lazy-img gallery-img">
@@ -31,7 +31,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-15" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-14" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Aug 14 // Ring Design <button onclick="switchRing()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<h2 id="aug-14" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-14">Aug 14 // Ring Design</a> <button onclick="switchRing()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="ring_v1" data-src="generated-artwork/odb-ring-design/v4-nano-banana-2-lite-The_Curator_s_Displa.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Ring Design 1" class="ring-img lazy-img gallery-img active">
   <img id="ring_v2" data-src="generated-artwork/odb-ring-design/v1-nano-banana-The_Artifact_Study__.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Ring Design 2" class="ring-img lazy-img gallery-img">
@@ -47,7 +47,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-14" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-13" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Aug 13 // Intl. Wolf Day <button onclick="switchWolf()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<h2 id="aug-13" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-13">Aug 13 // Intl. Wolf Day</a> <button onclick="switchWolf()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="wolf_v1" data-src="generated-artwork/official-daily-banana-wolf-day-carpathians/v4-nano-banana-pro-The_Carpathians__A_p.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl Wolf Day 1" class="wolf-img lazy-img gallery-img active">
   <img id="wolf_v2" data-src="generated-artwork/official-daily-banana-wolf-day-mongolia/v5-nano-banana-2-Mongolia__Gobi_Sunse.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl Wolf Day 2" class="wolf-img lazy-img gallery-img">
@@ -63,7 +63,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-13" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-12">Aug 12 // World Hirola Day</h2>
+<h2 id="aug-12"><a href="#aug-12">Aug 12 // World Hirola Day</a></h2>
 <div class="gallery-frame"><img data-src="generated-artwork/official-daily-banana-hirola-ethereal/v3-nano-banana-pro-An_ethereal_and_arti.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="World Hirola Day" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -74,7 +74,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-12" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-11">Aug 11 // Hero Poses</h2>
+<h2 id="aug-11"><a href="#aug-11">Aug 11 // Hero Poses</a></h2>
 <div class="gallery-frame"><img data-src="generated-artwork/official-daily-banana-hero-poses-cinematic-v2/v10-nano-banana-2-A_dramatic__low_angl.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Hero Poses" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -85,7 +85,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-11" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-10" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Aug 10 // World Lion Day <button onclick="switchLion()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<h2 id="aug-10" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-10">Aug 10 // World Lion Day</a> <button onclick="switchLion()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="lion_v1" data-src="generated-artwork/official-daily-banana-lion-prompt2_ethereal/v3-imagen-ultra-Ethereal___Artistic_.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="World Lion Day 1" class="lion-img lazy-img gallery-img active">
   <img id="lion_v2" data-src="generated-artwork/official-daily-banana-lion-prompt2_ethereal/v4-imagen-ultra-Ethereal___Artistic_.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="World Lion Day 2" class="lion-img lazy-img gallery-img">
@@ -101,7 +101,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-10" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-09">Aug 09 // Animal Migration</h2>
+<h2 id="aug-09"><a href="#aug-09">Aug 09 // Animal Migration</a></h2>
 <div class="gallery-frame"><img data-src="generated-artwork/animal-migration-prompt3_journalistic/v4-nano-banana-pro-A_raw__National_Geog.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Animal Migration" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -112,7 +112,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-09" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-08">Aug 08 // International Moon Bear Day</h2>
+<h2 id="aug-08"><a href="#aug-08">Aug 08 // International Moon Bear Day</a></h2>
 <div class="gallery-frame"><img data-src="generated-artwork/moon-bear-prompt3_journalistic/v6-nano-banana-2-Wildlife_Documentary.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl. Moon Bear Day" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -123,7 +123,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-08" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-07">Aug 07 // International Beer Day</h2>
+<h2 id="aug-07"><a href="#aug-07">Aug 07 // International Beer Day</a></h2>
 <div class="gallery-frame"><img data-src="generated-artwork/beer-prompt5_journalistic_pub/v5-nano-banana-2-Wildlife_Documentary.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl. Beer Day" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -134,7 +134,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-07" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-06">Aug 06 // Scenes from Literature</h2>
+<h2 id="aug-06"><a href="#aug-06">Aug 06 // Scenes from Literature</a></h2>
 <div class="gallery-frame"><img data-src="generated-artwork/alice-prompt2_realistic_v3/v4-nano-banana-pro-Ethereal___Realistic.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -145,7 +145,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-06" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-05">Aug 05 // World Tomistoma Day</h2>
+<h2 id="aug-05"><a href="#aug-05">Aug 05 // World Tomistoma Day</a></h2>
 <div class="gallery-frame"><img data-src="generated-artwork/tomistoma-prompt2_realistic/v5-nano-banana-2-Ethereal___Realistic.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="World Tomistoma Day" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -156,7 +156,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-05" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-04">Aug 04 // Clouded Leopard Day</h2>
+<h2 id="aug-04"><a href="#aug-04">Aug 04 // Clouded Leopard Day</a></h2>
 <div class="gallery-frame"><img data-src="generated-artwork/clouded-leopard-prompt3/v4-nano-banana-pro-A_professional_wildl.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Clouded Leopard Day" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -167,7 +167,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-04" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-03">Aug 03 // Graphic Novel Style</h2>
+<h2 id="aug-03"><a href="#aug-03">Aug 03 // Graphic Novel Style</a></h2>
 <div class="gallery-frame"><img data-src="generated-artwork/character-m-gn/v2-nano-banana-pro-A_breathtaking__edge.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Graphic Novel Style" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -178,7 +178,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-03" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-02">Aug 02 // Weather</h2>
+<h2 id="aug-02"><a href="#aug-02">Aug 02 // Weather</a></h2>
 <div class="gallery-frame"><img data-src="generated-artwork/weather-v5/v12-nano-banana-2-lite-A_breathtaking__edge.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Weather" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -189,7 +189,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-02" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-01">Aug 01 // Ramen Shops</h2>
+<h2 id="aug-01"><a href="#aug-01">Aug 01 // Ramen Shops</a></h2>
 <div class="gallery-frame"><img data-src="generated-artwork/ramen-shops-p4/v10-nano-banana-2-A_breathtaking__edge.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Ramen Shops" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -200,7 +200,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-01" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-31" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Jul 31 // Fortifications <button onclick="switchFort()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<h2 id="jul-31" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-31">Jul 31 // Fortifications</a> <button onclick="switchFort()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="fort_v1" data-src="generated-artwork/fortifications/v11-nano-banana-A_highly_detailed__p.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Fortifications_1" class="fort-img lazy-img gallery-img active">
   <img id="fort_v2" data-src="generated-artwork/fortifications-v2/v5-nano-banana-2-A_breathtaking__edge.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Fortifications_2" class="fort-img lazy-img gallery-img">
@@ -215,7 +215,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-31" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-30">Jul 30 // Alternative Human</h2>
+<h2 id="jul-30"><a href="#jul-30">Jul 30 // Alternative Human</a></h2>
 <div class="gallery-frame"><img data-src="generated-artwork/alien-alley-spoof-v3/v8-nano-banana-pro-A_hyper_realistic__s.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Alternative Human" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -226,7 +226,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-30" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-29" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Jul 29 // Games <button onclick="switchGame()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<h2 id="jul-29" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-29">Jul 29 // Games</a> <button onclick="switchGame()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="games_v1" data-src="generated-artwork/mario-search/v3-nano-banana-A_breathtaking__stud.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Games 1" class="game-img lazy-img gallery-img active">
   <img id="games_v2" data-src="generated-artwork/mario-search/v16-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Games 2" class="game-img lazy-img gallery-img">
@@ -245,7 +245,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-29" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-28" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Jul 28 // Botanical Robots <button onclick="switchBot()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<h2 id="jul-28" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-28">Jul 28 // Botanical Robots</a> <button onclick="switchBot()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="bot_v1" data-src="generated-artwork/plant-mech-animals/v16-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Botanical Robots 1" class="bot-img lazy-img gallery-img active">
   <img id="bot_v2" data-src="generated-artwork/plant-mech-animals/v14-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Botanical Robots 2" class="bot-img lazy-img gallery-img">
@@ -266,7 +266,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-28" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-27" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Jul 27 // Dinosaurs: Quetzalcoatlus <button onclick="switchQuetz()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<h2 id="jul-27" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-27">Jul 27 // Dinosaurs: Quetzalcoatlus</a> <button onclick="switchQuetz()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="Quetz_v1" data-src="generated-artwork/Quetzalcoatlus/v3-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Quetzalcoatlus 1" class="quetz-img lazy-img gallery-img active">
   <img id="Quetz_v2" data-src="generated-artwork/Quetzalcoatlus/v5-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Quetzalcoatlus 2" class="quetz-img lazy-img gallery-img">
@@ -284,7 +284,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-27" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Jul 26 // Dinosaurs: Archaeopteryx <button onclick="switchArcha()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<h2 id="jul-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-26">Jul 26 // Dinosaurs: Archaeopteryx</a> <button onclick="switchArcha()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="Archa_v1" data-src="generated-artwork/Archaeopteryx/v3-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Archaeopteryx 1" class="archa-img lazy-img gallery-img active">
   <img id="Archa_v2" data-src="generated-artwork/Archaeopteryx/v4-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Archaeopteryx 2" class="archa-img lazy-img gallery-img">
@@ -303,7 +303,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-25" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Jul 25 // Dinosaurs: Tyrannosaurus Rex <button onclick="switchTyran()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<h2 id="jul-25" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-25">Jul 25 // Dinosaurs: Tyrannosaurus Rex</a> <button onclick="switchTyran()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="Tyran_v1" data-src="generated-artwork/Tyrannosaurus_Rex/v5-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Tyrannosaurus 1" class="tyran-img lazy-img gallery-img active">
   <img id="Tyran_v2" data-src="generated-artwork/Tyrannosaurus_Rex/v6-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Tyrannosaurus 2" class="tyran-img lazy-img gallery-img">
@@ -321,7 +321,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-25" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-24" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Jul 24 // Time-traveling Animals <button onclick="switchTTP()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<h2 id="jul-24" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-24">Jul 24 // Time-traveling Animals</a> <button onclick="switchTTP()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="ttp_v1" data-src="generated-artwork/time-traveling-pets/v23-imagen-A_photorealistic_stu.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Time-traveling Pets 1" class="ttp-img lazy-img gallery-img active">
   <img id="ttp_v2" data-src="generated-artwork/time-traveling-pets/v19-imagen-ultra-A_photorealistic_stu.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Time-traveling Pets 2" class="ttp-img lazy-img gallery-img">
