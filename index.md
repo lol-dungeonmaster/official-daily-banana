@@ -530,6 +530,20 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     if (event.origin !== 'https://giscus.app') return;
     if (!(typeof event.data === 'object' && event.data.giscus)) return;
     
+    // Cache the updated comment/reaction count emitted by Giscus
+    if (event.data.giscus.discussion && currentDiscussion) {
+      const gDiscussion = event.data.giscus.discussion;
+      const totalEngagement = (gDiscussion.totalCommentCount || 0) + (gDiscussion.totalReplyCount || 0) + (gDiscussion.reactionCount || 0);
+      sessionStorage.setItem('odb_count_' + currentDiscussion, JSON.stringify({
+        count: totalEngagement,
+        time: Date.now()
+      }));
+      
+      // Instantly update the button on screen
+      const btn = document.querySelector(`button[onclick="openDiscussion('${currentDiscussion}')"]`);
+      if (btn) btn.innerText = `Comments (${totalEngagement})`;
+    }
+
     if (event.data.giscus.resizeHeight && currentDiscussion) {
       const target = document.getElementById('discuss-' + currentDiscussion);
       // Add 40px extra height to preserve the visual gap between entries!
@@ -552,21 +566,22 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
       return;
     }
 
-    // Close any previously opened discussion
+    // Hide previous discussion container if any
     if (currentDiscussion) {
-      const prevContainer = document.getElementById('discuss-' + currentDiscussion);
-      const prevBtn = prevContainer.parentElement.querySelector('.discuss-btn');
-      if (prevBtn) prevBtn.classList.remove('expanded');
-      prevContainer.style.display = 'none';
+      const prev = document.getElementById('discuss-' + currentDiscussion);
+      if (prev) {
+        prev.style.display = 'none';
+        const prevBtn = prev.parentElement.querySelector('.discuss-btn');
+        if(prevBtn) prevBtn.classList.remove('expanded');
+      }
     }
 
-    // Open new discussion
+    // Open new discussion container
     targetContainer.style.display = 'block';
     
-    // If the iframe already has a height (i.e. reopening the exact same thread), 
-    // we use its actual height right away. Otherwise, we fallback to 340px until Giscus resizes.
+    // Try to get a placeholder height from the iframe if it's already loaded
     const iframe = document.querySelector('iframe.giscus-frame');
-    if (iframe && iframe.offsetHeight > 0) {
+    if (iframe && iframe.offsetHeight > 100) {
       targetContainer.style.height = (iframe.offsetHeight + 40) + 'px';
     } else {
       targetContainer.style.height = '340px'; 
@@ -583,6 +598,45 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
       iframe.contentWindow.postMessage({ giscus: { setConfig: { term: entryId } } }, 'https://giscus.app');
     }
   }
+
+  // 5. Polling for Live Comment/Reaction Counts (Method 2: Conditional GET)
+  async function pollCommentCounts() {
+    try {
+      // Standard fetch allows the browser to utilize its native caching + conditional GET (304 Not Modified)
+      const res = await fetch('assets/data/comments.json');
+      if (!res.ok) return;
+      const data = await res.json();
+      const serverTime = data._meta ? data._meta.lastUpdated : 0;
+      
+      for (const [id, count] of Object.entries(data)) {
+        if (id === '_meta') continue;
+
+        let finalCount = count;
+        // Check if we have a locally cached count that is NEWER than the server's last updated time
+        const cachedDataStr = sessionStorage.getItem('odb_count_' + id);
+        if (cachedDataStr) {
+          try {
+            const cachedData = JSON.parse(cachedDataStr);
+            if (cachedData.time > serverTime) {
+              finalCount = cachedData.count;
+            }
+          } catch (e) {}
+        }
+
+        // Find the button for this discussion ID and update its text
+        const btn = document.querySelector(`button[onclick="openDiscussion('${id}')"]`);
+        if (btn) {
+          btn.innerText = `Comments (${finalCount})`;
+        }
+      }
+    } catch (e) {
+      console.warn("Failed to poll comment counts", e);
+    }
+  }
+
+  // Poll immediately on load, then every 5 minutes
+  pollCommentCounts();
+  setInterval(pollCommentCounts, 300000);
 </script>
 
 {% include nav-footer.html %}
