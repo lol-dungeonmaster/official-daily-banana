@@ -458,3 +458,70 @@ pre {
     justify-content: flex-start;
   }
 }
+
+/* Limit the width of the internal Giscus comment box to 800px and center it! */
+.gsc-main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- GISCUS CUSTOM THEME FIXES --- */
+/* Provide the complete set of Giscus variables so buttons, text, and menus perfectly match the Hacker Theme */
+main {
+  /* ======================================================== */
+  /* CHANGE THESE COLORS TO MATCH YOUR EXACT CSS BACKGROUND!  */
+  /* ======================================================== */
+  
+  /* Make the popup menu a SOLID darkened color (#00221e) so it doesn't overlap text transparently */
+  --color-canvas-overlay: #00221e; 
+  --color-canvas-subtle: transparent;
+  
+  /* Make the inner comment box untinted for contrast */
+  --color-canvas-inset: transparent;
+  
+  /* Darken the main frame with the same solid darkened color */
+  --color-canvas-default: #00221e;
+  /* ======================================================== */
+  
+  /* Force tabs and buttons to be bold */
+  button, 
+  .gsc-button,
+  .gsc-comment-box-tabs button,
+  button[role="tab"] {
+    font-weight: bold !important;
+  }
+  
+  /* Force the smiley widget and reaction pill backgrounds to match the frame */
+  .gsc-reactions-button, 
+  .gsc-direct-reaction-button {
+    background-color: #00221e !important;
+  }
+  /* ======================================================== */
+  
+  /* Borders - Matched to the Prompt/Discuss button borders (#838383) */
+  --color-border-default: #838383;
+  --color-border-muted: #838383;
+  
+  /* Text - Matched to the Prompt Text color */
+  --color-text-primary: #cbcbcb;
+  --color-text-secondary: #999999;
+  --color-text-link: #00ff00;
+  
+  /* Fonts */
+  --font-body: 'Monaco', 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
+  --font-monospace: 'Monaco', 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
+  
+  /* Buttons */
+  --color-btn-text: #cbcbcb;
+  --color-btn-bg: #00221e;
+  --color-btn-border: #444444;
+  --color-btn-hover-bg: #333333;
+  --color-btn-hover-border: #555555;
+  --color-btn-active-bg: #444444;
+  --color-btn-active-border: #666666;
+  
+  /* Misc */
+  --color-neutral-muted: rgba(255, 255, 255, 0.1);
+  --color-accent-fg: #00ff00;
+  --color-danger-fg: #ff0000;
+}
