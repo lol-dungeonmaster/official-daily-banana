@@ -148,6 +148,8 @@ body {
   font-size: 20px;
   letter-spacing: -0.02em;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  margin: 0;
+  padding: 0;
 }
 
 header h2 {
@@ -242,8 +244,13 @@ header h2 {
   filter: drop-shadow(0 0 2px #b5e853); /* Reduced blur to lower the glow intensity while keeping solid color */
 }
 
+#main_content {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 #main_content h1 {
-  font-size: 37px;
+  font-size: 2.0rem;
 }
 
 #main_content h2 {

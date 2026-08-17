@@ -43,11 +43,10 @@
 <script>
   function adjustNavHeight() {
     var nav = document.querySelector('.main-nav');
-    var header = document.querySelector('header');
-    if(nav && header && window.innerWidth > 768) {
-      var headerBottom = header.getBoundingClientRect().bottom;
-      if (headerBottom > 0) {
-        nav.style.height = 'calc(100vh - ' + headerBottom + 'px)';
+    if(nav && window.innerWidth > 768) {
+      var navTop = nav.getBoundingClientRect().top;
+      if (navTop > 0) {
+        nav.style.height = 'calc(100vh - ' + navTop + 'px)';
       } else {
         nav.style.height = '100vh';
       }
