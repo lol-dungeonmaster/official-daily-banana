@@ -376,6 +376,17 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-22-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
+<h2 id="jul-21-26"><a href="#jul-21-26">Jul 21 // Asking for Revert</a></h2>
+<div class="gallery-frame"><img data-src="generated-artwork/boromir-meme/v1-boromir-revert.jpg" class="lazy-img" style="aspect-ratio: 1264 / 848;" width="1264" height="848" alt="Asking for Revert" /></div>
+<div class="collapsible-code">
+<div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+  <button type="button">Asking for Revert</button>
+  <button type="button" class="discuss-btn" onclick="openDiscussion('jul-21-26')">Comments</button>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><p>Change the text subtitle at the bottom of the image. The original text '-If you would but lend me the Ring.' should be replaced with '-If you would but temporarily revert it.'. Keep the font style, white color with a black outline, position, and the original high-resolution Boromir background exactly the same. Do not alter any other details of the image.</p></code></pre></div>
+<div id="discuss-jul-21-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close">&times;</span>
   <img id="lightbox-img" src="" alt="Fullscreen view">
