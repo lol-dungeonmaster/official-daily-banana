@@ -161,7 +161,8 @@ header h2 {
 }
 
 .main-nav {
-  flex: 0 1 auto;
+  flex: 0 1000 250px;
+  max-width: 250px;
   background: rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
@@ -171,45 +172,64 @@ header h2 {
   border-right: 1px dashed #cbcbcb;
   border-bottom: 1px dashed #cbcbcb;
   overflow-y: auto;
-  min-width: min-content;
+  min-width: 150px; /* Allows the grid to compress to 3-days wide */
 }
 
-.main-nav ul {
-  list-style: none;
+.nav-month {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.nav-month-title {
   font-weight: bolder;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  font-size: 18px;
+  font-size: 16px;
   color: #cbcbcb;
-  padding: 0;
-  margin: 0;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  border-bottom: 1px dashed rgba(203, 203, 203, 0.3);
+  padding-bottom: 5px;
 }
 
-.main-nav ul ul {
-  font-size: 15px;
+.nav-days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
+  gap: 6px;
+  max-width: 250px;
+  margin: 0 auto;
 }
 
-.main-nav ul li {
-  list-style-image: none;
-}
-
-.main-nav li a {
-  display: block;
-  padding: 0.75rem 3rem 0.75rem 2.5rem; /* Moved the browser's 40px left padding directly into the links */
-  color: inherit;
-  text-decoration: none;
-  text-shadow: none;
-  transition: background 0.2s;
-}
-
-.main-nav li a:hover {
-  text-shadow: 0 0 10px #b5e853;
-}
-
-.main-nav li a.nav-top-link {
+.nav-days-grid a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 0; /* Perfectly centers across the full width of the column */
+  padding: 0.4rem 0;
+  color: inherit;
+  text-decoration: none;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.nav-days-grid a:hover {
+  text-shadow: 0 0 10px #b5e853;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-top-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.nav-top-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-icon {
@@ -218,8 +238,8 @@ header h2 {
   transition: filter 0.2s;
 }
 
-.main-nav li a.nav-top-link:hover .nav-icon {
-  filter: drop-shadow(0 0 4px rgba(181, 232, 83, 0.7)); /* Softer blur and opacity to match the text glow */
+.nav-top-link:hover .nav-icon {
+  filter: drop-shadow(0 0 2px #b5e853); /* Reduced blur to lower the glow intensity while keeping solid color */
 }
 
 #main_content h1 {
@@ -270,8 +290,10 @@ header h2 {
 }
 
 .wrapper .container {
-  flex: 1 4 auto;
-  width: 60%;
+  flex: 1 1 auto;
+  width: auto;
+  max-width: none;
+  min-width: 0; /* Fixes flexbox min-content overflow bug */
   padding: 2rem 3rem 80vh 3rem; /* Huge bottom padding allows the final anchor to reach the top of the screen */
 }
 
@@ -470,11 +492,27 @@ pre {
   }
   .main-nav {
     width: 100vw;
+    max-width: none;
     position: static;
     height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-right: none;
   }
-  .main-nav li a.nav-top-link {
-    justify-content: flex-start;
+  .nav-top-wrapper {
+    width: 100%;
+    justify-content: center;
+    padding-left: 0;
+  }
+  .nav-month {
+    flex: 1 1 250px; /* Wraps at exactly 520px screen width */
+    padding: 0;
+  }
+  .nav-days-grid {
+    max-width: 300px; /* Allows grid to naturally expand up to ~7 days wide */
   }
 }
 
