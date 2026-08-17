@@ -355,6 +355,27 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-23-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
+<h2 id="jul-22-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-22-26">Jul 22 // At the Beach</a> <button onclick="switchBree()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<div class="gallery-frame">
+  <img id="bree_v1" data-src="generated-artwork/bree-sand-art/v5-nano-banana-This_is_the_center_o.png" style="aspect-ratio: 1248 / 832;" width="1248" height="832" alt="At the Beach 1" class="bree-img lazy-img gallery-img active">
+  <img id="bree_v2" data-src="generated-artwork/bree-sand-art/v9-nano-banana-These_three_images_a.png" style="aspect-ratio: 1248 / 832;" width="1248" height="832" alt="At the Beach 2" class="bree-img lazy-img gallery-img">
+  <img id="bree_v3" data-src="generated-artwork/bree-sand-art/v10-nano-banana-These_three_images_a.png" style="aspect-ratio: 1248 / 832;" width="1248" height="832" alt="At the Beach 3" class="bree-img lazy-img gallery-img">
+  <img id="bree_v4" data-src="generated-artwork/bree-sand-art/v11-nano-banana-These_three_images_a.png" style="aspect-ratio: 1248 / 832;" width="1248" height="832" alt="At the Beach 4" class="bree-img lazy-img gallery-img">
+  <img id="bree_v5" data-src="generated-artwork/bree-sand-art/v12-nano-banana-These_three_images_a.png" style="aspect-ratio: 1248 / 832;" width="1248" height="832" alt="At the Beach 5" class="bree-img lazy-img gallery-img">
+  <img id="bree_v6" data-src="generated-artwork/bree-sand-art/v15-nano-banana-2-lite-These_three_images_a.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="At the Beach 6" class="bree-img lazy-img gallery-img">
+  <img id="bree_v7" data-src="generated-artwork/bree-sand-art/v16-nano-banana-2-lite-These_three_images_a.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="At the Beach 7" class="bree-img lazy-img gallery-img">
+  <img id="bree_v8" data-src="generated-artwork/bree-sand-art/v28-nano-banana-pro-These_three_images_a.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="At the Beach 8" class="bree-img lazy-img gallery-img">
+  <img id="bree_v9" data-src="generated-artwork/bree-sand-art/v39-nano-banana-pro-These_first_three_im.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="At the Beach 9" class="bree-img lazy-img gallery-img">
+</div>
+<div class="collapsible-code">
+<div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+  <button type="button">At the Beach</button>
+  <button type="button" class="discuss-btn" onclick="openDiscussion('jul-22-26')">Comments</button>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Bree Sand Art Workflow</strong></p><p><strong>1. Processing Individual Slices</strong><br/>This is the [left-side / center / right-side] of a panoramic image. Use this image as a base to generate a breathtaking sand-art version of the [left-side / center / right-side] of the city of Bree from LOTRO. Depicted on a beautiful sunny day at the beach. Intricate sand castle architecture matching the rustic town of Bree. No people.</p><p><strong>2. Synthesizing the Slices (Attempt 1)</strong><br/>These three images are the left, center, and right slices of a panoramic view of Bree. Synthesize them into a single, cohesive, standard 16:9 aspect ratio image depicting a photo-realistic, physically accurate representation of the entirety of Bree done as intricate sand art on a beautiful sunny day at the beach. Ensure consistent treatment of elements like trees. No people.</p><p><strong>3. Refined Synthesis Prompt ("All Sand" Rule)</strong><br/>These three images are the left, center, and right slices of a panoramic view of Bree. Synthesize them into a single, cohesive, standard 16:9 aspect ratio image depicting the entirety of Bree as a massive, intricately sculpted sandcastle sitting on a real beach on a beautiful sunny day. EVERYTHING in the town must be made entirely of sand—including the trees, foliage, buildings, and ground. There should be no real wood, no real leaves, and no green colors; it must all look like it was painstakingly carved out of wet beach sand. No people.</p></code></pre></div>
+<div id="discuss-jul-22-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close">&times;</span>
   <img id="lightbox-img" src="" alt="Fullscreen view">
@@ -384,6 +405,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let ringIndex = 0;
     let stegoIndex = 0;
     let mosaIndex = 0;
+    let breeIndex = 0;
 
     function switchGallery(currentIndex, className) {
       const imgs = document.querySelectorAll(className);
@@ -424,6 +446,9 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     }
     function switchMosa() {
       mosaIndex = switchGallery(mosaIndex, '.mosa-img');
+    }
+    function switchBree() {
+      breeIndex = switchGallery(breeIndex, '.bree-img');
     }
 </script>
 
