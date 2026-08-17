@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import urllib.request
 import urllib.error
@@ -9,6 +10,36 @@ if not TOKEN:
     print("No GITHUB_TOKEN provided")
     exit(1)
 
+REPO_ID = "R_kgDOTznXWA"
+CATEGORY_ID = "DIC_kwDOTznXWM4DDBk5"
+
+def graphql_request(query, variables=None):
+    url = "https://api.github.com/graphql"
+    headers = {
+        "Authorization": f"Bearer {TOKEN}",
+        "Content-Type": "application/json"
+    }
+    payload = {"query": query}
+    if variables:
+        payload["variables"] = variables
+    data = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(url, data=data, headers=headers)
+    with urllib.request.urlopen(req) as response:
+        return json.loads(response.read().decode())
+
+# 1. Parse index.md for all post IDs
+post_ids = set()
+try:
+    with open("index.md", "r", encoding="utf-8") as f:
+        content = f.read()
+        # Find all openDiscussion('...') occurrences
+        matches = re.findall(r"openDiscussion\('([^']+)'\)", content)
+        for m in matches:
+            post_ids.add(m)
+except Exception as e:
+    print(f"Warning: Could not parse index.md: {e}")
+
+# 2. Fetch all existing discussions from GitHub
 QUERY = """
 query {
   repository(owner: "lol-dungeonmaster", name: "official-daily-banana") {
@@ -26,35 +57,51 @@ query {
   }
 }
 """
-
-url = "https://api.github.com/graphql"
-headers = {
-    "Authorization": f"Bearer {TOKEN}",
-    "Content-Type": "application/json"
-}
-data = json.dumps({"query": QUERY}).encode("utf-8")
-
-try:
-    req = urllib.request.Request(url, data=data, headers=headers)
-    with urllib.request.urlopen(req) as response:
-        result = json.loads(response.read().decode())
-except Exception as e:
-    print(f"Error fetching data: {e}")
-    exit(1)
-
+result = graphql_request(QUERY)
 nodes = result.get("data", {}).get("repository", {}).get("discussions", {}).get("nodes", [])
 
 new_counts = {}
+existing_titles = set()
 for node in nodes:
     title = node.get("title")
     if not title: continue
+    existing_titles.add(title)
     comments_count = node.get("comments", {}).get("totalCount", 0)
     reactions_count = node.get("reactions", {}).get("totalCount", 0)
     new_counts[title] = comments_count + reactions_count
 
+# 3. Create missing discussions via GraphQL mutation
+CREATE_MUTATION = """
+mutation CreateDiscussion($repoId: ID!, $catId: ID!, $title: String!, $body: String!) {
+  createDiscussion(input: {repositoryId: $repoId, categoryId: $catId, title: $title, body: $body}) {
+    discussion {
+      id
+    }
+  }
+}
+"""
+created_count = 0
+for pid in post_ids:
+    if pid not in existing_titles:
+        print(f"Creating missing discussion for {pid}...")
+        variables = {
+            "repoId": REPO_ID,
+            "catId": CATEGORY_ID,
+            "title": pid,
+            "body": f"Automated discussion thread for blog post: {pid}"
+        }
+        try:
+            graphql_request(CREATE_MUTATION, variables)
+            new_counts[pid] = 0
+            created_count += 1
+            # Sleep slightly to avoid GraphQL abuse rate limits
+            time.sleep(1)
+        except Exception as e:
+            print(f"Failed to create {pid}: {e}")
+
 output_path = "assets/data/comments.json"
 
-# Read existing data to preserve caching
+# 4. Read existing data to preserve caching
 existing_data = {}
 existing_timestamp = int(time.time() * 1000)
 if os.path.exists(output_path):
@@ -81,4 +128,4 @@ comments_data.update(new_counts)
 with open(output_path, "w") as f:
     json.dump(comments_data, f, indent=2)
 
-print(f"Successfully wrote {len(new_counts)} entries to {output_path}")
+print(f"Successfully wrote {len(new_counts)} entries to {output_path} ({created_count} newly created)")

@@ -541,7 +541,9 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
       
       // Instantly update the button on screen
       const btn = document.querySelector(`button[onclick="openDiscussion('${currentDiscussion}')"]`);
-      if (btn) btn.innerText = `Comments (${totalEngagement})`;
+      if (btn) {
+        btn.innerText = totalEngagement > 0 ? `Comments (${totalEngagement})` : 'Comments';
+      }
     }
 
     if (event.data.giscus.resizeHeight && currentDiscussion) {
@@ -602,16 +604,28 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   // 5. Polling for Live Comment/Reaction Counts (Method 2: Conditional GET)
   async function pollCommentCounts() {
     try {
-      // Standard fetch allows the browser to utilize its native caching + conditional GET (304 Not Modified)
-      const res = await fetch('assets/data/comments.json');
-      if (!res.ok) return;
-      const data = await res.json();
-      const serverTime = data._meta ? data._meta.lastUpdated : 0;
+      let data = {};
+      let serverTime = 0;
       
-      for (const [id, count] of Object.entries(data)) {
-        if (id === '_meta') continue;
-
-        let finalCount = count;
+      const res = await fetch('assets/data/comments.json');
+      if (res.ok) {
+        try {
+          data = await res.json();
+          serverTime = data._meta ? data._meta.lastUpdated : 0;
+        } catch(e) {}
+      }
+      
+      // Iterate over ALL discuss buttons on the page
+      const buttons = document.querySelectorAll('.discuss-btn');
+      buttons.forEach(btn => {
+        // Extract the entryId from the onclick attribute (e.g. openDiscussion('jul-14-26'))
+        const match = btn.getAttribute('onclick').match(/openDiscussion\('([^']+)'\)/);
+        if (!match) return;
+        const id = match[1];
+        
+        // Default to 0 if not found in JSON or JSON is empty
+        let finalCount = data[id] !== undefined ? data[id] : 0;
+        
         // Check if we have a locally cached count that is NEWER than the server's last updated time
         const cachedDataStr = sessionStorage.getItem('odb_count_' + id);
         if (cachedDataStr) {
@@ -622,13 +636,9 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
             }
           } catch (e) {}
         }
-
-        // Find the button for this discussion ID and update its text
-        const btn = document.querySelector(`button[onclick="openDiscussion('${id}')"]`);
-        if (btn) {
-          btn.innerText = `Comments (${finalCount})`;
-        }
-      }
+        
+        btn.innerText = finalCount > 0 ? `Comments (${finalCount})` : 'Comments';
+      });
     } catch (e) {
       console.warn("Failed to poll comment counts", e);
     }
