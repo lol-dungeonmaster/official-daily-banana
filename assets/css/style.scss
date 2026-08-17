@@ -319,7 +319,15 @@ pre {
 }
 
 .collapsible-code {
+  width: 0;
+  min-width: 100%;
   padding-bottom: 2.0rem; 
+}
+
+.collapsible-code pre, .collapsible-code code, .collapsible-code p {
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
 }
 
 .collapsible-code pre {
@@ -327,6 +335,9 @@ pre {
   margin: 0;
   background: rgba(0, 0, 0, 0.3);
   color: #cbcbcb;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
 }
 
 .collapsible-code button {
