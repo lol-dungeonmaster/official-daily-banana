@@ -13,13 +13,12 @@
 <div id="discuss-aug-16" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-15">Aug 15 // Dinosaurs: Stegosaurus</h2>
+<h2 id="aug-15" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Aug 15 // Dinosaurs: Stegosaurus <button onclick="switchStego()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="stego_v1" data-src="generated-artwork/Stegosaurus/v4-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Stegosaurus 1" class="stego-img lazy-img gallery-img active">
   <img id="stego_v2" data-src="generated-artwork/Stegosaurus/v6-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Stegosaurus 2" class="stego-img lazy-img gallery-img">
   <img id="stego_v3" data-src="generated-artwork/Stegosaurus/v8-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Stegosaurus 3" class="stego-img lazy-img gallery-img">
   
-  <button onclick="switchStego()" class="toggle-btn">Next Image</button>
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -32,13 +31,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-15" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-14">Aug 14 // Ring Design</h2>
+<h2 id="aug-14" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Aug 14 // Ring Design <button onclick="switchRing()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="ring_v1" data-src="generated-artwork/odb-ring-design/v4-nano-banana-2-lite-The_Curator_s_Displa.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Ring Design 1" class="ring-img lazy-img gallery-img active">
   <img id="ring_v2" data-src="generated-artwork/odb-ring-design/v1-nano-banana-The_Artifact_Study__.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Ring Design 2" class="ring-img lazy-img gallery-img">
   <img id="ring_v3" data-src="generated-artwork/odb-ring-design/v4-nano-banana-2-lite-The_Obsidian_Plinth_.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Ring Design 3" class="ring-img lazy-img gallery-img">
   
-  <button onclick="switchRing()" class="toggle-btn">Next Image</button>
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -49,13 +47,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-14" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-13">Aug 13 // Intl. Wolf Day</h2>
+<h2 id="aug-13" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Aug 13 // Intl. Wolf Day <button onclick="switchWolf()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="wolf_v1" data-src="generated-artwork/official-daily-banana-wolf-day-carpathians/v4-nano-banana-pro-The_Carpathians__A_p.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl Wolf Day 1" class="wolf-img lazy-img gallery-img active">
   <img id="wolf_v2" data-src="generated-artwork/official-daily-banana-wolf-day-mongolia/v5-nano-banana-2-Mongolia__Gobi_Sunse.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl Wolf Day 2" class="wolf-img lazy-img gallery-img">
   <img id="wolf_v3" data-src="generated-artwork/official-daily-banana-wolf-day-northern_mexico/v6-nano-banana-2-Northern_Mexico__Sie.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl Wolf Day 3" class="wolf-img lazy-img gallery-img">
   
-  <button onclick="switchWolf()" class="toggle-btn">Next Image</button>
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -88,13 +85,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-11" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="aug-10">Aug 10 // World Lion Day</h2>
+<h2 id="aug-10" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Aug 10 // World Lion Day <button onclick="switchLion()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="lion_v1" data-src="generated-artwork/official-daily-banana-lion-prompt2_ethereal/v3-imagen-ultra-Ethereal___Artistic_.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="World Lion Day 1" class="lion-img lazy-img gallery-img active">
   <img id="lion_v2" data-src="generated-artwork/official-daily-banana-lion-prompt2_ethereal/v4-imagen-ultra-Ethereal___Artistic_.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="World Lion Day 2" class="lion-img lazy-img gallery-img">
   <img id="lion_v3" data-src="generated-artwork/official-daily-banana-lion-journalistic-v2-cubs_leaping/v5-nano-banana-An_atmospheric__wide.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="World Lion Day 3" class="lion-img lazy-img gallery-img">
   
-  <button onclick="switchLion()" class="toggle-btn">Next Image</button>
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -204,12 +200,11 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-aug-01" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-31">Jul 31 // Fortifications</h2>
+<h2 id="jul-31" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Jul 31 // Fortifications <button onclick="switchFort()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="fort_v1" data-src="generated-artwork/fortifications/v11-nano-banana-A_highly_detailed__p.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Fortifications_1" class="fort-img lazy-img gallery-img active">
   <img id="fort_v2" data-src="generated-artwork/fortifications-v2/v5-nano-banana-2-A_breathtaking__edge.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Fortifications_2" class="fort-img lazy-img gallery-img">
   
-  <button onclick="switchFort()" class="toggle-btn">Next Image</button>
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -231,7 +226,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-30" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-29">Jul 29 // Games</h2>
+<h2 id="jul-29" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Jul 29 // Games <button onclick="switchGame()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="games_v1" data-src="generated-artwork/mario-search/v3-nano-banana-A_breathtaking__stud.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Games 1" class="game-img lazy-img gallery-img active">
   <img id="games_v2" data-src="generated-artwork/mario-search/v16-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Games 2" class="game-img lazy-img gallery-img">
@@ -240,7 +235,6 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <img id="games_v5" data-src="generated-artwork/mario-search-bowser/v7-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Games 5" class="game-img lazy-img gallery-img">
   <img id="games_v6" data-src="generated-artwork/mario-search-bowser/v11-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Games 6" class="game-img lazy-img gallery-img">
   
-  <button onclick="switchGame()" class="toggle-btn">Next Image</button>
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -251,7 +245,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-29" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-28">Jul 28 // Botanical Robots</h2>
+<h2 id="jul-28" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Jul 28 // Botanical Robots <button onclick="switchBot()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="bot_v1" data-src="generated-artwork/plant-mech-animals/v16-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Botanical Robots 1" class="bot-img lazy-img gallery-img active">
   <img id="bot_v2" data-src="generated-artwork/plant-mech-animals/v14-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Botanical Robots 2" class="bot-img lazy-img gallery-img">
@@ -262,7 +256,6 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <img id="bot_v7" data-src="generated-artwork/dystopian-plant-mechs/v13-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Botanical Robots 7" class="bot-img lazy-img gallery-img">
   <img id="bot_v8" data-src="generated-artwork/dystopian-plant-mechs/v16-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Botanical Robots 8" class="bot-img lazy-img gallery-img">
   
-  <button onclick="switchBot()" class="toggle-btn">Next Image</button>
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -273,13 +266,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-28" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-27">Jul 27 // Dinosaurs: Quetzalcoatlus</h2>
+<h2 id="jul-27" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Jul 27 // Dinosaurs: Quetzalcoatlus <button onclick="switchQuetz()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="Quetz_v1" data-src="generated-artwork/Quetzalcoatlus/v3-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Quetzalcoatlus 1" class="quetz-img lazy-img gallery-img active">
   <img id="Quetz_v2" data-src="generated-artwork/Quetzalcoatlus/v5-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Quetzalcoatlus 2" class="quetz-img lazy-img gallery-img">
   <img id="Quetz_v3" data-src="generated-artwork/Quetzalcoatlus/v8-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Quetzalcoatlus 3" class="quetz-img lazy-img gallery-img">
   
-  <button onclick="switchQuetz()" class="toggle-btn">Next Image</button>
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -292,14 +284,13 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-27" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-26">Jul 26 // Dinosaurs: Archaeopteryx</h2>
+<h2 id="jul-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Jul 26 // Dinosaurs: Archaeopteryx <button onclick="switchArcha()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="Archa_v1" data-src="generated-artwork/Archaeopteryx/v3-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Archaeopteryx 1" class="archa-img lazy-img gallery-img active">
   <img id="Archa_v2" data-src="generated-artwork/Archaeopteryx/v4-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Archaeopteryx 2" class="archa-img lazy-img gallery-img">
   <img id="Archa_v3" data-src="generated-artwork/Archaeopteryx/v7-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Archaeopteryx 3" class="archa-img lazy-img gallery-img">
   <img id="Archa_v4" data-src="generated-artwork/Archaeopteryx/v8-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Archaeopteryx 4" class="archa-img lazy-img gallery-img">
   
-  <button onclick="switchArcha()" class="toggle-btn">Next Image</button>
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -312,13 +303,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-25">Jul 25 // Dinosaurs: Tyrannosaurus Rex</h2>
+<h2 id="jul-25" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Jul 25 // Dinosaurs: Tyrannosaurus Rex <button onclick="switchTyran()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="Tyran_v1" data-src="generated-artwork/Tyrannosaurus_Rex/v5-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Tyrannosaurus 1" class="tyran-img lazy-img gallery-img active">
   <img id="Tyran_v2" data-src="generated-artwork/Tyrannosaurus_Rex/v6-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Tyrannosaurus 2" class="tyran-img lazy-img gallery-img">
   <img id="Tyran_v3" data-src="generated-artwork/Tyrannosaurus_Rex/v8-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Tyrannosaurus 3" class="tyran-img lazy-img gallery-img">
   
-  <button onclick="switchTyran()" class="toggle-btn">Next Image</button>
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -331,7 +321,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-25" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
-<h2 id="jul-24">Jul 24 // Time-traveling Animals</h2>
+<h2 id="jul-24" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;">Jul 24 // Time-traveling Animals <button onclick="switchTTP()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="ttp_v1" data-src="generated-artwork/time-traveling-pets/v23-imagen-A_photorealistic_stu.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Time-traveling Pets 1" class="ttp-img lazy-img gallery-img active">
   <img id="ttp_v2" data-src="generated-artwork/time-traveling-pets/v19-imagen-ultra-A_photorealistic_stu.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Time-traveling Pets 2" class="ttp-img lazy-img gallery-img">
@@ -340,7 +330,6 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <img id="ttp_v5" data-src="generated-artwork/time-traveling-pets/v14-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Time-traveling Pets 5" class="ttp-img lazy-img gallery-img">
   <img id="ttp_v6" data-src="generated-artwork/time-traveling-pets/v15-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Time-traveling Pets 6" class="ttp-img lazy-img gallery-img">
   
-  <button onclick="switchTTP()" class="toggle-btn">Next Image</button>
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">

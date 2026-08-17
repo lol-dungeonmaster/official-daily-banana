@@ -20,7 +20,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 const galleryFrame = img.closest('.gallery-frame');
                 if (galleryFrame && galleryFrame.querySelectorAll('.gallery-img').length > 1) {
                     lightboxNextBtn.style.display = 'inline-flex';
-                    currentGalleryBtn = galleryFrame.querySelector('.toggle-btn');
+                    const prevH2 = galleryFrame.previousElementSibling;
+                    if (prevH2 && prevH2.tagName === 'H2') {
+                        currentGalleryBtn = prevH2.querySelector('.toggle-btn');
+                    } else {
+                        currentGalleryBtn = null;
+                    }
                 } else {
                     lightboxNextBtn.style.display = 'none';
                     currentGalleryBtn = null;
@@ -38,12 +43,35 @@ document.addEventListener("DOMContentLoaded", function() {
             if (currentGalleryBtn) {
                 currentGalleryBtn.click(); // Trigger the gallery's native toggle function
                 // Update lightbox image source based on the newly active image
-                const galleryFrame = currentGalleryBtn.closest('.gallery-frame');
-                if (galleryFrame) {
+                const h2 = currentGalleryBtn.closest('h2');
+                const galleryFrame = h2 ? h2.nextElementSibling : null;
+                if (galleryFrame && galleryFrame.classList.contains('gallery-frame')) {
                     const activeImg = galleryFrame.querySelector('.gallery-img.active');
                     if (activeImg) {
+                        // Create a temporary clone for the crossfade effect
+                        const clone = lightboxImg.cloneNode();
+                        clone.removeAttribute('id'); // Prevent ID collision
+                        clone.style.position = 'absolute';
+                        clone.style.top = '0';
+                        clone.style.left = '0';
+                        clone.style.width = '100vw';
+                        clone.style.height = '100vh';
+                        clone.style.objectFit = 'contain';
+                        clone.style.pointerEvents = 'none'; // Don't block clicks
+                        clone.style.transition = 'opacity 0.5s ease-in-out';
+                        clone.style.zIndex = '10'; // ensure it's on top of the underlying image
+                        lightboxImg.parentElement.appendChild(clone);
+
+                        // Swap the underlying image instantly
                         lightboxImg.src = activeImg.src;
                         lightboxLink.href = activeImg.src;
+
+                        // Force the browser to register the clone's initial state before fading
+                        void clone.offsetWidth;
+
+                        // Trigger the fade-out on the clone
+                        clone.style.opacity = '0';
+                        setTimeout(() => clone.remove(), 500);
                     }
                 }
             }

@@ -252,8 +252,10 @@ header h2 {
 }
 
 #main_content section img {
-  width: 100vw;
+  max-width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .wrapper .container {
@@ -325,6 +327,8 @@ pre {
 }
 
 .gallery-frame img {
+  display: block;
+  margin: 0 auto;
   max-width: 100%;
   height: auto !important;
   object-fit: contain;
@@ -338,6 +342,8 @@ pre {
 }
 
 .lazy-img {
+  display: block;
+  margin: 0 auto;
   opacity: 0;             /* Start the image invisible for a smooth fade-in */
   transition: opacity 0.5s ease-in;
   max-width: 100%;
@@ -355,6 +361,8 @@ pre {
   position: absolute;     /* Removes the image from the layout flow */
   top: 0;
   left: 0;
+  right: 0;               /* Anchor both sides to center absolute image */
+  margin: 0 auto;         /* Center horizontally */
   opacity: 0;
   pointer-events: none;
 }
