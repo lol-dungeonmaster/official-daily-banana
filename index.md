@@ -387,6 +387,20 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-21-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
+<h2 id="jul-14-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-14-26">Jul 14 // Forgotten Forest Secrets</a> <button onclick="switchForest()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<div class="gallery-frame">
+  <img id="forest_v1" data-src="generated-artwork/forgotten-forest-secrets/v1_forest_secret.jpg" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Forgotten Forest Secrets 1" class="forest-img lazy-img gallery-img active">
+  <img id="forest_v2" data-src="generated-artwork/forgotten-forest-secrets/v2_forest_secret.jpg" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Forgotten Forest Secrets 2" class="forest-img lazy-img gallery-img">
+</div>
+<div class="collapsible-code">
+<div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+  <button type="button">Forgotten Forest Secrets</button>
+  <button type="button" class="discuss-btn" onclick="openDiscussion('jul-14-26')">Comments</button>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Reference Material: forest_secret_1, forest_secret_2, and forest_secret_3</strong></p><p><strong>Phase 1: The Establishing Prompt</strong><br/>An ultra-detailed cinematic, photorealistic shot of a forgotten forest shack at blue hour. Ethereal moonlight streaming through a dense canopy, highlighting deep, moody cinematic blues and glowing lunar highlights across the valley. Lush mossy stone textures on the roof and bridge. The scene must include the rocky ridge path, guard-rail, cistern, and stone arch bridge over the waterfall. Negative prompt: The scene must be completely devoid of characters or people.</p><p><strong>Reference Material: v1_forest_secret</strong></p><p><strong>Phase 2: The Correction Prompt</strong><br/>Using the provided reference image, maintain the precise spatial layout and magical blue-hour moonlight. Modifications: Apply a very subdued, realistic warm amber glow ONLY to the exact pre-existing windows on the main large shack as seen in the original basis shot. Crucial: Do not add any new windows or structural fixtures that are not in the reference image. Retain the gentle chimney woodsmoke rising into the night air. Keep the small left structure perfectly dark. Do not add any characters.</p></code></pre></div>
+<div id="discuss-jul-14-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close">&times;</span>
   <img id="lightbox-img" src="" alt="Fullscreen view">
@@ -417,6 +431,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let stegoIndex = 0;
     let mosaIndex = 0;
     let breeIndex = 0;
+    let forestIndex = 0;
 
     function switchGallery(currentIndex, className) {
       const imgs = document.querySelectorAll(className);
@@ -460,6 +475,9 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     }
     function switchBree() {
       breeIndex = switchGallery(breeIndex, '.bree-img');
+    }
+    function switchForest() {
+      forestIndex = switchGallery(forestIndex, '.forest-img');
     }
 </script>
 
