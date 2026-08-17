@@ -340,6 +340,21 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div id="discuss-jul-24-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 
+<h2 id="jul-23-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-23-26">Jul 23 // Dinosaurs: Mosasaurus</a> <button onclick="switchMosa()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<div class="gallery-frame">
+  <img id="mosa_v1" data-src="generated-artwork/Mosasaurus/v3-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Mosasaurus 1" class="mosa-img lazy-img gallery-img active">
+  <img id="mosa_v2" data-src="generated-artwork/Mosasaurus/v4-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Mosasaurus 2" class="mosa-img lazy-img gallery-img">
+  <img id="mosa_v3" data-src="generated-artwork/Mosasaurus/v7-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Mosasaurus 3" class="mosa-img lazy-img gallery-img">
+</div>
+<div class="collapsible-code">
+<div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+  <button type="button">Dinosaurs: Mosasaurus</button>
+  <button type="button" class="discuss-btn" onclick="openDiscussion('jul-23-26')">Comments</button>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><p>A breathtaking, studio quality, hyper-realistic depiction of a Mosasaurus (gliding gracefully through a sunlit, crystal-clear prehistoric reef). Full environmental effects, incredibly exquisite detail on the animal's textures, skin, and authentic prehistoric environment. Subtle, realistic camera and lens effects. CRITICAL INSTRUCTION: There must be absolutely NO predator-prey interaction, no hunting, and no feeding depicted. If this is a carnivore, it must be depicted isolated from any prey species. Masterpiece quality. {lighting_and_atmosphere}</p><p>Lighting Variants ({lighting_and_atmosphere}):<br/>Variant 1 (Morning): Lighting/Environment: Bright, crisp morning sunlight piercing through the atmosphere, vibrant colors, clear visibility.<br/>Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golden-hour, or overcast skies with soft, diffused atmospheric shadows.</p></code></pre></div>
+<div id="discuss-jul-23-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close">&times;</span>
   <img id="lightbox-img" src="" alt="Fullscreen view">
@@ -368,6 +383,8 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let wolfIndex = 0;
     let ringIndex = 0;
     let stegoIndex = 0;
+    let mosaIndex = 0;
+
     function switchGallery(currentIndex, className) {
       const imgs = document.querySelectorAll(className);
       imgs[currentIndex].classList.remove('active');    // 1. Remove the active class
@@ -404,6 +421,9 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     }
     function switchStego() {
       stegoIndex = switchGallery(stegoIndex, '.stego-img');
+    }
+    function switchMosa() {
+      mosaIndex = switchGallery(mosaIndex, '.mosa-img');
     }
 </script>
 
