@@ -35,7 +35,8 @@ try:
         # Find all openDiscussion('...') occurrences
         matches = re.findall(r"openDiscussion\('([^']+)'\)", content)
         for m in matches:
-            post_ids.add(m)
+            if "${" not in m: # Ignore Javascript template literals
+                post_ids.add(m)
 except Exception as e:
     print(f"Warning: Could not parse index.md: {e}")
 

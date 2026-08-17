@@ -1,0 +1,76 @@
+name: Deploy Jekyll site with Comments
+
+on:
+  push:
+    branches: ["main"]
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages and access Discussions
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  discussions: read
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Fetch Comments & Create Missing Discussions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/fetch_comments.py
+
+      - name: Commit Comment Counts
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add assets/data/comments.json
+          
+          if ! git diff --staged --quiet; then
+            LAST_COMMIT_MSG=$(git log -1 --pretty=%s)
+            if [ "$LAST_COMMIT_MSG" = "chore: auto-update comment counts" ]; then
+              git commit --amend --no-edit
+              git push --force origin main
+            else
+              git commit -m "chore: auto-update comment counts"
+              git push origin main
+            fi
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
