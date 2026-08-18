@@ -2,6 +2,32 @@
 {% include nav.html %}
 <div class="container">
 
+<h2 id="aug-17-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-17-26">Aug 17 // Sprite Sheets</a> <button onclick="switchSprite()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+<div class="gallery-frame">
+  <img id="sprite_v1_png" data-src="generated-artwork/character-f-sprite/v1-nano-banana-pro-Sprite_sheet_of_a_ha.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Sprite Sheet 1" class="sprite-img lazy-img gallery-img active">
+  <img id="sprite_v1_gif" data-src="generated-artwork/character-f-sprite/v1-nano-banana-pro-Sprite_sheet_of_a_ha.gif" style="aspect-ratio: 1024 / 1024;" alt="Sprite GIF 1" class="sprite-img lazy-img gallery-img no-upscale">
+  <img id="sprite_v2_png" data-src="generated-artwork/character-f-sprite/v2-nano-banana-pro-Sprite_sheet_of_a_ha.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Sprite Sheet 2" class="sprite-img lazy-img gallery-img">
+  <img id="sprite_v2_gif" data-src="generated-artwork/character-f-sprite/v2-nano-banana-pro-Sprite_sheet_of_a_ha.gif" style="aspect-ratio: 1024 / 1024;" alt="Sprite GIF 2" class="sprite-img lazy-img gallery-img no-upscale">
+  <img id="sprite_v3_png" data-src="generated-artwork/character-f-sprite/v3-nano-banana-2-Sprite_sheet_of_a_ha.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Sprite Sheet 3" class="sprite-img lazy-img gallery-img">
+  <img id="sprite_v3_gif" data-src="generated-artwork/character-f-sprite/v3-nano-banana-2-Sprite_sheet_of_a_ha.gif" style="aspect-ratio: 1024 / 1024;" alt="Sprite GIF 3" class="sprite-img lazy-img gallery-img no-upscale">
+  <img id="sprite_v4_png" data-src="generated-artwork/character-f-sprite/v4-nano-banana-pro-Sprite_sheet_of_a_ha.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Sprite Sheet 4" class="sprite-img lazy-img gallery-img">
+  <img id="sprite_v4_gif" data-src="generated-artwork/character-f-sprite/v4-nano-banana-pro-Sprite_sheet_of_a_ha.gif" style="aspect-ratio: 1024 / 1024;" alt="Sprite GIF 4" class="sprite-img lazy-img gallery-img no-upscale">
+  <img id="sprite_v5_png" data-src="generated-artwork/character-f-sprite/v5-nano-banana-2-Sprite_sheet_of_a_ha.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Sprite Sheet 5" class="sprite-img lazy-img gallery-img">
+  <img id="sprite_v5_gif" data-src="generated-artwork/character-f-sprite/v5-nano-banana-2-Sprite_sheet_of_a_ha.gif" style="aspect-ratio: 1024 / 1024;" alt="Sprite GIF 5" class="sprite-img lazy-img gallery-img no-upscale">
+  <img id="sprite_v6_png" data-src="generated-artwork/character-f-sprite/v6-nano-banana-pro-Sprite_sheet_of_a_ha.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Sprite Sheet 6" class="sprite-img lazy-img gallery-img">
+  <img id="sprite_v6_gif" data-src="generated-artwork/character-f-sprite/v6-nano-banana-pro-Sprite_sheet_of_a_ha.gif" style="aspect-ratio: 1024 / 1024;" alt="Sprite GIF 6" class="sprite-img lazy-img gallery-img no-upscale">
+  <img id="sprite_v7_png" data-src="generated-artwork/character-f-sprite/v7-nano-banana-pro-Sprite_sheet_of_a_ha.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Sprite Sheet 7" class="sprite-img lazy-img gallery-img">
+  <img id="sprite_v7_gif" data-src="generated-artwork/character-f-sprite/v7-nano-banana-pro-Sprite_sheet_of_a_ha.gif" style="aspect-ratio: 1024 / 1024;" alt="Sprite GIF 7" class="sprite-img lazy-img gallery-img no-upscale">
+</div>
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Sprite Sheets</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-17-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>1. Generate a Sprite-sheet</strong></p><p><strong>- 3x3 Grid:</strong><br/>Sprite sheet of a halfling playing their Theorbo, realistic single neck theorbo, 3x3 grid, white background, sequence, frame by frame animation, square aspect ratio. Follow the structure of the attached reference images exactly ensuring to apply to the grid template from grid_3x3_1024.png.</p><p><strong>- 4x4 Grid + Singing Prompt:</strong><br/>Sprite sheet of a halfling playing their Theorbo, realistic single neck theorbo, 4x4 grid, white background, sequence, frame by frame animation, square aspect ratio, 1024x1024 resolution. The character is singing along to playing the theorbo. Follow the structure of the attached reference images exactly.</p><p><em>Note: Results may be improved with higher resolution sprite sheets (optional, up to 8K)</em></p><p><strong>2. Convert the sheet to GIF</strong><br/><a href="https://gist.github.com/lol-dungeonmaster/ae288a004e52d6a6c2ebbdbf0cb3e495">sprite_to_gif.py</a></p></code></pre></div>
+  <div id="discuss-aug-17-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+
 <h2 id="aug-16-26"><a href="#aug-16-26">Aug 16 // Some Assembly Required</a></h2>
 <div class="gallery-frame"><img data-src="generated-artwork/pizza_infographic/v4-nano-banana-pro-Generate_a_16_9_high.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Some Assembly Required" /></div>
 <div class="collapsible-code">
@@ -18,7 +44,6 @@
   <img id="stego_v1" data-src="generated-artwork/Stegosaurus/v4-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Stegosaurus 1" class="stego-img lazy-img gallery-img active">
   <img id="stego_v2" data-src="generated-artwork/Stegosaurus/v6-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Stegosaurus 2" class="stego-img lazy-img gallery-img">
   <img id="stego_v3" data-src="generated-artwork/Stegosaurus/v8-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Stegosaurus 3" class="stego-img lazy-img gallery-img">
-  
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -36,7 +61,6 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <img id="ring_v1" data-src="generated-artwork/odb-ring-design/v4-nano-banana-2-lite-The_Curator_s_Displa.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Ring Design 1" class="ring-img lazy-img gallery-img active">
   <img id="ring_v2" data-src="generated-artwork/odb-ring-design/v1-nano-banana-The_Artifact_Study__.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Ring Design 2" class="ring-img lazy-img gallery-img">
   <img id="ring_v3" data-src="generated-artwork/odb-ring-design/v4-nano-banana-2-lite-The_Obsidian_Plinth_.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Ring Design 3" class="ring-img lazy-img gallery-img">
-  
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -52,7 +76,6 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <img id="wolf_v1" data-src="generated-artwork/official-daily-banana-wolf-day-carpathians/v4-nano-banana-pro-The_Carpathians__A_p.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl Wolf Day 1" class="wolf-img lazy-img gallery-img active">
   <img id="wolf_v2" data-src="generated-artwork/official-daily-banana-wolf-day-mongolia/v5-nano-banana-2-Mongolia__Gobi_Sunse.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl Wolf Day 2" class="wolf-img lazy-img gallery-img">
   <img id="wolf_v3" data-src="generated-artwork/official-daily-banana-wolf-day-northern_mexico/v6-nano-banana-2-Northern_Mexico__Sie.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl Wolf Day 3" class="wolf-img lazy-img gallery-img">
-  
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -90,7 +113,6 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <img id="lion_v1" data-src="generated-artwork/official-daily-banana-lion-prompt2_ethereal/v3-imagen-ultra-Ethereal___Artistic_.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="World Lion Day 1" class="lion-img lazy-img gallery-img active">
   <img id="lion_v2" data-src="generated-artwork/official-daily-banana-lion-prompt2_ethereal/v4-imagen-ultra-Ethereal___Artistic_.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="World Lion Day 2" class="lion-img lazy-img gallery-img">
   <img id="lion_v3" data-src="generated-artwork/official-daily-banana-lion-journalistic-v2-cubs_leaping/v5-nano-banana-An_atmospheric__wide.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="World Lion Day 3" class="lion-img lazy-img gallery-img">
-  
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -204,7 +226,6 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div class="gallery-frame">
   <img id="fort_v1" data-src="generated-artwork/fortifications/v11-nano-banana-A_highly_detailed__p.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Fortifications_1" class="fort-img lazy-img gallery-img active">
   <img id="fort_v2" data-src="generated-artwork/fortifications-v2/v5-nano-banana-2-A_breathtaking__edge.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Fortifications_2" class="fort-img lazy-img gallery-img">
-  
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -234,7 +255,6 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <img id="games_v4" data-src="generated-artwork/mario-search-2.5D/v7-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Games 4" class="game-img lazy-img gallery-img">
   <img id="games_v5" data-src="generated-artwork/mario-search-bowser/v7-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Games 5" class="game-img lazy-img gallery-img">
   <img id="games_v6" data-src="generated-artwork/mario-search-bowser/v11-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Games 6" class="game-img lazy-img gallery-img">
-  
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -255,7 +275,6 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <img id="bot_v6" data-src="generated-artwork/dystopian-plant-mechs/v1-nano-banana-A_photorealistic_stu.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Botanical Robots 6" class="bot-img lazy-img gallery-img">
   <img id="bot_v7" data-src="generated-artwork/dystopian-plant-mechs/v13-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Botanical Robots 7" class="bot-img lazy-img gallery-img">
   <img id="bot_v8" data-src="generated-artwork/dystopian-plant-mechs/v16-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Botanical Robots 8" class="bot-img lazy-img gallery-img">
-  
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -271,7 +290,6 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <img id="Quetz_v1" data-src="generated-artwork/Quetzalcoatlus/v3-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Quetzalcoatlus 1" class="quetz-img lazy-img gallery-img active">
   <img id="Quetz_v2" data-src="generated-artwork/Quetzalcoatlus/v5-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Quetzalcoatlus 2" class="quetz-img lazy-img gallery-img">
   <img id="Quetz_v3" data-src="generated-artwork/Quetzalcoatlus/v8-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Quetzalcoatlus 3" class="quetz-img lazy-img gallery-img">
-  
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -290,7 +308,6 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <img id="Archa_v2" data-src="generated-artwork/Archaeopteryx/v4-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Archaeopteryx 2" class="archa-img lazy-img gallery-img">
   <img id="Archa_v3" data-src="generated-artwork/Archaeopteryx/v7-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Archaeopteryx 3" class="archa-img lazy-img gallery-img">
   <img id="Archa_v4" data-src="generated-artwork/Archaeopteryx/v8-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Archaeopteryx 4" class="archa-img lazy-img gallery-img">
-  
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -308,7 +325,6 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <img id="Tyran_v1" data-src="generated-artwork/Tyrannosaurus_Rex/v5-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Tyrannosaurus 1" class="tyran-img lazy-img gallery-img active">
   <img id="Tyran_v2" data-src="generated-artwork/Tyrannosaurus_Rex/v6-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Tyrannosaurus 2" class="tyran-img lazy-img gallery-img">
   <img id="Tyran_v3" data-src="generated-artwork/Tyrannosaurus_Rex/v8-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Tyrannosaurus 3" class="tyran-img lazy-img gallery-img">
-  
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -329,7 +345,6 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <img id="ttp_v4" data-src="generated-artwork/time-traveling-pets/v13-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Time-traveling Pets 4" class="ttp-img lazy-img gallery-img">
   <img id="ttp_v5" data-src="generated-artwork/time-traveling-pets/v14-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Time-traveling Pets 5" class="ttp-img lazy-img gallery-img">
   <img id="ttp_v6" data-src="generated-artwork/time-traveling-pets/v15-nano-banana-2-lite-A_photorealistic_stu.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Time-traveling Pets 6" class="ttp-img lazy-img gallery-img">
-  
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -418,21 +433,6 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
       img1.classList.toggle('active');
       img2.classList.toggle('active');
     }
-
-    let lionIndex = 0; // '.lion-img'
-    let gameIndex = 0; // '.game-img'
-    let botIndex = 0;  // '.bot-img'
-    let quetzIndex = 0;
-    let archaIndex = 0;
-    let tyranIndex = 0;
-    let ttpIndex = 0;
-    let wolfIndex = 0;
-    let ringIndex = 0;
-    let stegoIndex = 0;
-    let mosaIndex = 0;
-    let breeIndex = 0;
-    let forestIndex = 0;
-
     function switchGallery(currentIndex, className) {
       const imgs = document.querySelectorAll(className);
       imgs[currentIndex].classList.remove('active');    // 1. Remove the active class
@@ -440,44 +440,61 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
       imgs[currentIndex].classList.add('active');       // 3. Add the active class to the new current image
       return currentIndex;
     }
+    let lionIndex = 0; // '.lion-img'
     function switchLion() {
       lionIndex = switchGallery(lionIndex, '.lion-img');
     }
+    let gameIndex = 0; // '.game-img'
     function switchGame() {
       gameIndex = switchGallery(gameIndex, '.game-img');
     }
+    let botIndex = 0;  // '.bot-img'
     function switchBot() {
       botIndex = switchGallery(botIndex, '.bot-img');
     }
+    let quetzIndex = 0;
     function switchQuetz() {
       quetzIndex = switchGallery(quetzIndex, '.quetz-img');
     }
+    let archaIndex = 0;
     function switchArcha() {
       archaIndex = switchGallery(archaIndex, '.archa-img');
     }
+    let tyranIndex = 0;
     function switchTyran() {
       tyranIndex = switchGallery(tyranIndex, '.tyran-img');
     }
+    let ttpIndex = 0;
     function switchTTP() {
       ttpIndex = switchGallery(ttpIndex, '.ttp-img');
     }
+    let wolfIndex = 0;
     function switchWolf() {
       wolfIndex = switchGallery(wolfIndex, '.wolf-img');
     }
+    let ringIndex = 0;
     function switchRing() {
       ringIndex = switchGallery(ringIndex, '.ring-img');
     }
+    let stegoIndex = 0;
     function switchStego() {
       stegoIndex = switchGallery(stegoIndex, '.stego-img');
     }
+    let mosaIndex = 0;
     function switchMosa() {
       mosaIndex = switchGallery(mosaIndex, '.mosa-img');
     }
+    let breeIndex = 0;
     function switchBree() {
       breeIndex = switchGallery(breeIndex, '.bree-img');
     }
+    let forestIndex = 0;
     function switchForest() {
       forestIndex = switchGallery(forestIndex, '.forest-img');
+    }
+    let spriteIndex = 0;
+    function switchSprite() {
+      spriteIndex = switchGallery(spriteIndex, '.sprite-img');
     }
 </script>
 

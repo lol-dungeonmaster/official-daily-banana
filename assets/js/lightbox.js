@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
             lightboxImg.src = img.src; // Set the lightbox image to the clicked image's source
             lightboxLink.href = img.src; 
             
+            if (img.classList.contains('no-upscale')) {
+                lightboxImg.classList.add('no-upscale');
+            } else {
+                lightboxImg.classList.remove('no-upscale');
+            }
+            
             // Check for gallery frame to show/hide next button
             if (lightboxNextBtn) {
                 const galleryFrame = img.closest('.gallery-frame');
@@ -48,6 +54,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (galleryFrame && galleryFrame.classList.contains('gallery-frame')) {
                     const activeImg = galleryFrame.querySelector('.gallery-img.active');
                     if (activeImg) {
+                        // Get the current object-fit before we make changes
+                        const currentFit = window.getComputedStyle(lightboxImg).objectFit;
+                        
                         // Create a temporary clone for the crossfade effect
                         const clone = lightboxImg.cloneNode();
                         clone.removeAttribute('id'); // Prevent ID collision
@@ -56,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         clone.style.left = '0';
                         clone.style.width = '100vw';
                         clone.style.height = '100vh';
-                        clone.style.objectFit = 'contain';
+                        clone.style.objectFit = currentFit;
                         clone.style.pointerEvents = 'none'; // Don't block clicks
                         clone.style.transition = 'opacity 0.5s ease-in-out';
                         clone.style.zIndex = '10'; // ensure it's on top of the underlying image
@@ -65,6 +74,13 @@ document.addEventListener("DOMContentLoaded", function() {
                         // Swap the underlying image instantly
                         lightboxImg.src = activeImg.src;
                         lightboxLink.href = activeImg.src;
+                        
+                        // Transfer the no-upscale trait if the new image has it
+                        if (activeImg.classList.contains('no-upscale')) {
+                            lightboxImg.classList.add('no-upscale');
+                        } else {
+                            lightboxImg.classList.remove('no-upscale');
+                        }
 
                         // Force the browser to register the clone's initial state before fading
                         void clone.offsetWidth;
