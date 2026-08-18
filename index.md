@@ -29,7 +29,7 @@
 </div>
 
 <h2 id="aug-16-26"><a href="#aug-16-26">Aug 16 // Some Assembly Required</a></h2>
-<div class="gallery-frame"><img data-src="generated-artwork/pizza_infographic/v4-nano-banana-pro-Generate_a_16_9_high.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Some Assembly Required" /></div>
+<div class="gallery-frame"><img id="some_v1" data-src="generated-artwork/pizza_infographic/v4-nano-banana-pro-Generate_a_16_9_high.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Some Assembly Required" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Some Assembly Required</button>
@@ -87,7 +87,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <h2 id="aug-12-26"><a href="#aug-12-26">Aug 12 // World Hirola Day</a></h2>
-<div class="gallery-frame"><img data-src="generated-artwork/official-daily-banana-hirola-ethereal/v3-nano-banana-pro-An_ethereal_and_arti.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="World Hirola Day" /></div>
+<div class="gallery-frame"><img id="hiro_v1" data-src="generated-artwork/official-daily-banana-hirola-ethereal/v3-nano-banana-pro-An_ethereal_and_arti.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="World Hirola Day" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">World Hirola Day</button>
@@ -98,7 +98,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <h2 id="aug-11-26"><a href="#aug-11-26">Aug 11 // Hero Poses</a></h2>
-<div class="gallery-frame"><img data-src="generated-artwork/official-daily-banana-hero-poses-cinematic-v2/v10-nano-banana-2-A_dramatic__low_angl.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Hero Poses" /></div>
+<div class="gallery-frame"><img id="hero_v1" data-src="generated-artwork/official-daily-banana-hero-poses-cinematic-v2/v10-nano-banana-2-A_dramatic__low_angl.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Hero Poses" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Hero Poses</button>
@@ -124,7 +124,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <h2 id="aug-09-26"><a href="#aug-09-26">Aug 09 // Animal Migration</a></h2>
-<div class="gallery-frame"><img data-src="generated-artwork/animal-migration-prompt3_journalistic/v4-nano-banana-pro-A_raw__National_Geog.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Animal Migration" /></div>
+<div class="gallery-frame"><img id="anim_v1" data-src="generated-artwork/animal-migration-prompt3_journalistic/v4-nano-banana-pro-A_raw__National_Geog.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Animal Migration" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Animal Migration</button>
@@ -135,7 +135,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <h2 id="aug-08-26"><a href="#aug-08-26">Aug 08 // International Moon Bear Day</a></h2>
-<div class="gallery-frame"><img data-src="generated-artwork/moon-bear-prompt3_journalistic/v6-nano-banana-2-Wildlife_Documentary.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl. Moon Bear Day" /></div>
+<div class="gallery-frame"><img id="moon_v1" data-src="generated-artwork/moon-bear-prompt3_journalistic/v6-nano-banana-2-Wildlife_Documentary.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl. Moon Bear Day" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Intl. Moon Bear Day</button>
@@ -146,7 +146,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <h2 id="aug-07-26"><a href="#aug-07-26">Aug 07 // International Beer Day</a></h2>
-<div class="gallery-frame"><img data-src="generated-artwork/beer-prompt5_journalistic_pub/v5-nano-banana-2-Wildlife_Documentary.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl. Beer Day" /></div>
+<div class="gallery-frame"><img id="beer_v1" data-src="generated-artwork/beer-prompt5_journalistic_pub/v5-nano-banana-2-Wildlife_Documentary.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl. Beer Day" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Intl. Beer Day</button>
@@ -157,7 +157,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <h2 id="aug-06-26"><a href="#aug-06-26">Aug 06 // Scenes from Literature</a></h2>
-<div class="gallery-frame"><img data-src="generated-artwork/alice-prompt2_realistic_v3/v4-nano-banana-pro-Ethereal___Realistic.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature" /></div>
+<div class="gallery-frame"><img id="scen_v1" data-src="generated-artwork/alice-prompt2_realistic_v3/v4-nano-banana-pro-Ethereal___Realistic.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Scenes from Literature</button>
@@ -168,7 +168,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <h2 id="aug-05-26"><a href="#aug-05-26">Aug 05 // World Tomistoma Day</a></h2>
-<div class="gallery-frame"><img data-src="generated-artwork/tomistoma-prompt2_realistic/v5-nano-banana-2-Ethereal___Realistic.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="World Tomistoma Day" /></div>
+<div class="gallery-frame"><img id="tomi_v1" data-src="generated-artwork/tomistoma-prompt2_realistic/v5-nano-banana-2-Ethereal___Realistic.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="World Tomistoma Day" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">World Tomistoma Day</button>
@@ -179,7 +179,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <h2 id="aug-04-26"><a href="#aug-04-26">Aug 04 // Clouded Leopard Day</a></h2>
-<div class="gallery-frame"><img data-src="generated-artwork/clouded-leopard-prompt3/v4-nano-banana-pro-A_professional_wildl.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Clouded Leopard Day" /></div>
+<div class="gallery-frame"><img id="clou_v1" data-src="generated-artwork/clouded-leopard-prompt3/v4-nano-banana-pro-A_professional_wildl.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Clouded Leopard Day" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Clouded Leopard Day</button>
@@ -190,7 +190,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <h2 id="aug-03-26"><a href="#aug-03-26">Aug 03 // Graphic Novel Style</a></h2>
-<div class="gallery-frame"><img data-src="generated-artwork/character-m-gn/v2-nano-banana-pro-A_breathtaking__edge.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Graphic Novel Style" /></div>
+<div class="gallery-frame"><img id="grap_v1" data-src="generated-artwork/character-m-gn/v2-nano-banana-pro-A_breathtaking__edge.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Graphic Novel Style" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Graphic Novel Style</button>
@@ -201,7 +201,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <h2 id="aug-02-26"><a href="#aug-02-26">Aug 02 // Weather</a></h2>
-<div class="gallery-frame"><img data-src="generated-artwork/weather-v5/v12-nano-banana-2-lite-A_breathtaking__edge.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Weather" /></div>
+<div class="gallery-frame"><img id="weat_v1" data-src="generated-artwork/weather-v5/v12-nano-banana-2-lite-A_breathtaking__edge.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Weather" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Weather</button>
@@ -212,7 +212,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <h2 id="aug-01-26"><a href="#aug-01-26">Aug 01 // Ramen Shops</a></h2>
-<div class="gallery-frame"><img data-src="generated-artwork/ramen-shops-p4/v10-nano-banana-2-A_breathtaking__edge.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Ramen Shops" /></div>
+<div class="gallery-frame"><img id="rame_v1" data-src="generated-artwork/ramen-shops-p4/v10-nano-banana-2-A_breathtaking__edge.png" class="lazy-img" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="Ramen Shops" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Ramen Shops</button>
@@ -237,7 +237,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <h2 id="jul-30-26"><a href="#jul-30-26">Jul 30 // Alternative Human</a></h2>
-<div class="gallery-frame"><img data-src="generated-artwork/alien-alley-spoof-v3/v8-nano-banana-pro-A_hyper_realistic__s.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Alternative Human" /></div>
+<div class="gallery-frame"><img id="alte_v1" data-src="generated-artwork/alien-alley-spoof-v3/v8-nano-banana-pro-A_hyper_realistic__s.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Alternative Human" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Alternative Human</button>
@@ -392,7 +392,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <h2 id="jul-21-26"><a href="#jul-21-26">Jul 21 // Asking for Revert</a></h2>
-<div class="gallery-frame"><img data-src="generated-artwork/boromir-meme/v1-boromir-revert.jpg" class="lazy-img" style="aspect-ratio: 1264 / 848;" width="1264" height="848" alt="Asking for Revert" /></div>
+<div class="gallery-frame"><img id="aski_v1" data-src="generated-artwork/boromir-meme/v1-boromir-revert.jpg" class="lazy-img" style="aspect-ratio: 1264 / 848;" width="1264" height="848" alt="Asking for Revert" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Asking for Revert</button>
