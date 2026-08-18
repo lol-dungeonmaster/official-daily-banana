@@ -2,6 +2,22 @@
 {% include nav.html %}
 <div class="container">
 
+<h2 id="aug-18-26"><a href="#aug-18-26">Aug 18 // Intl. Pinot Noir Day</a></h2>
+
+<div class="gallery-frame">
+  <img id="pinot_v1" data-src="generated-artwork/pinot-noir-day-v5/v3-nano-banana-2-A_poster_for_the_Off.png" style="aspect-ratio: 848 / 1264;" width="848" height="1264" alt="Intl. Pinot Noir Day 1" class="lazy-img gallery-img active">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Intl. Pinot Noir Day</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-18-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p>An ultra-photorealistic, sweeping architectural vista of an expansive, vaulted historical Cistercian winery in Burgundy, France, captured from a high-angle wide perspective.</p><p>The Integrated Process Flow:</p><p>- The Harvest &amp; Sorting (Foreground): To the left, oversized hand-woven wicker baskets of deep purple Pinot Noir grapes spill onto a massive, rough-hewn oak sorting table. Artisans in 19th-century rural French attire are sorting berries by hand, moving them directly toward the fermentation hall.<br/>- The Fermentation Hall (Midground): The center of the room is dominated by a series of massive, open-top oak fermentation cuves that are half-sunken into the limestone floor, their heavy wooden rims flush with the ground. The hall shows the process in various stages:<br/>- Treading: In some cuves, workers in period attire are standing inside the vessels, treading the fresh grapes with bare feet to create the must.<br/>- Punching Down: In adjacent cuves, the wine is actively fermenting; workers stand on the limestone perimeter, leaning over the rims to punch down a thick, frothy, bubbling cap of grape skins with long wooden poles.<br/>- The Final Pressing (Midground Background): Beyond the vats stands the towering vertical wooden screw press. Wide wooden troughs filled with fermented skins are being moved from the finished cuves toward the press for the final extraction.<br/>- The Aging (Deep Background): The scene recedes into a vast, vaulted cathedral-like cellar where seasoned French oak barriques are stacked in long, vaulted rows, disappearing into a hazy, atmospheric distance.</p><p>Historical Authenticity &amp; Texture: Zero contemporary elements. Every surface is organic: oxidized copper, stained wood, damp limestone. The floor features centuries-old purple stains and mineral calcification.</p><p>Lighting &amp; Cinematic Quality: Dramatic chiaroscuro. Shafts of cold, northern light from high Romanesque windows collide with the flickering orange glow of wall-mounted oil lamps. A cool, heavy atmospheric haze and dust motes hang in the humid air.</p><p>Technical Specs: Shot on 24mm wide-angle prime lens, f/11 aperture for deep depth of field. 8k resolution, raw photographic style, muted earthy palette with the only vibrant color being the translucent, luminous ruby of the Pinot Noir.</p></code></pre></div>
+  <div id="discuss-aug-18-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+<hr>
+
 <h2 id="aug-17-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-17-26">Aug 17 // Sprite Sheets</a> <button onclick="switchSprite()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 <div class="gallery-frame">
   <img id="sprite_v1_png" data-src="generated-artwork/character-f-sprite/v1-nano-banana-pro-Sprite_sheet_of_a_ha.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Sprite Sheet 1" class="sprite-img lazy-img gallery-img active">
