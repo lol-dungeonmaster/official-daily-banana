@@ -2,6 +2,25 @@
 {% include nav.html %}
 <div class="container">
 
+<h2 id="aug-19-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-19-26">Aug 19 // World Orangutan Day</a> <button onclick="switchOran()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+
+<div class="gallery-frame">
+  <img id="oran_v1" data-src="generated-artwork/orangutan-day-final/v6-nano-banana-pro-A_poster_for_the_Off.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="World Orangutan Day 1" class="oran-img lazy-img gallery-img active">
+  <img id="oran_v2" data-src="generated-artwork/orangutan-day-final/v1-nano-banana-2-A_poster_for_the_Off.png" style="aspect-ratio: 768 / 1376;" width="768" height="1376" alt="World Orangutan Day 2" class="oran-img lazy-img gallery-img">
+  <img id="oran_v3" data-src="generated-artwork/orangutan-day-final/v5-nano-banana-2-A_poster_for_the_Off.png" style="aspect-ratio: 768 / 1376;" width="768" height="1376" alt="World Orangutan Day 3" class="oran-img lazy-img gallery-img">
+  
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">World Orangutan Day</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-19-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Tender Canopy Bond</strong></p><p>1. Cinematic &amp; Hyper-realistic: A cinematic movie-poster composition of a mother orangutan and her infant nestled in the mid-canopy. Dramatic high-contrast lighting with a single powerful beam of light illuminating the bond between mother and child. Hyper-realistic textures featuring subsurface scattering on the orange fur and crystalline dew drops on surrounding wild orchids. Deep emerald greens, 8k resolution, anamorphic lens, and IMAX quality.</p><p>2. Ethereal &amp; Artistic: An atmospheric, ethereal wide shot of a mother and infant orangutan shrouded in a dense, luminous morning mist that swirls through the mid-canopy. Vibrant wild orchids and epiphytes emerge like ghosts from the soft, silver-and-gold haze, blending the animals into the environment. The mother and her infant are partially enveloped by the fog, their warm orange fur creating a glowing focal point within the cool, translucent greens of the forest. Volumetric lighting, soft-focus dreamscape, and a transcendental fine-art nature aesthetic, captured as a breathtaking, immersive environmental scene.</p><p>3. Wildlife Documentary Style: A raw, candid wildlife shot of a mother orangutan cradling her infant on a thick rainforest branch. Captured with a 600mm telephoto lens at f/5.6, featuring razor-sharp focus on the infant's curious eyes and the mother's weathered skin. Natural, neutral color grading with authentic, diffused jungle light. Unfiltered detail of matted fur and organic textures in a National Geographic style, 8k resolution, zero post-processing look.</p><p><strong>The Forest Architect</strong></p><p>1. Cinematic &amp; Hyper-realistic: An epic cinematic wide shot of an orangutan constructing a massive nightly nest high in the Bornean canopy during the late afternoon golden hour. Low-angle, amber sunlight pierces through the dense canopy at a sharp slant, creating realistic, defined god-rays that illuminate the heavy evening humidity and lingering forest haze. Dramatic chiaroscuro lighting creates deep, rich shadows and brilliant golden highlights on the orangutan's orange fur and the damp, mossy bark. Wide-angle anamorphic perspective emphasizing the dizzying height and the grandeur of the dipterocarp trees, 8k resolution, movie-poster scale, hyper-realistic environmental textures.</p><p>2. Ethereal &amp; Artistic: An atmospheric, artistic depiction of an orangutan weaving its nest as twilight descends upon the Bornean canopy. The scene is enveloped in a settling evening haze, with the last remnants of the sun creating a luminous, burning amber and deep violet color palette. Dreamy, volumetric fog blurs the distant forest layers into a soft wash of indigo and emerald. The orangutan's fur glows with a soft, inner light against the darkening mist, captured with a soft-focus lens for a transcendental, fine-art nature aesthetic that evokes a sense of peace and closure at the end of the day.</p><p>3. Wildlife Documentary Style: A technical, high-detail wildlife photograph of an orangutan's hands meticulously weaving branches for a nest. Captured with a 400mm lens, emphasizing the intelligent dexterity and the structural complexity of the nest. Natural, flat lighting characteristic of a dense canopy, with authentic colors and deep, realistic shadows. Sharp detail on the texture of the leaves and the rough bark of the primary forest, 8k resolution, field-research style.</p></code></pre></div>
+  <div id="discuss-aug-19-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+<hr>
+
 <h2 id="aug-18-26"><a href="#aug-18-26">Aug 18 // Intl. Pinot Noir Day</a></h2>
 
 <div class="gallery-frame">
@@ -508,6 +527,11 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     function switchForest() {
       forestIndex = switchGallery(forestIndex, '.forest-img');
     }
+    let oranIndex = 0;
+    function switchOran() {
+      oranIndex = switchGallery(oranIndex, '.oran-img');
+    }
+    
     let spriteIndex = 0;
     function switchSprite() {
       spriteIndex = switchGallery(spriteIndex, '.sprite-img');
