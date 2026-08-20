@@ -2,6 +2,23 @@
 {% include nav.html %}
 <div class="container">
 
+<h2 id="aug-20-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-20-26">Aug 20 // Games II</a> <button onclick="switchHollin()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+
+<div class="gallery-frame">
+  <img id="game_v1" data-src="generated-artwork/ruins-of-hollin/v1-nano-banana-2-Cover_art_for_an_adv.png" style="aspect-ratio: 896 / 1200;" width="896" height="1200" alt="Games II 1" class="hollin-img lazy-img gallery-img active">
+  <img id="game_v2" data-src="generated-artwork/ruins-of-hollin/v2-nano-banana-2-Cover_art_for_an_adv.png" style="aspect-ratio: 1200 / 896;" width="1200" height="896" alt="Games II 2" class="hollin-img lazy-img gallery-img">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Games II</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-20-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p>Cover art for an adventure book. The layout and typography must perfectly match the provided reference image containing the 'The Lord of the Rings Roleplaying' logo. At the top center is the red ring logo containing the text '5E'. Below that is the prominent main title logo reading 'The Lord of the Rings Roleplaying' in the exact signature classic fantasy serif font shown in the reference. Below the main title, the subtitle reads 'Ruins of Hollin'.</p><p>A beautiful, highly detailed cinematic fantasy illustration. The art style MUST perfectly match the authentic, evocative painterly style of Middle-earth RPG book covers. The scene has a muted, earthy color palette with dramatic chiaroscuro lighting.</p><p>The setting is deep behind enemy lines. In the foreground, hidden securely in deep shadow behind a large, crumbling stone pillar, is a halfling burglar. The provided character reference images MUST be the sole basis for this character's physical design, clothing, and features. She is drawn in the exact same painted style as the official book covers. She is peeking out from her hiding spot, looking intently past the pillar at the enemy.</p><p>In the midground and background, the melancholic, white-stone ruins of the ancient Elven ring-forges of Eregion rise into the twilight sky. Saruman's forces—brutal Orcs and Dunlendings—are actively excavating the ancient stonework, their harsh torches and campfires casting an ominous, flickering orange glow.</p><p>8k resolution, masterpiece, official fantasy book cover design.</p></code></pre></div>
+  <div id="discuss-aug-20-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+<hr>
+
 <h2 id="aug-19-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-19-26">Aug 19 // World Orangutan Day</a> <button onclick="switchOran()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 
 <div class="gallery-frame">
@@ -527,6 +544,11 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     function switchForest() {
       forestIndex = switchGallery(forestIndex, '.forest-img');
     }
+    let hollinIndex = 0;
+    function switchHollin() {
+      hollinIndex = switchGallery(hollinIndex, '.hollin-img');
+    }
+    
     let oranIndex = 0;
     function switchOran() {
       oranIndex = switchGallery(oranIndex, '.oran-img');
