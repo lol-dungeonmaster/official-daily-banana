@@ -2,6 +2,24 @@
 {% include nav.html %}
 <div class="container">
 
+<h2 id="aug-21-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-21-26">Aug 21 // Dinosaurs: Velociraptor</a> <button onclick="switchRaptor()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+
+<div class="gallery-frame">
+  <img id="raptor_v1" data-src="generated-artwork/Velociraptor/v3-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Dinosaurs: Velociraptor 1" class="raptor-img lazy-img gallery-img active">
+  <img id="raptor_v2" data-src="generated-artwork/Velociraptor/v5-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Dinosaurs: Velociraptor 2" class="raptor-img lazy-img gallery-img">
+  <img id="raptor_v3" data-src="generated-artwork/Velociraptor/v8-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Dinosaurs: Velociraptor 3" class="raptor-img lazy-img gallery-img">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Dinosaurs: Velociraptor</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-21-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p>A breathtaking, studio quality, hyper-realistic depiction of a Velociraptor (navigating dense, sun-dappled fern undergrowth). Full environmental effects, incredibly exquisite detail on the animal's textures, skin, and authentic prehistoric environment. Subtle, realistic camera and lens effects. CRITICAL INSTRUCTION: There must be absolutely NO predator-prey interaction, no hunting, and no feeding depicted. If this is a carnivore, it must be depicted isolated from any prey species. Masterpiece quality. {lighting_and_atmosphere}</p><p>Lighting Variants ({lighting_and_atmosphere}):<br/>Variant 1 (Morning): Lighting/Environment: Bright, crisp morning sunlight piercing through the atmosphere, vibrant colors, clear visibility.<br/>Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golden-hour, or overcast skies with soft, diffused atmospheric shadows.</p></code></pre></div>
+  <div id="discuss-aug-21-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+<hr>
+
 <h2 id="aug-20-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-20-26">Aug 20 // Games II</a> <button onclick="switchHollin()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 
 <div class="gallery-frame">
@@ -14,7 +32,7 @@
     <button type="button">Games II</button>
     <button type="button" class="discuss-btn" onclick="openDiscussion('aug-20-26')">Comments</button>
   </div>
-  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p>Cover art for an adventure book. The layout and typography must perfectly match the provided reference image containing the 'The Lord of the Rings Roleplaying' logo. At the top center is the red ring logo containing the text '5E'. Below that is the prominent main title logo reading 'The Lord of the Rings Roleplaying' in the exact signature classic fantasy serif font shown in the reference. Below the main title, the subtitle reads 'Ruins of Hollin'.</p><p>A beautiful, highly detailed cinematic fantasy illustration. The art style MUST perfectly match the authentic, evocative painterly style of Middle-earth RPG book covers. The scene has a muted, earthy color palette with dramatic chiaroscuro lighting.</p><p>The setting is deep behind enemy lines. In the foreground, hidden securely in deep shadow behind a large, crumbling stone pillar, is a halfling burglar. The provided character reference images MUST be the sole basis for this character's physical design, clothing, and features. She is drawn in the exact same painted style as the official book covers. She is peeking out from her hiding spot, looking intently past the pillar at the enemy.</p><p>In the midground and background, the melancholic, white-stone ruins of the ancient Elven ring-forges of Eregion rise into the twilight sky. Saruman's forces—brutal Orcs and Dunlendings—are actively excavating the ancient stonework, their harsh torches and campfires casting an ominous, flickering orange glow.</p><p>8k resolution, masterpiece, official fantasy book cover design.</p></code></pre></div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p>Cover art for an adventure book. The layout and typography must perfectly match the provided reference image containing the 'The Lord of the Rings Roleplaying' logo. At the top center is the red ring logo containing the text '5E'. Below that is the prominent main title logo reading 'The Lord of the Rings Roleplaying' in the exact signature classic fantasy serif font shown in the reference. Below the main title, the subtitle reads 'Ruins of Hollin'.</p><p>A beautiful, highly detailed cinematic fantasy illustration. The art style MUST perfectly match the authentic, evocative painterly style of Middle-earth RPG book covers. The scene has a muted, earthy color palette with dramatic chiaroscuro lighting.</p><p>The setting is deep behind enemy lines. In the foreground, hidden securely in deep shadow behind a large, crumbling stone pillar, is a halfling burglar. The provided character reference images MUST be the sole basis for this character's physical design, clothing, and features. She is drawn in the exact same painted style as the official book covers. She is peeking out from her hiding spot, looking intently past the pillar at the enemy.</p><p>In the midground and background, the melancholic, white-stone ruins of the ancient Elven ring-forges of Eregion rise into the twilight sky. Saruman's forces—brutal Orcs and Dunlendings—are actively excavating the ancient stonework, their harsh torches and campfires casting an ominous, flickering orange glow.</p><p>8k resolution, masterpiece, official fantasy book cover design.</p><p><strong>To be continued...</strong><br/><a href="https://gist.github.com/lol-dungeonmaster/56614c97fddda518d881ba66be249c1d">eregion_ttrpg_to_be_continued.md</a></p></code></pre></div>
   <div id="discuss-aug-20-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 <hr>
@@ -544,6 +562,11 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     function switchForest() {
       forestIndex = switchGallery(forestIndex, '.forest-img');
     }
+    let raptorIndex = 0;
+    function switchRaptor() {
+      raptorIndex = switchGallery(raptorIndex, '.raptor-img');
+    }
+    
     let hollinIndex = 0;
     function switchHollin() {
       hollinIndex = switchGallery(hollinIndex, '.hollin-img');
