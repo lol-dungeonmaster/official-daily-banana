@@ -2,6 +2,29 @@
 {% include nav.html %}
 <div class="container">
 
+
+<h2 id="aug-22-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-22-26">Aug 22 // Tales of Folklore</a> <button onclick="switchTale()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+
+<div class="gallery-frame">
+  <img id="tale_1" data-src="generated-artwork/tales-folklore/panel_1_confusion.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Tales of Folklore 1" class="tale-img lazy-img gallery-img active">
+  <img id="tale_2" data-src="generated-artwork/tales-folklore/panel_2_effort.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Tales of Folklore 2" class="tale-img lazy-img gallery-img">
+  <img id="tale_3" data-src="generated-artwork/tales-folklore/panel_3_arrival.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Tales of Folklore 3" class="tale-img lazy-img gallery-img">
+  <img id="tale_4" data-src="generated-artwork/tales-folklore/panel_4_ascent.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Tales of Folklore 4" class="tale-img lazy-img gallery-img">
+  <img id="tale_5" data-src="generated-artwork/tales-folklore/panel_5_mistake.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Tales of Folklore 5" class="tale-img lazy-img gallery-img">
+  <img id="tale_6" data-src="generated-artwork/tales-folklore/panel_6_descent.jpg" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Tales of Folklore 6" class="tale-img lazy-img gallery-img">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Tales of Folklore</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-22-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Tale of the Divine Elephant</strong></p><p><strong>Panel 1: The Confusion</strong><br/>A bold, theatrical illustration inspired by Ambalangoda mask carving. The Gamarala is depicted with an exaggeratedly shocked and suspicious facial expression, his eyes wide and eyebrows arched. He stands in a stylized rural field, accusing a row of rice mortars. The color palette is high-contrast with vivid reds, bright yellows, and deep blacks. The image features intricate, symmetrical folk patterns and a rich, carved-wood texture, as if the scene were a living mask.</p><p><strong>Panel 2: The Absurd Effort</strong><br/>A bold, theatrical illustration inspired by Ambalangoda mask carving. The Gamarala is in a comedic frenzy, tying thick, oversized hemp ropes in complicated knots around several heavy wooden rice mortars. His face is a mask of strained, exaggerated determination. In the background, his wife stands in the doorway of a mud hut, her face a mask of deep skepticism and judgment. The color palette is high-contrast with vivid reds, bright yellows, and deep blacks. The image features intricate, symmetrical folk patterns and a rich, carved-wood texture, as if the scene were a living mask.</p><p><strong>Panel 3: The Arrival</strong><br/>A bold, theatrical illustration inspired by Ambalangoda mask carving. A colossal, divine white tusk elephant descends from swirling, stylized clouds. The elephant’s forehead is adorned with intricate, glowing gold mask-like ornaments. It is effortlessly knocking over the rope-tied mortars. In the foreground, the Gamarala is tiny, his face a mask of absolute awe with wide, staring eyes and a gaping mouth. The color palette is high-contrast with vivid reds, bright yellows, and deep blacks. The image features intricate, symmetrical folk patterns and a rich, carved-wood texture, as if the scene were a living mask.</p><p><strong>Panel 4: The Ascent</strong><br/>A bold, theatrical illustration inspired by Ambalangoda mask carving. A dynamic vertical composition. The Gamarala's hands are tightly gripping the end of a divine elephant's long tail. Below him, two other villagers hang in a human chain, each tightly gripping the ankles of the person above them. They are being pulled high into a stylized, patterned sky. Their faces are masks of terror and excitement. Their colorful sarongs flutter like decorative ribbons. Below them, the Sri Lankan village is depicted as a miniature, stylized folk-art map. The color palette is high-contrast with vivid reds, bright yellows, and deep blacks. The image features intricate, symmetrical folk patterns and a rich, carved-wood texture, as if the scene were a living mask.</p><p><strong>Panel 5: The Fatal Mistake</strong><br/>A bold, theatrical illustration inspired by Ambalangoda mask carving. A theatrical close-up set mid-air among iridescent, stylized clouds. A human chain of exactly three people is falling rapidly through the sky from a great height, completely detached from the elephant. At the top of the falling chain, the Gamarala has a triumphant, foolish expression, making a large circular hand gesture with both arms. Below him, two other villagers clinging to his ankles are plummeting downwards. Their faces are masks of pure horror and panic. The color palette is high-contrast with vivid reds, bright yellows, and deep blacks. The image features intricate, symmetrical folk patterns and a rich, carved-wood texture, as if the scene were a living mask.</p><p><strong>Panel 6: The Descent</strong><br/>A bold, theatrical illustration inspired by Ambalangoda mask carving. A dramatic vertical plunge where the Gamarala and his two friends are falling rapidly through the air, their faces frozen in comedic shock and wide-eyed realization. There are only two companions present. The divine elephant is a small, glowing figure receding into the top of the frame. The Gamarala still holds the circular "quart measure" hand gesture. The color palette is high-contrast with vivid reds, bright yellows, and deep blacks. The image features intricate, symmetrical folk patterns and a rich, carved-wood texture, as if the scene were a living mask.</p></code></pre></div>
+  <div id="discuss-aug-22-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+<hr>
+
+
 <h2 id="aug-21-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-21-26">Aug 21 // Dinosaurs: Velociraptor</a> <button onclick="switchRaptor()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 
 <div class="gallery-frame">
@@ -562,6 +585,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     function switchForest() {
       forestIndex = switchGallery(forestIndex, '.forest-img');
     }
+    
+    let taleIndex = 0;
+    function switchTale() {
+      taleIndex = switchGallery(taleIndex, '.tale-img');
+    }
+
     let raptorIndex = 0;
     function switchRaptor() {
       raptorIndex = switchGallery(raptorIndex, '.raptor-img');
