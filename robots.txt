@@ -1,0 +1,6 @@
+---
+layout: null
+---
+User-agent: *
+Allow: /
+Sitemap: https://github.oswind.xyz/official-daily-banana/sitemap.xml
