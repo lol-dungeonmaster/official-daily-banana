@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderActiveTags() {
     if (!activeTagsContainer) return;
     const currentTags = getActiveTags();
-    activeTagsContainer.innerHTML = "";
+    activeTagsContainer.textContent = "";
 
     // To preserve specific color styling, we need to know if it's topic/setting/style.
     // The easiest way is to find a rendered tag in the DOM with that data-tag and copy its class.

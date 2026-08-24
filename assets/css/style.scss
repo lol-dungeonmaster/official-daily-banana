@@ -741,7 +741,7 @@ main {
 }
 .gemini-popover {
   position: absolute;
-  top: 0;
+  top: calc(100% + 15px);
   left: 0;
   margin: 0;
   background: rgba(0, 49, 43, 0.95);

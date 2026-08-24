@@ -14,6 +14,155 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+
+  const ledgerBtn = document.getElementById("ledger-btn");
+  const ledgerPopover = document.getElementById("ledger-popover");
+  const ledgerTabs = document.querySelectorAll(".ledger-tab");
+  const ledgerContent = document.getElementById("ledger-content");
+
+  let currentLedgerTab = "info";
+
+  const ledgerBadge = document.getElementById("ledger-badge");
+  if (ledgerBadge && sessionStorage.getItem("odb_ledger_unread") === "true") {
+    ledgerBadge.style.display = "block";
+  }
+
+  function renderLedger() {
+    if (!ledgerContent) return;
+    try {
+      const logs = JSON.parse(sessionStorage.getItem("odb_audit_log") || "[]");
+
+      const counts = { info: 0, warn: 0, error: 0 };
+      logs.forEach((l) => {
+        if (counts[l.type] !== undefined) counts[l.type]++;
+      });
+      ledgerTabs.forEach((tab) => {
+        const t = tab.getAttribute("data-tab");
+        const title = t.charAt(0).toUpperCase() + t.slice(1);
+        tab.textContent = `${title} (${counts[t]})`;
+      });
+
+      const filtered = logs.filter((l) => l.type === currentLedgerTab);
+      ledgerContent.textContent = "";
+      if (filtered.length === 0) {
+        ledgerContent.textContent = "No records found.";
+        return;
+      }
+      filtered.reverse().forEach((l) => {
+        const div = document.createElement("div");
+        div.style.cssText =
+          "margin-bottom: 8px; border-bottom: 1px solid #444; padding-bottom: 8px;";
+
+        const timeDiv = document.createElement("div");
+        timeDiv.style.cssText = "color: #888; margin-bottom:2px;";
+        timeDiv.textContent = new Date(l.timestamp).toLocaleString();
+        div.appendChild(timeDiv);
+
+        const msgDiv = document.createElement("div");
+        const lines = l.message.split("\n");
+        lines.forEach((line, i) => {
+          msgDiv.appendChild(document.createTextNode(line));
+          if (i < lines.length - 1)
+            msgDiv.appendChild(document.createElement("br"));
+        });
+        div.appendChild(msgDiv);
+
+        ledgerContent.appendChild(div);
+      });
+    } catch (e) {}
+  }
+
+  function logAudit(type, message) {
+    try {
+      const logs = JSON.parse(sessionStorage.getItem("odb_audit_log") || "[]");
+      const key = sessionStorage.getItem("gemini_api_key");
+      let redacted = false;
+      if (key && key.length > 5 && message.includes(key)) {
+        message = message.split(key).join("[REDACTED_API_KEY]");
+        redacted = true;
+      }
+      if (/AIzaSy[\w-]{33}/.test(message)) {
+        message = message.replace(/AIzaSy[\w-]{33}/g, "[REDACTED_API_KEY]");
+        redacted = true;
+      }
+      logs.push({ timestamp: new Date().toISOString(), type, message });
+      if (redacted) {
+        logs.push({
+          timestamp: new Date().toISOString(),
+          type: "error",
+          message:
+            "CRITICAL SECURITY TRIPWIRE: A system process attempted to leak an API key into the audit logs. The key was successfully intercepted and redacted.",
+        });
+      }
+      if (logs.length > 50) logs.shift();
+      sessionStorage.setItem("odb_audit_log", JSON.stringify(logs));
+      if (ledgerPopover && ledgerPopover.classList.contains("show")) {
+        renderLedger();
+      } else {
+        sessionStorage.setItem("odb_ledger_unread", "true");
+        if (ledgerBadge) ledgerBadge.style.display = "block";
+      }
+    } catch (e) {}
+  }
+
+  if (ledgerBtn && ledgerPopover) {
+    ledgerBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      // Close other popover
+      if (popover) popover.classList.remove("show");
+      ledgerPopover.classList.toggle("show");
+      if (ledgerPopover.classList.contains("show")) {
+        renderLedger();
+        sessionStorage.removeItem("odb_ledger_unread");
+        if (ledgerBadge) ledgerBadge.style.display = "none";
+      }
+    });
+
+    ledgerTabs.forEach((tab) => {
+      tab.addEventListener("click", (e) => {
+        e.stopPropagation();
+        ledgerTabs.forEach((t) => {
+          t.classList.remove("active");
+          t.style.background = "transparent";
+          t.style.color = "";
+          t.style.borderColor = "transparent";
+        });
+        tab.classList.add("active");
+        tab.style.background = "rgba(0,255,136,0.1)";
+        tab.style.color = "#00ff88";
+        tab.style.borderColor = "rgba(0,255,136,0.3)";
+        currentLedgerTab = tab.getAttribute("data-tab");
+        renderLedger();
+      });
+    });
+
+    ledgerPopover.addEventListener("click", (e) => e.stopPropagation());
+    const clearBtn = document.getElementById("ledger-clear-btn");
+    if (clearBtn) {
+      clearBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        sessionStorage.removeItem("odb_audit_log");
+        renderLedger();
+      });
+    }
+
+    // Close on scroll if open
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (ledgerPopover.classList.contains("show")) {
+          ledgerPopover.classList.remove("show");
+        }
+      },
+      { passive: true },
+    );
+  }
+
+  // Hook clicking outside for ledger
+  document.addEventListener("click", () => {
+    if (ledgerPopover) ledgerPopover.classList.remove("show");
+  });
+
   const cancelBtn = document.getElementById("gemini-key-cancel");
   const icon = document.querySelector(".gemini-icon");
 
@@ -22,6 +171,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(toast);
 
   function showToast(message, isWarning = false) {
+    logAudit(isWarning ? "error" : "info", message);
+
     toast.textContent = message;
     toast.style.background = isWarning ? "#ff4444" : "#00ff88";
     toast.style.color = isWarning ? "#fff" : "#000";
@@ -71,6 +222,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   confirmBtn.addEventListener("click", async () => {
     const key = input.value.trim();
+
+    // STRIDE Mitigation: Client-Side Throttling
+    confirmBtn.disabled = true;
+    const originalText = confirmBtn.textContent;
+    confirmBtn.textContent = "Wait...";
+    setTimeout(() => {
+      confirmBtn.disabled = input.value.trim() === "";
+      confirmBtn.textContent = originalText;
+    }, 3000);
+
     if (!key) {
       sessionStorage.removeItem("gemini_api_key");
       document.querySelector(".gemini-icon").classList.remove("activated");
@@ -133,6 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (hasBilling) {
           showToast("Authorized");
         } else {
+          logAudit("warn", "Valid Key, but Nano Banana requires billing.");
           toast.textContent = "Valid Key, but Nano Banana requires billing.";
           toast.style.background = "#ffcc00";
           toast.style.color = "#000";
@@ -273,7 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedVariant = sessionStorage.getItem(storageKey);
     const addCopyButton = (text) => {
       const copyBtn = document.createElement("span");
-      copyBtn.innerHTML = "✂️";
+      copyBtn.textContent = "✂️";
       copyBtn.title = "Copy to clipboard";
       copyBtn.style.cssText =
         "position: absolute; top: 5px; right: 5px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; color: #fff; cursor: pointer; padding: 4px; font-size: 14px; transition: background 0.2s;";
@@ -282,7 +444,7 @@ document.addEventListener("DOMContentLoaded", () => {
       copyBtn.onmouseout = () => (copyBtn.style.background = "rgba(0,0,0,0.3)");
       copyBtn.onclick = () => {
         navigator.clipboard.writeText(text);
-        copyBtn.innerHTML = "✓";
+        copyBtn.textContent = "✓";
         setTimeout(() => (copyBtn.innerHTML = "✂️"), 1500);
       };
       outputArea.appendChild(copyBtn);
@@ -306,7 +468,7 @@ document.addEventListener("DOMContentLoaded", () => {
       variantBtn.title = "Generating variant...";
 
       outputArea.style.display = "block";
-      outputArea.innerHTML = "<em>...</em>";
+      outputArea.textContent = "...";
 
       try {
         const key = sessionStorage.getItem("gemini_api_key");
@@ -399,3 +561,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// stride-ignore: Hardcoded UI template HTML is safe from XSS

@@ -1,3 +1,11 @@
+
+<!-- STRIDE Mitigations: Frame-Busting & CSP -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://giscus.app; style-src 'self' 'unsafe-inline' https://giscus.app; img-src 'self' data: https://github.oswind.xyz; frame-src https://giscus.app; connect-src 'self' https://generativelanguage.googleapis.com;">
+<script>
+  if (window.top !== window.self) {
+    window.top.location = window.self.location;
+  }
+</script>
 <!-- SEO Customization -->
 <meta name="description" content="The Official Daily Banana. A daily catalog of stunning AI-generated artwork, detailed prompts, and digital designs powered by Google Gemini Nano Banana.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -16,7 +24,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
 
 <style>
-  .btn-github .github-icon, .btn-gemini .gemini-icon {
+  .btn-github .github-icon, .btn-gemini .gemini-icon, .btn-ledger .ledger-icon {
     width: 24px;
     height: 24px;
     vertical-align: middle;
@@ -24,11 +32,14 @@
     opacity: 0.8;
     transition: all 0.3s ease;
   }
-  .btn-github:hover .github-icon, .btn-gemini:hover .gemini-icon {
+  .btn-ledger .ledger-icon {
+    margin-right: 0;
+
+  }
+  .btn-github:hover .github-icon, .btn-gemini:hover .gemini-icon, .btn-ledger:hover .ledger-icon {
     opacity: 1;
     filter: drop-shadow(0 0 8px #00ff88);
   }
-  .btn-gemini:hover { border-color: rgba(0,255,136,0.5); }
   .gemini-icon.activated { opacity: 1; color: #00ff88; }
   
   #gemini-key-confirm {
@@ -36,6 +47,10 @@
     color: #00ff88;
     border-color: rgba(0,255,136,0.3);
     transition: all 0.3s ease;
+  }
+  .btn-ledger .ledger-icon {
+    margin-right: 0;
+
   }
   #gemini-key-confirm:hover:not(:disabled) {
     background: rgba(0,255,136,0.25);

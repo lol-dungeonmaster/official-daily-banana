@@ -19,6 +19,36 @@ document.addEventListener("DOMContentLoaded", () => {
         <svg class="gemini-icon" viewBox="0 0 25 25" fill="currentColor"><path d="M19 2.5C19.5 5.5 21.5 7.5 24.5 8C21.5 8.5 19.5 10.5 19 13.5C18.5 10.5 16.5 8.5 13.5 8C16.5 7.5 18.5 5.5 19 2.5ZM9.5 5C10.1 9.7 13.8 13.4 18.5 14C13.8 14.6 10.1 18.3 9.5 23C8.9 18.3 5.2 14.6 0.5 14C5.2 13.4 8.9 9.7 9.5 5Z" /></svg>
         AI Studio
       </a>
+      <a href="javascript:void(0)" id="ledger-btn" class="btn btn-ledger" style="position: relative; padding: 6px 10px; margin-left: 5px;" title="Logs">
+        <span id="ledger-badge" style="display: none; position: absolute; top: 2px; right: 2px; width: 8px; height: 8px; background: #00ff88; border-radius: 50%; box-shadow: 0 0 5px #00ff88;"></span>
+        <svg class="ledger-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+        </svg>
+      </a>
+      <div id="ledger-popover" class="gemini-popover" style="right: 0; width: max-content; min-width: 450px; max-width: calc(100vw - 20px); max-height: calc(100vh - 100px); display: flex; flex-direction: column;">
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 8px; margin-bottom: 5px;">
+          <label style="font-size:0.85em; color:#fff; margin:0;">Logs</label>
+          <a href="javascript:void(0)" id="ledger-clear-btn" title="Clear Ledger" style="color: #888; transition: color 0.2s; display: flex; align-items: center;" onmouseover="this.style.color='#ff4444'" onmouseout="this.style.color='#888'">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" style="width: 20px; height: 20px; shape-rendering: crispEdges;">
+              <rect x="6" y="1" width="4" height="2"/>
+              <rect x="2" y="3" width="12" height="2"/>
+              <rect x="3" y="6" width="10" height="9"/>
+              <rect x="5" y="7" width="1" height="7" fill="rgba(0,0,0,0.5)"/>
+              <rect x="7" y="7" width="2" height="7" fill="rgba(0,0,0,0.5)"/>
+              <rect x="10" y="7" width="1" height="7" fill="rgba(0,0,0,0.5)"/>
+              <rect x="3" y="14" width="10" height="1" fill="rgba(0,0,0,0.3)"/>
+            </svg>
+          </a>
+        </div>
+        <div style="display: flex; gap: 5px; margin-bottom: 10px; border-bottom: 1px solid #555; padding-bottom: 5px; flex-shrink: 0;">
+          <button class="btn ledger-tab active" data-tab="info" style="flex: 1; padding: 5px; font-size: 0.8em; margin: 0; background: rgba(0,255,136,0.1); color: #00ff88; border-color: rgba(0,255,136,0.3);">Info</button>
+          <button class="btn ledger-tab" data-tab="warn" style="flex: 1; padding: 5px; font-size: 0.8em; margin: 0;">Warn</button>
+          <button class="btn ledger-tab" data-tab="error" style="flex: 1; padding: 5px; font-size: 0.8em; margin: 0;">Error</button>
+        </div>
+        <div id="ledger-content" style="flex: 1; overflow-y: auto; font-size: 0.8em; color: #ccc; line-height: 1.4; word-wrap: break-word; min-height: 150px; max-height: 60vh;">
+        </div>
+      </div>
+
       <div id="gemini-popover" class="gemini-popover">
         <label style="font-size:0.85em; margin-bottom: 5px; color:#fff;">Gemini / Nano Banana API Key</label>
         <input type="text" id="gemini-key-input" placeholder="AIzaSy..." style="padding: 8px; border-radius: 4px; border: 1px solid #555; background: rgba(0,0,0,0.3); color: #fff; width: 330px;" />
@@ -33,3 +63,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.body.id = "top";
 });
+// stride-ignore: Hardcoded UI template HTML is safe from XSS

@@ -128,5 +128,6 @@ comments_data.update(new_counts)
 
 with open(output_path, "w") as f:
     json.dump(comments_data, f, indent=2, sort_keys=True)
+    f.write("\n")
 
 print(f"Successfully wrote {len(new_counts)} entries to {output_path} ({created_count} newly created)")

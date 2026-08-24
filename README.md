@@ -25,4 +25,4 @@ While text-based prompt variation relies on models like _Gemini 2.5 Flash Lite_ 
   1. Go to the [Google Cloud Console](https://console.cloud.google.com).
   2. Create a new Project and link a Billing Account to it.
   3. Search for the **Generative Language API** in the API library and enable it.
-  4. Go back to AI Studio, click "Create API Key", and select your newly created, billing-enabled project from the dropdown list.
+  4. Go back to AI Studio, click "Create API Key", and select your newly created, billing-enabled project from the dropdown list.\n
