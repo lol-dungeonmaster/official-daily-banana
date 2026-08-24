@@ -2,6 +2,32 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="literature,fantasy,lee-howe">
+<h2 id="aug-24-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-24-26">Aug 24 // Scenes from Literature II</a> <button onclick="switchHeritage()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="literature">literature</span>
+  <span class="tag tag-setting" data-tag="fantasy">fantasy</span>
+  <span class="tag tag-style" data-tag="lee-howe">lee-howe</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="heritage_v1" data-src="generated-artwork/heritage-LeeHowe/v1-nano-banana-pro-A_gorgeous__luminous.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature II 1" class="heritage-img lazy-img gallery-img active">
+  <img id="heritage_v2" data-src="generated-artwork/heritage-LeeHowe/v1-nano-banana-2-lite-A_gorgeous__luminous.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature II 2" class="heritage-img lazy-img gallery-img">
+  <img id="heritage_v3" data-src="generated-artwork/heritage-LeeHowe/v2-nano-banana-2-lite-A_gorgeous__luminous.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature II 3" class="heritage-img lazy-img gallery-img">
+  <img id="heritage_v4" data-src="generated-artwork/heritage-LeeHowe/v3-nano-banana-2-Use_the_boots_worn_b.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature II 4" class="heritage-img lazy-img gallery-img">
+  <img id="heritage_v5" data-src="generated-artwork/heritage-LeeHowe/v4-nano-banana-2-lite-In_the_provided_base.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature II 5" class="heritage-img lazy-img gallery-img">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Scenes from Literature II</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-24-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><em>Note: To make sure our AI image prompts were 100% lore-accurate the models were guided through a "research phase" using The Heritage of Shannara series.</em></p><ul><li><strong>Prompt 1 (The Destruction of Paranor):</strong> A gorgeous, luminous watercolor and pencil illustration in the legendary high fantasy style of Alan Lee and John Howe. Ethereal, delicate washes of color, soft dreamlike lighting, highly detailed intricate sketching, conveying a deep sense of mythic age, melancholic beauty, and epic scale. Masterpiece, 8k resolution. A terrifying vision of the destruction of Paranor. A towering, weathered stone fortress sits atop a great forested mountain against the dark of the land. Sinister vapors and flitting shadows coil tightly around the castle's high battlements. A catastrophic eruption of fire splits the earth and the mountain apart from beneath. The stone and mortar of the Keep are violently cracking and crumbling into the fiery chasm below.</li><li><strong>Prompt 2 (Cogline's Spirit Walk):</strong> A gorgeous, luminous watercolor and pencil illustration in the legendary high fantasy style of Alan Lee and John Howe. Ethereal, delicate washes of color, soft dreamlike lighting, highly detailed intricate sketching. The interior of the lost Druid's Keep of Paranor, cast away by magic into a different place and time. It is an austere medieval fortress keep built of thick, heavy stone blocks with martial defense architecture. A sprawling, cavernous indoor stone hallway whose heavy beamed and arched ceilings rise into thick, suffocating clouds of ancient brume and dust. The indoor atmosphere is swathed entirely in a strange, spectral greenish cast. The cold, lifeless corridor is littered with the grotesque, misshapen skeletal remains of dark creatures and gnomes. In the foreground, the glowing, translucent spirit of an old man with wispy hair walks cautiously through the haunted, abandoned ruins.</li><li><strong>Prompt 3 (Walker Boh Restoring Paranor):</strong> A gorgeous, luminous watercolor and pencil illustration in the legendary high fantasy style of Alan Lee and John Howe. Ethereal, delicate washes of color, soft atmospheric lighting, highly detailed intricate sketching. A tall, lean, athletic man with pale skin and flowing black hair stands alone on an empty, windswept forest bluff at sunset. He is bathed in the heated, withering crimson glow of the dying sun. He wears a worn, dark travel cloak whipping violently in a magical wind. He is missing his right arm at the shoulder. His single left hand thrusts forward, tightly clutching a small, palm-sized, pitch-black gemstone. A massive torrent of magical 'black light' erupts from the tiny stone like an inverted waterfall of pure darkness. The nonlight spreads like thick ink against the crimson sunset sky, magically tracing and etching the solid architectural lines of massive stone walls, parapets, and castle towers out of thin air to restore a lost fortress. The man's body shimmers in a magical haze, fragmenting into overlapping, translucent, wraith-like sketches as he channels the immense power. Highly textured, dramatic watercolor washes, intricate pencil detailing.</li><li><strong>Prompt 4 (Walker Boh's Transformation in the Tower Well):</strong> A gorgeous, luminous watercolor and pencil illustration in the legendary high fantasy style of Alan Lee and John Howe. Ethereal, delicate washes of color, soft atmospheric lighting, highly detailed intricate sketching. Deep underground, standing on the solid stone floor at the very bottom of a massive cylindrical tower well. In the background, heavy iron grates reveal the epic, awakening glow of subterranean earth-fueled furnaces, casting a warm, atmospheric firelight that blends beautifully with the delicate watercolor style. In the center, a tall, lean, athletic man with pale skin and flowing black hair. He wears worn, dark flowing travel robes (intact, not shredded). He is missing his right arm at the shoulder. He stands with his head thrown back in screaming, defiant agony. His single left hand thrusts forward, tightly clutching a small, palm-sized pitch-black gemstone. A violent vortex of ethereal serpentine mist is being sucked from the air into the small gem. Ghostly, translucent faces of ancient, hooded Druids swirl in the mist, overlapping with his skin as their memories weave into his mind.</li></ul></code></pre></div>
+  <div id="discuss-aug-24-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+<hr>
+
 <article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
 <h2 id="aug-23-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-23-26">Aug 23 // Dinosaurs: Plesiosaurus</a> <button onclick="switchPlesio()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="dinosaurs">dinosaurs</span>
@@ -856,6 +882,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     }
     
     
+    
+    let heritageIndex = 0;
+    function switchHeritage() {
+      heritageIndex = switchGallery(heritageIndex, '.heritage-img');
+    }
+
     let plesioIndex = 0;
     function switchPlesio() {
       plesioIndex = switchGallery(plesioIndex, '.plesio-img');
