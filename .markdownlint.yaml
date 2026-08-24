@@ -1,0 +1,16 @@
+# Disable line length rule for markdown since we have huge html blocks in index.md
+MD013: false
+# Disable inline html rule because we use raw HTML in index.md
+MD033: false
+# Allow duplicate headers because we have posts with the same sub-headers
+MD024: false
+# Allow first line to be HTML (like wrapper divs) instead of a heading
+MD041: false
+# Allow multiple consecutive blank lines for spacing out HTML logic
+MD012: false
+# Allow trailing spaces for markdown line breaks inside HTML blocks
+MD009: false
+# Allow bare URLs since they are mostly inside JS strings or HTML attributes
+MD034: false
+# Allow alt text to be blank on generic design icons
+MD045: false

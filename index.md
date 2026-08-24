@@ -2,7 +2,6 @@
 {% include nav.html %}
 <div class="container">
 
-
 <h2 id="aug-23-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-23-26">Aug 23 // Dinosaurs: Plesiosaurus</a> <button onclick="switchPlesio()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 
 <div class="gallery-frame">
@@ -21,8 +20,6 @@
   <div id="discuss-aug-23-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 <hr>
-
-
 
 <h2 id="aug-22-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-22-26">Aug 22 // Tales of Folklore</a> <button onclick="switchTale()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 
@@ -44,7 +41,6 @@
   <div id="discuss-aug-22-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 <hr>
-
 
 <h2 id="aug-21-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-21-26">Aug 21 // Dinosaurs: Velociraptor</a> <button onclick="switchRaptor()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 
@@ -87,7 +83,7 @@
   <img id="oran_v1" data-src="generated-artwork/orangutan-day-final/v6-nano-banana-pro-A_poster_for_the_Off.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="World Orangutan Day 1" class="oran-img lazy-img gallery-img active">
   <img id="oran_v2" data-src="generated-artwork/orangutan-day-final/v1-nano-banana-2-A_poster_for_the_Off.png" style="aspect-ratio: 768 / 1376;" width="768" height="1376" alt="World Orangutan Day 2" class="oran-img lazy-img gallery-img">
   <img id="oran_v3" data-src="generated-artwork/orangutan-day-final/v5-nano-banana-2-A_poster_for_the_Off.png" style="aspect-ratio: 768 / 1376;" width="768" height="1376" alt="World Orangutan Day 3" class="oran-img lazy-img gallery-img">
-  
+
 </div>
 
 <div class="collapsible-code">
@@ -644,50 +640,50 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   let currentDiscussion = null;
   const masterContainer = document.getElementById('giscus-master-container');
 
-  // 1. Inject script on page load so it's fully ready invisibly
-  const script = document.createElement('script');
-  script.src = "https://giscus.app/client.js";
-  script.setAttribute("data-repo", "lol-dungeonmaster/official-daily-banana");
-  script.setAttribute("data-repo-id", "R_kgDOTznXWA");
-  script.setAttribute("data-category", "General");
-  script.setAttribute("data-category-id", "DIC_kwDOTznXWM4DDBk5");
-  script.setAttribute("data-mapping", "specific");
-  script.setAttribute("data-term", "home"); // default placeholder
-  script.setAttribute("data-strict", "1");
-  script.setAttribute("data-reactions-enabled", "1");
-  script.setAttribute("data-emit-metadata", "1");
-  script.setAttribute("data-input-position", "top");
-  
-  // Cache-busting: append a timestamp so Giscus doesn't use a cached version of the CSS
-  const themeUrl = new URL("assets/css/style.css?v=" + Date.now(), window.location.href).href;
-  script.setAttribute("data-theme", themeUrl);
-  
-  script.setAttribute("data-lang", "en");
-  script.crossOrigin = "anonymous";
-  script.async = true;
-  masterContainer.appendChild(script);
+// 1. Inject script on page load so it's fully ready invisibly
+const script = document.createElement('script');
+script.src = "https://giscus.app/client.js";
+script.setAttribute("data-repo", "lol-dungeonmaster/official-daily-banana");
+script.setAttribute("data-repo-id", "R_kgDOTznXWA");
+script.setAttribute("data-category", "General");
+script.setAttribute("data-category-id", "DIC_kwDOTznXWM4DDBk5");
+script.setAttribute("data-mapping", "specific");
+script.setAttribute("data-term", "home"); // default placeholder
+script.setAttribute("data-strict", "1");
+script.setAttribute("data-reactions-enabled", "1");
+script.setAttribute("data-emit-metadata", "1");
+script.setAttribute("data-input-position", "top");
 
-  // 2. Handle Positioning and Syncing
-  function syncPosition() {
-    if (!currentDiscussion) return;
-    const target = document.getElementById('discuss-' + currentDiscussion);
-    const rect = target.getBoundingClientRect();
-    masterContainer.style.top = (rect.top + window.scrollY) + 'px';
-    masterContainer.style.left = (rect.left + window.scrollX) + 'px';
-    masterContainer.style.width = rect.width + 'px';
-  }
+// Cache-busting: append a timestamp so Giscus doesn't use a cached version of the CSS
+const themeUrl = new URL("assets/css/style.css?v=" + Date.now(), window.location.href).href;
+script.setAttribute("data-theme", themeUrl);
 
-  // Use a ResizeObserver so the iframe perfectly follows the placeholder
-  // even if you expand a Prompt text above it that pushes the layout down!
-  const observer = new ResizeObserver(syncPosition);
-  observer.observe(document.body);
-  window.addEventListener('resize', syncPosition);
-  
-  // 3. Listen for Giscus resize to push our placeholder height
-  window.addEventListener('message', (event) => {
-    if (event.origin !== 'https://giscus.app') return;
-    if (!(typeof event.data === 'object' && event.data.giscus)) return;
-    
+script.setAttribute("data-lang", "en");
+script.crossOrigin = "anonymous";
+script.async = true;
+masterContainer.appendChild(script);
+
+// 2. Handle Positioning and Syncing
+function syncPosition() {
+if (!currentDiscussion) return;
+const target = document.getElementById('discuss-' + currentDiscussion);
+const rect = target.getBoundingClientRect();
+masterContainer.style.top = (rect.top + window.scrollY) + 'px';
+masterContainer.style.left = (rect.left + window.scrollX) + 'px';
+masterContainer.style.width = rect.width + 'px';
+}
+
+// Use a ResizeObserver so the iframe perfectly follows the placeholder
+// even if you expand a Prompt text above it that pushes the layout down!
+const observer = new ResizeObserver(syncPosition);
+observer.observe(document.body);
+window.addEventListener('resize', syncPosition);
+
+// 3. Listen for Giscus resize to push our placeholder height
+window.addEventListener('message', (event) => {
+if (event.origin !== 'https://giscus.app') return;
+if (!(typeof event.data === 'object' && event.data.giscus)) return;
+
     // Cache the updated comment/reaction count emitted by Giscus
     if (event.data.giscus.discussion && currentDiscussion) {
       const gDiscussion = event.data.giscus.discussion;
@@ -696,7 +692,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
         count: totalEngagement,
         time: Date.now()
       }));
-      
+
       // Instantly update the button on screen
       const btn = document.querySelector(`button[onclick="openDiscussion('${currentDiscussion}')"]`);
       if (btn) {
@@ -710,12 +706,13 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
       target.style.height = (event.data.giscus.resizeHeight + 40) + 'px';
       syncPosition(); // keep absolute container aligned
     }
-  });
 
-  // 4. The Click Handler
-  function openDiscussion(entryId) {
-    const targetContainer = document.getElementById('discuss-' + entryId);
-    const btn = targetContainer.parentElement.querySelector('.discuss-btn');
+});
+
+// 4. The Click Handler
+function openDiscussion(entryId) {
+const targetContainer = document.getElementById('discuss-' + entryId);
+const btn = targetContainer.parentElement.querySelector('.discuss-btn');
 
     // If clicking the currently open discussion, close it
     if (currentDiscussion === entryId) {
@@ -738,15 +735,15 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 
     // Open new discussion container
     targetContainer.style.display = 'block';
-    
+
     // Try to get a placeholder height from the iframe if it's already loaded
     const iframe = document.querySelector('iframe.giscus-frame');
     if (iframe && iframe.offsetHeight > 100) {
       targetContainer.style.height = (iframe.offsetHeight + 40) + 'px';
     } else {
-      targetContainer.style.height = '340px'; 
+      targetContainer.style.height = '340px';
     }
-    
+
     btn.classList.add('expanded');
     currentDiscussion = entryId;
 
@@ -757,14 +754,15 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     if (iframe) {
       iframe.contentWindow.postMessage({ giscus: { setConfig: { term: entryId } } }, 'https://giscus.app');
     }
-  }
 
-  // 5. Polling for Live Comment/Reaction Counts (Method 2: Conditional GET)
-  async function pollCommentCounts() {
-    try {
-      let data = {};
-      let serverTime = 0;
-      
+}
+
+// 5. Polling for Live Comment/Reaction Counts (Method 2: Conditional GET)
+async function pollCommentCounts() {
+try {
+let data = {};
+let serverTime = 0;
+
       const res = await fetch('assets/data/comments.json');
       if (res.ok) {
         try {
@@ -772,7 +770,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
           serverTime = data._meta ? data._meta.lastUpdated : 0;
         } catch(e) {}
       }
-      
+
       // Iterate over ALL discuss buttons on the page
       const buttons = document.querySelectorAll('.discuss-btn');
       buttons.forEach(btn => {
@@ -780,10 +778,10 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
         const match = btn.getAttribute('onclick').match(/openDiscussion\('([^']+)'\)/);
         if (!match) return;
         const id = match[1];
-        
+
         // Default to 0 if not found in JSON or JSON is empty
         let finalCount = data[id] !== undefined ? data[id] : 0;
-        
+
         // Check if we have a locally cached count that is NEWER than the server's last updated time
         const cachedDataStr = sessionStorage.getItem('odb_count_' + id);
         if (cachedDataStr) {
@@ -794,17 +792,18 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
             }
           } catch (e) {}
         }
-        
+
         btn.innerText = finalCount > 0 ? `Comments (${finalCount})` : 'Comments';
       });
     } catch (e) {
       console.warn("Failed to poll comment counts", e);
     }
-  }
 
-  // Poll immediately on load, then every 5 minutes
-  pollCommentCounts();
-  setInterval(pollCommentCounts, 300000);
+}
+
+// Poll immediately on load, then every 5 minutes
+pollCommentCounts();
+setInterval(pollCommentCounts, 300000);
 </script>
 
 {% include nav-footer.html %}
