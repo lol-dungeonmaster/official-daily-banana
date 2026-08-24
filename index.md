@@ -3,6 +3,27 @@
 <div class="container">
 
 
+<h2 id="aug-23-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-23-26">Aug 23 // Dinosaurs: Plesiosaurus</a> <button onclick="switchPlesio()" class="toggle-btn" style="position: static;">Next Image</button></h2>
+
+<div class="gallery-frame">
+  <img id="plesio_v1" data-src="generated-artwork/Plesiosaurus/v8-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Dinosaurs: Plesiosaurus 1" class="plesio-img lazy-img gallery-img active">
+  <img id="plesio_v2" data-src="generated-artwork/Plesiosaurus/v1-nano-banana-A_breathtaking__stud.png" style="aspect-ratio: 1024 / 1024;" width="1024" height="1024" alt="Dinosaurs: Plesiosaurus 2" class="plesio-img lazy-img gallery-img">
+  <img id="plesio_v3" data-src="generated-artwork/Plesiosaurus/v3-nano-banana-pro-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Dinosaurs: Plesiosaurus 3" class="plesio-img lazy-img gallery-img">
+  <img id="plesio_v4" data-src="generated-artwork/Plesiosaurus/v5-nano-banana-2-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Dinosaurs: Plesiosaurus 4" class="plesio-img lazy-img gallery-img">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Dinosaurs: Plesiosaurus</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-23-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p>A breathtaking, studio quality, hyper-realistic depiction of a Plesiosaurus (peacefully navigating a dense prehistoric kelp forest). Full environmental effects, incredibly exquisite detail on the animal's textures, skin, and authentic prehistoric environment. Subtle, realistic camera and lens effects. CRITICAL INSTRUCTION: There must be absolutely NO predator-prey interaction, no hunting, and no feeding depicted. If this is a carnivore, it must be depicted isolated from any prey species. Masterpiece quality. {lighting_and_atmosphere}</p><p>Lighting Variants ({lighting_and_atmosphere}):<br/>Variant 1 (Morning): Lighting/Environment: Bright, crisp morning sunlight piercing through the atmosphere, vibrant colors, clear visibility.<br/>Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golden-hour, or overcast skies with soft, diffused atmospheric shadows.</p></code></pre></div>
+  <div id="discuss-aug-23-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+<hr>
+
+
+
 <h2 id="aug-22-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-22-26">Aug 22 // Tales of Folklore</a> <button onclick="switchTale()" class="toggle-btn" style="position: static;">Next Image</button></h2>
 
 <div class="gallery-frame">
@@ -586,6 +607,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
       forestIndex = switchGallery(forestIndex, '.forest-img');
     }
     
+    
+    let plesioIndex = 0;
+    function switchPlesio() {
+      plesioIndex = switchGallery(plesioIndex, '.plesio-img');
+    }
+
     let taleIndex = 0;
     function switchTale() {
       taleIndex = switchGallery(taleIndex, '.tale-img');
