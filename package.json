@@ -8,8 +8,9 @@
     "lint:md": "markdownlint '**/*.md' --ignore node_modules --ignore _site",
     "lint:format": "prettier --check '**/*.{js,css,json,md,html}'",
     "format": "prettier --write '**/*.{js,css,json,md,html}'",
-    "test": "npm run lint && npm run test:links && npm run test:a11y",
+    "test": "npm run lint && npm run test:links && npm run test:a11y && npm run test:stride",
     "test:links": "find . -name \"*.md\" ! -path \"./node_modules/*\" ! -path \"./_site/*\" -exec markdown-link-check {} +",
+    "test:stride": "node scripts/stride-lint.js",
     "test:a11y": "pa11y -c pa11y.json https://github.oswind.xyz/official-daily-banana/"
   },
   "devDependencies": {
