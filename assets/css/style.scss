@@ -344,10 +344,11 @@ pre {
   color: #cbcbcb;
   max-width: 100%;
   box-sizing: border-box;
-  overflow-x: auto;
+  overflow: visible;
 }
 
 .collapsible-code button {
+  position: relative;
   color: #cbcbcb;
   background: rgba(0, 0, 0, 0.1);
   border: 1px solid #838383;
@@ -718,4 +719,146 @@ main {
     align-items: flex-start !important;
     margin-top: 0 !important;
   }
+}
+
+/* Gemini AI Studio Styles */
+.btn-gemini {
+  position: relative;
+}
+.gemini-icon {
+  width: 24px;
+  height: 24px;
+  margin: -3px 8px 0 0;
+  display: inline-block;
+  float: left;
+  color: #fff;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+.gemini-icon.activated {
+  color: #00ff88;
+  opacity: 1;
+}
+.gemini-popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background: rgba(0, 49, 43, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.gemini-popover.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+/* Toast Notification */
+#ai-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00ff88;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+#ai-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#gemini-key-confirm {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: rgba(0, 255, 136, 0.4);
+  color: #00ff88;
+  transition: all 0.3s ease;
+}
+#gemini-key-confirm:disabled {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: #555;
+  color: #888;
+  cursor: not-allowed;
+}
+
+#gemini-key-confirm:hover:not(:disabled) {
+  background: rgba(0, 255, 136, 0.25);
+  border-color: rgba(0, 255, 136, 0.8);
+}
+
+@keyframes marching-ants {
+  0% {
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+  }
+  100% {
+    background-position: 15px 0, -15px 100%, 0 -15px, 100% 15px;
+  }
+}
+.btn-generating {
+  /* Inherit background color from .expanded */
+  background-image: 
+    linear-gradient(90deg, #00ff88 50%, transparent 50%), 
+    linear-gradient(90deg, #00ff88 50%, transparent 50%), 
+    linear-gradient(180deg, #00ff88 50%, transparent 50%), 
+    linear-gradient(180deg, #00ff88 50%, transparent 50%) !important;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y !important;
+  background-size: 10px 2px, 10px 2px, 2px 10px, 2px 10px !important;
+  background-position: 0 0, 0 100%, 0 0, 100% 0 !important;
+  animation: marching-ants 0.75s infinite linear !important;
+  border-color: transparent !important;
+}
+
+.collapsible-code button.btn-generating {
+  cursor: not-allowed !important;
+}
+
+.collapsible-code button.btn-generating::before {
+  content: "";
+  position: absolute;
+  top: -5px; left: -5px; right: -5px; bottom: -5px;
+  background-image: 
+    linear-gradient(90deg, #00ff88 50%, transparent 50%), 
+    linear-gradient(90deg, #00ff88 50%, transparent 50%), 
+    linear-gradient(180deg, #00ff88 50%, transparent 50%), 
+    linear-gradient(180deg, #00ff88 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 15px 3px, 15px 3px, 3px 15px, 3px 15px;
+  animation: marching-ants 0.75s infinite linear;
+  pointer-events: none;
+  border-radius: 6px;
+  z-index: -1;
+}
+
+.github-icon {
+  width: 24px;
+  height: 24px;
+  margin: -3px 8px 0 0;
+  display: inline-block;
+  float: left;
+  color: #fff;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+.btn-github:hover .github-icon,
+.btn-gemini:hover .gemini-icon {
+  opacity: 1;
+  filter: drop-shadow(0 0 8px #00ff88);
 }
