@@ -1,7 +1,7 @@
 # STRIDE Threat Modeling Report
 
-*Target: https://github.oswind.xyz/official-daily-banana/*
-*Generated: 2026-08-24T21:13:20.856Z*
+_Target: https://github.oswind.xyz/official-daily-banana/_
+_Generated: 2026-08-24T21:13:20.856Z_
 
 ## Security Architecture & Threat Mitigation (Q&A)
 
@@ -33,23 +33,29 @@ Because this site is a completely serverless application hosted on GitHub Pages,
 This appendix outlines the raw automated STRIDE security linting results for the Official Daily Banana repository, and the detailed architectural acceptance parameters mapped to each finding.
 
 ### Spoofing
+
 - ⚠️ Missing HSTS header: Site is vulnerable to Man-in-the-Middle spoofing attacks on non-HTTPS downgrades.
 - ⚠️ Missing X-Frame-Options: Site is vulnerable to Clickjacking (UI Redress attacks).
 
 ### Tampering
+
 - ⚠️ Missing Content-Security-Policy (CSP): Site is vulnerable to Cross-Site Scripting (XSS) tampering.
 
 ### Repudiation
+
 - ⚠️ Static GitHub Pages site without backend logging: User actions (like prompt generation) cannot be audited or non-repudiated on our end.
 
 ### InformationDisclosure
+
 - ⚠️ Missing CSP: Allows malicious scripts to exfiltrate sessionStorage data (like API keys).
 - ⚠️ Found API Key stored in sessionStorage in `ai-studio.js`. While volatile, it is fully exposed to any XSS tampering.
 
 ### DenialOfService
+
 - ⚠️ Client-side API requests mean DoS protection relies entirely on Google Gemini API rate limits, not our infrastructure.
 
 ### ElevationOfPrivilege
+
 - ⚠️ Local API key usage in `ai-studio.js` trusts the client. If exfiltrated via XSS, attacker elevates to user's premium API quota.
 
 ### Mitigation Plan & Architectural Acceptance
@@ -57,22 +63,26 @@ This appendix outlines the raw automated STRIDE security linting results for the
 While a static GitHub Pages site inherently lacks backend security enforcement, we have implemented and documented robust client-side mitigations for all reported vulnerabilities, including architectural limitations and past issues:
 
 #### 1. Spoofing & Tampering (Headers & Clickjacking)
-*   **Issue:** The linter warns about missing HTTP headers (HSTS, CSP, X-Frame-Options) because GitHub Pages strips custom backend response headers.
-*   **Mitigation:** We inject a strict `<meta http-equiv="Content-Security-Policy">` into `head-custom.html`. Additionally, we implemented a Javascript frame-buster (`window.top !== window.self`) to force top-level navigation and prevent Clickjacking UI Redress attacks.
+
+- **Issue:** The linter warns about missing HTTP headers (HSTS, CSP, X-Frame-Options) because GitHub Pages strips custom backend response headers.
+- **Mitigation:** We inject a strict `<meta http-equiv="Content-Security-Policy">` into `head-custom.html`. Additionally, we implemented a Javascript frame-buster (`window.top !== window.self`) to force top-level navigation and prevent Clickjacking UI Redress attacks.
 
 #### 2. Tampering & XSS Immunity (DOM-Based)
-*   **Past Issues Resolved:** Previous versions relied heavily on `innerHTML` for dynamic user content (e.g., tag routing, toast messages, and the Audit Ledger).
-*   **Mitigation (XSS IMMUNITY):** We have engineered a mathematically secure, Zero-Trust DOM. Absolutely zero dynamic user inputs or AI-generated outputs are parsed as HTML. Every single log message, toast, and variant string is safely injected using strictly sanitized `.textContent` and `document.createTextNode` elements. Even if a malicious payload or hallucinated script is returned by the API, it is physically impossible for the browser to execute it; it will only render as harmless flat text.
+
+- **Past Issues Resolved:** Previous versions relied heavily on `innerHTML` for dynamic user content (e.g., tag routing, toast messages, and the Audit Ledger).
+- **Mitigation (XSS IMMUNITY):** We have engineered a mathematically secure, Zero-Trust DOM. Absolutely zero dynamic user inputs or AI-generated outputs are parsed as HTML. Every single log message, toast, and variant string is safely injected using strictly sanitized `.textContent` and `document.createTextNode` elements. Even if a malicious payload or hallucinated script is returned by the API, it is physically impossible for the browser to execute it; it will only render as harmless flat text.
 
 #### 3. Information Disclosure & Elevation of Privilege
-*   **Issue:** The user's Gemini API key must be stored in `sessionStorage` for a serverless client-side app, exposing it to potential XSS exfiltration.
-*   **Mitigation:** Our primary defense is the Zero-Trust DOM (strict CSP + no dynamic innerHTML). Additionally, we deployed a **Security Tripwire**: the logger actively scrubs both the active API key and generic `AIzaSy` patterns from being written to the logs, and explicitly injects a critical error alert if a leak is intercepted.
+
+- **Issue:** The user's Gemini API key must be stored in `sessionStorage` for a serverless client-side app, exposing it to potential XSS exfiltration.
+- **Mitigation:** Our primary defense is the Zero-Trust DOM (strict CSP + no dynamic innerHTML). Additionally, we deployed a **Security Tripwire**: the logger actively scrubs both the active API key and generic `AIzaSy` patterns from being written to the logs, and explicitly injects a critical error alert if a leak is intercepted.
 
 #### 4. Denial of Service (DoS)
-*   **Issue:** We lack backend rate-limiting infrastructure.
-*   **Mitigation:** We rely on Google's inherent Gemini API rate-limiting architecture. To prevent accidental quota exhaustion on the frontend, we implemented a strict 3-second visual debounce and cooldown mechanism on the API interaction buttons.
+
+- **Issue:** We lack backend rate-limiting infrastructure.
+- **Mitigation:** We rely on Google's inherent Gemini API rate-limiting architecture. To prevent accidental quota exhaustion on the frontend, we implemented a strict 3-second visual debounce and cooldown mechanism on the API interaction buttons.
 
 #### 5. Repudiation
-*   **Issue:** Static GitHub Pages lack a backend database to log user actions, failing standard repudiation checks.
-*   **Mitigation:** We engineered a highly visible **Local Audit Ledger** popover directly in the site navigation. It streams all standard toasts, API network errors, and prompt generations into a tabbed `sessionStorage` history, granting the user full transparent visibility into client-side actions.
 
+- **Issue:** Static GitHub Pages lack a backend database to log user actions, failing standard repudiation checks.
+- **Mitigation:** We engineered a highly visible **Local Audit Ledger** popover directly in the site navigation. It streams all standard toasts, API network errors, and prompt generations into a tabbed `sessionStorage` history, granting the user full transparent visibility into client-side actions.
