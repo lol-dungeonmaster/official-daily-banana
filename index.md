@@ -2,6 +2,30 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="character-design,middle-earth,realistic,concept-art,lotro">
+<h2 id="aug-26-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-26-26">Aug 26 // Protagonists</a> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="character-design">character-design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="concept-art">concept-art</span>
+  <span class="tag tag-style" data-tag="lotro">lotro</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="protagonists_v1" data-src="generated-artwork/character-a_unreal/v1-nano-banana-pro-Use_the_provided_pho.png" style="aspect-ratio: 768 / 1376;" width="768" height="1376" alt="Protagonists 1" class="protagonists-img lazy-img gallery-img active">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Protagonists</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-26-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p>Use the provided photorealistic portraits as strict visual references for the woman's face and hair. Use the provided 3D game screenshots as strict visual references for her distinctive armor and clothing. A stunning, photorealistic Unreal Engine 5 AAA game concept art portrait. A female fantasy hunter is captured in a tense, low sneaking posture, hunting unseen enemies in a dark, moody environment. She is NOT wearing a hood; her light brown hair is pulled back tightly into a small braided bun. She wears highly detailed rugged brown leather armor with intricate green cross-stitching, and blue-grey steel shoulder pauldrons with gold trim. The camera angle is dynamic, framing her tightly so her stealthy, tense posture fills the 9:16 vertical frame. Cinematic shadows, strong backlighting, photorealistic masterpiece, 8k resolution.</p></code></pre></div>
+  <div id="discuss-aug-26-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+<hr>
+
 <article class="post-entry" data-tags="character-design,middle-earth,double-exposure,concept-art,lotro">
 <h2 id="aug-25-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-25-26">Aug 25 // Double Exposure</a> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="character-design">character-design</span>
