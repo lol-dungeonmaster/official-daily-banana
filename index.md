@@ -2,6 +2,30 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="character-design,middle-earth,double-exposure,concept-art,lotro">
+<h2 id="aug-25-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-25-26">Aug 25 // Double Exposure</a> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="character-design">character-design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="double-exposure">double-exposure</span>
+  <span class="tag tag-style" data-tag="concept-art">concept-art</span>
+  <span class="tag tag-style" data-tag="lotro">lotro</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="double_v1" data-src="generated-artwork/character-a_double_exposure/v1-nano-banana-pro-A_breathtaking__midj.png" style="aspect-ratio: 768 / 1376;" width="768" height="1376" alt="Double Exposure 1" class="double-img lazy-img gallery-img active">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Double Exposure</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-25-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Positive Prompt:</strong><br/>A breathtaking, midjourney-style double exposure masterpiece. Use Image 1 strictly for the primary base character silhouette and pose. Use Image 2 (the landscape) entirely as the texture filler. Her silhouette acts as a pure window into the landscape. Her body and form are entirely made of the sweeping forest road, trees, and river from Image 2. Do not draw any physical clothing, leather, or armor. Maintain only a faint, translucent geometric outline of her human form superimposed over the landscape so she is recognizable, but the textures inside the silhouette must be 100% forest landscape. The character's form harmoniously intertwines with the Vales of Anduin environment, creating a stunning, seamless surreal blend. Studio quality realism, cinematic lighting, extremely detailed, 9:16 vertical aspect ratio.</p><p><strong>Negative Prompt:</strong><br/>leather, steel, metal, fabric, clothing texture, armor texture, tunic, stitches</p></code></pre></div>
+  <div id="discuss-aug-25-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+<hr>
+
 <article class="post-entry" data-tags="literature,fantasy,lee-howe">
 <h2 id="aug-24-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-24-26">Aug 24 // Scenes from Literature II</a> <button onclick="switchHeritage()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="literature">literature</span>
