@@ -3,6 +3,30 @@
 <div class="container">
 
 <article class="post-entry" data-tags="character-design,middle-earth,realistic,concept-art,lotro">
+<h2 id="aug-27-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-27-26">Aug 27 // World Rock Paper Scissors Day</a> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="character-design">character-design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="concept-art">concept-art</span>
+  <span class="tag tag-style" data-tag="lotro">lotro</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="rps_v1" data-src="generated-artwork/rps_scene/v1-nano-banana-pro-Multiple_reference_i.png" style="aspect-ratio: 1376 / 768;" width="1376" height="768" alt="World Rock Paper Scissors Day 1" class="rps-img lazy-img gallery-img active">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">World Rock Paper Scissors Day</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-27-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><em>Note: Multiple reference images are provided, including a 3D campsite, 3D armor references, and generated face portraits for three distinct characters.</em></p><p><strong>ENVIRONMENT:</strong> A stunning, photorealistic real-world landscape photograph of a rustic campsite clearing that leads into a dark, moody ancient forest. The path into the forest is clearly visible in the background frame. This is NOT a 3D game engine—it is a photorealistic, cinematic real-world realization.<br/>In the center of the campsite, three female halflings (hobbits) are standing in a circle, engaged in a game of rock-paper-scissors to decide who is in charge.</p><p><strong>Character-N:</strong> Use her portrait as her facial basis. She has slightly pointed halfling ears. She wears the wide-brimmed brown leather hat with a feather and gold trim from her 3D reference. Her light brown hair is pulled into a short ponytail underneath the hat. She wears the exact armor from her 3D reference: a black cloak with a silver star clasp, a single metal pauldron on her right shoulder, and a white quilted tunic. Her hand is extended forward, formed into a ROCK (a closed fist).</p><p><strong>Character-F:</strong> Use her portrait as her facial basis. She has slightly pointed halfling ears. She wears the wide-brimmed orange and brown hat with a feather from her 3D reference. Her long light brown hair is in a loose side-braid flowing from underneath the hat. She wears the exact armor from her 3D reference: a green cowl and white tunic with brown criss-cross strapping. Her hand is extended forward, formed into PAPER (a flat, open palm).</p><p><strong>Character-I:</strong> Use her portrait as her facial basis. She has slightly pointed halfling ears, short wavy light brown hair tucked behind her ears. She wears the exact armor from her 3D reference: a sleeveless green leather tunic with dark trim, thick brown leather pauldrons, green cape, and green cross-laced lower armor. Her hand is extended forward, formed into SCISSORS (index and middle fingers extended).</p><p>A stunning, photorealistic cinematic masterpiece, extremely detailed, real-world photography, 8k resolution, 16:9 widescreen aspect ratio.</p></code></pre></div>
+  <div id="discuss-aug-27-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+<hr>
+
+<article class="post-entry" data-tags="character-design,middle-earth,realistic,concept-art,lotro">
 <h2 id="aug-26-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-26-26">Aug 26 // Protagonists</a> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="character-design">character-design</span>
   <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
