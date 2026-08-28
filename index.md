@@ -2,6 +2,30 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="design,middle-earth,realistic,concept-art">
+<h2 id="aug-28-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-28-26">Aug 28 // Outpainting</a> <button onclick="switchOutpainting()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="design">design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="concept-art">concept-art</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="outpaint_v1" data-src="generated-artwork/anduin_landscape_road/v1-nano-banana-2-lite-Use_the_provided_ima.png" style="aspect-ratio: 768 / 1376;" width="768" height="1376" alt="Outpainting 1" class="outpaint-img lazy-img gallery-img active">
+  <img id="outpaint_v2" data-src="generated-artwork/anduin_landscape_road/v2-imagen-ultra-forest_road_1.jpg" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Outpainting 2" class="outpaint-img lazy-img gallery-img">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Outpainting</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-28-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p>Use the provided image as the strict visual reference for the winding road. A breathtaking, panoramic vertical landscape shot of the 2nd Age Vales of Anduin near Greenwood Forest. The Anduin river flows through the left side of the scene, but the primary focus is heavily on the right side of the river bank. Here, a prominent dirt road (matching the reference image) winds its way up a slope through the trees along its path, eventually disappearing into a distant valley. The lighting is a magical, cinematic golden hour. The landscape features a dense forest mixture of fir and pine trees, with thick undergrowth of old growth and flowering wild berries. Along the river bank, vibrant yellow Iris and blue Myosotis flowers grow alongside reeds. Studio quality photorealism, breathtaking masterpiece, extremely detailed, 9:16 vertical aspect ratio.</p></code></pre></div>
+  <div id="discuss-aug-28-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+<hr>
+
 <article class="post-entry" data-tags="character-design,middle-earth,realistic,concept-art,lotro">
 <h2 id="aug-27-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-27-26">Aug 27 // World Rock Paper Scissors Day</a> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="character-design">character-design</span>
@@ -955,6 +979,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     
     
     
+    
+    let outpaintIndex = 0;
+    function switchOutpainting() {
+      outpaintIndex = switchGallery(outpaintIndex, '.outpaint-img');
+    }
+
     let heritageIndex = 0;
     function switchHeritage() {
       heritageIndex = switchGallery(heritageIndex, '.heritage-img');
