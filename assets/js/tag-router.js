@@ -103,10 +103,33 @@ document.addEventListener("DOMContentLoaded", () => {
       // Check if ALL current tags are in postTags (AND logic)
       const matchesAll = currentTags.every((t) => postTags.includes(t));
 
+      // Get the h2 ID to find the matching TOC link
+      const heading = post.querySelector("h2");
+      const tocLink = heading
+        ? document.querySelector(`.nav-days-grid a[href="#${heading.id}"]`)
+        : null;
+
       if (currentTags.length === 0 || matchesAll) {
         post.classList.remove("hidden");
+        if (tocLink) tocLink.style.display = "";
       } else {
         post.classList.add("hidden");
+        if (tocLink) tocLink.style.display = "none";
+      }
+    });
+
+    // Hide empty month containers in the TOC
+    document.querySelectorAll(".nav-month").forEach((monthDiv) => {
+      const grid = monthDiv.querySelector(".nav-days-grid");
+      if (grid) {
+        const visibleLinks = Array.from(grid.querySelectorAll("a")).filter(
+          (a) => a.style.display !== "none",
+        );
+        if (visibleLinks.length === 0) {
+          monthDiv.style.display = "none";
+        } else {
+          monthDiv.style.display = "";
+        }
       }
     });
 
