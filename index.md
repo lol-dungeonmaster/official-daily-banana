@@ -29,7 +29,6 @@
   <div id="discuss-aug-29-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-<hr>
 
 <article class="post-entry" data-tags="design,middle-earth,realistic,concept-art">
 <h2 id="aug-28-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-28-26">Aug 28 // Outpainting</a> <button onclick="switchOutpainting()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -53,7 +52,6 @@
   <div id="discuss-aug-28-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-<hr>
 
 <article class="post-entry" data-tags="character-design,middle-earth,realistic,concept-art,lotro">
 <h2 id="aug-27-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-27-26">Aug 27 // World Rock Paper Scissors Day</a> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -77,7 +75,6 @@
   <div id="discuss-aug-27-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-<hr>
 
 <article class="post-entry" data-tags="character-design,middle-earth,realistic,concept-art,lotro">
 <h2 id="aug-26-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-26-26">Aug 26 // Protagonists</a> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -101,7 +98,6 @@
   <div id="discuss-aug-26-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-<hr>
 
 <article class="post-entry" data-tags="character-design,middle-earth,double-exposure,concept-art,lotro">
 <h2 id="aug-25-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-25-26">Aug 25 // Double Exposure</a> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -125,7 +121,6 @@
   <div id="discuss-aug-25-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-<hr>
 
 <article class="post-entry" data-tags="literature,fantasy,lee-howe">
 <h2 id="aug-24-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-24-26">Aug 24 // Scenes from Literature II</a> <button onclick="switchHeritage()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -151,7 +146,6 @@
   <div id="discuss-aug-24-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-<hr>
 
 <article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
 <h2 id="aug-23-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-23-26">Aug 23 // Dinosaurs: Plesiosaurus</a> <button onclick="switchPlesio()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
