@@ -2,6 +2,35 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="animals,contemporary,realistic,ethereal,journalistic,cinematic">
+<h2 id="aug-29-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-29-26">Aug 29 // Intl. Bat Night</a> <button onclick="switchBatNight()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="animals">animals</span>
+  <span class="tag tag-setting" data-tag="contemporary">contemporary</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="ethereal">ethereal</span>
+  <span class="tag tag-style" data-tag="journalistic">journalistic</span>
+  <span class="tag tag-style" data-tag="cinematic">cinematic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="batnight_v1" data-src="generated-artwork/intl_bat_night/v1-nano-banana-pro-Edit_the_provided_im.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl. Bat Night 1" class="batnight-img lazy-img gallery-img active">
+  <img id="batnight_v2" data-src="generated-artwork/intl_bat_night/v2-nano-banana-pro-Edit_the_provided_im.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl. Bat Night 2" class="batnight-img lazy-img gallery-img">
+  <img id="batnight_v3" data-src="generated-artwork/intl_bat_night/v3-nano-banana-pro-Edit_the_provided_im.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl. Bat Night 3" class="batnight-img lazy-img gallery-img">
+  <img id="batnight_v4" data-src="generated-artwork/intl_bat_night/v4-nano-banana-pro-Edit_the_provided_im.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl. Bat Night 4" class="batnight-img lazy-img gallery-img">
+  <img id="batnight_v5" data-src="generated-artwork/intl_bat_night/v5-nano-banana-pro-Edit_the_provided_im.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl. Bat Night 5" class="batnight-img lazy-img gallery-img">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Intl. Bat Night</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-29-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><ul><li><strong>Flying Foxes (Ethereal but Realistic):</strong> A surreal yet biologically accurate scene of a Golden-crowned Flying Fox gliding through a mist-shrouded Borneo rainforest canopy at dawn. The air is filled with floating iridescent pollen and soft, diffused golden light filtering through giant ferns. The bat's fur is rendered in high detail, while the background dissolves into a dreamy, atmospheric haze of emerald and gold.</li><li><strong>Brazilian Free-tailed Bat (Cinematic):</strong> A breathtaking cinematic wide-angle shot of millions of Brazilian Free-tailed bats streaming out of the mouth of Bracken Cave in Texas. The bats form a massive, swirling obsidian ribbon against a deep violet twilight sky. Low-angle perspective, dramatic lighting, and hyper-realistic textures of the limestone cliff, capturing the sheer scale and motion of the emergence.</li><li><strong>Lesser Long-nosed Bat (Journalistic):</strong> A candid, National Geographic-style wildlife photograph of a Lesser Long-nosed bat hovering mid-air to feed from a blooming agave flower in the Sonoran Desert. Raw, unposed composition with a shallow depth of field and natural moonlight highlighting the pollen on the bat's muzzle. Grainy texture and realistic environmental lighting capture a fleeting moment of biological interaction.</li><li><strong>Common Pipistrelle (Realistic):</strong> A hyper-realistic macro shot of a Common Pipistrelle bat clinging to a dew-covered branch in the Black Forest of Germany. Soft, moody morning light creates a rim-light effect on the bat's fine brown fur and the translucent veins of its wings. Extreme detail on the water droplets and the texture of the mossy bark, with a cinematic bokeh background of a misty ancient woodland.</li><li><strong>Greater Horseshoe Bat (Journalistic):</strong> A documentary-style interior shot of Greater Horseshoe bats roosting along the damp, jagged walls of a limestone karst cave in Southern France. Wide-angle lens and natural cave lighting with high contrast highlight the distinctive nose-leaf anatomy of the bats. The composition is raw and authentic, focusing on the social clustering of the colony in their natural subterranean environment.</li></ul></code></pre></div>
+  <div id="discuss-aug-29-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+<hr>
+
 <article class="post-entry" data-tags="design,middle-earth,realistic,concept-art">
 <h2 id="aug-28-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-28-26">Aug 28 // Outpainting</a> <button onclick="switchOutpainting()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="design">design</span>
@@ -980,6 +1009,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     
     
     
+    
+    let batnightIndex = 0;
+    function switchBatNight() {
+      batnightIndex = switchGallery(batnightIndex, '.batnight-img');
+    }
+
     let outpaintIndex = 0;
     function switchOutpainting() {
       outpaintIndex = switchGallery(outpaintIndex, '.outpaint-img');
