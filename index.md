@@ -3,6 +3,33 @@
 <div class="container">
 
 <article class="post-entry" data-tags="animals,contemporary,realistic,ethereal,journalistic,cinematic">
+<h2 id="aug-30-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-30-26">Aug 30 // Intl. Whale Shark Day</a> <button onclick="switchWhaleShark()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="animals">animals</span>
+  <span class="tag tag-setting" data-tag="contemporary">contemporary</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="ethereal">ethereal</span>
+  <span class="tag tag-style" data-tag="journalistic">journalistic</span>
+  <span class="tag tag-style" data-tag="cinematic">cinematic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="whaleshark_v1" data-src="generated-artwork/intl_ws_day/v1-nano-banana-pro-An_ethereal_yet_real.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl. Whale Shark Day 1" class="whaleshark-img lazy-img gallery-img active">
+  <img id="whaleshark_v2" data-src="generated-artwork/intl_ws_day/v1-nano-banana-pro-A_National_Geographi.png" style="aspect-ratio: 1584 / 672;" width="1584" height="672" alt="Intl. Whale Shark Day 2" class="whaleshark-img lazy-img gallery-img">
+  <img id="whaleshark_v3" data-src="generated-artwork/intl_ws_day/v1-nano-banana-pro-A_dramatic__cinemati.png" style="aspect-ratio: 1584 / 672;" width="1584" height="672" alt="Intl. Whale Shark Day 3" class="whaleshark-img lazy-img gallery-img">
+  <img id="whaleshark_v4" data-src="generated-artwork/intl_ws_day/v1-nano-banana-pro-An_atmospheric__pain.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Intl. Whale Shark Day 4" class="whaleshark-img lazy-img gallery-img">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Intl. Whale Shark Day</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-30-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><ul><li><strong>Ethereal (Maldives):</strong> An ethereal yet realistic underwater scene in the South Ari Atoll, where a whale shark drifts through a liquid sapphire void. The lighting is otherworldly, with soft, shimmering beams of sunlight creating a cathedral-like effect as they filter through the water. Below the shark, a vibrant coral garden glows with soft, bioluminescent-like hues of pink and gold, and a manta ray glides in a mirrored arc beside the shark. The composition emphasizes a sense of profound peace and weightlessness, blending hyper-realistic textures with a dreamlike, luminous atmosphere.</li><li><strong>Journalistic (Australia):</strong> A National Geographic style wide-angle photograph taken at Ningaloo Reef. The shot is captured from a low angle underwater, showing a massive whale shark swimming alongside a professional diver to emphasize the animal's epic scale. The water is a brilliant, transparent Indian Ocean blue. To maintain a realistic horizon, the arid red cliffs of the Western Australian coastline are visible only as a thin, distant silhouette far above the water's surface line in the extreme background. The lighting is natural midday sun, highlighting the authentic, rough texture of the shark's skin and the clarity of the pelagic environment.</li><li><strong>Cinematic (Belize):</strong> A dramatic, cinematic wide shot at the deep ocean drop-off of Gladden Spit. The scene captures the moment of a "deep rise," with a whale shark emerging from the midnight blue depths into the light, its massive mouth wide open in a suction-feeding pose. Thousands of tiny silver fish swirl in a shimmering vortex around the shark's mouth, while several remoras are clearly visible attached to its underbelly. The lighting uses a strong chiaroscuro effect, with the deep void of the ocean behind the shark and a bright, ethereal glow from the surface above.</li><li><strong>Ethereal (Philippines):</strong> An atmospheric, painterly image of a whale shark drifting through a golden-green diatom bloom in Donsol. The water is filled with shimmering, microscopic organic particles that resemble floating stardust, creating a soft, mystical glow. The focus is tight on the shark's gentle eye and the front of its head, with a shallow depth of field that blurs the background into a hazy, emerald-toned ocean void. The lighting is diffused and soft, evoking a sense of quiet companionship between the giant and the microscopic life of the biosphere.</li></ul></code></pre></div>
+  <div id="discuss-aug-30-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+<article class="post-entry" data-tags="animals,contemporary,realistic,ethereal,journalistic,cinematic">
 <h2 id="aug-29-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-29-26">Aug 29 // Intl. Bat Night</a> <button onclick="switchBatNight()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
   <span class="tag tag-setting" data-tag="contemporary">contemporary</span>
@@ -1004,6 +1031,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     
     
     
+    
+    let whalesharkIndex = 0;
+    function switchWhaleShark() {
+      whalesharkIndex = switchGallery(whalesharkIndex, '.whaleshark-img');
+    }
+
     let batnightIndex = 0;
     function switchBatNight() {
       batnightIndex = switchGallery(batnightIndex, '.batnight-img');
