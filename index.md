@@ -2,6 +2,28 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
+<h2 id="aug-31-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-31-26">Aug 31 // Dinosaurs: Brachiosaurus</a> <button onclick="switchBrachiosaurus()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="dinosaurs">dinosaurs</span>
+  <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="brachiosaurus_v1" data-src="generated-artwork/Brachiosaurus/v7-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Dinosaurs: Brachiosaurus 1" class="brachiosaurus-img lazy-img gallery-img active">
+  <img id="brachiosaurus_v2" data-src="generated-artwork/Brachiosaurus/v8-nano-banana-2-lite-A_breathtaking__stud.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Dinosaurs: Brachiosaurus 2" class="brachiosaurus-img lazy-img gallery-img">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Dinosaurs: Brachiosaurus</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('aug-31-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p>A breathtaking, studio quality, hyper-realistic depiction of a Brachiosaurus (grazing from the canopies of ancient conifers). Full environmental effects, incredibly exquisite detail on the animal's textures, skin, and authentic prehistoric environment. Subtle, realistic camera and lens effects. CRITICAL INSTRUCTION: There must be absolutely NO predator-prey interaction, no hunting, and no feeding depicted. If this is a carnivore, it must be depicted isolated from any prey species. Masterpiece quality. {lighting_and_atmosphere}</p><p>Lighting Variants ({lighting_and_atmosphere}):<br/>Variant 1 (Morning): Lighting/Environment: Bright, crisp morning sunlight piercing through the atmosphere, vibrant colors, clear visibility.<br/>Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golden-hour, or overcast skies with soft, diffused atmospheric shadows.</p></code></pre></div>
+  <div id="discuss-aug-31-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="animals,contemporary,realistic,ethereal,journalistic,cinematic">
 <h2 id="aug-30-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-30-26">Aug 30 // Intl. Whale Shark Day</a> <button onclick="switchWhaleShark()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -1032,6 +1054,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     
     
     
+    
+    let brachiosaurusIndex = 0;
+    function switchBrachiosaurus() {
+      brachiosaurusIndex = switchGallery(brachiosaurusIndex, '.brachiosaurus-img');
+    }
+
     let whalesharkIndex = 0;
     function switchWhaleShark() {
       whalesharkIndex = switchGallery(whalesharkIndex, '.whaleshark-img');
