@@ -2,6 +2,28 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="folklore,historical,APY,dot-work">
+<h2 id="sep-02-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#sep-02-26">Sep 02 // Tales of Folklore II</a> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="folklore">folklore</span>
+  <span class="tag tag-setting" data-tag="historical">historical</span>
+  <span class="tag tag-style" data-tag="APY">APY</span>
+  <span class="tag tag-style" data-tag="dot-work">dot-work</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="songline_map" data-src="generated-artwork/songline_map/v2-nano-banana-2-lite-Authentic_Central_We.png" style="aspect-ratio: 768 / 1376;" width="768" height="1376" alt="Tales of Folklore II" class="lazy-img gallery-img active">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Tales of Folklore II</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-02-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>(Seven Sisters Songline Map)</strong> Authentic Central/Western Desert Aboriginal inspired digital art. A grand vertical composition depicting the Kungkarangkalpa Songline. The image is a top-down aerial map that tells a 5-part story from bottom to top, rendered in dense ochre dot-work. 1. At the base, a gathering of U-shapes surrounded by bright red ochre represents the sisters dancing in Harmony. 2. Just above, heavy dark footprints cross a jagged rocky line, representing the Arrival of the pursuer. 3. A frantic, winding journey line sweeps across vast orange and sienna swirls, depicting the Chase across the desert. 4. The journey line abruptly hits a harsh boundary of stylized turquoise blue dots, representing the Edge of the coastal cliff. 5. From this cliff edge, the earthy geographical map smoothly transitions and curves upward into a deep indigo night sky. The journey line transforms into shimmering golden light ascending into the cosmos, culminating in the seven brilliant white stars of the Pleiades cluster high above. Below and to the right of the Pleiades, the constellation Orion is depicted in the dot-work style, trapped in eternal pursuit.</p></code></pre></div>
+  <div id="discuss-sep-02-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
 <h2 id="sep-01-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#sep-01-26">Sep 01 // Dinosaurs: Spinosaurus</a> <button onclick="switchSpinosaurus()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="dinosaurs">dinosaurs</span>
