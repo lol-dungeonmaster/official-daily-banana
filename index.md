@@ -3,7 +3,7 @@
 <div class="container">
 
 <article class="post-entry" data-tags="literature,fantasy,realistic,dk-sweet">
-<h2 id="sep-04-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#sep-04-26">Sep 04 // Scenes from Literature III</a> <button onclick="switchWotBalefire()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="sep-04-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#sep-04-26">Sep 04 // Scenes from Literature III</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchWotBalefire(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchWotBalefire(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="literature">literature</span>
   <span class="tag tag-setting" data-tag="fantasy">fantasy</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -32,7 +32,7 @@
 </article>
 
 <article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
-<h2 id="sep-03-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#sep-03-26">Sep 03 // Dinosaurs: Ankylosaurus</a> <button onclick="switchAnkylosaurus()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="sep-03-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#sep-03-26">Sep 03 // Dinosaurs: Ankylosaurus</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchAnkylosaurus(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchAnkylosaurus(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="dinosaurs">dinosaurs</span>
   <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -77,7 +77,7 @@
 </article>
 
 <article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
-<h2 id="sep-01-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#sep-01-26">Sep 01 // Dinosaurs: Spinosaurus</a> <button onclick="switchSpinosaurus()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="sep-01-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#sep-01-26">Sep 01 // Dinosaurs: Spinosaurus</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchSpinosaurus(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchSpinosaurus(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="dinosaurs">dinosaurs</span>
   <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -102,7 +102,7 @@
 </article>
 
 <article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
-<h2 id="aug-31-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-31-26">Aug 31 // Dinosaurs: Brachiosaurus</a> <button onclick="switchBrachiosaurus()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-31-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-31-26">Aug 31 // Dinosaurs: Brachiosaurus</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchBrachiosaurus(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchBrachiosaurus(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="dinosaurs">dinosaurs</span>
   <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -124,7 +124,7 @@
 </article>
 
 <article class="post-entry" data-tags="animals,contemporary,realistic,ethereal,journalistic,cinematic">
-<h2 id="aug-30-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-30-26">Aug 30 // Intl. Whale Shark Day</a> <button onclick="switchWhaleShark()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-30-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-30-26">Aug 30 // Intl. Whale Shark Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchWhaleShark(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchWhaleShark(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
   <span class="tag tag-setting" data-tag="contemporary">contemporary</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -151,7 +151,7 @@
 </article>
 
 <article class="post-entry" data-tags="animals,contemporary,realistic,ethereal,journalistic,cinematic">
-<h2 id="aug-29-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-29-26">Aug 29 // Intl. Bat Night</a> <button onclick="switchBatNight()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-29-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-29-26">Aug 29 // Intl. Bat Night</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchBatNight(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchBatNight(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
   <span class="tag tag-setting" data-tag="contemporary">contemporary</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -179,7 +179,7 @@
 </article>
 
 <article class="post-entry" data-tags="design,middle-earth,realistic,concept-art">
-<h2 id="aug-28-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-28-26">Aug 28 // Outpainting</a> <button onclick="switchOutpainting()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-28-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-28-26">Aug 28 // Outpainting</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchOutpainting(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchOutpainting(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="design">design</span>
   <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -271,7 +271,7 @@
 </article>
 
 <article class="post-entry" data-tags="literature,fantasy,lee-howe">
-<h2 id="aug-24-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-24-26">Aug 24 // Scenes from Literature II</a> <button onclick="switchHeritage()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-24-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-24-26">Aug 24 // Scenes from Literature II</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchHeritage(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchHeritage(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="literature">literature</span>
   <span class="tag tag-setting" data-tag="fantasy">fantasy</span>
   <span class="tag tag-style" data-tag="lee-howe">lee-howe</span>
@@ -296,7 +296,7 @@
 </article>
 
 <article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
-<h2 id="aug-23-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-23-26">Aug 23 // Dinosaurs: Plesiosaurus</a> <button onclick="switchPlesio()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-23-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-23-26">Aug 23 // Dinosaurs: Plesiosaurus</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchPlesio(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchPlesio(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="dinosaurs">dinosaurs</span>
   <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -320,7 +320,7 @@
 </article>
 
 <article class="post-entry" data-tags="folklore,historical,mask-art,sri-lanka">
-<h2 id="aug-22-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-22-26">Aug 22 // Tales of Folklore</a> <button onclick="switchTale()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-22-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-22-26">Aug 22 // Tales of Folklore</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTale(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTale(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="folklore">folklore</span>
   <span class="tag tag-setting" data-tag="historical">historical</span>
   <span class="tag tag-style" data-tag="mask-art">mask-art</span>
@@ -347,7 +347,7 @@
 </article>
 
 <article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
-<h2 id="aug-21-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-21-26">Aug 21 // Dinosaurs: Velociraptor</a> <button onclick="switchRaptor()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-21-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-21-26">Aug 21 // Dinosaurs: Velociraptor</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchRaptor(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchRaptor(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="dinosaurs">dinosaurs</span>
   <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -370,7 +370,7 @@
 </article>
 
 <article class="post-entry" data-tags="games,middle-earth,table-top,illustration,lotro,concept-art">
-<h2 id="aug-20-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-20-26">Aug 20 // Games II</a> <button onclick="switchHollin()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-20-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-20-26">Aug 20 // Games II</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchHollin(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchHollin(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="games">games</span>
   <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
   <span class="tag tag-style" data-tag="table-top">table-top</span>
@@ -395,7 +395,7 @@
 </article>
 
 <article class="post-entry" data-tags="animals,contemporary,journalistic,ethereal">
-<h2 id="aug-19-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-19-26">Aug 19 // World Orangutan Day</a> <button onclick="switchOran()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-19-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-19-26">Aug 19 // World Orangutan Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchOran(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchOran(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
   <span class="tag tag-setting" data-tag="contemporary">contemporary</span>
   <span class="tag tag-style" data-tag="journalistic">journalistic</span>
@@ -441,7 +441,7 @@
 </article>
 
 <article class="post-entry" data-tags="character-design,middle-earth,sprite-sheet,pixel-art,lotro">
-<h2 id="aug-17-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-17-26">Aug 17 // Sprite Sheets</a> <button onclick="switchSprite()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-17-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-17-26">Aug 17 // Sprite Sheets</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchSprite(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchSprite(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="character-design">character-design</span>
   <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
   <span class="tag tag-style" data-tag="sprite-sheet">sprite-sheet</span>
@@ -494,7 +494,7 @@
 </article>
 
 <article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
-<h2 id="aug-15-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-15-26">Aug 15 // Dinosaurs: Stegosaurus</a> <button onclick="switchStego()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-15-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-15-26">Aug 15 // Dinosaurs: Stegosaurus</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchStego(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchStego(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="dinosaurs">dinosaurs</span>
   <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -518,7 +518,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </article>
 
 <article class="post-entry" data-tags="design,middle-earth,realistic">
-<h2 id="aug-14-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-14-26">Aug 14 // Ring Design</a> <button onclick="switchRing()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-14-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-14-26">Aug 14 // Ring Design</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchRing(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchRing(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="design">design</span>
   <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -540,7 +540,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </article>
 
 <article class="post-entry" data-tags="animals,contemporary,journalistic,ethereal">
-<h2 id="aug-13-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-13-26">Aug 13 // Intl. Wolf Day</a> <button onclick="switchWolf()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-13-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-13-26">Aug 13 // Intl. Wolf Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchWolf(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchWolf(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
   <span class="tag tag-setting" data-tag="contemporary">contemporary</span>
   <span class="tag tag-style" data-tag="journalistic">journalistic</span>
@@ -599,7 +599,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </article>
 
 <article class="post-entry" data-tags="animals,contemporary,ethereal">
-<h2 id="aug-10-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-10-26">Aug 10 // World Lion Day</a> <button onclick="switchLion()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="aug-10-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#aug-10-26">Aug 10 // World Lion Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchLion(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchLion(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
   <span class="tag tag-setting" data-tag="contemporary">contemporary</span>
   <span class="tag tag-style" data-tag="ethereal">ethereal</span>
@@ -787,7 +787,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </article>
 
 <article class="post-entry" data-tags="architecture,historical,concept-art,morocco,realistic,cinematic">
-<h2 id="jul-31-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-31-26">Jul 31 // Fortifications</a> <button onclick="switchFort()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="jul-31-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-31-26">Jul 31 // Fortifications</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchFort(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchFort(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="architecture">architecture</span>
   <span class="tag tag-setting" data-tag="historical">historical</span>
   <span class="tag tag-style" data-tag="concept-art">concept-art</span>
@@ -829,7 +829,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </article>
 
 <article class="post-entry" data-tags="games,fantasy,pixel-art">
-<h2 id="jul-29-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-29-26">Jul 29 // Games</a> <button onclick="switchGame()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="jul-29-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-29-26">Jul 29 // Games</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchGame(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchGame(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="games">games</span>
   <span class="tag tag-setting" data-tag="fantasy">fantasy</span>
   <span class="tag tag-style" data-tag="pixel-art">pixel-art</span>
@@ -854,7 +854,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </article>
 
 <article class="post-entry" data-tags="technology,post-apocalyptic,concept-art,realistic">
-<h2 id="jul-28-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-28-26">Jul 28 // Botanical Robots</a> <button onclick="switchBot()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="jul-28-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-28-26">Jul 28 // Botanical Robots</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchBot(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchBot(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="technology">technology</span>
   <span class="tag tag-setting" data-tag="post-apocalyptic">post-apocalyptic</span>
   <span class="tag tag-style" data-tag="concept-art">concept-art</span>
@@ -882,7 +882,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </article>
 
 <article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
-<h2 id="jul-27-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-27-26">Jul 27 // Dinosaurs: Quetzalcoatlus</a> <button onclick="switchQuetz()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="jul-27-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-27-26">Jul 27 // Dinosaurs: Quetzalcoatlus</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchQuetz(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchQuetz(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="dinosaurs">dinosaurs</span>
   <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -906,7 +906,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </article>
 
 <article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
-<h2 id="jul-26-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-26-26">Jul 26 // Dinosaurs: Archaeopteryx</a> <button onclick="switchArcha()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="jul-26-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-26-26">Jul 26 // Dinosaurs: Archaeopteryx</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchArcha(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchArcha(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="dinosaurs">dinosaurs</span>
   <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -931,7 +931,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </article>
 
 <article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
-<h2 id="jul-25-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-25-26">Jul 25 // Dinosaurs: Tyrannosaurus Rex</a> <button onclick="switchTyran()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="jul-25-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-25-26">Jul 25 // Dinosaurs: Tyrannosaurus Rex</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTyran(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTyran(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="dinosaurs">dinosaurs</span>
   <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -955,7 +955,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </article>
 
 <article class="post-entry" data-tags="animals,sci-fi,cinematic">
-<h2 id="jul-24-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-24-26">Jul 24 // Time-traveling Animals</a> <button onclick="switchTTP()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="jul-24-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-24-26">Jul 24 // Time-traveling Animals</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTTP(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTTP(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
   <span class="tag tag-setting" data-tag="sci-fi">sci-fi</span>
   <span class="tag tag-style" data-tag="cinematic">cinematic</span>
@@ -980,7 +980,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </article>
 
 <article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
-<h2 id="jul-23-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-23-26">Jul 23 // Dinosaurs: Mosasaurus</a> <button onclick="switchMosa()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="jul-23-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-23-26">Jul 23 // Dinosaurs: Mosasaurus</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchMosa(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchMosa(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="dinosaurs">dinosaurs</span>
   <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
@@ -1002,7 +1002,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </article>
 
 <article class="post-entry" data-tags="design,middle-earth,sand-art,realistic,lotro">
-<h2 id="jul-22-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-22-26">Jul 22 // At the Beach</a> <button onclick="switchBree()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="jul-22-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-22-26">Jul 22 // At the Beach</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchBree(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchBree(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="design">design</span>
   <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
   <span class="tag tag-style" data-tag="sand-art">sand-art</span>
@@ -1050,7 +1050,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </article>
 
 <article class="post-entry" data-tags="design,middle-earth,lotro,concept-art">
-<h2 id="jul-14-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-14-26">Jul 14 // Forgotten Forest Secrets</a> <button onclick="switchForest()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+<h2 id="jul-14-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#jul-14-26">Jul 14 // Forgotten Forest Secrets</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchForest(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchForest(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="design">design</span>
   <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
   <span class="tag tag-style" data-tag="lotro">lotro</span>
@@ -1075,77 +1075,80 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <span class="lightbox-close">&times;</span>
   <img id="lightbox-img" src="" alt="Fullscreen view">
   <div class="lightbox-controls">
-    <button id="lightbox-next-btn" class="lightbox-btn" style="display: none;">Next Image</button>
+    <div id="lightbox-toggle-group" style="display: none; gap: 0;">
+      <button id="lightbox-prev-btn" class="lightbox-btn" style="border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button>
+      <button id="lightbox-next-btn" class="lightbox-btn" style="border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button>
+    </div>
     <a href="" id="lightbox-link" target="_blank" class="lightbox-btn">View Original</a>
   </div>
 </div>
 
 <script>
-    function switchFort() {
+    function switchFort(dir = 1) {
       const img1 = document.getElementById('fort_v1');
       const img2 = document.getElementById('fort_v2');
 
       img1.classList.toggle('active');
       img2.classList.toggle('active');
     }
-    function switchGallery(currentIndex, className) {
+    function switchGallery(currentIndex, className, direction = 1) {
       const imgs = document.querySelectorAll(className);
       imgs[currentIndex].classList.remove('active');    // 1. Remove the active class
-      currentIndex = (currentIndex + 1) % imgs.length;  // 2. Move to the next index
+      currentIndex = (currentIndex + direction + imgs.length) % imgs.length;  // 2. Move to the next index
       imgs[currentIndex].classList.add('active');       // 3. Add the active class to the new current image
       return currentIndex;
     }
     let lionIndex = 0; // '.lion-img'
-    function switchLion() {
-      lionIndex = switchGallery(lionIndex, '.lion-img');
+    function switchLion(dir = 1) {
+      lionIndex = switchGallery(lionIndex, '.lion-img', dir);
     }
     let gameIndex = 0; // '.game-img'
-    function switchGame() {
-      gameIndex = switchGallery(gameIndex, '.game-img');
+    function switchGame(dir = 1) {
+      gameIndex = switchGallery(gameIndex, '.game-img', dir);
     }
     let botIndex = 0;  // '.bot-img'
-    function switchBot() {
-      botIndex = switchGallery(botIndex, '.bot-img');
+    function switchBot(dir = 1) {
+      botIndex = switchGallery(botIndex, '.bot-img', dir);
     }
     let quetzIndex = 0;
-    function switchQuetz() {
-      quetzIndex = switchGallery(quetzIndex, '.quetz-img');
+    function switchQuetz(dir = 1) {
+      quetzIndex = switchGallery(quetzIndex, '.quetz-img', dir);
     }
     let archaIndex = 0;
-    function switchArcha() {
-      archaIndex = switchGallery(archaIndex, '.archa-img');
+    function switchArcha(dir = 1) {
+      archaIndex = switchGallery(archaIndex, '.archa-img', dir);
     }
     let tyranIndex = 0;
-    function switchTyran() {
-      tyranIndex = switchGallery(tyranIndex, '.tyran-img');
+    function switchTyran(dir = 1) {
+      tyranIndex = switchGallery(tyranIndex, '.tyran-img', dir);
     }
     let ttpIndex = 0;
-    function switchTTP() {
-      ttpIndex = switchGallery(ttpIndex, '.ttp-img');
+    function switchTTP(dir = 1) {
+      ttpIndex = switchGallery(ttpIndex, '.ttp-img', dir);
     }
     let wolfIndex = 0;
-    function switchWolf() {
-      wolfIndex = switchGallery(wolfIndex, '.wolf-img');
+    function switchWolf(dir = 1) {
+      wolfIndex = switchGallery(wolfIndex, '.wolf-img', dir);
     }
     let ringIndex = 0;
-    function switchRing() {
-      ringIndex = switchGallery(ringIndex, '.ring-img');
+    function switchRing(dir = 1) {
+      ringIndex = switchGallery(ringIndex, '.ring-img', dir);
     }
     let stegoIndex = 0;
-    function switchStego() {
-      stegoIndex = switchGallery(stegoIndex, '.stego-img');
+    function switchStego(dir = 1) {
+      stegoIndex = switchGallery(stegoIndex, '.stego-img', dir);
     }
     let mosaIndex = 0;
-    function switchMosa() {
-      mosaIndex = switchGallery(mosaIndex, '.mosa-img');
+    function switchMosa(dir = 1) {
+      mosaIndex = switchGallery(mosaIndex, '.mosa-img', dir);
     }
     let breeIndex = 0;
-    function switchBree() {
-      breeIndex = switchGallery(breeIndex, '.bree-img');
+    function switchBree(dir = 1) {
+      breeIndex = switchGallery(breeIndex, '.bree-img', dir);
     }
     let forestIndex = 0;
-    function switchForest() {
-      forestIndex = switchGallery(forestIndex, '.forest-img');
+    function switchForest(dir = 1) {
+      forestIndex = switchGallery(forestIndex, '.forest-img', dir);
     }
     
     
@@ -1158,73 +1161,73 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     
     
     let wotbalefireIndex = 0;
-    function switchWotBalefire() {
-      wotbalefireIndex = switchGallery(wotbalefireIndex, '.wotbalefire-img');
+    function switchWotBalefire(dir = 1) {
+      wotbalefireIndex = switchGallery(wotbalefireIndex, '.wotbalefire-img', dir);
     }
 
     let ankylosaurusIndex = 0;
-    function switchAnkylosaurus() {
-      ankylosaurusIndex = switchGallery(ankylosaurusIndex, '.ankylosaurus-img');
+    function switchAnkylosaurus(dir = 1) {
+      ankylosaurusIndex = switchGallery(ankylosaurusIndex, '.ankylosaurus-img', dir);
     }
 
     let spinosaurusIndex = 0;
-    function switchSpinosaurus() {
-      spinosaurusIndex = switchGallery(spinosaurusIndex, '.spinosaurus-img');
+    function switchSpinosaurus(dir = 1) {
+      spinosaurusIndex = switchGallery(spinosaurusIndex, '.spinosaurus-img', dir);
     }
 
     let brachiosaurusIndex = 0;
-    function switchBrachiosaurus() {
-      brachiosaurusIndex = switchGallery(brachiosaurusIndex, '.brachiosaurus-img');
+    function switchBrachiosaurus(dir = 1) {
+      brachiosaurusIndex = switchGallery(brachiosaurusIndex, '.brachiosaurus-img', dir);
     }
 
     let whalesharkIndex = 0;
-    function switchWhaleShark() {
-      whalesharkIndex = switchGallery(whalesharkIndex, '.whaleshark-img');
+    function switchWhaleShark(dir = 1) {
+      whalesharkIndex = switchGallery(whalesharkIndex, '.whaleshark-img', dir);
     }
 
     let batnightIndex = 0;
-    function switchBatNight() {
-      batnightIndex = switchGallery(batnightIndex, '.batnight-img');
+    function switchBatNight(dir = 1) {
+      batnightIndex = switchGallery(batnightIndex, '.batnight-img', dir);
     }
 
     let outpaintIndex = 0;
-    function switchOutpainting() {
-      outpaintIndex = switchGallery(outpaintIndex, '.outpaint-img');
+    function switchOutpainting(dir = 1) {
+      outpaintIndex = switchGallery(outpaintIndex, '.outpaint-img', dir);
     }
 
     let heritageIndex = 0;
-    function switchHeritage() {
-      heritageIndex = switchGallery(heritageIndex, '.heritage-img');
+    function switchHeritage(dir = 1) {
+      heritageIndex = switchGallery(heritageIndex, '.heritage-img', dir);
     }
 
     let plesioIndex = 0;
-    function switchPlesio() {
-      plesioIndex = switchGallery(plesioIndex, '.plesio-img');
+    function switchPlesio(dir = 1) {
+      plesioIndex = switchGallery(plesioIndex, '.plesio-img', dir);
     }
 
     let taleIndex = 0;
-    function switchTale() {
-      taleIndex = switchGallery(taleIndex, '.tale-img');
+    function switchTale(dir = 1) {
+      taleIndex = switchGallery(taleIndex, '.tale-img', dir);
     }
 
     let raptorIndex = 0;
-    function switchRaptor() {
-      raptorIndex = switchGallery(raptorIndex, '.raptor-img');
+    function switchRaptor(dir = 1) {
+      raptorIndex = switchGallery(raptorIndex, '.raptor-img', dir);
     }
     
     let hollinIndex = 0;
-    function switchHollin() {
-      hollinIndex = switchGallery(hollinIndex, '.hollin-img');
+    function switchHollin(dir = 1) {
+      hollinIndex = switchGallery(hollinIndex, '.hollin-img', dir);
     }
     
     let oranIndex = 0;
-    function switchOran() {
-      oranIndex = switchGallery(oranIndex, '.oran-img');
+    function switchOran(dir = 1) {
+      oranIndex = switchGallery(oranIndex, '.oran-img', dir);
     }
     
     let spriteIndex = 0;
-    function switchSprite() {
-      spriteIndex = switchGallery(spriteIndex, '.sprite-img');
+    function switchSprite(dir = 1) {
+      spriteIndex = switchGallery(spriteIndex, '.sprite-img', dir);
     }
 </script>
 
