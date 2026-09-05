@@ -12,12 +12,8 @@
 
 <div class="gallery-frame">
   <img id="wotbalefire_v1" data-src="generated-artwork/wot_balefire_tests/v1-nano-banana-pro-prompt_b.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature III 1" class="wotbalefire-img lazy-img gallery-img active">
-  <img id="wotbalefire_v2" data-src="generated-artwork/wot_balefire_tests/v2-nano-banana-2-prompt_b.png" style="aspect-ratio: 1192 / 896;" width="1192" height="896" alt="Scenes from Literature III 2" class="wotbalefire-img lazy-img gallery-img">
-  <img id="wotbalefire_v3" data-src="generated-artwork/wot_balefire_tests/v3-nano-banana-2-lite-prompt_b.png" style="aspect-ratio: 1181 / 896;" width="1181" height="896" alt="Scenes from Literature III 3" class="wotbalefire-img lazy-img gallery-img">
-  <img id="wotbalefire_v4" data-src="generated-artwork/wot_balefire_tests/v4-nano-banana-pro-prompt_a.png" style="aspect-ratio: 1584 / 672;" width="1584" height="672" alt="Scenes from Literature III 4" class="wotbalefire-img lazy-img gallery-img">
-  <img id="wotbalefire_v5" data-src="generated-artwork/wot_balefire_tests/v5-nano-banana-pro-prompt_a.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature III 5" class="wotbalefire-img lazy-img gallery-img">
-  <img id="wotbalefire_v6" data-src="generated-artwork/wot_balefire_tests/v6-nano-banana-2-prompt_a.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature III 6" class="wotbalefire-img lazy-img gallery-img">
-  <img id="wotbalefire_v7" data-src="generated-artwork/wot_balefire_tests/v7-nano-banana-2-lite-prompt_a.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature III 7" class="wotbalefire-img lazy-img gallery-img">
+  <img id="wotbalefire_v2" data-src="generated-artwork/wot_balefire_tests/v6-nano-banana-2-prompt_a.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature III 2" class="wotbalefire-img lazy-img gallery-img">
+  <img id="wotbalefire_v3" data-src="generated-artwork/wot_balefire_tests/v7-nano-banana-2-lite-prompt_a.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature III 3" class="wotbalefire-img lazy-img gallery-img">
 </div>
 
 <div class="collapsible-code">
