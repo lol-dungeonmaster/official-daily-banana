@@ -2,6 +2,35 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="literature,fantasy,realistic,dk-sweet">
+<h2 id="sep-04-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#sep-04-26">Sep 04 // Scenes from Literature III</a> <button onclick="switchWotBalefire()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="literature">literature</span>
+  <span class="tag tag-setting" data-tag="fantasy">fantasy</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="dk-sweet">dk-sweet</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="wotbalefire_v1" data-src="generated-artwork/wot_balefire_tests/v1-nano-banana-pro-prompt_b.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature III 1" class="wotbalefire-img lazy-img gallery-img active">
+  <img id="wotbalefire_v2" data-src="generated-artwork/wot_balefire_tests/v2-nano-banana-2-prompt_b.png" style="aspect-ratio: 1192 / 896;" width="1192" height="896" alt="Scenes from Literature III 2" class="wotbalefire-img lazy-img gallery-img">
+  <img id="wotbalefire_v3" data-src="generated-artwork/wot_balefire_tests/v3-nano-banana-2-lite-prompt_b.png" style="aspect-ratio: 1181 / 896;" width="1181" height="896" alt="Scenes from Literature III 3" class="wotbalefire-img lazy-img gallery-img">
+  <img id="wotbalefire_v4" data-src="generated-artwork/wot_balefire_tests/v4-nano-banana-pro-prompt_a.png" style="aspect-ratio: 1584 / 672;" width="1584" height="672" alt="Scenes from Literature III 4" class="wotbalefire-img lazy-img gallery-img">
+  <img id="wotbalefire_v5" data-src="generated-artwork/wot_balefire_tests/v5-nano-banana-pro-prompt_a.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature III 5" class="wotbalefire-img lazy-img gallery-img">
+  <img id="wotbalefire_v6" data-src="generated-artwork/wot_balefire_tests/v6-nano-banana-2-prompt_a.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature III 6" class="wotbalefire-img lazy-img gallery-img">
+  <img id="wotbalefire_v7" data-src="generated-artwork/wot_balefire_tests/v7-nano-banana-2-lite-prompt_a.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Scenes from Literature III 7" class="wotbalefire-img lazy-img gallery-img">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <button type="button">Scenes from Literature III</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-04-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Prompt A: Hyper-Realistic Studio Quality</strong></p><p><strong>[MEDIUM]</strong> A hyper-realistic, high-budget live-action cinematic still of the desperate, bloody conclusion to an epic fantasy chase. Shot on 35mm anamorphic lens, sharp focus, shallow depth of field. Octane render, Unreal Engine 5, ray tracing, global illumination. Features dramatic chiaroscuro lighting, rich deep shadows, HDR cinematic color grading, and subsurface scattering on skin to highlight dirt, sweat, and micro-detailed fabric textures. Masterpiece. <strong>[SETTING]</strong> An ethereal, dream-like dimension reflecting a grand palace colonnade. The architecture is organic and monumental, appearing as if grown or wind-carved from gleaming white marble rather than built block-by-block. There are no harsh angles, sharp corners, or gothic elements; everything features sweeping, elegant, fluid curves. Rows of towering 60-foot white marble columns, fluted to resemble massive stone tree trunks, march alongside intricate lion-carved stone panels. The entire space possesses a surreal, translucent, ghostly quality. <strong>[CHARACTERS BASE]</strong> Character 1 (Rand al'Thor): A tall young hero with reddish hair and piercing grey eyes, wearing a rich red coat intricately embroidered with golden dragons on the forearms, worn open over a loose white linen shirt, dark breeches, and tall riding boots. Character 2 (Rahvin): A large, broad-shouldered, exceptionally handsome villain with distinct white-streaked dark hair at his temples, wearing an opulent dark velvet coat with silver trim over a ruffled silk shirt, fitted dark trousers, and aristocratic leather boots. <strong>[EVENT MODIFIERS]</strong> Rand is battered and exhausted, knees buckling, with bloody rips in his red coat and blood on his hard face. He is screaming in rage with outstretched hands, unleashing a massive, impossibly bright, solid cylindrical beam of pure white light (balefire). The blinding beam strikes Rahvin, who is stumbling backward. Rahvin has been severely damaged prior to the strike: his opulent coat is smoking and charred, his face a seared ruin with one milky white eye, his expression malevolent. Rahvin is caught mid-obliteration: his body turning into fine mist, glowing luminous threads visibly ripping away from his form as he is violently burned backward out of time. Harsh, high-contrast studio lighting driven entirely by the blinding white beam.</p>
+<p><strong>Prompt B: 1990s Vintage Fantasy Cover Art Variant</strong></p><p><strong>[MEDIUM]</strong> A classic 1990s vintage fantasy book cover illustration. The provided reference images must be used strictly as a style guide for brushwork, color palette, and texture, NOT for literal content or composition. Emulate the traditional oil painting technique seen in the references, featuring soft, blended brushstrokes and a slightly hazy atmospheric perspective. The color palette relies on muted, earthy, autumnal backgrounds punctuated by highly saturated primary colors on the characters' clothing. The scene features sweeping, dramatic pastel clouds and somewhat stiff, highly theatrical character blocking typical of late 20th-century fantasy art. Masterpiece. <strong>[SETTING]</strong> A surreal, swirling dreamscape reflection of a grand palace colonnade. The architecture features the monumental scale and sweeping, organic, fluid curves of wind-carved white marble, completely lacking sharp blocky angles. Towering white marble columns resembling massive fluted stone tree trunks and lion-carved stone panels dissolve into autumnal, impressionistic clouds. <strong>[CHARACTERS BASE]</strong> Character 1 (Rand al'Thor): A tall young hero with reddish hair and piercing grey eyes, wearing a highly saturated rich red coat intricately embroidered with golden dragons, a loose white linen shirt, dark breeches, and tall riding boots. Character 2 (Rahvin): A large, broad-shouldered, handsome villain with distinctive white streaks at his temples, wearing an opulent dark velvet coat with silver trim, a ruffled silk shirt, fitted dark trousers, and aristocratic leather boots. <strong>[EVENT MODIFIERS]</strong> The desperate conclusion of an epic chase. Rand is battered, his red coat torn and bloody, casting a blinding, solid white shaft of magical light from his hands. The beam strikes Rahvin, who is stumbling backward. Rahvin is heavily battle-damaged, his clothes charred and smoking, his face twisted in malevolent fury. Rahvin is dissolving, his form turning into misty brushstrokes and unravelling threads of paint as he is erased from existence. The color palette features earthy tones contrasting with the intense, saturated white of the magic.</p></code></pre></div>
+  <div id="discuss-sep-04-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="dinosaurs,prehistoric,realistic">
 <h2 id="sep-03-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#sep-03-26">Sep 03 // Dinosaurs: Ankylosaurus</a> <button onclick="switchAnkylosaurus()" class="toggle-btn" style="position: static;">Next Image</button> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="dinosaurs">dinosaurs</span>
@@ -1127,6 +1156,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     
     
     
+    
+    let wotbalefireIndex = 0;
+    function switchWotBalefire() {
+      wotbalefireIndex = switchGallery(wotbalefireIndex, '.wotbalefire-img');
+    }
+
     let ankylosaurusIndex = 0;
     function switchAnkylosaurus() {
       ankylosaurusIndex = switchGallery(ankylosaurusIndex, '.ankylosaurus-img');
