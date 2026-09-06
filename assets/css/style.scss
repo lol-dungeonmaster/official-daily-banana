@@ -862,3 +862,28 @@ main {
   opacity: 1;
   filter: drop-shadow(0 0 8px #00ff88);
 }
+
+
+/* Prompt Width Toggle */
+body.prompt-width-standard .collapsible-code .language-python,
+body.prompt-width-standard .collapsible-code .discuss-container,
+body.prompt-width-standard .collapsible-code .action-buttons {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.prompt-width-wide .collapsible-code .language-python,
+body.prompt-width-wide .collapsible-code .discuss-container,
+body.prompt-width-wide .collapsible-code .action-buttons {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.prompt-btn-active {
+  color: #00ff88 !important;
+  text-shadow: 0 0 8px #00ff88 !important;
+  background: rgba(0,0,0,0.1); /* fallback to default button background */
+}

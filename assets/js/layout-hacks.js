@@ -13,18 +13,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Inject AI Studio Button
     const aiContainer = document.createElement("div");
-    aiContainer.style.cssText = "position: relative; display: inline-block;";
+    aiContainer.style.cssText =
+      "position: relative; display: inline-flex; align-items: center; gap: 10px;";
     aiContainer.innerHTML = `
-      <a href="javascript:void(0)" id="gemini-key-btn" class="btn btn-gemini">
+      <a href="javascript:void(0)" id="gemini-key-btn" class="btn btn-gemini" style="margin-bottom: 0;">
         <svg class="gemini-icon" viewBox="0 0 25 25" fill="currentColor"><path d="M19 2.5C19.5 5.5 21.5 7.5 24.5 8C21.5 8.5 19.5 10.5 19 13.5C18.5 10.5 16.5 8.5 13.5 8C16.5 7.5 18.5 5.5 19 2.5ZM9.5 5C10.1 9.7 13.8 13.4 18.5 14C13.8 14.6 10.1 18.3 9.5 23C8.9 18.3 5.2 14.6 0.5 14C5.2 13.4 8.9 9.7 9.5 5Z" /></svg>
         AI Studio
       </a>
-      <a href="javascript:void(0)" id="ledger-btn" class="btn btn-ledger" style="position: relative; padding: 6px 10px; margin-left: 5px;" title="Logs">
+      <a href="javascript:void(0)" id="ledger-btn" class="btn btn-ledger" style="position: relative; padding: 6px 10px; margin-bottom: 0;" title="Logs">
         <span id="ledger-badge" style="display: none; position: absolute; top: 2px; right: 2px; width: 8px; height: 8px; background: #00ff88; border-radius: 50%; box-shadow: 0 0 5px #00ff88;"></span>
         <svg class="ledger-icon" viewBox="0 0 24 24" fill="currentColor">
           <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
         </svg>
       </a>
+      <div id="prompt-width-toggle-group" class="toggle-group" style="display: inline-flex; align-items: stretch; gap: 0; height: 38px;">
+        <a href="javascript:void(0)" id="prompt-width-standard" class="btn" style="position: relative; padding: 6px 10px; font-weight: 900; -webkit-text-stroke: 1px currentColor; min-width: 38px; text-align: center; border-right: none; border-top-right-radius: 0; border-bottom-right-radius: 0; margin: 0; box-sizing: border-box; margin-bottom: 0; display: inline-flex; align-items: center; justify-content: center; height: 100%; transition: all 0.3s ease;" title="900px">+</a>
+        <a href="javascript:void(0)" id="prompt-width-wide" class="btn prompt-btn-active" style="position: relative; padding: 6px 10px; font-weight: 900; -webkit-text-stroke: 1px currentColor; min-width: 38px; text-align: center; border-radius: 0; border-left: none; border-right: none; margin: 0; box-sizing: border-box; margin-bottom: 0; display: inline-flex; align-items: center; justify-content: center; height: 100%; transition: all 0.3s ease;" title="1200px">++</a>
+        <a href="javascript:void(0)" id="prompt-width-wider" class="btn" style="position: relative; padding: 6px 10px; font-weight: 900; -webkit-text-stroke: 1px currentColor; min-width: 38px; text-align: center; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin: 0; box-sizing: border-box; margin-bottom: 0; display: inline-flex; align-items: center; justify-content: center; height: 100%; transition: all 0.3s ease;" title="100%">+++</a>
+      </div>
       <div id="ledger-popover" class="gemini-popover" style="right: 0; width: max-content; min-width: 450px; max-width: calc(100vw - 20px); max-height: calc(100vh - 100px); display: flex; flex-direction: column;">
         <div style="display: flex; justify-content: flex-start; align-items: center; gap: 8px; margin-bottom: 5px;">
           <label style="font-size:0.85em; color:#fff; margin:0;">Logs</label>
@@ -62,5 +68,53 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.body.id = "top";
+
+  // Prompt Width Toggle Logic
+  const btnStandard = document.getElementById("prompt-width-standard");
+  const btnWide = document.getElementById("prompt-width-wide");
+  const btnWider = document.getElementById("prompt-width-wider");
+
+  if (btnStandard && btnWide && btnWider) {
+    const clearClasses = () => {
+      document.body.classList.remove(
+        "prompt-width-standard",
+        "prompt-width-wide",
+      );
+      btnStandard.classList.remove("prompt-btn-active");
+      btnWide.classList.remove("prompt-btn-active");
+      btnWider.classList.remove("prompt-btn-active");
+    };
+
+    btnStandard.addEventListener("click", () => {
+      clearClasses();
+      document.body.classList.add("prompt-width-standard");
+      btnStandard.classList.add("prompt-btn-active");
+      sessionStorage.setItem("odb_prompt_width", "standard");
+    });
+
+    btnWide.addEventListener("click", () => {
+      clearClasses();
+      document.body.classList.add("prompt-width-wide");
+      btnWide.classList.add("prompt-btn-active");
+      sessionStorage.setItem("odb_prompt_width", "wide");
+    });
+
+    btnWider.addEventListener("click", () => {
+      clearClasses();
+      btnWider.classList.add("prompt-btn-active");
+      sessionStorage.setItem("odb_prompt_width", "wider");
+    });
+
+    // Restore state from sessionStorage (Default to 1200px Wide)
+    const savedWidth = sessionStorage.getItem("odb_prompt_width");
+    if (savedWidth === "standard") {
+      btnStandard.click();
+    } else if (savedWidth === "wider") {
+      btnWider.click();
+    } else {
+      // Default fallback
+      btnWide.click();
+    }
+  }
 });
 // stride-ignore: Hardcoded UI template HTML is safe from XSS
