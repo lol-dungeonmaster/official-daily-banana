@@ -223,14 +223,8 @@ document.addEventListener("DOMContentLoaded", () => {
   confirmBtn.addEventListener("click", async () => {
     const key = input.value.trim();
 
-    // STRIDE Mitigation: Client-Side Throttling
-    confirmBtn.disabled = true;
-    const originalText = confirmBtn.textContent;
-    confirmBtn.textContent = "Wait...";
-    setTimeout(() => {
-      confirmBtn.disabled = input.value.trim() === "";
-      confirmBtn.textContent = originalText;
-    }, 3000);
+    // STRIDE Mitigation: Promise-based Minimum Delay
+    const minDelay = new Promise((resolve) => setTimeout(resolve, 3000));
 
     if (!key) {
       sessionStorage.removeItem("gemini_api_key");
@@ -331,6 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (e) {
       showToast("Network Error", true);
     } finally {
+      await minDelay;
       confirmBtn.textContent = "Confirm";
       confirmBtn.disabled = false;
     }
