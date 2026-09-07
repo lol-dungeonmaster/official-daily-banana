@@ -2,6 +2,31 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="character-design,middle-earth,realistic,concept-art,lotro">
+<h2 id="sep-06-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#sep-06-26">Sep 06 // Read a Book Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchReadBook(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchReadBook(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="character-design">character-design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="concept-art">concept-art</span>
+  <span class="tag tag-style" data-tag="lotro">lotro</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="readbook_v1" data-src="generated-artwork/read_a_book_day/v1-nano-banana-pro.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Read a Book Day 1" class="readbook-img lazy-img gallery-img active">
+  <img id="readbook_v2" data-src="generated-artwork/read_a_book_day/v2-nano-banana-2.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Read a Book Day 2" class="readbook-img lazy-img gallery-img">
+  <img id="readbook_v3" data-src="generated-artwork/read_a_book_day/v3-nano-banana-2-lite.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Read a Book Day 3" class="readbook-img lazy-img gallery-img">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Read a Book Day</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-06-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>[MEDIUM]</strong> A hyper-realistic, high-budget live-action cinematic still possessing an ethereal yet grounded quality, perfectly capturing the quiet, atmospheric intensity of scholars unraveling an ancient mystery. Shot on a 35mm anamorphic lens at T/2.8, providing crystalline sharp focus on the subjects with a smooth, dreamlike background blur (shallow depth of field). The lighting is a masterful chiaroscuro mix—warm, flickering candlelight illuminating the table contrasts against soft, cool ambient rays piercing through the dusty library air, creating a mystical, volumetric haze. Masterpiece artwork rendered in Unreal Engine 5 and Octane Render, utilizing ray tracing, path-traced global illumination and physically based rendering (PBR). HDR cinematic color grading balances deep, mysterious shadows with warm, glowing highlights. Extreme micro-level detailing grounds the ethereal mood in reality, capturing the precise weave of fabric fibers, the natural pores and subsurface scattering of skin, the worn grain of leather, and authentic specular highlights on metallic surfaces. <strong>[SETTING]</strong> Using the provided library reference images as the sole design guide: A grand, dimly lit ancient library hall in the fantasy world of Middle-earth. The architecture features imposing pale stone walls with carved geometric friezes, massive stone pillars, and grand heavy wooden double doors adorned with golden sunburst emblems flanked by statues. The floor is a masterpiece of intricate, intersecting circular compass motifs in pale stone and warm gold inlay, partially covered by long, deep emerald-teal carpets with ornate woven borders. Massive, multi-tiered dark wooden bookshelves line the walls, packed tightly with thousands of ancient, leather-bound tomes and accessed by tall rolling wooden ladders. In the background, a large fire brazier burning within an ornate golden stone basin casts a warm ambient glow. To the side, a tranquil indoor pool is enclosed by dark stone railings, featuring a massive, rugged, unhewn black rock outcropping rising directly from the water, contrasting sharply with the refined masonry. Tall stone planters containing spiky blue-purple flowers add a rare touch of life to the dusty, scholarly environment. <strong>[CHARACTERS BASE]</strong> Using the provided front reference images as the sole design guide for Character H, and the table reference images as the sole design guide for The Historian: Character H: A sturdy Dwarf of Middle-earth with piercing blue eyes, bushy eyebrows and a massive, thick, dark brown beard featuring prominent side braids secured by silver knotwork clasps. He wears a textured periwinkle blue tunic featuring a distinct green and yellow trim along the bottom hem. Underneath, off-white, heavily wrinkled long sleeves extend past the elbow. He wears a brown leather vest, a small brown leather pouch on his right hip, dark brown leg wraps, and red leather shoes with silver buckles. Ornate bronze, gold, and red shoulder pauldrons feature swirling knotwork filigree. The Historian: A human scholar and keeper of the library's lore. He has a neat brown beard and a brown skullcap, wearing a forest green tunic over white sleeves, projecting an aura of quiet academic authority. <strong>[EVENT MODIFIERS]</strong> Character H is seated in a high-backed dark wooden chair at a long table, with The Historian seated adjacent to him. The table's surface and the chair's upholstery feature a matching, intricate inlaid pattern of repeating diamonds and stars in cream, yellow, and red. The table is heavily cluttered with rolled parchment, red wax-sealed scrolls, an ornate metal goblet, and a flickering candelabra. Character H's wide-brimmed brown leather hat (designed strictly according to the provided front*withhat reference images)—featuring a buckled hatband, yellow-stitched brim, and a large white feather—rests on the table surface. Character H is deeply engrossed in reading a massive, weathered history tome. He has a highly perplexed, wide-eyed expression, his brows furrowed as if coming to a sudden, stunning conclusion from the text. The Historian is actively assisting in the study of the ancient tome, leaning closely over the book, pointing at specific passages, and helping the dwarf understand the cryptic contents. The dramatic chiaroscuro lighting catches the metallic glint of the dwarf's pauldrons and casts deep, rich shadows across his face, emphasizing the gravity of his realization.</p></code></pre></div>
+  <div id="discuss-sep-06-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="animals,contemporary,realistic,journalistic,cinematic,ethereal">
 <h2 id="sep-05-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#sep-05-26">Sep 05 // Intl. Vulture Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchVulture(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchVulture(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -1262,6 +1287,11 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let spriteIndex = 0;
     function switchSprite(dir = 1) {
       spriteIndex = switchGallery(spriteIndex, '.sprite-img', dir);
+    }
+
+    let readBookIndex = 0;
+    function switchReadBook(dir = 1) {
+      readBookIndex = switchGallery(readBookIndex, '.readbook-img', dir);
     }
 </script>
 
