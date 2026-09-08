@@ -4,9 +4,9 @@
 
 <article class="post-entry" data-tags="character-design,middle-earth,g-moses,realistic,concept-art">
 <h2 id="sep-07-26" style="display: flex; justify-content: flex-start; align-items: center; gap: 25px;"><a href="#sep-07-26">Sep 07 // Grandma Moses Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchGrandmaMoses(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchGrandmaMoses(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
-  <span class="tag tag-style" data-tag="g-moses">g-moses</span>
   <span class="tag tag-topic" data-tag="character-design">character-design</span>
   <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="g-moses">g-moses</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
   <span class="tag tag-style" data-tag="concept-art">concept-art</span>
 </div></h2>
