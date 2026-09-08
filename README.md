@@ -26,3 +26,10 @@ While text-based prompt variation relies on models like _Gemini 2.5 Flash Lite_ 
   2. Create a new Project and link a Billing Account to it.
   3. Search for the **Generative Language API** in the API library and enable it.
   4. Go back to AI Studio, click "Create API Key", and select your newly created, billing-enabled project from the dropdown list.\n
+
+## License
+
+This repository uses a dual-licensing structure:
+
+- **Codebase (MIT License):** All software, scripts, HTML, CSS, and structural code are licensed under the [MIT License](LICENSE).
+- **Artwork & Prompts (CC BY 4.0):** All AI-generated images, artwork, and carefully engineered textual prompts are licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). You are completely free to share, adapt, and use these images (even commercially), provided you give appropriate credit and link back to this repository.
