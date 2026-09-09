@@ -35,7 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
           ) {
             lightboxToggleGroup.style.display = "flex";
             const prevH2 = galleryFrame.previousElementSibling;
-            if (prevH2 && prevH2.tagName === "H2") {
+            if (
+              prevH2 &&
+              (prevH2.tagName === "H2" || prevH2.tagName === "H3")
+            ) {
               currentGalleryBtnNext = prevH2.querySelector(".toggle-next");
               currentGalleryBtnPrev = prevH2.querySelector(".toggle-prev");
             } else {
@@ -59,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (btn) {
       btn.click(); // Trigger the gallery's native toggle function
       // Update lightbox image source based on the newly active image
-      const h2 = btn.closest("h2");
+      const h2 = btn.closest("h2, h3");
       const galleryFrame = h2 ? h2.nextElementSibling : null;
       if (galleryFrame && galleryFrame.classList.contains("gallery-frame")) {
         const activeImg = galleryFrame.querySelector(".gallery-img.active");

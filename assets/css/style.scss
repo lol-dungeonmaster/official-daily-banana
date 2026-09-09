@@ -143,6 +143,7 @@ header {
 }
 
 body {
+  overflow-x: hidden;
   color: #fff7f3;
   background: #00312b;
   font-size: 20px;
@@ -510,11 +511,12 @@ pre {
     flex-direction: column;
   }
   .wrapper .container {
-    width: 85%;
-    padding: 2rem 3rem 80vh 2.3rem;
+    width: 100%;
+    padding: 2rem 1.5rem 80vh 1.5rem;
+    box-sizing: border-box;
   }
   .main-nav {
-    width: 100vw;
+    width: 100%;
     max-width: none;
     position: static;
     height: auto; /* Ensures it grows fully */
