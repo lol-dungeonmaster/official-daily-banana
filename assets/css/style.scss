@@ -524,6 +524,7 @@ pre {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding-top: 3rem;
     padding-bottom: 1.5rem;
     border-right: none;
     overflow-y: visible; /* Disables the internal scrollbar inherited from desktop */
@@ -532,6 +533,7 @@ pre {
     width: 100%;
     justify-content: center;
     padding-left: 0;
+    order: 99;
   }
   .nav-month {
     flex: 1 1 250px; /* Wraps at exactly 520px screen width */
