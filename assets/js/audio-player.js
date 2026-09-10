@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const playerContainer = document.createElement("div");
   playerContainer.id = "flow-music-player";
   playerContainer.className = "toggle-group";
-  playerContainer.style.cssText = "display: inline-flex; align-items: stretch; gap: 0; height: 38px;";
+  playerContainer.style.cssText = "display: inline-flex; align-items: stretch; gap: 0; height: 38px; pointer-events: none; opacity: 0.5; transition: opacity 0.3s ease;";
 
   // Audio Element (hidden)
   const audioEl = document.createElement("audio");
@@ -115,6 +115,9 @@ document.addEventListener("DOMContentLoaded", () => {
   playerContainer.appendChild(downloadBtn);
   playerContainer.appendChild(spaceBtn);
 
+  // Append immediately so it renders instantly alongside other header controls
+  downloadsSection.appendChild(playerContainer);
+
   // Toggle Dropdown
   trackBtn.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -135,6 +138,10 @@ document.addEventListener("DOMContentLoaded", () => {
         playerContainer.style.display = "none";
         return;
       }
+
+      // Re-enable player container now that loading is complete
+      playerContainer.style.pointerEvents = "auto";
+      playerContainer.style.opacity = "1";
 
       // Populate custom dropdown menu
       tracks.forEach((track, index) => {
@@ -230,9 +237,6 @@ document.addEventListener("DOMContentLoaded", () => {
         playBtn.title = "Play";
         audioEl.currentTime = 0;
       });
-
-      // Since aiContainer is now display: contents, we can just append it directly to downloadsSection
-      downloadsSection.appendChild(playerContainer);
     })
     .catch(err => {
       console.error("Failed to load Flow Music tracks:", err);
