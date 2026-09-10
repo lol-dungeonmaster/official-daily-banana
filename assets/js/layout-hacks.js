@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inject AI Studio Button
     const aiContainer = document.createElement("div");
     aiContainer.style.cssText =
-      "position: relative; display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px;";
+      "display: contents;";
     aiContainer.innerHTML = `
       <a href="javascript:void(0)" id="gemini-key-btn" class="btn btn-gemini" style="margin-bottom: 0;">
         <svg class="gemini-icon" viewBox="0 0 25 25" fill="currentColor"><path d="M19 2.5C19.5 5.5 21.5 7.5 24.5 8C21.5 8.5 19.5 10.5 19 13.5C18.5 10.5 16.5 8.5 13.5 8C16.5 7.5 18.5 5.5 19 2.5ZM9.5 5C10.1 9.7 13.8 13.4 18.5 14C13.8 14.6 10.1 18.3 9.5 23C8.9 18.3 5.2 14.6 0.5 14C5.2 13.4 8.9 9.7 9.5 5Z" /></svg>
