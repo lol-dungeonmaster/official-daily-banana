@@ -2,6 +2,26 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="character-design,contemporary,webcomic,lotro">
+<h2 id="sep-09-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-09-26">Sep 09 // Webcomics</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="character-design">character-design</span>
+  <span class="tag tag-setting" data-tag="contemporary">contemporary</span>
+  <span class="tag tag-style" data-tag="webcomic">webcomic</span>
+  <span class="tag tag-style" data-tag="lotro">lotro</span>
+</div></h2>
+
+<div class="gallery-frame"><img id="webcomic_v1" data-src="generated-artwork/satire_comic/v1-nano-banana-2-webcomic.png" class="lazy-img" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Webcomics" /></div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Webcomics</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-09-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>[NEGATIVE]</strong> highly detailed, realistic, cinematic lighting, 3d render, shading, gradients, complex backgrounds, beautiful, anime, manga, professional illustration, elves, pointy ears, hats on dwarf, text tags, watermarks, social media handles, patreon, signatures, web links, realistic anatomy, realistic proportions, pure white room backgrounds, black panel borders <strong>[MEDIUM]</strong> A 4-panel slice-of-life internet webcomic page with speech bubbles containing legible text. The artwork MUST look exactly like it was drawn by the artist of the comic references. Use their exact thick wobbly line art, highly exaggerated cartoon facial expressions, and solid flat full coloring without any uncolored white patches. Each panel must have a distinct, solid pastel-colored background filling the room. The panels must be separated by thick, pure white gutters. Do not use pure white for the room backgrounds. <strong>[CHARACTERS BASE]</strong> CRITICAL: The portrait references are ONLY for capturing defining physical traits (hair style, beard shape, eye color). The actual drawing style and anatomy must strictly mimic the cartoon comic references. Character M: a human woman with dark hair and green eyes, wearing an oversized baggy sweater and messy hair bun; Character H: a stout dwarf without a hat, with a massive, distinctively thick brown beard and a plain t-shirt. Both characters must be rendered using the primitive, goofy cartoon anatomy of the comic references. <strong>[EVENT MODIFIERS]</strong> Panel 1: Character M is hunched angrily over a simple drawing monitor on a desk, with a "BE MAD" poster on the blank wall behind her, speech bubble says "AI art is algorithmic slop! True art requires a human soul grappling with profound themes!". Panel 2: Character H walks up behind her holding a coffee mug, speech bubble says "So you aren't just drawing another strawman to win a fake argument against?". Panel 3: Close up of the monitor showing a crude drawing of an angry internet troll wearing a red baseball cap, slipping on a giant banana peel, drawn strictly in the style of the antagonists from the provided webcomic reference images. The speech bubble explicitly says "make art great again!". Panel 4: Character M turns to Character H with a highly exaggerated, teary-eyed expression of smug emotional fulfillment, speech bubble says "An algorithm could never replicate this raw healing catharsis." Character H stares blankly at the viewer.</p></code></pre></div>
+  <div id="discuss-sep-09-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="literature,fantasy,canty,realistic">
 <h2 id="sep-08-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-08-26">Sep 08 // Intl. Literacy Day</a>
   <div class="toggle-group" style="display: flex; gap: 0;">
