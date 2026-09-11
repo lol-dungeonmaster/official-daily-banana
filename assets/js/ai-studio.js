@@ -3,11 +3,63 @@ document.addEventListener("DOMContentLoaded", () => {
   const popover = document.getElementById("gemini-popover");
   const input = document.getElementById("gemini-key-input");
   const confirmBtn = document.getElementById("gemini-key-confirm");
+  const eyeBtn = document.getElementById("gemini-key-eye");
 
-  // Instantly unactivate the icon if the user starts typing a new key
+  const getObfuscatedKey = (k) => {
+    if (!k || k.length < 10) return k;
+    const half = Math.floor(k.length / 2);
+    return k.substring(0, half) + "▪".repeat(17);
+  };
+
+  if (input) {
+    input.addEventListener("copy", (e) => e.preventDefault());
+    input.addEventListener("cut", (e) => e.preventDefault());
+  }
+
+  let eyeTimeout;
+  if (eyeBtn) {
+    eyeBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const real = input.dataset.realKey;
+      if (!real) return;
+      if (input.value === real && real !== getObfuscatedKey(real)) {
+        input.value = getObfuscatedKey(real);
+        clearTimeout(eyeTimeout);
+      } else {
+        input.value = real;
+        clearTimeout(eyeTimeout);
+        eyeTimeout = setTimeout(() => {
+          if (input.dataset.realKey === real) {
+            input.value = getObfuscatedKey(real);
+          }
+        }, 5000);
+      }
+    });
+  }
+
+  input.addEventListener("dblclick", () => {
+    const existingKey = sessionStorage.getItem("gemini_api_key");
+    if (existingKey && input.readOnly) {
+      input.readOnly = false;
+      input.style.cursor = "text";
+      input.title = "";
+      input.value = "";
+      input.dataset.realKey = "";
+      confirmBtn.disabled = true;
+      input.focus();
+    }
+  });
+
+  // Handle fresh inputs after double-click clears the box
   input.addEventListener("input", () => {
-    if (sessionStorage.getItem("gemini_api_key")) {
-      if (input.value.trim() !== sessionStorage.getItem("gemini_api_key")) {
+    input.dataset.realKey = input.value;
+    
+    const currentRealKey = input.dataset.realKey;
+    confirmBtn.disabled = currentRealKey.trim() === "";
+
+    const existingKey = sessionStorage.getItem("gemini_api_key");
+    if (existingKey) {
+      if (currentRealKey.trim() !== existingKey) {
         icon.classList.remove("activated");
       } else {
         icon.classList.add("activated");
@@ -186,11 +238,19 @@ document.addEventListener("DOMContentLoaded", () => {
     e.stopPropagation();
     const existingKey = sessionStorage.getItem("gemini_api_key");
     if (existingKey) {
-      input.value = existingKey;
+      input.dataset.realKey = existingKey;
+      input.value = getObfuscatedKey(existingKey);
       confirmBtn.disabled = false;
+      input.readOnly = true;
+      input.style.cursor = "pointer";
+      input.title = "Double-click to edit key";
     } else {
+      input.dataset.realKey = "";
       input.value = "";
       confirmBtn.disabled = true;
+      input.readOnly = false;
+      input.style.cursor = "text";
+      input.title = "";
     }
     popover.classList.toggle("show");
   });
@@ -221,7 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   confirmBtn.addEventListener("click", async () => {
-    const key = input.value.trim();
+    const key = (input.dataset.realKey || input.value).trim();
 
     // STRIDE Mitigation: Promise-based Minimum Delay
     const minDelay = new Promise((resolve) => setTimeout(resolve, 3000));

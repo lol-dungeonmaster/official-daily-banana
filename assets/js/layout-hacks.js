@@ -57,7 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <div id="gemini-popover" class="gemini-popover">
         <label style="font-size:0.85em; margin-bottom: 5px; color:#fff;">Gemini / Nano Banana API Key</label>
-        <input type="text" id="gemini-key-input" placeholder="AIzaSy..." style="padding: 8px; border-radius: 4px; border: 1px solid #555; background: rgba(0,0,0,0.3); color: #fff; width: 330px;" />
+        <div style="position: relative; width: 330px;">
+          <input type="text" id="gemini-key-input" placeholder="AIzaSy..." style="padding: 8px; padding-right: 30px; border-radius: 4px; border: 1px solid #555; background: rgba(0,0,0,0.3); color: #fff; width: 100%; box-sizing: border-box;" />
+          <span id="gemini-key-eye" title="Show key" style="position: absolute; right: 8px; top: 0; bottom: 0; margin: auto; height: 16px; display: flex; align-items: center; cursor: pointer;" onmouseover="this.querySelector('svg').style.stroke='#fff'" onmouseout="this.querySelector('svg').style.stroke='#aaa'"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: stroke 0.2s;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
+        </div>
         <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: flex-end;">
           <button id="gemini-key-cancel" class="btn" style="padding: 6px 12px; font-size:0.8em; margin:0;">Cancel</button>
           <button id="gemini-key-confirm" class="btn" style="padding: 6px 12px; font-size:0.8em; margin:0;">Confirm</button>
