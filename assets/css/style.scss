@@ -410,6 +410,7 @@ pre {
 
 .gallery-img.lazy-img {
   max-width: 100%;        /* Bound by container */
+  width: 100%;            /* Explicit width to fix WebKit absolute aspect-ratio squish bug */
   height: auto;           /* Keep aspect ratio */
   position: absolute;     /* Removes the image from the layout flow */
   top: 0;
