@@ -376,6 +376,7 @@ pre {
 .gallery-frame {
   position: relative;
   padding-bottom: 1.0rem;
+  overflow: hidden;
   width: 100%;            /* Ensure it fills its container */
 }
 

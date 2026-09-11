@@ -1273,9 +1273,42 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     }
     function switchGallery(currentIndex, className, direction = 1) {
       const imgs = document.querySelectorAll(className);
-      imgs[currentIndex].classList.remove('active');    // 1. Remove the active class
-      currentIndex = (currentIndex + direction + imgs.length) % imgs.length;  // 2. Move to the next index
-      imgs[currentIndex].classList.add('active');       // 3. Add the active class to the new current image
+      if (imgs.length === 0) return currentIndex;
+      
+      const container = imgs[0].closest('.gallery-frame');
+      let startHeight = 0;
+      let endHeight = 0;
+      
+      if (container) {
+        container.style.transition = 'none';
+        container.style.height = 'auto';
+        startHeight = container.getBoundingClientRect().height;
+        container.style.height = startHeight + 'px';
+      }
+
+      imgs[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + direction + imgs.length) % imgs.length;
+      imgs[currentIndex].classList.add('active');
+      
+      if (container) {
+        container.style.height = 'auto';
+        endHeight = container.getBoundingClientRect().height;
+        
+        container.style.height = startHeight + 'px';
+        container.offsetHeight; // Force reflow
+        
+        container.style.transition = 'height 0.4s ease-in-out';
+        container.style.height = endHeight + 'px';
+        
+        setTimeout(() => {
+          // Only reset to auto if we haven't started another transition
+          if (container.style.height === endHeight + 'px') {
+            container.style.transition = 'none';
+            container.style.height = 'auto';
+          }
+        }, 450);
+      }
+      
       return currentIndex;
     }
     let lionIndex = 0; // '.lion-img'
