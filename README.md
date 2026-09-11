@@ -14,6 +14,22 @@ To use the interactive "Generate Variant" and image generation features on this 
 4. You can either generate a key in a new project automatically, or select an existing Google Cloud project.
 5. Copy the key and paste it into the AI Studio input box in the site's navigation bar.
 
+### Pricing & Free Tier Rate Limits
+
+Generating text-based variant prompts through this site relies on Google's Gemini Flash model family. 
+The rates are fixed by Google's API pricing model and are not promotional. For the most up-to-date information, always refer to the official [Gemini API Pricing Page](https://ai.google.dev/gemini-api/docs/pricing) and [Rate Limits Page](https://ai.google.dev/gemini-api/docs/rate-limits).
+
+**Free Tier (No Billing Account):**
+*   **Cost:** $0.00
+*   **Rate Limits:** Capped at **15 Requests Per Minute (RPM)**, 1 million Tokens Per Minute (TPM), and 1,500 Requests Per Day (RPD). If you click the Variant button too rapidly, the site will catch a `429 Rate Limit Exceeded` error and notify you to wait.
+
+**Cost Breakdown per Model:**
+If you attach a billing account to bypass the rate limits, generating short text variants is staggeringly inexpensive. Because our prompts are highly structured and short (averaging ~250 input tokens and ~150 output tokens):
+*   **2.5 Flash Lite ($):** ~15,000 variants per $1.00
+*   **3.1 Flash Lite ($$):** ~8,000 variants per $1.00
+*   **3.5 Flash Lite ($$$):** ~6,000 variants per $1.00
+*   **2.5 Flash ($$$$):** ~4,000 variants per $1.00
+
 ### Nano Banana (Image Generation) Billing Requirements
 
 While text-based prompt variation relies on models like _Gemini 2.5 Flash Lite_ (which work perfectly on the free tier), generating actual artwork via **Nano Banana** **strictly requires a Google Cloud Billing account**. Free tier keys have a hard quota of 0 RPM for image generation and will throw a `429 Quota Exceeded` error or a `403 Forbidden` error.

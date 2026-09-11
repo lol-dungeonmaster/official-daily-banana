@@ -445,7 +445,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedModel =
       sessionStorage.getItem("preferred_model") || "gemini-2.5-flash-lite";
     const savedLabel =
-      sessionStorage.getItem("preferred_model_label") || "2.5 Flash Lite (Eco)";
+      sessionStorage.getItem("preferred_model_label") || "<span>2.5 Flash Lite</span> <span>($<span style=\"opacity: 0.3\">$$$</span>)</span>";
 
     controls.innerHTML = `
       <strong style="color: #cbcbcb; font-family: inherit; font-size: 20px;">Generate:</strong>
@@ -453,14 +453,14 @@ document.addEventListener("DOMContentLoaded", () => {
       <button class="btn-custom" disabled title="Coming soon" style="cursor: not-allowed; opacity: 0.5;">Custom</button>
       <div class="model-dropdown-container" style="position: relative; display: inline-flex; align-items: center; margin: 0; padding: 0;">
         <div role="button" class="model-select-btn" style="background: rgba(0,0,0,0.1); border: 1px solid #838383; border-radius: 4px; color: #cbcbcb; padding: 4px 8px; font-family: inherit; font-size: 20px; line-height: normal; box-sizing: border-box; cursor: pointer; display: flex; align-items: center; gap: 5px; margin: 0;">
-          <span class="model-label">${savedLabel}</span>
+          <div class="model-label" style="display: flex; justify-content: space-between; gap: 15px; width: 100%;">${savedLabel}</div>
           <span style="font-size: 12px; pointer-events: none;">▼</span>
         </div>
         <div class="model-options-menu fade-dropdown" style=" position: absolute; top: 100%; left: 0; margin-top: 4px; background: rgba(0, 49, 43, 0.95); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 4px 0; flex-direction: column; gap: 0; z-index: 2000; min-width: max-content; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
-          <div class="model-option" data-value="gemini-2.5-flash-lite" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px;">2.5 Flash Lite (Eco)</div>
-          <div class="model-option" data-value="gemini-3.1-flash-lite" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px;">3.1 Flash Lite (Fast)</div>
-          <div class="model-option" data-value="gemini-3.5-flash-lite" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px;">3.5 Flash Lite (Fast)</div>
-          <div class="model-option" data-value="gemini-2.5-flash" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px;">2.5 Flash (Balanced)</div>
+          <div class="model-option" data-value="gemini-2.5-flash-lite" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px; display: flex; justify-content: space-between; gap: 15px;"><span>2.5 Flash Lite</span> <span>($<span style="opacity: 0.3">$$$</span>)</span></div>
+          <div class="model-option" data-value="gemini-3.1-flash-lite" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px; display: flex; justify-content: space-between; gap: 15px;"><span>3.1 Flash Lite</span> <span>($$<span style="opacity: 0.3">$$</span>)</span></div>
+          <div class="model-option" data-value="gemini-3.5-flash-lite" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px; display: flex; justify-content: space-between; gap: 15px;"><span>3.5 Flash Lite</span> <span>($$$<span style="opacity: 0.3">$</span>)</span></div>
+          <div class="model-option" data-value="gemini-2.5-flash" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px; display: flex; justify-content: space-between; gap: 15px;"><span>2.5 Flash</span> <span>($$$$)</span></div>
         </div>
       </div>
     `;
@@ -482,9 +482,9 @@ document.addEventListener("DOMContentLoaded", () => {
       opt.addEventListener("click", (e) => {
         e.stopPropagation();
         currentModel = opt.getAttribute("data-value");
-        modelLabel.textContent = opt.textContent;
+        modelLabel.innerHTML = opt.innerHTML;
         sessionStorage.setItem("preferred_model", currentModel);
-        sessionStorage.setItem("preferred_model_label", opt.textContent);
+        sessionStorage.setItem("preferred_model_label", opt.innerHTML);
         dropdownMenu.classList.remove("show");
       });
       opt.addEventListener(
