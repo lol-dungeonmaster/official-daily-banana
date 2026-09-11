@@ -1264,12 +1264,9 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <script>
+    let currentFortIndex = 0;
     function switchFort(dir = 1) {
-      const img1 = document.getElementById('fort_v1');
-      const img2 = document.getElementById('fort_v2');
-
-      img1.classList.toggle('active');
-      img2.classList.toggle('active');
+      currentFortIndex = switchGallery(currentFortIndex, '.fort-img', dir);
     }
     function switchGallery(currentIndex, className, direction = 1) {
       const imgs = document.querySelectorAll(className);
