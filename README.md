@@ -21,6 +21,7 @@ The rates are fixed by Google's API pricing model and are not promotional. For t
 
 **Free Tier (No Billing Account):**
 *   **Cost:** $0.00
+*   **Data Privacy:** For transparency, the [Gemini API Terms of Service](https://ai.google.dev/gemini-api/terms) explicitly states that for the free tier (Unpaid Services): *"To help with quality and improve our products, human reviewers may read, annotate, and process your API input and output... Do not submit sensitive, confidential, or personal information."* (This data collection does *not* apply to API keys connected to [an active Google Cloud billing account](#nano-banana-image-generation-billing-requirements)).
 *   **Rate Limits:** Capped at **15 Requests Per Minute (RPM)**, 1 million Tokens Per Minute (TPM), and 1,500 Requests Per Day (RPD). If you click the Variant button too rapidly, the site will catch a `429 Rate Limit Exceeded` error and notify you to wait.
 
 **Cost Breakdown per Model:**
@@ -36,8 +37,15 @@ While text-based prompt variation relies on models like _Gemini 2.5 Flash Lite_ 
 
 **Ways to associate a Billing Account:**
 
-- **Option A (Upgrade an existing AI Studio Key):** If you let AI Studio automatically create a project for your key (usually named `generativelanguage-...`), go to the [Google Cloud Console Billing Page](https://console.cloud.google.com/billing), select that project from the dropdown, and link an active credit card/billing account to it.
-- **Option B (Create a new Cloud Project):**
+- **Option A (Directly in AI Studio - Easiest):**
+  1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey) and view your existing API keys.
+  2. Click the **"Set up billing"** button or link next to the key you want to upgrade.
+  3. Follow the prompts to link a credit card.
+- **Option B (Upgrade an existing key via Cloud Console):** If you let AI Studio automatically create a project for your key (usually named `generativelanguage-...`), you can upgrade it manually:
+  1. Go to the [Google Cloud Console Billing Page](https://console.cloud.google.com/billing) and create/select an active billing account.
+  2. In the left sidebar, click **"Account Management"** (or "My Projects").
+  3. Find the auto-generated `generativelanguage-...` project in the list, click the three dots next to it, and select **"Change Billing"** to link it to your active credit card.
+- **Option C (Create a new Cloud Project):**
   1. Go to the [Google Cloud Console](https://console.cloud.google.com).
   2. Create a new Project and link a Billing Account to it.
   3. Search for the **Generative Language API** in the API library and enable it.
