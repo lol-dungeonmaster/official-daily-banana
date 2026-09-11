@@ -61,6 +61,17 @@ document.addEventListener("DOMContentLoaded", () => {
           <input type="text" id="gemini-key-input" placeholder="AIzaSy..." style="padding: 8px; padding-right: 30px; border-radius: 4px; border: 1px solid #555; background: rgba(0,0,0,0.3); color: #fff; width: 100%; box-sizing: border-box;" />
           <span id="gemini-key-eye" title="Show key" style="position: absolute; right: 8px; top: 0; bottom: 0; margin: auto; height: 16px; display: flex; align-items: center; cursor: pointer;" onmouseover="this.querySelector('svg').style.stroke='#fff'" onmouseout="this.querySelector('svg').style.stroke='#aaa'"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: stroke 0.2s;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
         </div>
+        <div id="gemini-key-indicators" style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.8em; color: #aaa; background: rgba(0,0,0,0.2); padding: 6px 8px; border-radius: 4px;">
+          <div style="display: flex; align-items: center; gap: 4px;" title="Text Generation / Variant creation capabilities">
+            <span id="indicator-basic">❌</span> Variants
+          </div>
+          <div style="display: flex; align-items: center; gap: 4px;" title="Nano Banana image generation capabilities (Requires Billing)">
+            <span id="indicator-image">❌</span> Images
+          </div>
+          <div style="display: flex; align-items: center; gap: 4px;" title="Rate limit cooldown timer between requests">
+            <span id="indicator-delay" style="font-family: monospace; background: rgba(255,255,255,0.1); padding: 2px 4px; border-radius: 2px; color: #fff;">--s</span> Delay
+          </div>
+        </div>
         <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: flex-end;">
           <button id="gemini-key-cancel" class="btn" style="padding: 6px 12px; font-size:0.8em; margin:0;">Cancel</button>
           <button id="gemini-key-confirm" class="btn" style="padding: 6px 12px; font-size:0.8em; margin:0;">Confirm</button>

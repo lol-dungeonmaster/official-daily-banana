@@ -1,5 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  const updateIndicators = () => {
+    const indBasic = document.getElementById("indicator-basic");
+    const indImage = document.getElementById("indicator-image");
+    const indDelay = document.getElementById("indicator-delay");
+    if (!indBasic || !indImage || !indDelay) return;
+    const existingKey = sessionStorage.getItem("gemini_api_key");
+    if (existingKey) {
+      indBasic.textContent = "✅";
+      const hasBilling = sessionStorage.getItem("has_billing") !== "false";
+      indImage.textContent = hasBilling ? "✅" : "❌";
+      indDelay.textContent = hasBilling ? "3s" : "5s";
+    } else {
+      indBasic.textContent = "❌";
+      indImage.textContent = "❌";
+      indDelay.textContent = "--s";
+    }
+  };
+
+
   document.addEventListener("closeAllPopovers", () => {
     if (popover) popover.classList.remove("show");
     if (ledgerPopover) ledgerPopover.classList.remove("show");
@@ -275,6 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
       input.style.cursor = "text";
       input.title = "";
     }
+    updateIndicators();
     popover.classList.add("show");
   });
 
@@ -359,6 +379,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         sessionStorage.setItem("gemini_api_key", key);
+        sessionStorage.setItem("has_billing", hasBilling ? "true" : "false");
+        updateIndicators();
         icon.classList.add("activated");
         popover.classList.remove("show");
 
@@ -537,6 +559,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     variantBtn.addEventListener("click", async (e) => {
+      // Global Debounce Lock (Cross-Entry Protection)
+      const hasBilling = sessionStorage.getItem("has_billing") !== "false";
+      const debounceMs = hasBilling ? 3000 : 5000;
+      const now = Date.now();
+      window._lastVariantTime = window._lastVariantTime || 0;
+      
+      if (now - window._lastVariantTime < debounceMs) {
+         const remaining = Math.ceil((debounceMs - (now - window._lastVariantTime)) / 1000);
+         showToast(hasBilling ? `Please wait ${remaining}s.` : `Free Tier cooldown. Please wait ${remaining}s.`, true);
+         return;
+      }
+      window._lastVariantTime = now;
+
       // Toggle arrows
       variantBtn.classList.add("expanded");
       if (customBtn) customBtn.classList.remove("expanded");
@@ -585,7 +620,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const errText = await res.text();
           console.error("Gemini API Error [" + res.status + "]:", errText);
           if (res.status === 429) {
-            showToast("Rate limit reached. Please wait a moment.", true);
+            sessionStorage.setItem("has_billing", "false");
+            showToast("Rate limit reached. Switching to 5s cooldown.", true);
           } else if (
             res.status === 400 ||
             res.status === 401 ||
