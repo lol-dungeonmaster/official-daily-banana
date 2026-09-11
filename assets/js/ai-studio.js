@@ -474,9 +474,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <button class="btn-variant">Variant</button>
       <button class="btn-custom" disabled title="Coming soon" style="cursor: not-allowed; opacity: 0.5;">Custom</button>
       <div class="model-dropdown-container" style="position: relative; display: inline-flex; align-items: center; margin: 0; padding: 0;">
-        <div role="button" class="model-select-btn" style="background: rgba(0,0,0,0.1); border: 1px solid #838383; border-radius: 4px; color: #cbcbcb; padding: 4px 8px; font-family: inherit; font-size: 20px; line-height: normal; box-sizing: border-box; cursor: pointer; display: flex; align-items: center; gap: 5px; margin: 0;">
+        <div role="button" title="Change model" class="model-select-btn" style="background: rgba(0,0,0,0.1); border: 1px solid #838383; border-radius: 4px; color: #cbcbcb; padding: 4px 8px; font-family: inherit; font-size: 20px; line-height: normal; box-sizing: border-box; cursor: pointer; display: flex; align-items: center; gap: 5px; margin: 0;">
           <div class="model-label" style="display: flex; justify-content: space-between; gap: 15px; width: 100%;">${savedLabel}</div>
-          <span style="font-size: 12px; pointer-events: none;">▼</span>
+          <span class="model-caret" style="font-size: 12px; pointer-events: none; transition: all 0.2s ease;">▼</span>
         </div>
         <div class="model-options-menu fade-dropdown" style=" position: absolute; top: 100%; left: 0; margin-top: 4px; background: rgba(0, 49, 43, 0.95); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 4px 0; flex-direction: column; gap: 0; z-index: 2000; min-width: max-content; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
           <div class="model-option" data-value="gemini-2.5-flash-lite" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px; display: flex; justify-content: space-between; gap: 15px;"><span>2.5 Flash Lite</span> <span>($<span style="opacity: 0.3">$$$</span>)</span></div>

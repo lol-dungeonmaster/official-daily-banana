@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const trackBtn = document.createElement("a");
   trackBtn.className = "btn";
   trackBtn.style.cssText = "margin: 0; padding: 0 6px; display: inline-flex; align-items: center; justify-content: space-between; gap: 4px; border-radius: 0; border-right: none; font-size: 0.85em; font-family: Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace; cursor: pointer; text-decoration: none; overflow: hidden;";
+  trackBtn.title = "Change track";
   
   // Track Label Scroller
   const labelMask = document.createElement("div");
@@ -94,8 +95,20 @@ document.addEventListener("DOMContentLoaded", () => {
   labelMask.appendChild(trackLabel);
 
   const caret = document.createElement("span");
-  caret.style.cssText = "font-size: 0.8em; opacity: 0.7; pointer-events: none;";
+  caret.style.cssText = "font-size: 0.8em; opacity: 0.7; pointer-events: none; transition: all 0.2s ease;";
   caret.textContent = "▼";
+
+  // Hover Glow Effect
+  trackBtn.addEventListener("mouseover", () => {
+    caret.style.textShadow = "0 0 8px #00ff88";
+    caret.style.color = "";
+    caret.style.opacity = "1";
+  });
+  trackBtn.addEventListener("mouseout", () => {
+    caret.style.textShadow = "none";
+    caret.style.color = "";
+    caret.style.opacity = "0.7";
+  });
 
   trackBtn.appendChild(labelMask);
   trackBtn.appendChild(caret);

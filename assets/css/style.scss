@@ -936,3 +936,16 @@ body.prompt-width-wide .collapsible-code .action-buttons {
   border-style: solid;
   border-color: #ff4a4a transparent transparent transparent;
 }
+
+
+/* Variant Dropdown Styling */
+.model-select-btn {
+  transition: background 0.2s ease, border-color 0.2s ease !important;
+}
+.model-select-btn:hover {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border-color: #a0a0a0 !important;
+}
+.model-select-btn:hover .model-caret {
+  text-shadow: 0 0 8px #00ff88;
+}
