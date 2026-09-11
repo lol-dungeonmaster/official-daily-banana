@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cursor: pointer;
       color: #cbcbcb;
       font-size: 0.85em;
+      font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
       transition: background 0.2s;
     }
     .track-option:hover {
@@ -67,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Dropdown Button
   const trackBtn = document.createElement("a");
   trackBtn.className = "btn";
-  trackBtn.style.cssText = "margin: 0; padding: 0 6px; display: inline-flex; align-items: center; justify-content: space-between; gap: 4px; border-radius: 0; border-right: none; font-size: 0.85em; cursor: pointer; text-decoration: none; overflow: hidden;";
+  trackBtn.style.cssText = "margin: 0; padding: 0 6px; display: inline-flex; align-items: center; justify-content: space-between; gap: 4px; border-radius: 0; border-right: none; font-size: 0.85em; font-family: Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace; cursor: pointer; text-decoration: none; overflow: hidden;";
   
   // Track Label Scroller
   const labelMask = document.createElement("div");
