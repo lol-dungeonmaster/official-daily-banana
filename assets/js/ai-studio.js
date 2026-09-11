@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  document.addEventListener("closeAllPopovers", () => {
+    if (popover) popover.classList.remove("show");
+    if (ledgerPopover) ledgerPopover.classList.remove("show");
+    document.querySelectorAll(".model-options-menu").forEach(m => m.classList.remove("show"));
+  });
+
+  window.addEventListener("scroll", () => {
+    document.querySelectorAll(".model-options-menu.show").forEach((menu) => {
+      const rect = menu.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) {
+        menu.classList.remove("show");
+      }
+    });
+  }, { passive: true });
+
   const btn = document.getElementById("gemini-key-btn");
   const popover = document.getElementById("gemini-popover");
   const input = document.getElementById("gemini-key-input");
@@ -160,10 +176,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (ledgerBtn && ledgerPopover) {
     ledgerBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      // Close other popover
-      if (popover) popover.classList.remove("show");
-      ledgerPopover.classList.toggle("show");
-      if (ledgerPopover.classList.contains("show")) {
+      const wasOpen = ledgerPopover.classList.contains("show");
+      document.dispatchEvent(new CustomEvent("closeAllPopovers"));
+      if (!wasOpen) {
+        ledgerPopover.classList.add("show");
         renderLedger();
         sessionStorage.removeItem("odb_ledger_unread");
         if (ledgerBadge) ledgerBadge.style.display = "none";
@@ -198,12 +214,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Close on scroll if open
+    // Close on scroll if off screen
     window.addEventListener(
       "scroll",
       () => {
         if (ledgerPopover.classList.contains("show")) {
-          ledgerPopover.classList.remove("show");
+          const rect = ledgerPopover.getBoundingClientRect();
+          if (rect.bottom < 0 || rect.top > window.innerHeight) {
+            ledgerPopover.classList.remove("show");
+          }
         }
       },
       { passive: true },
@@ -236,6 +255,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   btn.addEventListener("click", (e) => {
     e.stopPropagation();
+    const wasOpen = popover.classList.contains("show");
+    document.dispatchEvent(new CustomEvent("closeAllPopovers"));
+    if (wasOpen) return;
+
     const existingKey = sessionStorage.getItem("gemini_api_key");
     if (existingKey) {
       input.dataset.realKey = existingKey;
@@ -252,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
       input.style.cursor = "text";
       input.title = "";
     }
-    popover.classList.toggle("show");
+    popover.classList.add("show");
   });
 
   popover.addEventListener("click", (e) => {
@@ -262,11 +285,11 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     if (popover.classList.contains("show")) {
       const rect = popover.getBoundingClientRect();
-      if (rect.bottom < 0) {
+      if (rect.bottom < 0 || rect.top > window.innerHeight) {
         popover.classList.remove("show");
       }
     }
-  });
+  }, { passive: true });
 
   document.addEventListener("click", () => {
     popover.classList.remove("show");
@@ -450,7 +473,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     dropdownBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      dropdownMenu.classList.toggle("show");
+      const wasOpen = dropdownMenu.classList.contains("show");
+      document.dispatchEvent(new CustomEvent("closeAllPopovers"));
+      if (!wasOpen) dropdownMenu.classList.add("show");
     });
 
     controls.querySelectorAll(".model-option").forEach((opt) => {

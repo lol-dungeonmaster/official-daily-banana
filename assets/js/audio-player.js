@@ -1,4 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    document.addEventListener("closeAllPopovers", () => {
+        if (trackMenu) trackMenu.classList.remove("show");
+    });
+
+    window.addEventListener("scroll", () => {
+        if (trackMenu && trackMenu.classList.contains("show")) {
+            const rect = trackMenu.getBoundingClientRect();
+            if (rect.bottom < 0 || rect.top > window.innerHeight) {
+                trackMenu.classList.remove("show");
+            }
+        }
+    }, { passive: true });
+
   const downloadsSection = document.getElementById("downloads");
   if (!downloadsSection) return;
 
@@ -123,7 +137,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Toggle Dropdown
   trackBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    trackMenu.classList.toggle("show");
+    const wasOpen = trackMenu.classList.contains("show");
+    document.dispatchEvent(new CustomEvent("closeAllPopovers"));
+    if (!wasOpen) trackMenu.classList.add("show");
   });
   document.addEventListener("click", () => {
     trackMenu.classList.remove("show");
