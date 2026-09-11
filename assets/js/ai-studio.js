@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  if (input) {
   input.addEventListener("dblclick", () => {
     const existingKey = sessionStorage.getItem("gemini_api_key");
     if (existingKey && input.readOnly) {
@@ -101,6 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+
+  }
 
   const ledgerBtn = document.getElementById("ledger-btn");
   const ledgerPopover = document.getElementById("ledger-popover");
@@ -453,6 +456,25 @@ document.addEventListener("DOMContentLoaded", () => {
       hash |= 0;
     }
     const storageKey = "variant_" + hash;
+    const customStorageKey = "custom_" + hash;
+
+    const extractCleanText = () => {
+      const clone = pre.cloneNode(true);
+      clone.querySelectorAll(".generate-ui-container, .negative-prompt-container, span[title='Copy to clipboard'], .token-estimator").forEach(c => c.remove());
+      const codeClone = clone.querySelector("code");
+      if (codeClone) {
+        codeClone.querySelectorAll("br").forEach(br => br.replaceWith("\n"));
+        const chunks = [];
+        codeClone.childNodes.forEach(node => {
+          if (node.nodeType === Node.ELEMENT_NODE || node.nodeType === Node.TEXT_NODE) {
+            let t = node.textContent.trim().replace(/[ \t]+/g, ' ');
+            if (t) chunks.push(t);
+          }
+        });
+        return chunks.join("\n\n");
+      }
+      return clone.textContent.trim();
+    };
 
     const container = document.createElement("div");
     container.className = "generate-ui-container";
@@ -471,8 +493,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     controls.innerHTML = `
       <strong style="color: #cbcbcb; font-family: inherit; font-size: 20px;">Generate:</strong>
-      <button class="btn-variant">Variant</button>
-      <button class="btn-custom" disabled title="Coming soon" style="cursor: not-allowed; opacity: 0.5;">Custom</button>
+      <button class="btn-variant" title="Create variant">Variant</button>
+      <button class="btn-custom" title="Create edit">Custom</button>
       <div class="model-dropdown-container" style="position: relative; display: inline-flex; align-items: center; margin: 0; padding: 0;">
         <div role="button" title="Change model" class="model-select-btn" style="background: rgba(0,0,0,0.1); border: 1px solid #838383; border-radius: 4px; color: #cbcbcb; padding: 4px 8px; font-family: inherit; font-size: 20px; line-height: normal; box-sizing: border-box; cursor: pointer; display: flex; align-items: center; gap: 5px; margin: 0;">
           <div class="model-label" style="display: flex; justify-content: space-between; gap: 15px; width: 100%;">${savedLabel}</div>
@@ -544,7 +566,7 @@ document.addEventListener("DOMContentLoaded", () => {
         (copyBtn.style.background = "rgba(0,0,0,0.6)");
       copyBtn.onmouseout = () => (copyBtn.style.background = "rgba(0,0,0,0.3)");
       copyBtn.onclick = () => {
-        navigator.clipboard.writeText(text);
+        navigator.clipboard.writeText(typeof text === 'function' ? text() : text);
         copyBtn.textContent = "✓";
         setTimeout(() => (copyBtn.innerHTML = "✂️"), 1500);
       };
@@ -559,27 +581,160 @@ document.addEventListener("DOMContentLoaded", () => {
       outputArea.appendChild(tokenLabel);
     };
 
-    if (savedVariant) {
+    const renderVariant = () => {
       variantBtn.classList.add("expanded");
-      let parsed = null;
-      try {
-        parsed = JSON.parse(savedVariant);
-      } catch (e) {
-        // Fallback for older raw strings
-        parsed = { text: savedVariant, baseTokens: null, variantTokens: null };
+      customBtn.classList.remove("expanded");
+      variantBtn.title = "Press to generate";
+      customBtn.title = "Create edit";
+      outputArea.innerHTML = "";
+      const savedVariantData = sessionStorage.getItem(storageKey);
+      if (savedVariantData) {
+        let parsed = null;
+        try {
+          parsed = JSON.parse(savedVariantData);
+        } catch (e) {
+          parsed = { text: savedVariantData, baseTokens: null, variantTokens: null };
+        }
+        outputArea.style.display = "block";
+        outputArea.textContent = parsed.text;
+        addCopyButton(parsed.text, parsed.variantTokens);
+        if (parsed.baseTokens) {
+          const baseTokenUI = pre.querySelector(".token-estimator");
+          if (baseTokenUI) baseTokenUI.textContent = parsed.baseTokens;
+        }
+        return true; // Successfully loaded from cache
       }
-      
+      return false; // Needs generation
+    };
+
+    const renderCustom = async () => {
+      customBtn.classList.add("expanded");
+      variantBtn.classList.remove("expanded");
+      customBtn.title = "Edit the prompt";
+      variantBtn.title = "Create variant";
+      outputArea.innerHTML = "";
       outputArea.style.display = "block";
-      outputArea.textContent = parsed.text;
-      addCopyButton(parsed.text, parsed.variantTokens);
       
-      if (parsed.baseTokens) {
+      const cleanPrompt = extractCleanText();
+      
+      // Inject editable area
+      const editArea = document.createElement("div");
+      editArea.className = "custom-edit-area";
+      editArea.contentEditable = "plaintext-only";
+      editArea.style.cssText = "outline: none; min-height: 20px; width: 100%; white-space: pre-wrap;";
+      outputArea.appendChild(editArea);
+      
+      const cachedCustom = sessionStorage.getItem(customStorageKey);
+      let customTokens = null;
+      
+      if (cachedCustom) {
+        const parsed = JSON.parse(cachedCustom);
+        editArea.textContent = parsed.text;
+        customTokens = parsed.tokens;
+      } else {
+        editArea.textContent = cleanPrompt;
         const baseTokenUI = pre.querySelector(".token-estimator");
-        if (baseTokenUI) baseTokenUI.textContent = parsed.baseTokens;
+        if (baseTokenUI && baseTokenUI.textContent) {
+           customTokens = parseInt(baseTokenUI.textContent);
+           sessionStorage.setItem(customStorageKey, JSON.stringify({text: cleanPrompt, tokens: customTokens}));
+        } else {
+           // We don't know the exact count, run countTokens just for the base prompt
+           const key = sessionStorage.getItem("gemini_api_key");
+           if (key) {
+               editArea.style.opacity = "0.5";
+               try {
+                 logAudit("info", "Counting base prompt tokens...");
+                 const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:countTokens?key=${key}`, {
+                   method: "POST",
+                   headers: { "Content-Type": "application/json" },
+                   body: JSON.stringify({ contents: [{ parts: [{ text: cleanPrompt }] }] })
+                 });
+                 if (res.ok) {
+                   const countData = await res.json();
+                   customTokens = countData.totalTokens;
+                   logAudit("info", `API Usage: ${customTokens} tokens counted`);
+                   sessionStorage.setItem(customStorageKey, JSON.stringify({text: cleanPrompt, tokens: customTokens}));
+                   if (baseTokenUI) baseTokenUI.textContent = customTokens;
+                 } else {
+                   logAudit("warn", `API Error [${res.status}] during token count`);
+                 }
+               } catch(e) {
+                   logAudit("warn", "Network Exception during token count");
+               }
+               editArea.style.opacity = "1";
+           }
+        }
       }
-    }
+      
+      addCopyButton(() => editArea.textContent, customTokens);
+      
+      // Debounced exact token counting for edits
+      let customTypingTimeout = null;
+      let lastText = editArea.textContent;
+      
+      editArea.addEventListener("input", () => {
+         const currentText = editArea.textContent;
+         if (currentText === lastText) return;
+         
+         const hasBilling = sessionStorage.getItem("has_billing") !== "false";
+         const debounceMs = hasBilling ? 3000 : 5000;
+         
+         if (customTypingTimeout) clearTimeout(customTypingTimeout);
+         
+         customTypingTimeout = setTimeout(async () => {
+            const key = sessionStorage.getItem("gemini_api_key");
+            if (!key) return;
+            
+            // Strictly obey global delay
+            const now = Date.now();
+            window._lastVariantTime = window._lastVariantTime || 0;
+            if (now - window._lastVariantTime < debounceMs) return; // Drop if another API call just happened
+            
+            window._lastVariantTime = now; // Lock global API usage
+            
+            try {
+               logAudit("info", "Counting prompt edit tokens...");
+               const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:countTokens?key=${key}`, {
+                 method: "POST",
+                 headers: { "Content-Type": "application/json" },
+                 body: JSON.stringify({ contents: [{ parts: [{ text: currentText }] }] })
+               });
+               if (res.ok) {
+                 const countData = await res.json();
+                 const exactTokens = countData.totalTokens;
+                 logAudit("info", `API Usage: ${exactTokens} tokens counted`);
+                 lastText = currentText;
+                 
+                 sessionStorage.setItem(customStorageKey, JSON.stringify({text: currentText, tokens: exactTokens}));
+                 
+                 const label = outputArea.querySelector('.variant-token-estimator');
+                 if (label) label.textContent = exactTokens;
+               } else {
+                 logAudit("warn", `API Error [${res.status}] during token count`);
+               }
+            } catch(e) {
+               logAudit("warn", "Network Exception during token count");
+            }
+         }, debounceMs);
+      });
+    };
+
+    // Initial Load: if variant exists, render it. Else do nothing.
+    if (sessionStorage.getItem(storageKey)) renderVariant();
+
+    customBtn.addEventListener("click", () => {
+       if (!customBtn.classList.contains("expanded")) {
+           renderCustom();
+       }
+    });
 
     variantBtn.addEventListener("click", async (e) => {
+      // If we are just toggling back from custom and have a cache, just render it
+      if (!variantBtn.classList.contains("expanded") && sessionStorage.getItem(storageKey)) {
+          renderVariant();
+          return;
+      }
+      
       // Global Debounce Lock (Cross-Entry Protection)
       const hasBilling = sessionStorage.getItem("has_billing") !== "false";
       const debounceMs = hasBilling ? 3000 : 5000;
@@ -603,7 +758,20 @@ document.addEventListener("DOMContentLoaded", () => {
       variantBtn.title = "Generating variant...";
 
       outputArea.style.display = "block";
+      outputArea.innerHTML = "";
       outputArea.textContent = "...";
+      
+      // Transfer known base tokens from Custom cache before generating
+      const cachedCustom = sessionStorage.getItem(customStorageKey);
+      if (cachedCustom) {
+         try {
+           const parsedCustom = JSON.parse(cachedCustom);
+           const baseTokenUI = pre.querySelector(".token-estimator");
+           if (baseTokenUI && parsedCustom.tokens) {
+               baseTokenUI.textContent = parsedCustom.tokens;
+           }
+         } catch(e) {}
+      }
 
       try {
         const key = sessionStorage.getItem("gemini_api_key");
@@ -630,6 +798,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const data = await res.json();
           const variant = data.candidates[0].content.parts[0].text.trim();
 
+          outputArea.innerHTML = "";
           outputArea.textContent = variant;
           
           let exactBase = null;
@@ -665,28 +834,23 @@ document.addEventListener("DOMContentLoaded", () => {
             res.status === 401 ||
             res.status === 403
           ) {
+            showToast("Invalid API Key.", true);
             sessionStorage.removeItem("gemini_api_key");
-            document
-              .querySelector(".gemini-icon")
-              .classList.remove("activated");
-            document
-              .querySelectorAll(".generate-ui-container")
-              .forEach((el) => el.remove());
-            showToast("Key Revoked or Invalid.", true);
+            document.querySelectorAll(".generate-ui-container").forEach((el) => {
+              el.style.display = "none";
+            });
+            openKeyModal(true);
           } else {
-            showToast("Failed to generate variant. API Error.", true);
+            showToast("API Error. Check console.", true);
           }
-          outputArea.style.display = "none";
         }
-      } catch (err) {
-        console.error("Gemini API Network Exception:", err);
-        showToast("Network Error during generation.", true);
-        outputArea.style.display = "none";
+      } catch (e) {
+        console.error("Gemini API Network Exception:", e);
+        showToast("Network Error", true);
       } finally {
-        // Stop marching ants
         variantBtn.classList.remove("btn-generating");
         variantBtn.disabled = false;
-        variantBtn.removeAttribute("title");
+        variantBtn.title = "Press to generate";
       }
     });
 
@@ -699,7 +863,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const block = revealBtn.closest(".collapsible-code");
       setTimeout(() => {
         const pre = block.querySelector("pre");
-        if (pre && pre.style.display === "block") {
+        if (pre && pre.style.display === "block" && !block.querySelector(".generate-ui-container")) {
           injectGenerateUI(block);
         }
       }, 10);
