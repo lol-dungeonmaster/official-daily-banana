@@ -478,7 +478,7 @@ pre {
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
-  z-index: 1010;
+  z-index: 2010;
 }
 
 .lightbox-btn, .toggle-btn {
@@ -756,7 +756,7 @@ main {
   box-shadow: 0 8px 24px rgba(0,0,0,0.8);
   display: flex;
   flex-direction: column;
-  z-index: 1000;
+  z-index: 2000;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
