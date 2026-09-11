@@ -10,6 +10,41 @@ document.addEventListener("DOMContentLoaded", () => {
       codeBlock.style.display = "block";
       codeBlock.style.paddingRight = "40px";
       codeBlock.style.boxSizing = "border-box";
+
+      // Enhanced Regex: Case-insensitive (/i) to catch [NEGATIVE] as well as [Negative]
+      const negativeRegex = /(?:<strong>)?(?:\[[^\]]*negative[^\]]*\]|negative\s*prompt\s*:)(?:<\/strong>)?\s*(?:<br\s*\/?>)?\s*([\s\S]*?)\s*(?=(?:<strong>)?(?:\[|\bnegative\b)|$)/i;
+      
+      // Iterate over each child node (usually <p> tags) to keep negative prompts coupled to their original paragraphs
+      Array.from(codeBlock.children).forEach((child) => {
+        let match;
+        while ((match = child.innerHTML.match(negativeRegex))) {
+          const fullMatch = match[0];
+          const negativeText = match[1].replace(/<[^>]+>/g, '').trim();
+          
+          // Remove the negative prompt segment from the child's HTML
+          child.innerHTML = child.innerHTML.replace(fullMatch, '');
+          
+          let targetNode = child;
+          
+          // If stripping the negative prompt left the paragraph completely empty (meaning it was isolated in its own <p> tag)
+          if (child.innerHTML.replace(/<[^>]+>/g, '').trim() === '') {
+             // Redirect the target to the preceding paragraph (the positive prompt it belongs to)
+             targetNode = child.previousElementSibling || child;
+             child.remove(); // Safely destroy the empty paragraph so it doesn't leave a gap
+          }
+          
+          // Build the isolated UI container (styles handled by style.scss)
+          const negContainer = document.createElement("div");
+          negContainer.className = "negative-prompt-container";
+          
+          negContainer.innerHTML = `<strong style="color: #ff4a4a;">Negative prompt:</strong>\n${negativeText}`;
+          
+          // Insert the negative prompt container immediately ABOVE the target paragraph, with its CSS arrow pointing down to it
+          if (targetNode.parentNode) {
+            targetNode.parentNode.insertBefore(negContainer, targetNode);
+          }
+        }
+      });
     }
 
     // Inject copy to clipboard button for base prompt
@@ -22,16 +57,43 @@ document.addEventListener("DOMContentLoaded", () => {
     copyBtn.onmouseout = () => (copyBtn.style.background = "rgba(0,0,0,0.3)");
     copyBtn.onclick = (e) => {
       e.stopPropagation();
-      // Extract clean text content, excluding the button's own text and any generated variants
+      
+      // Extract clean text content, excluding the button's own text and any generated variants/negatives
       const clone = pre.cloneNode(true);
       
       const btnInClone = clone.querySelector("span[title='Copy to clipboard']");
       if (btnInClone) btnInClone.remove();
       
-      const variantContainer = clone.querySelector(".generate-ui-container");
-      if (variantContainer) variantContainer.remove();
+      const variantContainers = clone.querySelectorAll(".generate-ui-container");
+      variantContainers.forEach(c => c.remove());
+
+      const negativeContainers = clone.querySelectorAll(".negative-prompt-container");
+      negativeContainers.forEach(c => c.remove());
       
-      navigator.clipboard.writeText(clone.textContent.trim());
+      // Lint and format the remaining clean text
+      let formattedText = "";
+      const codeClone = clone.querySelector("code");
+      if (codeClone) {
+        // Convert <br> tags to actual newlines to preserve formatting
+        codeClone.querySelectorAll("br").forEach(br => br.replaceWith("\n"));
+        
+        const chunks = [];
+        codeClone.childNodes.forEach(node => {
+          if (node.nodeType === Node.ELEMENT_NODE || node.nodeType === Node.TEXT_NODE) {
+            let text = node.textContent.trim();
+            // Collapse multiple horizontal spaces but preserve newlines
+            text = text.replace(/[ \t]+/g, ' '); 
+            if (text) chunks.push(text);
+          }
+        });
+        
+        // Join distinct paragraphs with a double newline for excellent readability
+        formattedText = chunks.join("\n\n");
+      } else {
+        formattedText = clone.textContent.trim();
+      }
+      
+      navigator.clipboard.writeText(formattedText);
       copyBtn.textContent = "✓";
       setTimeout(() => (copyBtn.innerHTML = "✂️"), 1500);
     };

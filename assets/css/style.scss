@@ -910,3 +910,29 @@ body.prompt-width-wide .collapsible-code .action-buttons {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Negative Prompt UI Extraction */
+.negative-prompt-container {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding: 10px;
+  background: rgba(255, 74, 74, 0.05);
+  border-left: 3px solid #ff4a4a;
+  font-family: monospace;
+  font-size: 13px;
+  color: #ccc;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Arrow pointing down to the base prompt */
+.negative-prompt-container::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; 
+  left: -6.5px;
+  border-width: 10px 5px 0 5px;
+  border-style: solid;
+  border-color: #ff4a4a transparent transparent transparent;
+}
