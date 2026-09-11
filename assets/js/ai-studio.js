@@ -373,7 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <span class="model-label">${savedLabel}</span>
           <span style="font-size: 12px; pointer-events: none;">▼</span>
         </div>
-        <div class="model-options-menu" style="display: none; position: absolute; top: 100%; left: 0; margin-top: 4px; background: rgba(0, 49, 43, 0.95); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 4px 0; flex-direction: column; gap: 0; z-index: 100; min-width: max-content; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+        <div class="model-options-menu fade-dropdown" style=" position: absolute; top: 100%; left: 0; margin-top: 4px; background: rgba(0, 49, 43, 0.95); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 4px 0; flex-direction: column; gap: 0; z-index: 2000; min-width: max-content; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
           <div class="model-option" data-value="gemini-2.5-flash-lite" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px;">2.5 Flash Lite (Eco)</div>
           <div class="model-option" data-value="gemini-3.1-flash-lite" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px;">3.1 Flash Lite (Fast)</div>
           <div class="model-option" data-value="gemini-3.5-flash-lite" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px;">3.5 Flash Lite (Fast)</div>
@@ -390,8 +390,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     dropdownBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      dropdownMenu.style.display =
-        dropdownMenu.style.display === "none" ? "flex" : "none";
+      dropdownMenu.classList.toggle("show");
     });
 
     controls.querySelectorAll(".model-option").forEach((opt) => {
@@ -401,7 +400,7 @@ document.addEventListener("DOMContentLoaded", () => {
         modelLabel.textContent = opt.textContent;
         sessionStorage.setItem("preferred_model", currentModel);
         sessionStorage.setItem("preferred_model_label", opt.textContent);
-        dropdownMenu.style.display = "none";
+        dropdownMenu.classList.remove("show");
       });
       opt.addEventListener(
         "mouseover",
@@ -414,7 +413,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.addEventListener("click", () => {
-      if (dropdownMenu) dropdownMenu.style.display = "none";
+      if (dropdownMenu) dropdownMenu.classList.remove("show");
     });
 
     const outputArea = document.createElement("div");

@@ -88,7 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Dropdown Menu
   const trackMenu = document.createElement("div");
-  trackMenu.style.cssText = "display: none; position: absolute; top: 100%; left: 0; margin-top: 4px; background: rgba(0, 49, 43, 0.95); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 4px 0; flex-direction: column; z-index: 100; min-width: max-content; box-shadow: 0 4px 12px rgba(0,0,0,0.5);";
+  trackMenu.className = "fade-dropdown";
+  trackMenu.style.cssText = " position: absolute; top: 100%; left: 0; margin-top: 4px; background: rgba(0, 49, 43, 0.95); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 4px 0; flex-direction: column; z-index: 2000; min-width: max-content; box-shadow: 0 4px 12px rgba(0,0,0,0.5);";
 
   dropdownContainer.appendChild(trackBtn);
   dropdownContainer.appendChild(trackMenu);
@@ -122,10 +123,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Toggle Dropdown
   trackBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    trackMenu.style.display = trackMenu.style.display === "none" ? "flex" : "none";
+    trackMenu.classList.toggle("show");
   });
   document.addEventListener("click", () => {
-    trackMenu.style.display = "none";
+    trackMenu.classList.remove("show");
   });
 
   // Track active animation to cancel it on switch
@@ -152,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
         option.addEventListener("click", (e) => {
           e.stopPropagation();
           loadTrack(index);
-          trackMenu.style.display = "none";
+          trackMenu.classList.remove("show");
         });
         trackMenu.appendChild(option);
       });
