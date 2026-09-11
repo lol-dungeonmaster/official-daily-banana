@@ -425,8 +425,11 @@ pre {
   position: relative;
   left: auto;
   transform: none;
-  opacity: 1;
   pointer-events: auto;
+}
+
+.gallery-img.lazy-img.active.loaded {
+  opacity: 1;
 }
 
 .lightbox {
