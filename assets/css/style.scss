@@ -411,19 +411,19 @@ pre {
 
 .gallery-img.lazy-img {
   max-width: 100%;        /* Bound by container */
-  width: 100%;            /* Explicit width to fix WebKit absolute aspect-ratio squish bug */
   height: auto;           /* Keep aspect ratio */
   position: absolute;     /* Removes the image from the layout flow */
   top: 0;
-  left: 0;
-  right: 0;               /* Anchor both sides to center absolute image */
-  margin: 0 auto;         /* Center horizontally */
+  left: 50%;
+  transform: translateX(-50%); /* Center without triggering Safari bounding box bug */
   opacity: 0;
   pointer-events: none;
 }
 
 .gallery-img.lazy-img.active {
-  position: relative;     /* Adds the image back into the layout flow */
+  position: relative;
+  left: auto;
+  transform: none;
   opacity: 1;
   pointer-events: auto;
 }
