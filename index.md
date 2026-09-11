@@ -2,6 +2,32 @@
 {% include nav.html %}
 <div class="container">
 
+
+<article class="post-entry" data-tags="animals,prehistoric,insects,realistic">
+<h2 id="sep-10-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-10-26">Sep 10 // Insects: Meganeura</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchMeganeura(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchMeganeura(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="animals">animals</span>
+  <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
+  <span class="tag tag-style" data-tag="insects">insects</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="mega_v1" data-src="generated-artwork/Meganeura_Variant_Macro_Log/v1-nano-banana-pro.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Insects: Meganeura 1" class="mega-img lazy-img gallery-img active">
+  <img id="mega_v2" data-src="generated-artwork/Meganeura_Variant_Macro_Log/v2-nano-banana-2-lite.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Insects: Meganeura 2" class="mega-img lazy-img gallery-img">
+  <img id="mega_v3" data-src="generated-artwork/Meganeura_Variant_Macro_Log/v3-nano-banana-2.png" style="aspect-ratio: 1408 / 768;" width="1408" height="768" alt="Insects: Meganeura 3" class="mega-img lazy-img gallery-img">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Insects: Meganeura</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-10-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human elements, modern artifacts, text, watermarks <strong>[MEDIUM]</strong> Extreme macro wildlife photography. Shot mid-air with a fast-shutter macro lens to perfectly freeze the intricate details of the insect's massive wings and spiked legs as it interacts with the tiny amphibian. <strong>[SETTING]</strong> A hazy, deeply atmospheric Carboniferous swamp environment. The dense background is choked with towering, bamboo-like Calamites (giant horsetails) and thick stands of Lepidodendron (scale trees) featuring distinctive diamond-patterned bark. Lush, primordial ferns and thick mosses carpet the damp, decaying forest floor. In the blurred background, shallow, murky water reflects the canopy. Lighting: Moody, diffused swamp light filtering through the dense canopy, highlighting the iridescent structural colors of the insect's exoskeleton. <strong>[ANIMALS BASE]</strong> Meganeura. CRITICAL ANATOMY: A massive prehistoric insect, anatomically identical to a modern dragonfly but with a terrifying two-foot wingspan. Extremely thick, intricate, heavily veined translucent wings. Massive compound eyes. <strong>[EVENT MODIFIERS]</strong> Mid-air aerial capture. The massive insect is gracefully swooping down to snatch a small, salamander-sized Dendrerpeton (a primitive Carboniferous amphibian) directly off a thick, decaying Lepidodendron log covered in moss. It is catching the Dendrerpeton cleanly in its spiked legs without any blood or gore, perfectly showcasing the terrifying two-foot scale of the insect compared to the tiny vertebrate prey. The scene captures a tranquil, observational nature documentary moment, expressly avoiding combat or large-scale violence.</p></code></pre></div>
+  <div id="discuss-sep-10-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
 <article class="post-entry" data-tags="character-design,contemporary,webcomic,lotro">
 <h2 id="sep-09-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-09-26">Sep 09 // Webcomics</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="character-design">character-design</span>
@@ -1409,6 +1435,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     function switchHearth(dir = 1) {
       hearthIndex = switchGallery(hearthIndex, '.hearth-img', dir);
     }
+
+    let meganeuraIndex = 0;
+    function switchMeganeura(dir = 1) {
+      meganeuraIndex = switchGallery(meganeuraIndex, '.mega-img', dir);
+    }
+
 </script>
 
 <div id="giscus-master-container" style="position: absolute; top: -9999px; left: 0; z-index: 10; width: 100%;"></div>
