@@ -534,7 +534,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Restore cached variant if it exists
     const savedVariant = sessionStorage.getItem(storageKey);
-    const addCopyButton = (text) => {
+    const addCopyButton = (text, exactTokens = null) => {
       const copyBtn = document.createElement("span");
       copyBtn.textContent = "✂️";
       copyBtn.title = "Copy to clipboard";
@@ -549,13 +549,34 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => (copyBtn.innerHTML = "✂️"), 1500);
       };
       outputArea.appendChild(copyBtn);
+      
+      const tokenLabel = document.createElement("div");
+      tokenLabel.className = "variant-token-estimator";
+      if (exactTokens !== null) {
+          tokenLabel.textContent = exactTokens;
+      }
+      tokenLabel.style.cssText = "position: absolute; top: 35px; right: 5px; width: 24px; text-align: center; font-size: 10px; color: rgba(255,255,255,0.8); pointer-events: none; font-family: inherit;";
+      outputArea.appendChild(tokenLabel);
     };
 
     if (savedVariant) {
       variantBtn.classList.add("expanded");
+      let parsed = null;
+      try {
+        parsed = JSON.parse(savedVariant);
+      } catch (e) {
+        // Fallback for older raw strings
+        parsed = { text: savedVariant, baseTokens: null, variantTokens: null };
+      }
+      
       outputArea.style.display = "block";
-      outputArea.textContent = savedVariant;
-      addCopyButton(savedVariant);
+      outputArea.textContent = parsed.text;
+      addCopyButton(parsed.text, parsed.variantTokens);
+      
+      if (parsed.baseTokens) {
+        const baseTokenUI = pre.querySelector(".token-estimator");
+        if (baseTokenUI) baseTokenUI.textContent = parsed.baseTokens;
+      }
     }
 
     variantBtn.addEventListener("click", async (e) => {
@@ -586,26 +607,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         const key = sessionStorage.getItem("gemini_api_key");
+        logAudit("info", `Generating variant using ${currentModel}...`);
+        
+        const sysInstruction = "You are an introspective, expert AI prompt engineer. Deliberately construct a new, grounded variation of the following image generation prompt by thoughtfully reimagining the medium, setting, and event modifiers while strictly preserving the original core subject. Output ONLY the final raw prompt text, with no introductory or concluding commentary.\n\n";
+        
+        // Hardcoded token count for the system instruction (must be updated if the instruction string above ever changes)
+        const sysTokens = 48;
+        
         const res = await fetch(
           `https://generativelanguage.googleapis.com/v1beta/models/${currentModel}:generateContent?key=${key}`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-              contents: [
-                {
-                  parts: [
-                    {
-                      text:
-                        "You are an introspective, expert AI prompt engineer. Deliberately construct a new, grounded variation of the following image generation prompt by thoughtfully reimagining the medium, setting, and event modifiers while strictly preserving the original core subject. Output ONLY the final raw prompt text, with no introductory or concluding commentary.\n\n" +
-                        promptText,
-                    },
-                  ],
-                },
-              ],
+              contents: [{ parts: [{ text: sysInstruction + promptText }] }],
               generationConfig: { temperature: 0.6 },
             }),
-          },
+          }
         );
 
         if (res.ok) {
@@ -613,9 +631,29 @@ document.addEventListener("DOMContentLoaded", () => {
           const variant = data.candidates[0].content.parts[0].text.trim();
 
           outputArea.textContent = variant;
-          addCopyButton(variant);
-          // Persist the generated variant
-          sessionStorage.setItem(storageKey, variant);
+          
+          let exactBase = null;
+          let exactVariant = null;
+          if (data.usageMetadata) {
+            exactBase = data.usageMetadata.promptTokenCount - sysTokens;
+            exactVariant = data.usageMetadata.candidatesTokenCount;
+            logAudit("info", `API Usage: ${data.usageMetadata.promptTokenCount} input tokens (${sysTokens} system), ${data.usageMetadata.candidatesTokenCount} output tokens`);
+          }
+          
+          addCopyButton(variant, exactVariant);
+          
+          // Persist the generated variant as JSON
+          sessionStorage.setItem(storageKey, JSON.stringify({
+            text: variant,
+            baseTokens: exactBase,
+            variantTokens: exactVariant
+          }));
+          
+          // Update base prompt UI
+          if (exactBase) {
+            const baseTokenUI = pre.querySelector(".token-estimator");
+            if (baseTokenUI) baseTokenUI.textContent = exactBase;
+          }
         } else {
           const errText = await res.text();
           console.error("Gemini API Error [" + res.status + "]:", errText);
