@@ -562,20 +562,21 @@ document.addEventListener("DOMContentLoaded", () => {
                   parts: [
                     {
                       text:
-                        "You are an expert AI prompt engineer. First, deeply analyze the core subject and intent of the following image generation prompt. Then, deliberately construct a new, grounded variation by thoughtfully reimagining the atmospheric lighting, artistic medium, or stylistic execution while preserving the original core subject. Output ONLY the final raw prompt text, with no introductory or concluding commentary.\n\n" +
+                        "You are an introspective, expert AI prompt engineer. Deliberately construct a new, grounded variation of the following image generation prompt by thoughtfully reimagining the medium, setting, and event modifiers while strictly preserving the original core subject. Output ONLY the final raw prompt text, with no introductory or concluding commentary.\n\n" +
                         promptText,
                     },
                   ],
                 },
               ],
-              generationConfig: { temperature: 0.2 },
+              generationConfig: { temperature: 0.6 },
             }),
           },
         );
 
         if (res.ok) {
           const data = await res.json();
-          const variant = data.candidates[0].content.parts[0].text;
+          const variant = data.candidates[0].content.parts[0].text.trim();
+
           outputArea.textContent = variant;
           addCopyButton(variant);
           // Persist the generated variant
