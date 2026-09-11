@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("closeAllPopovers", () => {
     if (popover) popover.classList.remove("show");
     if (ledgerPopover) ledgerPopover.classList.remove("show");
-    document.querySelectorAll(".model-options-menu").forEach(m => m.classList.remove("show"));
+    document.querySelectorAll(".model-options-menu, .image-model-options-menu").forEach(m => m.classList.remove("show"));
   });
 
   window.addEventListener("scroll", () => {
@@ -491,10 +491,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedLabel =
       sessionStorage.getItem("preferred_model_label") || "<span>2.5 Flash Lite</span> <span>($<span style=\"opacity: 0.3\">$$$</span>)</span>";
 
+    const hasBilling = sessionStorage.getItem("has_billing") !== "false";
+    const imgTooltip = hasBilling ? "Change image model" : "No image generation with free tier";
+    const cameraTooltip = hasBilling ? "Generate image" : "No image generation with free tier";
+    const imgOpacity = hasBilling ? "1" : "0.5";
+    const imgCursor = hasBilling ? "pointer" : "not-allowed";
+    
+    const savedImgModel = sessionStorage.getItem("preferred_image_model") || "nano-banana-2-lite";
+    const savedImgLabel = sessionStorage.getItem("preferred_image_model_label") || "<span>NB 2 Lite</span> <span>($<span style=\"opacity: 0.3\">$$$</span>)</span>";
+
     controls.innerHTML = `
       <strong style="color: #cbcbcb; font-family: inherit; font-size: 20px;">Generate:</strong>
       <button class="btn-variant" title="Create variant">Variant</button>
       <button class="btn-custom" title="Create edit">Custom</button>
+      
+      <!-- Text Model Dropdown -->
       <div class="model-dropdown-container" style="position: relative; display: inline-flex; align-items: center; margin: 0; padding: 0;">
         <div role="button" title="Change model" class="model-select-btn" style="background: rgba(0,0,0,0.1); border: 1px solid #838383; border-radius: 4px; color: #cbcbcb; padding: 4px 8px; font-family: inherit; font-size: 20px; line-height: normal; box-sizing: border-box; cursor: pointer; display: flex; align-items: center; gap: 5px; margin: 0;">
           <div class="model-label" style="display: flex; justify-content: space-between; gap: 15px; width: 100%;">${savedLabel}</div>
@@ -507,6 +518,21 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="model-option" data-value="gemini-2.5-flash" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px; display: flex; justify-content: space-between; gap: 15px;"><span>2.5 Flash</span> <span>($$$$)</span></div>
         </div>
       </div>
+      
+      <!-- Image Model Dropdown -->
+      <div class="image-model-dropdown-container" style="position: relative; display: inline-flex; align-items: center; margin: 0; padding: 0;">
+        <div role="button" title="${imgTooltip}" class="image-model-select-btn" style="opacity: ${imgOpacity}; background: rgba(0,0,0,0.1); border: 1px solid #838383; border-radius: 4px; color: #cbcbcb; padding: 4px 8px; font-family: inherit; font-size: 20px; line-height: normal; box-sizing: border-box; cursor: ${imgCursor}; display: flex; align-items: center; gap: 5px; margin: 0;">
+          <div class="image-model-label" style="display: flex; justify-content: space-between; gap: 15px; width: 100%;">${savedImgLabel}</div>
+          <span class="image-model-caret" style="font-size: 12px; pointer-events: none; transition: all 0.2s ease;">▼</span>
+        </div>
+        <div class="image-model-options-menu fade-dropdown" style=" position: absolute; top: 100%; left: 0; margin-top: 4px; background: rgba(0, 49, 43, 0.95); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 4px 0; flex-direction: column; gap: 0; z-index: 2000; min-width: max-content; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+          <div class="image-model-option" data-value="nano-banana-2-lite" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px; display: flex; justify-content: space-between; gap: 15px;"><span>NB 2 Lite</span> <span>($<span style="opacity: 0.3">$$$</span>)</span></div>
+          <div class="image-model-option" data-value="nano-banana-2" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px; display: flex; justify-content: space-between; gap: 15px;"><span>NB 2</span> <span>($$<span style="opacity: 0.3">$$</span>)</span></div>
+          <div class="image-model-option" data-value="nano-banana-pro" style="padding: 4px 12px; cursor: pointer; color: #cbcbcb; font-family: inherit; font-size: 16px; border-radius: 2px; display: flex; justify-content: space-between; gap: 15px;"><span>NB Pro</span> <span>($$$$)</span></div>
+        </div>
+      </div>
+      
+      <button class="btn-generate-image" title="${cameraTooltip}" style="opacity: ${imgOpacity}; background: transparent; border: none; color: #cbcbcb; padding: 4px; cursor: ${imgCursor}; display: flex; align-items: center; justify-content: center; margin: 0; margin-left: 10px; transition: color 0.2s, filter 0.2s;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg></button>
     `;
     container.appendChild(controls);
 
@@ -514,12 +540,48 @@ document.addEventListener("DOMContentLoaded", () => {
     const dropdownMenu = controls.querySelector(".model-options-menu");
     const modelLabel = controls.querySelector(".model-label");
     let currentModel = savedModel;
+    
+    const imgDropdownBtn = controls.querySelector(".image-model-select-btn");
+    const imgDropdownMenu = controls.querySelector(".image-model-options-menu");
+    const imgModelLabel = controls.querySelector(".image-model-label");
+    let currentImgModel = savedImgModel;
 
     dropdownBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       const wasOpen = dropdownMenu.classList.contains("show");
       document.dispatchEvent(new CustomEvent("closeAllPopovers"));
       if (!wasOpen) dropdownMenu.classList.add("show");
+    });
+    
+    const imgGenerateBtn = controls.querySelector(".btn-generate-image");
+    
+    const updateCameraBtnState = () => {
+      const hasBilling = sessionStorage.getItem("has_billing") !== "false";
+      if (!hasBilling) {
+         imgGenerateBtn.style.opacity = "0.5";
+         imgGenerateBtn.style.cursor = "not-allowed";
+         imgGenerateBtn.title = "No image generation with free tier";
+         return;
+      }
+      
+      if (customBtn.classList.contains("expanded") || variantBtn.classList.contains("expanded")) {
+         imgGenerateBtn.style.opacity = "1";
+         imgGenerateBtn.style.cursor = "pointer";
+         imgGenerateBtn.title = "Generate image";
+      } else {
+         imgGenerateBtn.style.opacity = "0.5";
+         imgGenerateBtn.style.cursor = "not-allowed";
+         imgGenerateBtn.title = "Create a prompt first";
+      }
+    };
+
+    
+    imgDropdownBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (sessionStorage.getItem("has_billing") === "false") return;
+      const wasOpen = imgDropdownMenu.classList.contains("show");
+      document.dispatchEvent(new CustomEvent("closeAllPopovers"));
+      if (!wasOpen) imgDropdownMenu.classList.add("show");
     });
 
     controls.querySelectorAll(".model-option").forEach((opt) => {
@@ -530,6 +592,25 @@ document.addEventListener("DOMContentLoaded", () => {
         sessionStorage.setItem("preferred_model", currentModel);
         sessionStorage.setItem("preferred_model_label", opt.innerHTML);
         dropdownMenu.classList.remove("show");
+      });
+      opt.addEventListener(
+        "mouseover",
+        () => (opt.style.background = "rgba(255,255,255,0.1)"),
+      );
+      opt.addEventListener(
+        "mouseout",
+        () => (opt.style.background = "transparent"),
+      );
+    });
+    
+    controls.querySelectorAll(".image-model-option").forEach((opt) => {
+      opt.addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentImgModel = opt.getAttribute("data-value");
+        imgModelLabel.innerHTML = opt.innerHTML;
+        sessionStorage.setItem("preferred_image_model", currentImgModel);
+        sessionStorage.setItem("preferred_image_model_label", opt.innerHTML);
+        imgDropdownMenu.classList.remove("show");
       });
       opt.addEventListener(
         "mouseover",
@@ -581,11 +662,25 @@ document.addEventListener("DOMContentLoaded", () => {
       outputArea.appendChild(tokenLabel);
     };
 
+    const extractNegativeText = () => {
+      const clone = pre.cloneNode(true);
+      const negContainers = clone.querySelectorAll(".negative-prompt-container");
+      let negText = "";
+      negContainers.forEach(c => {
+         const strong = c.querySelector("strong");
+         if (strong) strong.remove();
+         negText += c.textContent.trim() + " ";
+      });
+      return negText.trim();
+    };
+
     const renderVariant = () => {
+      sessionStorage.setItem("odb_tab_" + storageKey, "variant");
       variantBtn.classList.add("expanded");
       customBtn.classList.remove("expanded");
       variantBtn.title = "Press to generate";
       customBtn.title = "Create edit";
+      updateCameraBtnState();
       outputArea.innerHTML = "";
       const savedVariantData = sessionStorage.getItem(storageKey);
       if (savedVariantData) {
@@ -608,14 +703,18 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const renderCustom = async () => {
+      sessionStorage.setItem("odb_tab_" + storageKey, "custom");
       customBtn.classList.add("expanded");
       variantBtn.classList.remove("expanded");
       customBtn.title = "Edit the prompt";
+      updateCameraBtnState();
       variantBtn.title = "Create variant";
+      updateCameraBtnState();
       outputArea.innerHTML = "";
       outputArea.style.display = "block";
       
       const cleanPrompt = extractCleanText();
+      const cleanNegative = extractNegativeText();
       
       // Inject editable area
       const editArea = document.createElement("div");
@@ -624,11 +723,18 @@ document.addEventListener("DOMContentLoaded", () => {
       editArea.style.cssText = "outline: none; min-height: 20px; width: 100%; white-space: pre-wrap;";
       outputArea.appendChild(editArea);
       
+
+      
       const cachedCustom = sessionStorage.getItem(customStorageKey);
       let customTokens = null;
       
       if (cachedCustom) {
-        const parsed = JSON.parse(cachedCustom);
+        let parsed = null;
+        try {
+          parsed = JSON.parse(cachedCustom);
+        } catch (e) {
+          parsed = { text: cachedCustom, tokens: null };
+        }
         editArea.textContent = parsed.text;
         customTokens = parsed.tokens;
       } else {
@@ -647,7 +753,7 @@ document.addEventListener("DOMContentLoaded", () => {
                  const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:countTokens?key=${key}`, {
                    method: "POST",
                    headers: { "Content-Type": "application/json" },
-                   body: JSON.stringify({ contents: [{ parts: [{ text: cleanPrompt }] }] })
+                   body: JSON.stringify({ contents: [{ parts: [{ text: cleanPrompt + (cleanNegative ? "\nNegative prompt:\n" + cleanNegative : "") }] }] })
                  });
                  if (res.ok) {
                    const countData = await res.json();
@@ -672,9 +778,10 @@ document.addEventListener("DOMContentLoaded", () => {
       let customTypingTimeout = null;
       let lastText = editArea.textContent;
       
-      editArea.addEventListener("input", () => {
+      const onCustomInput = () => {
          const currentText = editArea.textContent;
          if (currentText === lastText) return;
+         const currentNegative = extractNegativeText();
          
          const hasBilling = sessionStorage.getItem("has_billing") !== "false";
          const debounceMs = hasBilling ? 3000 : 5000;
@@ -697,7 +804,7 @@ document.addEventListener("DOMContentLoaded", () => {
                const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:countTokens?key=${key}`, {
                  method: "POST",
                  headers: { "Content-Type": "application/json" },
-                 body: JSON.stringify({ contents: [{ parts: [{ text: currentText }] }] })
+                 body: JSON.stringify({ contents: [{ parts: [{ text: currentText + (currentNegative ? "\nNegative prompt:\n" + currentNegative : "") }] }] })
                });
                if (res.ok) {
                  const countData = await res.json();
@@ -716,11 +823,146 @@ document.addEventListener("DOMContentLoaded", () => {
                logAudit("warn", "Network Exception during token count");
             }
          }, debounceMs);
-      });
+      };
+      
+      editArea.addEventListener("input", onCustomInput);
     };
 
-    // Initial Load: if variant exists, render it. Else do nothing.
-    if (sessionStorage.getItem(storageKey)) renderVariant();
+    // Wire up Image Generation
+    imgGenerateBtn.addEventListener("click", async (e) => {
+      e.stopPropagation();
+      const hasBilling = sessionStorage.getItem("has_billing") !== "false";
+      if (!hasBilling) return; // Disabled on free tier
+      
+      if (!customBtn.classList.contains("expanded") && !variantBtn.classList.contains("expanded")) {
+          // Do nothing if neither is expanded
+          return;
+      }
+      
+      const key = sessionStorage.getItem("gemini_api_key");
+      if (!key) return;
+      
+      // Determine what prompt to send
+      let activePromptText = "";
+      if (customBtn.classList.contains("expanded")) {
+         const editArea = outputArea.querySelector(".custom-edit-area");
+         activePromptText = editArea ? editArea.textContent.trim() : extractCleanText();
+      } else if (variantBtn.classList.contains("expanded")) {
+         const clone = outputArea.cloneNode(true);
+         clone.querySelectorAll("span[title='Copy to clipboard'], .variant-token-estimator").forEach(c => c.remove());
+         activePromptText = clone.textContent.trim();
+      }
+      
+      const activeNegativeText = extractNegativeText();
+      
+      // Lock UI
+      imgGenerateBtn.disabled = true;
+      imgGenerateBtn.style.opacity = "0.8";
+      imgGenerateBtn.classList.add("btn-generating");
+      imgGenerateBtn.title = "Please wait...";
+      
+      logAudit("info", `Generating image with ${currentImgModel}...`);
+      if (activeNegativeText) {
+          logAudit("info", `Negative Prompt applied: "${activeNegativeText}"`);
+      }
+      
+      try {
+         const payload = {
+             contents: [{ parts: [{ text: activePromptText }] }]
+         };
+         
+         if (activeNegativeText) {
+             // Standard Gemini generateContent schema does not support negativePrompt in generationConfig.
+             // Instead, we isolate it in the systemInstruction layer to strictly separate it from the core prompt text!
+             payload.systemInstruction = {
+                 parts: [{ text: `DO NOT generate any of the following elements: ${activeNegativeText}` }]
+             };
+         }
+         
+         let targetModel = "gemini-3.1-flash-lite-image";
+         if (currentImgModel === "nano-banana-2") targetModel = "gemini-3.1-flash-image";
+         if (currentImgModel === "nano-banana-pro") targetModel = "gemini-3.1-pro-image";
+         
+         const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${targetModel}:generateContent?key=${key}`, {
+             method: "POST",
+             headers: { "Content-Type": "application/json" },
+             body: JSON.stringify(payload)
+         });
+         
+         if (res.ok) {
+             const data = await res.json();
+             
+             let inputTokens = "Unknown";
+             let outputTokens = "Unknown";
+             if (data.usageMetadata) {
+                 inputTokens = data.usageMetadata.promptTokenCount || inputTokens;
+             }
+             
+             logAudit("info", `API Usage: ${inputTokens} input tokens, 1 image generated`);
+             
+             let imgSrc = "";
+             try {
+                const part = data.candidates[0].content.parts[0];
+                if (part.inlineData) {
+                    imgSrc = `data:${part.inlineData.mimeType};base64,${part.inlineData.data}`;
+                } else if (part.text) {
+                    imgSrc = part.text; 
+                }
+             } catch(e) {}
+             
+             if (imgSrc) {
+                 // Display full-screen lightbox
+                 const lightbox = document.createElement("div");
+                 lightbox.style.cssText = "position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.9); display: flex; justify-content: center; align-items: center; z-index: 9999; cursor: pointer; opacity: 0; transition: opacity 0.3s ease;";
+                 
+                 const imgDisplay = document.createElement("img");
+                 imgDisplay.src = imgSrc;
+                 imgDisplay.style.cssText = "max-width: 90%; max-height: 90%; border: 2px solid #00ff88; box-shadow: 0 0 30px rgba(0, 255, 136, 0.4); border-radius: 4px;";
+                 
+                 lightbox.appendChild(imgDisplay);
+                 document.body.appendChild(lightbox);
+                 
+                 // Fade in
+                 requestAnimationFrame(() => lightbox.style.opacity = "1");
+                 
+                 lightbox.addEventListener("click", () => {
+                     lightbox.style.opacity = "0";
+                     
+                     // Trigger background download on close
+                     const a = document.createElement("a");
+                     a.href = imgSrc;
+                     a.download = `generated_${currentImgModel}_${Date.now()}.png`;
+                     document.body.appendChild(a);
+                     a.click();
+                     document.body.removeChild(a);
+                     
+                     setTimeout(() => {
+                         lightbox.remove();
+                         showToast("Image downloaded to default location", false);
+                     }, 300);
+                 });
+             }
+         } else {
+             const err = await res.json();
+             showToast(`API Error [${res.status}]: ${err.error ? err.error.message : "Unknown error"}`, true);
+         }
+      } catch(e) {
+         showToast(`Network Error: ${e.message}`, true);
+      } finally {
+         imgGenerateBtn.classList.remove("btn-generating");
+         imgGenerateBtn.disabled = false;
+         updateCameraBtnState();
+      }
+    });
+
+    // Initial Load: Restore tab state, fallback to Variant if exists
+    updateCameraBtnState();
+    const activeTab = sessionStorage.getItem("odb_tab_" + storageKey);
+    if (activeTab === "custom") {
+       renderCustom();
+    } else if (activeTab === "variant" || sessionStorage.getItem(storageKey)) {
+       renderVariant();
+    }
 
     customBtn.addEventListener("click", () => {
        if (!customBtn.classList.contains("expanded")) {
