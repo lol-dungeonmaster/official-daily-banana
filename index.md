@@ -3,6 +3,34 @@
 <div class="container">
 
 
+<article class="post-entry" data-tags="design,middle-earth,split-tone,realistic,concept-art">
+<h2 id="sep-11-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-11-26">Sep 11 // Split-Toning</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchSplit(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchSplit(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="design">design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="split-tone">split-tone</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="concept-art">concept-art</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="split_v1" data-src="generated-artwork/Lindorinand_Forest_Path/v1-nano-banana-2-lite-___MEDIUM____Masterc.png" alt="Split-Toning 1" class="split-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="split_v2" data-src="generated-artwork/Lindorinand_Forest_Path/v2-nano-banana-2-___MEDIUM____Masterc.png" alt="Split-Toning 2" class="split-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="split_v3" data-src="generated-artwork/Lindorinand_Forest_Path/v3-nano-banana-pro-___MEDIUM____Masterc.png" alt="Split-Toning 3" class="split-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Split-Toning</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-11-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human elements, modern artifacts, text, watermarks, flat lighting, overexposed, volumetric light, god rays, sun beams, perfectly straight, manicured, artificial, smooth <strong>[MEDIUM]</strong> Masterclass, award-winning landscape photography. Shot with a medium-format Hasselblad and an 85mm medium-telephoto lens to compress the background and amplify forest density. The image utilizes advanced Focus Stacking for mathematically impossible, crystalline edge-to-edge sharpness from the closest rock to the furthest tree. The subtle application of the Orton Effect gives a magical, ethereal glow to the highlights, while a circular polarizer eliminates all glare from the wet surfaces. <strong>[SETTING]</strong> A forgotten, ancient woodland path winding along a steep ridge in Lindórinand (the Vales of Anduin) during the Second Age of Middle-earth. The towering canopy consists of colossal, silver-barked ancient European Beeches and dark oaks. The ground is thickly carpeted in a breathtaking, fiery mosaic of wet, russet, copper, and burnt-sienna fallen leaves. <strong>[EVENT MODIFIERS]</strong> The composition features a natural, rugged leading line. An uneven, organically winding game-trail meanders roughly from the bottom right, curving imperfectly around massive tree roots before vanishing into heavy, cool cyan-tinted river mist in the deep background. Massive, jagged boulders of mica-flecked schist, slick with moisture and draped in vibrant emerald star-moss, act as heavy visual anchor points framing the left side of the trail. Above, overarching branches with late-autumn foliage interlock to create a natural, unmanicured vignette, a rugged frame-within-a-frame that funnels the viewer's eye downward. Exactly at the vanishing point of the meandering trail, where the heavy mist is thickest, the majestic silhouette of a massive, dark-antlered Red Deer stag is half-swallowed by the fog. Its form fades seamlessly into the cool cyan atmosphere, standing silently on the path and capturing the wild, untamed magic of the world before the preservation of the Elven Rings.</p></code></pre></div>
+  <div id="discuss-sep-11-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
+
+
 <article class="post-entry" data-tags="animals,prehistoric,insects,realistic">
 <h2 id="sep-10-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-10-26">Sep 10 // Insects: Meganeura</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchMeganeura(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchMeganeura(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -1418,6 +1446,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let plesioIndex = 0;
     function switchPlesio(dir = 1) {
       plesioIndex = switchGallery(plesioIndex, '.plesio-img', dir);
+    }
+
+    
+    let splitIndex = 0;
+    function switchSplit(dir = 1) {
+      splitIndex = switchGallery(splitIndex, '.split-img', dir);
     }
 
     let taleIndex = 0;
