@@ -1,12 +1,12 @@
 [
   {
-    "title": "Cyberpunk Neon Drive",
-    "file": "assets/audio/cyberpunk_neon_drive.mp3",
-    "space_url": "https://flowmusic.app/space/cyberpunk123"
+    "title": "Decoy",
+    "file": "assets/audio/decoy.wav",
+    "space_url": "https://example.com/flow-music-space-link"
   },
   {
-    "title": "Fantasy Tavern Ambience",
-    "file": "assets/audio/fantasy_tavern.mp3",
-    "space_url": "https://flowmusic.app/space/tavern456"
+    "title": "Eregion Day 2",
+    "file": "assets/audio/Eregion_Day_2.flac",
+    "space_url": "https://example.com/flow-music-space-link"
   }
 ]

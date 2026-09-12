@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Audio Element (hidden)
   const audioEl = document.createElement("audio");
   audioEl.id = "flow-audio-el";
+  audioEl.loop = true;
   playerContainer.appendChild(audioEl);
 
   // Play/Pause Button
@@ -257,7 +258,10 @@ document.addEventListener("DOMContentLoaded", () => {
       // Handle Stop
       stopBtn.addEventListener("click", () => {
         audioEl.pause();
-        audioEl.currentTime = 0;
+        try {
+          audioEl.currentTime = 0;
+        } catch(e) {}
+        audioEl.load(); // Force a hard reset of the media buffer to guarantee it starts from 0 next time
         playBtn.innerHTML = playIcon;
         playBtn.title = "Play";
       });
@@ -266,7 +270,10 @@ document.addEventListener("DOMContentLoaded", () => {
       audioEl.addEventListener("ended", () => {
         playBtn.innerHTML = playIcon;
         playBtn.title = "Play";
-        audioEl.currentTime = 0;
+        try {
+          audioEl.currentTime = 0;
+        } catch(e) {}
+        audioEl.load(); // Flush buffer to fix browser playhead caching at the end of track
       });
     })
     .catch(err => {
