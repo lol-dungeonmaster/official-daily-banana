@@ -3,6 +3,32 @@
 <div class="container">
 
 
+<article class="post-entry" data-tags="animals,contemporary,realistic,ethereal">
+<h2 id="sep-12-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-12-26">Sep 12 // World Dolphin Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchDolphin(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchDolphin(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="animals">animals</span>
+  <span class="tag tag-setting" data-tag="contemporary">contemporary</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="ethereal">ethereal</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="dolphin_v1" data-src="generated-artwork/Dolphin_Day/v1-nano-banana-pro-___MEDIUM____Masterc.png" alt="World Dolphin Day 1" class="dolphin-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="dolphin_v2" data-src="generated-artwork/Dolphin_Day/v2-nano-banana-2-___MEDIUM____Masterc.png" alt="World Dolphin Day 2" class="dolphin-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="dolphin_v3" data-src="generated-artwork/Dolphin_Day/v3-nano-banana-2-lite-___MEDIUM____Masterc.png" alt="World Dolphin Day 3" class="dolphin-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">World Dolphin Day</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-12-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>[NEGATIVE]</strong> stylized, cartoon, crystal clear water, blue ocean water, overexposed, fake, 3d render, bad anatomy, harsh sunlight, directional sunbeams, volumetric god rays, sun beams, pasted on, layered, flat depth of field, poorly composited, sticker, macaws, birds, refraction, warped, distorted lens, distortion, visible undersides, vertical, portrait, 9:16 <strong>[MEDIUM]</strong> Masterclass, award-winning split-level (over/under) dome port photography, cinematic widescreen layout. The waterline precisely bisects the frame, capturing two distinct worlds simultaneously. The waterline is a clean, natural meniscus line separating the upper and lower environments perfectly without unnatural distortion. <strong>[SETTING]</strong> The flooded Amazonian igapó during an overcast, golden-hour morning. Above the waterline: a lush, overgrown emerald-green rainforest canopy dripping with moisture. A thick, glowing layer of ethereal morning steam-fog clings directly to the glossy river surface. Thick woody lianas and blooming bromeliads hang from massive Ceiba trees in the mist. On the surface, colossal Victoria amazonica lily pads float, with a single, brilliant iridescent blue Morpho butterfly resting on a spiky rim. Below the waterline: directly beneath each floating lily pad, its thick, viciously thorny stalk can be seen piercing the meniscus and descending straight down into the glowing, tannic amber river. The underwater lighting is naturally diffused by the heavy surface fog, creating a soft, omnidirectional, glowing amber atmosphere without harsh directional beams, perfectly illuminating the dark, submerged labyrinth of twisted mahogany roots. <strong>[ANIMALS BASE]</strong> Amazon River Dolphins (Botos). The adult mother is a vibrant, mottled fleshy pink with a distinctively flexible neck and a bulbous melon. <strong>[EVENT MODIFIERS]</strong> The slate-grey calf is tucked perfectly against its mother's flank, slipstreaming through the glowing amber water. They gracefully weave through the dense, sunken branches, embodying serene maternal care.</p></code></pre></div>
+  <div id="discuss-sep-12-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
+
 <article class="post-entry" data-tags="design,middle-earth,split-tone,realistic,concept-art">
 <h2 id="sep-11-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-11-26">Sep 11 // Split-Toning</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchSplit(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchSplit(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="design">design</span>
@@ -90,9 +116,9 @@
 
 <div class="gallery-frame">
   <img id="mondor_v1" data-src="generated-artwork/intl_literacy_day/mondor/v1-nano-banana-2-lite-canty.png" alt="Mondor 1" class="mondor-img lazy-img gallery-img active" style="aspect-ratio: 768 / 1376; max-width: 768px; width: 100%;">
-  <img id="mondor_v2" data-src="generated-artwork/intl_literacy_day/mondor/v2-nano-banana-2-lite-realistic.png" alt="Mondor 2" class="mondor-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="mondor_v3" data-src="generated-artwork/intl_literacy_day/mondor/v3-nano-banana-2-realistic.png" alt="Mondor 3" class="mondor-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="mondor_v4" data-src="generated-artwork/intl_literacy_day/mondor/v4-nano-banana-pro-realistic.png" alt="Mondor 4" class="mondor-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="mondor_v2" data-src="generated-artwork/intl_literacy_day/mondor/v2-nano-banana-2-lite-realistic.png" alt="Mondor 2" class="mondor-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="mondor_v3" data-src="generated-artwork/intl_literacy_day/mondor/v3-nano-banana-2-realistic.png" alt="Mondor 3" class="mondor-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="mondor_v4" data-src="generated-artwork/intl_literacy_day/mondor/v4-nano-banana-pro-realistic.png" alt="Mondor 4" class="mondor-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 
 <h3 style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px; margin-top: 30px; margin-bottom: 15px;">
@@ -105,8 +131,8 @@
 
 <div class="gallery-frame">
   <img id="hearth_v1" data-src="generated-artwork/intl_literacy_day/hearth/v1-nano-banana-2-lite-canty.png" alt="Hearth 1" class="hearth-img lazy-img gallery-img active" style="aspect-ratio: 768 / 1376; max-width: 768px; width: 100%;">
-  <img id="hearth_v2" data-src="generated-artwork/intl_literacy_day/hearth/v2-nano-banana-2-lite-realistic.png" alt="Hearth 2" class="hearth-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="hearth_v3" data-src="generated-artwork/intl_literacy_day/hearth/v3-nano-banana-2-realistic.png" alt="Hearth 3" class="hearth-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="hearth_v2" data-src="generated-artwork/intl_literacy_day/hearth/v2-nano-banana-2-lite-realistic.png" alt="Hearth 2" class="hearth-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="hearth_v3" data-src="generated-artwork/intl_literacy_day/hearth/v3-nano-banana-2-realistic.png" alt="Hearth 3" class="hearth-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
   <img id="hearth_v4" data-src="generated-artwork/intl_literacy_day/hearth/v4-nano-banana-pro-realistic.png" alt="Hearth 4" class="hearth-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 
@@ -131,9 +157,9 @@
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="grandma_v1" data-src="generated-artwork/grandma_moses_day/v1-nano-banana-2-lite-gm.png" alt="Grandma Moses Day 1" class="grandma-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="grandma_v2" data-src="generated-artwork/grandma_moses_day/v2-nano-banana-2-lite-realistic.png" alt="Grandma Moses Day 2" class="grandma-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="grandma_v3" data-src="generated-artwork/grandma_moses_day/v3-nano-banana-2-realistic.png" alt="Grandma Moses Day 3" class="grandma-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="grandma_v1" data-src="generated-artwork/grandma_moses_day/v1-nano-banana-2-lite-gm.png" alt="Grandma Moses Day 1" class="grandma-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="grandma_v2" data-src="generated-artwork/grandma_moses_day/v2-nano-banana-2-lite-realistic.png" alt="Grandma Moses Day 2" class="grandma-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="grandma_v3" data-src="generated-artwork/grandma_moses_day/v3-nano-banana-2-realistic.png" alt="Grandma Moses Day 3" class="grandma-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
   <img id="grandma_v4" data-src="generated-artwork/grandma_moses_day/v4-nano-banana-pro-realistic.png" alt="Grandma Moses Day 4" class="grandma-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 
@@ -183,15 +209,15 @@
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="vulture_v1" data-src="generated-artwork/vulture_day/v1-nano-banana-2-lite-journalistic.png" alt="Intl. Vulture Day 1" class="vulture-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="vulture_v2" data-src="generated-artwork/vulture_day/v2-nano-banana-2-journalistic.png" alt="Intl. Vulture Day 2" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="vulture_v3" data-src="generated-artwork/vulture_day/v3-nano-banana-pro-journalistic.png" alt="Intl. Vulture Day 3" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="vulture_v4" data-src="generated-artwork/vulture_day/v4-nano-banana-2-lite-dramatic.png" alt="Intl. Vulture Day 4" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="vulture_v5" data-src="generated-artwork/vulture_day/v5-nano-banana-2-dramatic.png" alt="Intl. Vulture Day 5" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="vulture_v1" data-src="generated-artwork/vulture_day/v1-nano-banana-2-lite-journalistic.png" alt="Intl. Vulture Day 1" class="vulture-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="vulture_v2" data-src="generated-artwork/vulture_day/v2-nano-banana-2-journalistic.png" alt="Intl. Vulture Day 2" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="vulture_v3" data-src="generated-artwork/vulture_day/v3-nano-banana-pro-journalistic.png" alt="Intl. Vulture Day 3" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="vulture_v4" data-src="generated-artwork/vulture_day/v4-nano-banana-2-lite-dramatic.png" alt="Intl. Vulture Day 4" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="vulture_v5" data-src="generated-artwork/vulture_day/v5-nano-banana-2-dramatic.png" alt="Intl. Vulture Day 5" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
   <img id="vulture_v6" data-src="generated-artwork/vulture_day/v6-nano-banana-pro-dramatic.png" alt="Intl. Vulture Day 6" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
-  <img id="vulture_v7" data-src="generated-artwork/vulture_day/v7-nano-banana-2-lite-ethereal.png" alt="Intl. Vulture Day 7" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="vulture_v8" data-src="generated-artwork/vulture_day/v8-nano-banana-2-ethereal.png" alt="Intl. Vulture Day 8" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="vulture_v9" data-src="generated-artwork/vulture_day/v9-nano-banana-pro-ethereal.png" alt="Intl. Vulture Day 9" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="vulture_v7" data-src="generated-artwork/vulture_day/v7-nano-banana-2-lite-ethereal.png" alt="Intl. Vulture Day 7" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="vulture_v8" data-src="generated-artwork/vulture_day/v8-nano-banana-2-ethereal.png" alt="Intl. Vulture Day 8" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="vulture_v9" data-src="generated-artwork/vulture_day/v9-nano-banana-pro-ethereal.png" alt="Intl. Vulture Day 9" class="vulture-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 
 <div class="collapsible-code">
@@ -213,9 +239,9 @@
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="wotbalefire_v1" data-src="generated-artwork/wot_balefire_tests/v1-nano-banana-pro-prompt_b.png" alt="Scenes from Literature III 1" class="wotbalefire-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="wotbalefire_v2" data-src="generated-artwork/wot_balefire_tests/v6-nano-banana-2-prompt_a.png" alt="Scenes from Literature III 2" class="wotbalefire-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="wotbalefire_v3" data-src="generated-artwork/wot_balefire_tests/v7-nano-banana-2-lite-prompt_a.png" alt="Scenes from Literature III 3" class="wotbalefire-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="wotbalefire_v1" data-src="generated-artwork/wot_balefire_tests/v1-nano-banana-pro-prompt_b.png" alt="Scenes from Literature III 1" class="wotbalefire-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="wotbalefire_v2" data-src="generated-artwork/wot_balefire_tests/v6-nano-banana-2-prompt_a.png" alt="Scenes from Literature III 2" class="wotbalefire-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="wotbalefire_v3" data-src="generated-artwork/wot_balefire_tests/v7-nano-banana-2-lite-prompt_a.png" alt="Scenes from Literature III 3" class="wotbalefire-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 
 <div class="collapsible-code">
@@ -238,9 +264,9 @@
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="ankylosaurus_v1" data-src="generated-artwork/Ankylosaurus/v5-nano-banana-2-A_breathtaking__stud.png" alt="Dinosaurs: Ankylosaurus 1" class="ankylosaurus-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="ankylosaurus_v2" data-src="generated-artwork/Ankylosaurus/v7-nano-banana-2-lite-A_breathtaking__stud.png" alt="Dinosaurs: Ankylosaurus 2" class="ankylosaurus-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="ankylosaurus_v3" data-src="generated-artwork/Ankylosaurus/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Dinosaurs: Ankylosaurus 3" class="ankylosaurus-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="ankylosaurus_v1" data-src="generated-artwork/Ankylosaurus/v5-nano-banana-2-A_breathtaking__stud.png" alt="Dinosaurs: Ankylosaurus 1" class="ankylosaurus-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="ankylosaurus_v2" data-src="generated-artwork/Ankylosaurus/v7-nano-banana-2-lite-A_breathtaking__stud.png" alt="Dinosaurs: Ankylosaurus 2" class="ankylosaurus-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="ankylosaurus_v3" data-src="generated-artwork/Ankylosaurus/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Dinosaurs: Ankylosaurus 3" class="ankylosaurus-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 
 <div class="collapsible-code">
@@ -285,10 +311,10 @@
 
 <div class="gallery-frame">
   <img id="spinosaurus_v1" data-src="generated-artwork/Spinosaurus/v2-nano-banana-A_breathtaking__stud.png" alt="Dinosaurs: Spinosaurus 1" class="spinosaurus-img lazy-img gallery-img active" style="aspect-ratio: 1024 / 1024; max-width: 1024px; width: 100%;">
-  <img id="spinosaurus_v2" data-src="generated-artwork/Spinosaurus/v4-nano-banana-pro-A_breathtaking__stud.png" alt="Dinosaurs: Spinosaurus 2" class="spinosaurus-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="spinosaurus_v3" data-src="generated-artwork/Spinosaurus/v6-nano-banana-2-A_breathtaking__stud.png" alt="Dinosaurs: Spinosaurus 3" class="spinosaurus-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="spinosaurus_v4" data-src="generated-artwork/Spinosaurus/v7-nano-banana-2-lite-A_breathtaking__stud.png" alt="Dinosaurs: Spinosaurus 4" class="spinosaurus-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="spinosaurus_v5" data-src="generated-artwork/Spinosaurus/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Dinosaurs: Spinosaurus 5" class="spinosaurus-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="spinosaurus_v2" data-src="generated-artwork/Spinosaurus/v4-nano-banana-pro-A_breathtaking__stud.png" alt="Dinosaurs: Spinosaurus 2" class="spinosaurus-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="spinosaurus_v3" data-src="generated-artwork/Spinosaurus/v6-nano-banana-2-A_breathtaking__stud.png" alt="Dinosaurs: Spinosaurus 3" class="spinosaurus-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="spinosaurus_v4" data-src="generated-artwork/Spinosaurus/v7-nano-banana-2-lite-A_breathtaking__stud.png" alt="Dinosaurs: Spinosaurus 4" class="spinosaurus-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="spinosaurus_v5" data-src="generated-artwork/Spinosaurus/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Dinosaurs: Spinosaurus 5" class="spinosaurus-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 
 <div class="collapsible-code">
@@ -310,8 +336,8 @@
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="brachiosaurus_v1" data-src="generated-artwork/Brachiosaurus/v7-nano-banana-2-lite-A_breathtaking__stud.png" alt="Dinosaurs: Brachiosaurus 1" class="brachiosaurus-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="brachiosaurus_v2" data-src="generated-artwork/Brachiosaurus/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Dinosaurs: Brachiosaurus 2" class="brachiosaurus-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="brachiosaurus_v1" data-src="generated-artwork/Brachiosaurus/v7-nano-banana-2-lite-A_breathtaking__stud.png" alt="Dinosaurs: Brachiosaurus 1" class="brachiosaurus-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="brachiosaurus_v2" data-src="generated-artwork/Brachiosaurus/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Dinosaurs: Brachiosaurus 2" class="brachiosaurus-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 
 <div class="collapsible-code">
@@ -335,10 +361,10 @@
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="whaleshark_v1" data-src="generated-artwork/intl_ws_day/v1-nano-banana-pro-An_ethereal_yet_real.png" alt="Intl. Whale Shark Day 1" class="whaleshark-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="whaleshark_v1" data-src="generated-artwork/intl_ws_day/v1-nano-banana-pro-An_ethereal_yet_real.png" alt="Intl. Whale Shark Day 1" class="whaleshark-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
   <img id="whaleshark_v2" data-src="generated-artwork/intl_ws_day/v1-nano-banana-pro-A_National_Geographi.png" alt="Intl. Whale Shark Day 2" class="whaleshark-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
   <img id="whaleshark_v3" data-src="generated-artwork/intl_ws_day/v1-nano-banana-pro-A_dramatic__cinemati.png" alt="Intl. Whale Shark Day 3" class="whaleshark-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
-  <img id="whaleshark_v4" data-src="generated-artwork/intl_ws_day/v1-nano-banana-pro-An_atmospheric__pain.png" alt="Intl. Whale Shark Day 4" class="whaleshark-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="whaleshark_v4" data-src="generated-artwork/intl_ws_day/v1-nano-banana-pro-An_atmospheric__pain.png" alt="Intl. Whale Shark Day 4" class="whaleshark-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 
 <div class="collapsible-code">
@@ -362,11 +388,11 @@
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="batnight_v1" data-src="generated-artwork/intl_bat_night/v1-nano-banana-pro-Edit_the_provided_im.png" alt="Intl. Bat Night 1" class="batnight-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="batnight_v2" data-src="generated-artwork/intl_bat_night/v2-nano-banana-pro-Edit_the_provided_im.png" alt="Intl. Bat Night 2" class="batnight-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="batnight_v3" data-src="generated-artwork/intl_bat_night/v3-nano-banana-pro-Edit_the_provided_im.png" alt="Intl. Bat Night 3" class="batnight-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="batnight_v4" data-src="generated-artwork/intl_bat_night/v4-nano-banana-pro-Edit_the_provided_im.png" alt="Intl. Bat Night 4" class="batnight-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="batnight_v5" data-src="generated-artwork/intl_bat_night/v5-nano-banana-pro-Edit_the_provided_im.png" alt="Intl. Bat Night 5" class="batnight-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="batnight_v1" data-src="generated-artwork/intl_bat_night/v1-nano-banana-pro-Edit_the_provided_im.png" alt="Intl. Bat Night 1" class="batnight-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="batnight_v2" data-src="generated-artwork/intl_bat_night/v2-nano-banana-pro-Edit_the_provided_im.png" alt="Intl. Bat Night 2" class="batnight-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="batnight_v3" data-src="generated-artwork/intl_bat_night/v3-nano-banana-pro-Edit_the_provided_im.png" alt="Intl. Bat Night 3" class="batnight-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="batnight_v4" data-src="generated-artwork/intl_bat_night/v4-nano-banana-pro-Edit_the_provided_im.png" alt="Intl. Bat Night 4" class="batnight-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="batnight_v5" data-src="generated-artwork/intl_bat_night/v5-nano-banana-pro-Edit_the_provided_im.png" alt="Intl. Bat Night 5" class="batnight-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 
 <div class="collapsible-code">
@@ -389,7 +415,7 @@
 
 <div class="gallery-frame">
   <img id="outpaint_v1" data-src="generated-artwork/anduin_landscape_road/v1-nano-banana-2-lite-Use_the_provided_ima.png" alt="Outpainting 1" class="outpaint-img lazy-img gallery-img active" style="aspect-ratio: 768 / 1376; max-width: 768px; width: 100%;">
-  <img id="outpaint_v2" data-src="generated-artwork/anduin_landscape_road/v2-imagen-ultra-forest_road_1.jpg" alt="Outpainting 2" class="outpaint-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="outpaint_v2" data-src="generated-artwork/anduin_landscape_road/v2-imagen-ultra-forest_road_1.jpg" alt="Outpainting 2" class="outpaint-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 
 <div class="collapsible-code">
@@ -479,11 +505,11 @@
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="heritage_v1" data-src="generated-artwork/heritage-LeeHowe/v1-nano-banana-pro-A_gorgeous__luminous.png" alt="Scenes from Literature II 1" class="heritage-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="heritage_v2" data-src="generated-artwork/heritage-LeeHowe/v1-nano-banana-2-lite-A_gorgeous__luminous.png" alt="Scenes from Literature II 2" class="heritage-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="heritage_v3" data-src="generated-artwork/heritage-LeeHowe/v2-nano-banana-2-lite-A_gorgeous__luminous.png" alt="Scenes from Literature II 3" class="heritage-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="heritage_v4" data-src="generated-artwork/heritage-LeeHowe/v3-nano-banana-2-Use_the_boots_worn_b.png" alt="Scenes from Literature II 4" class="heritage-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="heritage_v5" data-src="generated-artwork/heritage-LeeHowe/v4-nano-banana-2-lite-In_the_provided_base.png" alt="Scenes from Literature II 5" class="heritage-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="heritage_v1" data-src="generated-artwork/heritage-LeeHowe/v1-nano-banana-pro-A_gorgeous__luminous.png" alt="Scenes from Literature II 1" class="heritage-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="heritage_v2" data-src="generated-artwork/heritage-LeeHowe/v1-nano-banana-2-lite-A_gorgeous__luminous.png" alt="Scenes from Literature II 2" class="heritage-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="heritage_v3" data-src="generated-artwork/heritage-LeeHowe/v2-nano-banana-2-lite-A_gorgeous__luminous.png" alt="Scenes from Literature II 3" class="heritage-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="heritage_v4" data-src="generated-artwork/heritage-LeeHowe/v3-nano-banana-2-Use_the_boots_worn_b.png" alt="Scenes from Literature II 4" class="heritage-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="heritage_v5" data-src="generated-artwork/heritage-LeeHowe/v4-nano-banana-2-lite-In_the_provided_base.png" alt="Scenes from Literature II 5" class="heritage-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 
 <div class="collapsible-code">
@@ -505,10 +531,10 @@
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="plesio_v1" data-src="generated-artwork/Plesiosaurus/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Reptiles: Plesiosaurus 1" class="plesio-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="plesio_v1" data-src="generated-artwork/Plesiosaurus/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Reptiles: Plesiosaurus 1" class="plesio-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
   <img id="plesio_v2" data-src="generated-artwork/Plesiosaurus/v1-nano-banana-A_breathtaking__stud.png" alt="Reptiles: Plesiosaurus 2" class="plesio-img lazy-img gallery-img" style="aspect-ratio: 1024 / 1024; max-width: 1024px; width: 100%;">
-  <img id="plesio_v3" data-src="generated-artwork/Plesiosaurus/v3-nano-banana-pro-A_breathtaking__stud.png" alt="Reptiles: Plesiosaurus 3" class="plesio-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="plesio_v4" data-src="generated-artwork/Plesiosaurus/v5-nano-banana-2-A_breathtaking__stud.png" alt="Reptiles: Plesiosaurus 4" class="plesio-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="plesio_v3" data-src="generated-artwork/Plesiosaurus/v3-nano-banana-pro-A_breathtaking__stud.png" alt="Reptiles: Plesiosaurus 3" class="plesio-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="plesio_v4" data-src="generated-artwork/Plesiosaurus/v5-nano-banana-2-A_breathtaking__stud.png" alt="Reptiles: Plesiosaurus 4" class="plesio-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 
 <div class="collapsible-code">
@@ -557,9 +583,9 @@
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="raptor_v1" data-src="generated-artwork/Velociraptor/v3-nano-banana-pro-A_breathtaking__stud.png" alt="Dinosaurs: Velociraptor 1" class="raptor-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="raptor_v2" data-src="generated-artwork/Velociraptor/v5-nano-banana-2-A_breathtaking__stud.png" alt="Dinosaurs: Velociraptor 2" class="raptor-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="raptor_v3" data-src="generated-artwork/Velociraptor/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Dinosaurs: Velociraptor 3" class="raptor-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="raptor_v1" data-src="generated-artwork/Velociraptor/v3-nano-banana-pro-A_breathtaking__stud.png" alt="Dinosaurs: Velociraptor 1" class="raptor-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="raptor_v2" data-src="generated-artwork/Velociraptor/v5-nano-banana-2-A_breathtaking__stud.png" alt="Dinosaurs: Velociraptor 2" class="raptor-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="raptor_v3" data-src="generated-artwork/Velociraptor/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Dinosaurs: Velociraptor 3" class="raptor-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 
 <div class="collapsible-code">
@@ -606,7 +632,7 @@
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="oran_v1" data-src="generated-artwork/orangutan-day-final/v6-nano-banana-pro-A_poster_for_the_Off.png" alt="World Orangutan Day 1" class="oran-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="oran_v1" data-src="generated-artwork/orangutan-day-final/v6-nano-banana-pro-A_poster_for_the_Off.png" alt="World Orangutan Day 1" class="oran-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
   <img id="oran_v2" data-src="generated-artwork/orangutan-day-final/v1-nano-banana-2-A_poster_for_the_Off.png" alt="World Orangutan Day 2" class="oran-img lazy-img gallery-img" style="aspect-ratio: 768 / 1376; max-width: 768px; width: 100%;">
   <img id="oran_v3" data-src="generated-artwork/orangutan-day-final/v5-nano-banana-2-A_poster_for_the_Off.png" alt="World Orangutan Day 3" class="oran-img lazy-img gallery-img" style="aspect-ratio: 768 / 1376; max-width: 768px; width: 100%;">
 
@@ -705,9 +731,9 @@
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="stego_v1" data-src="generated-artwork/Stegosaurus/v4-nano-banana-pro-A_breathtaking__stud.png" alt="Stegosaurus 1" class="stego-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="stego_v2" data-src="generated-artwork/Stegosaurus/v6-nano-banana-2-A_breathtaking__stud.png" alt="Stegosaurus 2" class="stego-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="stego_v3" data-src="generated-artwork/Stegosaurus/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Stegosaurus 3" class="stego-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="stego_v1" data-src="generated-artwork/Stegosaurus/v4-nano-banana-pro-A_breathtaking__stud.png" alt="Stegosaurus 1" class="stego-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="stego_v2" data-src="generated-artwork/Stegosaurus/v6-nano-banana-2-A_breathtaking__stud.png" alt="Stegosaurus 2" class="stego-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="stego_v3" data-src="generated-artwork/Stegosaurus/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Stegosaurus 3" class="stego-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -752,9 +778,9 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="wolf_v1" data-src="generated-artwork/official-daily-banana-wolf-day-carpathians/v4-nano-banana-pro-The_Carpathians__A_p.png" alt="Intl Wolf Day 1" class="wolf-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="wolf_v2" data-src="generated-artwork/official-daily-banana-wolf-day-mongolia/v5-nano-banana-2-Mongolia__Gobi_Sunse.png" alt="Intl Wolf Day 2" class="wolf-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="wolf_v3" data-src="generated-artwork/official-daily-banana-wolf-day-northern_mexico/v6-nano-banana-2-Northern_Mexico__Sie.png" alt="Intl Wolf Day 3" class="wolf-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="wolf_v1" data-src="generated-artwork/official-daily-banana-wolf-day-carpathians/v4-nano-banana-pro-The_Carpathians__A_p.png" alt="Intl Wolf Day 1" class="wolf-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="wolf_v2" data-src="generated-artwork/official-daily-banana-wolf-day-mongolia/v5-nano-banana-2-Mongolia__Gobi_Sunse.png" alt="Intl Wolf Day 2" class="wolf-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="wolf_v3" data-src="generated-artwork/official-daily-banana-wolf-day-northern_mexico/v6-nano-banana-2-Northern_Mexico__Sie.png" alt="Intl Wolf Day 3" class="wolf-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -791,7 +817,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <span class="tag tag-style" data-tag="cinematic">cinematic</span>
 </div></h2>
 
-<div class="gallery-frame"><img id="hero_v1" data-src="generated-artwork/official-daily-banana-hero-poses-cinematic-v2/v10-nano-banana-2-A_dramatic__low_angl.png" class="lazy-img" alt="Hero Poses"  style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;" /></div>
+<div class="gallery-frame"><img id="hero_v1" data-src="generated-artwork/official-daily-banana-hero-poses-cinematic-v2/v10-nano-banana-2-A_dramatic__low_angl.png" class="lazy-img" alt="Hero Poses"  style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Hero Poses</button>
@@ -831,7 +857,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <span class="tag tag-style" data-tag="journalistic">journalistic</span>
 </div></h2>
 
-<div class="gallery-frame"><img id="anim_v1" data-src="generated-artwork/animal-migration-prompt3_journalistic/v4-nano-banana-pro-A_raw__National_Geog.png" class="lazy-img" alt="Animal Migration"  style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;" /></div>
+<div class="gallery-frame"><img id="anim_v1" data-src="generated-artwork/animal-migration-prompt3_journalistic/v4-nano-banana-pro-A_raw__National_Geog.png" class="lazy-img" alt="Animal Migration"  style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Animal Migration</button>
@@ -849,7 +875,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <span class="tag tag-style" data-tag="journalistic">journalistic</span>
 </div></h2>
 
-<div class="gallery-frame"><img id="moon_v1" data-src="generated-artwork/moon-bear-prompt3_journalistic/v6-nano-banana-2-Wildlife_Documentary.png" class="lazy-img" alt="Intl. Moon Bear Day"  style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;" /></div>
+<div class="gallery-frame"><img id="moon_v1" data-src="generated-artwork/moon-bear-prompt3_journalistic/v6-nano-banana-2-Wildlife_Documentary.png" class="lazy-img" alt="Intl. Moon Bear Day"  style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Intl. Moon Bear Day</button>
@@ -868,7 +894,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <span class="tag tag-style" data-tag="still-life">still-life</span>
 </div></h2>
 
-<div class="gallery-frame"><img id="beer_v1" data-src="generated-artwork/beer-prompt5_journalistic_pub/v5-nano-banana-2-Wildlife_Documentary.png" class="lazy-img" alt="Intl. Beer Day"  style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;" /></div>
+<div class="gallery-frame"><img id="beer_v1" data-src="generated-artwork/beer-prompt5_journalistic_pub/v5-nano-banana-2-Wildlife_Documentary.png" class="lazy-img" alt="Intl. Beer Day"  style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Intl. Beer Day</button>
@@ -886,7 +912,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <span class="tag tag-style" data-tag="ethereal">ethereal</span>
 </div></h2>
 
-<div class="gallery-frame"><img id="scen_v1" data-src="generated-artwork/alice-prompt2_realistic_v3/v4-nano-banana-pro-Ethereal___Realistic.png" class="lazy-img" alt="Scenes from Literature"  style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;" /></div>
+<div class="gallery-frame"><img id="scen_v1" data-src="generated-artwork/alice-prompt2_realistic_v3/v4-nano-banana-pro-Ethereal___Realistic.png" class="lazy-img" alt="Scenes from Literature"  style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Scenes from Literature</button>
@@ -904,7 +930,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <span class="tag tag-style" data-tag="ethereal">ethereal</span>
 </div></h2>
 
-<div class="gallery-frame"><img id="tomi_v1" data-src="generated-artwork/tomistoma-prompt2_realistic/v5-nano-banana-2-Ethereal___Realistic.png" class="lazy-img" alt="World Tomistoma Day"  style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;" /></div>
+<div class="gallery-frame"><img id="tomi_v1" data-src="generated-artwork/tomistoma-prompt2_realistic/v5-nano-banana-2-Ethereal___Realistic.png" class="lazy-img" alt="World Tomistoma Day"  style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">World Tomistoma Day</button>
@@ -922,7 +948,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <span class="tag tag-style" data-tag="journalistic">journalistic</span>
 </div></h2>
 
-<div class="gallery-frame"><img id="clou_v1" data-src="generated-artwork/clouded-leopard-prompt3/v4-nano-banana-pro-A_professional_wildl.png" class="lazy-img" alt="Clouded Leopard Day"  style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;" /></div>
+<div class="gallery-frame"><img id="clou_v1" data-src="generated-artwork/clouded-leopard-prompt3/v4-nano-banana-pro-A_professional_wildl.png" class="lazy-img" alt="Clouded Leopard Day"  style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Clouded Leopard Day</button>
@@ -1002,7 +1028,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 
 <div class="gallery-frame">
   <img id="fort_v1" data-src="generated-artwork/fortifications/v11-nano-banana-A_highly_detailed__p.png" alt="Fortifications_1" class="fort-img lazy-img gallery-img active" style="aspect-ratio: 1024 / 1024; max-width: 1024px; width: 100%;">
-  <img id="fort_v2" data-src="generated-artwork/fortifications-v2/v5-nano-banana-2-A_breathtaking__edge.png" alt="Fortifications_2" class="fort-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="fort_v2" data-src="generated-artwork/fortifications-v2/v5-nano-banana-2-A_breathtaking__edge.png" alt="Fortifications_2" class="fort-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -1021,7 +1047,7 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
   <span class="tag tag-style" data-tag="realistic">realistic</span>
 </div></h2>
 
-<div class="gallery-frame"><img id="alte_v1" data-src="generated-artwork/alien-alley-spoof-v3/v8-nano-banana-pro-A_hyper_realistic__s.png" class="lazy-img" alt="Alternative Human"  style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;" /></div>
+<div class="gallery-frame"><img id="alte_v1" data-src="generated-artwork/alien-alley-spoof-v3/v8-nano-banana-pro-A_hyper_realistic__s.png" class="lazy-img" alt="Alternative Human"  style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;" /></div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
   <button type="button">Alternative Human</button>
@@ -1066,14 +1092,14 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="bot_v1" data-src="generated-artwork/plant-mech-animals/v16-nano-banana-2-lite-A_photorealistic_stu.png" alt="Botanical Robots 1" class="bot-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="bot_v2" data-src="generated-artwork/plant-mech-animals/v14-nano-banana-2-lite-A_photorealistic_stu.png" alt="Botanical Robots 2" class="bot-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="bot_v1" data-src="generated-artwork/plant-mech-animals/v16-nano-banana-2-lite-A_photorealistic_stu.png" alt="Botanical Robots 1" class="bot-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="bot_v2" data-src="generated-artwork/plant-mech-animals/v14-nano-banana-2-lite-A_photorealistic_stu.png" alt="Botanical Robots 2" class="bot-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
   <img id="bot_v3" data-src="generated-artwork/silvan-guardians/v2-nano-banana-pro-This_image_is_a_phot.png" alt="Botanical Robots 3" class="bot-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
   <img id="bot_v4" data-src="generated-artwork/silvan-guardians/v3-nano-banana-pro-This_image_is_a_phot.png" alt="Botanical Robots 4" class="bot-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
   <img id="bot_v5" data-src="generated-artwork/dystopian-plant-mechs/v21-imagen-A_photorealistic_stu.png" alt="Botanical Robots 5" class="bot-img lazy-img gallery-img" style="aspect-ratio: 1024 / 1024; max-width: 1024px; width: 100%;">
   <img id="bot_v6" data-src="generated-artwork/dystopian-plant-mechs/v1-nano-banana-A_photorealistic_stu.png" alt="Botanical Robots 6" class="bot-img lazy-img gallery-img" style="aspect-ratio: 1024 / 1024; max-width: 1024px; width: 100%;">
-  <img id="bot_v7" data-src="generated-artwork/dystopian-plant-mechs/v13-nano-banana-2-lite-A_photorealistic_stu.png" alt="Botanical Robots 7" class="bot-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="bot_v8" data-src="generated-artwork/dystopian-plant-mechs/v16-nano-banana-2-lite-A_photorealistic_stu.png" alt="Botanical Robots 8" class="bot-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="bot_v7" data-src="generated-artwork/dystopian-plant-mechs/v13-nano-banana-2-lite-A_photorealistic_stu.png" alt="Botanical Robots 7" class="bot-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="bot_v8" data-src="generated-artwork/dystopian-plant-mechs/v16-nano-banana-2-lite-A_photorealistic_stu.png" alt="Botanical Robots 8" class="bot-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -1094,9 +1120,9 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="Quetz_v1" data-src="generated-artwork/Quetzalcoatlus/v3-nano-banana-pro-A_breathtaking__stud.png" alt="Quetzalcoatlus 1" class="quetz-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="Quetz_v2" data-src="generated-artwork/Quetzalcoatlus/v5-nano-banana-2-A_breathtaking__stud.png" alt="Quetzalcoatlus 2" class="quetz-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="Quetz_v3" data-src="generated-artwork/Quetzalcoatlus/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Quetzalcoatlus 3" class="quetz-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="Quetz_v1" data-src="generated-artwork/Quetzalcoatlus/v3-nano-banana-pro-A_breathtaking__stud.png" alt="Quetzalcoatlus 1" class="quetz-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="Quetz_v2" data-src="generated-artwork/Quetzalcoatlus/v5-nano-banana-2-A_breathtaking__stud.png" alt="Quetzalcoatlus 2" class="quetz-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="Quetz_v3" data-src="generated-artwork/Quetzalcoatlus/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Quetzalcoatlus 3" class="quetz-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -1119,10 +1145,10 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="Archa_v1" data-src="generated-artwork/Archaeopteryx/v3-nano-banana-pro-A_breathtaking__stud.png" alt="Archaeopteryx 1" class="archa-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="Archa_v2" data-src="generated-artwork/Archaeopteryx/v4-nano-banana-pro-A_breathtaking__stud.png" alt="Archaeopteryx 2" class="archa-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="Archa_v3" data-src="generated-artwork/Archaeopteryx/v7-nano-banana-2-lite-A_breathtaking__stud.png" alt="Archaeopteryx 3" class="archa-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="Archa_v4" data-src="generated-artwork/Archaeopteryx/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Archaeopteryx 4" class="archa-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="Archa_v1" data-src="generated-artwork/Archaeopteryx/v3-nano-banana-pro-A_breathtaking__stud.png" alt="Archaeopteryx 1" class="archa-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="Archa_v2" data-src="generated-artwork/Archaeopteryx/v4-nano-banana-pro-A_breathtaking__stud.png" alt="Archaeopteryx 2" class="archa-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="Archa_v3" data-src="generated-artwork/Archaeopteryx/v7-nano-banana-2-lite-A_breathtaking__stud.png" alt="Archaeopteryx 3" class="archa-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="Archa_v4" data-src="generated-artwork/Archaeopteryx/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Archaeopteryx 4" class="archa-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -1145,9 +1171,9 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="Tyran_v1" data-src="generated-artwork/Tyrannosaurus_Rex/v5-nano-banana-2-A_breathtaking__stud.png" alt="Tyrannosaurus 1" class="tyran-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="Tyran_v2" data-src="generated-artwork/Tyrannosaurus_Rex/v6-nano-banana-2-A_breathtaking__stud.png" alt="Tyrannosaurus 2" class="tyran-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="Tyran_v3" data-src="generated-artwork/Tyrannosaurus_Rex/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Tyrannosaurus 3" class="tyran-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="Tyran_v1" data-src="generated-artwork/Tyrannosaurus_Rex/v5-nano-banana-2-A_breathtaking__stud.png" alt="Tyrannosaurus 1" class="tyran-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="Tyran_v2" data-src="generated-artwork/Tyrannosaurus_Rex/v6-nano-banana-2-A_breathtaking__stud.png" alt="Tyrannosaurus 2" class="tyran-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="Tyran_v3" data-src="generated-artwork/Tyrannosaurus_Rex/v8-nano-banana-2-lite-A_breathtaking__stud.png" alt="Tyrannosaurus 3" class="tyran-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -1171,10 +1197,10 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 <div class="gallery-frame">
   <img id="ttp_v1" data-src="generated-artwork/time-traveling-pets/v23-imagen-A_photorealistic_stu.jpg" alt="Time-traveling Pets 1" class="ttp-img lazy-img gallery-img active" style="aspect-ratio: 1024 / 1024; max-width: 1024px; width: 100%;">
   <img id="ttp_v2" data-src="generated-artwork/time-traveling-pets/v19-imagen-ultra-A_photorealistic_stu.png" alt="Time-traveling Pets 2" class="ttp-img lazy-img gallery-img" style="aspect-ratio: 1024 / 1024; max-width: 1024px; width: 100%;">
-  <img id="ttp_v3" data-src="generated-artwork/time-traveling-pets/v10-nano-banana-2-A_photorealistic_stu.png" alt="Time-traveling Pets 3" class="ttp-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="ttp_v4" data-src="generated-artwork/time-traveling-pets/v13-nano-banana-2-lite-A_photorealistic_stu.png" alt="Time-traveling Pets 4" class="ttp-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="ttp_v5" data-src="generated-artwork/time-traveling-pets/v14-nano-banana-2-lite-A_photorealistic_stu.png" alt="Time-traveling Pets 5" class="ttp-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="ttp_v6" data-src="generated-artwork/time-traveling-pets/v15-nano-banana-2-lite-A_photorealistic_stu.png" alt="Time-traveling Pets 6" class="ttp-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="ttp_v3" data-src="generated-artwork/time-traveling-pets/v10-nano-banana-2-A_photorealistic_stu.png" alt="Time-traveling Pets 3" class="ttp-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="ttp_v4" data-src="generated-artwork/time-traveling-pets/v13-nano-banana-2-lite-A_photorealistic_stu.png" alt="Time-traveling Pets 4" class="ttp-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="ttp_v5" data-src="generated-artwork/time-traveling-pets/v14-nano-banana-2-lite-A_photorealistic_stu.png" alt="Time-traveling Pets 5" class="ttp-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="ttp_v6" data-src="generated-artwork/time-traveling-pets/v15-nano-banana-2-lite-A_photorealistic_stu.png" alt="Time-traveling Pets 6" class="ttp-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -1195,9 +1221,9 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="mosa_v1" data-src="generated-artwork/Mosasaurus/v3-nano-banana-pro-A_breathtaking__stud.png" alt="Mosasaurus 1" class="mosa-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="mosa_v2" data-src="generated-artwork/Mosasaurus/v4-nano-banana-pro-A_breathtaking__stud.png" alt="Mosasaurus 2" class="mosa-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
-  <img id="mosa_v3" data-src="generated-artwork/Mosasaurus/v7-nano-banana-2-lite-A_breathtaking__stud.png" alt="Mosasaurus 3" class="mosa-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="mosa_v1" data-src="generated-artwork/Mosasaurus/v3-nano-banana-pro-A_breathtaking__stud.png" alt="Mosasaurus 1" class="mosa-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="mosa_v2" data-src="generated-artwork/Mosasaurus/v4-nano-banana-pro-A_breathtaking__stud.png" alt="Mosasaurus 2" class="mosa-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="mosa_v3" data-src="generated-artwork/Mosasaurus/v7-nano-banana-2-lite-A_breathtaking__stud.png" alt="Mosasaurus 3" class="mosa-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
 </div>
 <div class="collapsible-code">
 <div class="action-buttons" style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -1452,6 +1478,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let splitIndex = 0;
     function switchSplit(dir = 1) {
       splitIndex = switchGallery(splitIndex, '.split-img', dir);
+    }
+
+    
+    let dolphinIndex = 0;
+    function switchDolphin(dir = 1) {
+      dolphinIndex = switchGallery(dolphinIndex, '.dolphin-img', dir);
     }
 
     let taleIndex = 0;
