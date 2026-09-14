@@ -3,6 +3,29 @@
 <div class="container">
 
 
+<article class="post-entry" data-tags="character-design,middle-earth,realistic,ethereal,concept-art">
+<h2 id="sep-13-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-13-26">Sep 13 // Silhouettes</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="character-design">character-design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="ethereal">ethereal</span>
+  <span class="tag tag-style" data-tag="concept-art">concept-art</span>
+</div></h2>
+
+<div class="gallery-frame"><img id="silhouettes_v1" data-src="generated-artwork/wolfdog_silhouettes/v2-nano-banana-2-___MEDIUM____Masterc.png" class="lazy-img" alt="Silhouettes" style="aspect-ratio: 768 / 1376; max-width: 768px; width: 100%;" /></div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Silhouettes</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-13-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>[NEGATIVE]</strong> 3d render, humans, harsh sunlight, directional sunbeams, widescreen, 16:9, narrow creek, weeping willows, multiple dogs, pack, bare trees, winter <strong>[MEDIUM]</strong> Masterclass landscape photography, 9:16 vertical layout. The camera is positioned low, hovering directly over the calm river, looking back toward a small peninsula of the shore. Heavy atmospheric perspective via an endless void of dense mist. Diffused volumetric lighting acts as a natural softbox. Subtle Orton Effect for a dreamlike glow. Color grading features natural, deep earthy tones in the immediate crisp foreground, fading seamlessly into a monochromatic, hauntingly pale-silver ghostly fog in the midground and deep background. <strong>[SETTING]</strong> The misty shoreline of the Vales of Anduin during a cool mid-summer morning. The Great River is massive, its glassy surface dominating the entire bottom half of the composition. Jutting out into the black water is a small, muddy peninsula—a masterpiece of maximalist natural detail. The peninsula is lined with a realistic, naturally dense grove of tall, slender silver birches and river poplars in lush mid-summer foliage. Because these trees naturally grow with an open vertical structure, the glowing, diffused white light of the fog is able to filter beautifully through their green canopies and pale trunks. Because the camera looks across the water at this jutting shoreline, the utterly still, glass-like river acts as a massive dark liquid mirror in the foreground. It provides perfect vertical symmetry, flawlessly reflecting the glowing fog filtering through the summer trees above. Crucially, along the muddy edges of the peninsula, faint microscopic ripples and summer river reeds gently warp the reflection, reminding the viewer it is liquid water. <strong>[EVENT MODIFIERS]</strong> Standing firmly on the edge of the muddy peninsula—not submerged in the water—is a single, solitary wolfdog wearing extraordinary, maximalist beast-armor: a harness of boiled leather embossed with Northman knotwork, an iron-studded gorget, and a quilted linen gambeson. It is positioned in the midground, shrouded by the atmospheric mist. While the fog softens its edges and grounds the hound firmly in the environment, it does not wash out the subject; its wildly textured fur and intricate armor remain sharply visible and beautifully detailed. It is actively leaning its armored neck far down from the dry shore to drink directly from the river. As its jaw gently breaks the surface tension of the black water, it does not meet a normal reflection. Instead, looming just beneath the glassy surface is a massively oversized, pitch-black shadow that mimics the dog's pose. This giant, submerged silhouette is twice as large as the physical dog above, meeting it perfectly snout-to-snout at the waterline. The faint concentric rings from its tongue gently warp this giant submerged shadow and the towering tree silhouettes around it.</p></code></pre></div>
+  <div id="discuss-sep-13-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
+
 <article class="post-entry" data-tags="animals,contemporary,realistic,ethereal">
 <h2 id="sep-12-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-12-26">Sep 12 // World Dolphin Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchDolphin(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchDolphin(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
