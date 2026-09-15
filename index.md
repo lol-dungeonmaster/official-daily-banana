@@ -3,6 +3,47 @@
 <div class="container">
 
 
+<article class="post-entry" data-tags="literature,fantasy,realistic,horror">
+<h2 id="sep-14-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-14-26">Sep 14 // Scenes from Literature IV</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchFeeding(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchFeeding(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="literature">literature</span>
+  <span class="tag tag-setting" data-tag="fantasy">fantasy</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="horror">horror</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="feeding_v1" data-src="generated-artwork/bogeyman-outsiders/if_it_bleeds-feeding/v1-nano-banana-2-lite.png" alt="The Feeding 1" class="feeding-img lazy-img gallery-img active" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
+  <img id="feeding_v2" data-src="generated-artwork/bogeyman-outsiders/if_it_bleeds-feeding/v2-nano-banana-pro.png" alt="The Feeding 2" class="feeding-img lazy-img gallery-img" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
+  <img id="feeding_v3" data-src="generated-artwork/bogeyman-outsiders/if_it_bleeds-feeding/v3-nano-banana-2.png" alt="The Feeding 3" class="feeding-img lazy-img gallery-img" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
+</div>
+
+<h3 style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px; margin-top: 30px; margin-bottom: 15px;">
+  The Cave Defeat
+  <div class="toggle-group" style="display: flex; gap: 0;">
+    <button onclick="switchDefeat(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button>
+    <button onclick="switchDefeat(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button>
+  </div>
+</h3>
+
+<div class="gallery-frame">
+  <img id="defeat_v1" data-src="generated-artwork/bogeyman-outsiders/the_outsider-defeat/v1-nano-banana-2-lite.png" alt="The Defeat 1" class="defeat-img lazy-img gallery-img active" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
+  <img id="defeat_v2" data-src="generated-artwork/bogeyman-outsiders/the_outsider-defeat/v2-nano-banana-pro.png" alt="The Defeat 2" class="defeat-img lazy-img gallery-img" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
+  <img id="defeat_v3" data-src="generated-artwork/bogeyman-outsiders/the_outsider-defeat/v3-nano-banana-2.png" alt="The Defeat 3" class="defeat-img lazy-img gallery-img" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
+</div>
+
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Scenes from Literature IV</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-14-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>The Feeding (If It Bleeds)</strong></p><p><strong>[NEGATIVE]</strong> 3d render, illustration, sunny, clear skies, in-focus background, fangs, literal vampire, gore, physical blood <strong>[MEDIUM]</strong> Masterclass cinematic photojournalism, 16:9 widescreen layout. Shallow depth of field (bokeh effect) isolating the crisp foreground from a chaotic, heavily blurred background. High-contrast cinematic split-toning. The background features harsh, alarming, saturated reds and thick hazy smoke, while the foreground is rendered in crisp, unsettlingly calm, cold tones. <strong>[SETTING]</strong> The chaotic aftermath of a massive urban disaster on a city street. The background is a masterpiece of maximalist tragedy detail: fleets of highly detailed emergency ambulances with aggressively flashing cherry-red sirens, and a chaotic, heavily blurred crowd of weeping civilians and frantic paramedics. Thick, billowing clouds of ash and gray dust choke the air, creating a heavy atmospheric perspective that completely obscures the deep background. <strong>[CHARACTERS BASE]</strong> Standing alone in the crisp foreground is Chet Ondowsky, a male news reporter. He wears a tailored, maximalist charcoal-gray wool suit, a crisp white heavily starched dress shirt, and a deeply textured silk crimson tie. His hair is slightly mussed from the wind. His face is pale and sharply structured. In his hand, he grips a highly detailed, heavy broadcast microphone featuring a bulky black foam windscreen. <strong>[EVENT MODIFIERS]</strong> Despite the horrific tragedy unfolding behind him, Chet Ondowsky is experiencing a terrifying psychic feeding. A subtle Orton Effect is applied exclusively to his skin to create a dreamlike, artificial smoothness that violently clashes with the gritty reality of the environment. This photographic effect heavily distorts his features into a horrific "Play-Doh face"-his skin is rendered unnervingly smooth, pale, and entirely devoid of human pores or texture, appearing like a blank, featureless clay mask that doesn't quite fit his skull. While the blurred crowd weeps behind him, his expression is one of sickening, wide-eyed euphoria. He stares directly into the camera lens with a subtle, predatory smile, greedily drinking in the ambient pain.</p><p><strong>The Cave Defeat (The Outsider)</strong></p><p><strong>[NEGATIVE]</strong> 3d render, illustration, daylight, outdoors, guns, firearms, pistols, clean clothes, multiple light sources, ambient light, normal human face, gore <strong>[MEDIUM]</strong> Masterclass gritty survival horror photography, 16:9 widescreen layout. Extreme claustrophobic chiaroscuro lighting, featuring a pitch-black void pierced by a single, harsh, highly directional tactical flashlight beam. Heavy atmospheric perspective via thick, swirling clouds of subterranean cave dust illuminated by the god-rays of the flashlight. The color grading is incredibly desaturated, relying on the stark contrast of blinding white LED light against absolute crushed black shadows. <strong>[SETTING]</strong> Deep inside an ancient, terrifyingly claustrophobic subterranean cave system. The environment is a masterpiece of maximalist geological detail: jagged, wet limestone stalactites, heavily textured, crumbling shale walls dripping with cold moisture, and a deeply uneven, treacherous floor composed of sharp, shattered stone and suffocating gray dust. The darkness outside the singular flashlight beam is absolute and impenetrable. <strong>[CHARACTERS BASE]</strong> There are two subjects. First is Holly Gibney, a pale, tallish, slim Caucasian woman in her late forties. She has mouse-brown hair scrooped back into a tight, messy bun. She wears a bulky, heavily textured winter jacket, sensible hiking shoes, and practical dark trousers. In her hands, she grips her "Happy Slapper"-a long, heavily textured white cotton tube sock stretched tight around a heavy mass of steel ball bearings. Second is the Outsider, currently wearing the stolen form of a man in a tattered, dirt-caked flannel shirt and torn denim jeans. <strong>[EVENT MODIFIERS]</strong> Holly Gibney stands at the edge of the blinding flashlight beam, her posture locked in terrified, adrenaline-fueled combat. She has just struck the Outsider with the Happy Slapper. Pinned against the jagged limestone wall by the harsh light, the Outsider's human disguise has catastrophically failed. It has reverted to a horrifying "Play-Doh face"-a terrifyingly smooth, pale, blank clay-like visage completely devoid of human features, with vacant, hollow tubes where its eyes should be. From a massive, gourd-like crack in its cloven skull, a sickening, maximalist swarm of glistening, wet red worms and writhing maggots is pouring out, squirming down its neck and spilling desperately onto the dusty cave floor.</p></code></pre></div>
+  <div id="discuss-sep-14-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
+
 <article class="post-entry" data-tags="character-design,middle-earth,realistic,ethereal,concept-art">
 <h2 id="sep-13-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-13-26">Sep 13 // Silhouettes</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="character-design">character-design</span>
@@ -1507,6 +1548,17 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let dolphinIndex = 0;
     function switchDolphin(dir = 1) {
       dolphinIndex = switchGallery(dolphinIndex, '.dolphin-img', dir);
+    }
+
+    
+    let feedingIndex = 0;
+    function switchFeeding(dir = 1) {
+      feedingIndex = switchGallery(feedingIndex, '.feeding-img', dir);
+    }
+
+    let defeatIndex = 0;
+    function switchDefeat(dir = 1) {
+      defeatIndex = switchGallery(defeatIndex, '.defeat-img', dir);
     }
 
     let taleIndex = 0;
