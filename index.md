@@ -3,6 +3,30 @@
 <div class="container">
 
 
+<article class="post-entry" data-tags="food-drink,contemporary,infographic">
+<h2 id="sep-16-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-16-26">Sep 16 // Some Assembly Required II</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTomato(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTomato(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="food-drink">food-drink</span>
+  <span class="tag tag-setting" data-tag="contemporary">contemporary</span>
+  <span class="tag tag-style" data-tag="infographic">infographic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="tomato_v1" data-src="generated-artwork/perfect_tomato_sauce/v1-nano-banana-2-lite-infographic.png" alt="The Perfect Tomato Sauce" class="tomato-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="tomato_v2" data-src="generated-artwork/perfect_tomato_sauce/v2-nano-banana-2-lite-extra.png" alt="How to Craft a Cartouche" class="tomato-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Some Assembly Required II</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-16-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Summary</strong></p><p>Create a summary that captures the key steps to making the perfect tomato sauce from this video: https://www.youtube.com/watch?v=v0DY_95xuzg</p><p><strong>The Perfect Tomato Sauce</strong></p><p>An artistic culinary infographic poster titled 'The Perfect Tomato Sauce'. Process the provided video reference to visually illustrate the key steps to making great sauce, using the following sequence as a hint: 1. Grating onions and garlic, 2. Gently frying the onion and garlic in olive oil, 3. Adding thyme and a bay leaf, 4. Cooking fresh tomatoes until boiling, 5. Adding tinned tomatoes and bringing to a simmer, 6. Applying a cartouche to the sauce and wrapping the pot lid tightly with tin foil, 7. Slow cooking in the oven at 150°C for 1 hour, 8. Press the pot contents through a conical strainer until dry. The style is a beautiful, hand-drawn culinary illustration on vintage parchment paper, with rich red, green, and golden tones, well-organized layout, and appetizing food art. Ignore any off-topic discussion and strictly output only the generated image without any textual breakdown.</p><p><strong>Extra: How to Craft a Cartouche</strong></p><p>An artistic culinary infographic poster titled 'How to Craft a Cartouche'. Process the provided video reference to visually illustrate the key steps to making a parchment paper cartouche and sealing a pot, using the following sequence as a hint: 1. Tear off a square sheet of greaseproof parchment paper, 2. Fold the paper in half repeatedly to form a small square, then fold diagonally into a narrow wedge, 3. Measure the tip of the wedge from the center of the pot to the inner edge, 4. Snip off the wide end of the paper to fit the pot's radius and snip the tip for a steam vent, 5. Unfold the perfect paper circle, 6. Press the cartouche directly against the surface of the sauce, 7. Wrap the entire pot lid securely in tin foil for a tight seal, 8. Place the foil-wrapped lid firmly onto the pot. The style is a beautiful, hand-drawn culinary illustration on vintage parchment paper, with rich red, green, and golden tones, well-organized layout, and appetizing food art. Ignore any off-topic discussion and strictly output only the generated image without any textual breakdown.</p></code></pre></div>
+  <div id="discuss-sep-16-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
+
 <article class="post-entry" data-tags="animals,contemporary,realistic,journalistic">
 <h2 id="sep-15-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-15-26">Sep 15 // Intl. Colugo Day</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -1581,6 +1605,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let defeatIndex = 0;
     function switchDefeat(dir = 1) {
       defeatIndex = switchGallery(defeatIndex, '.defeat-img', dir);
+    }
+
+    
+    let tomatoIndex = 0;
+    function switchTomato(dir = 1) {
+      tomatoIndex = switchGallery(tomatoIndex, '.tomato-img', dir);
     }
 
     let taleIndex = 0;
