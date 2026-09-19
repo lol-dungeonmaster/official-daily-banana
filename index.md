@@ -3,6 +3,34 @@
 <div class="container">
 
 
+<article class="post-entry" data-tags="animals,prehistoric,dinosaurs,realistic,cinematic,journalistic">
+<h2 id="sep-18-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-18-26">Sep 18 // Dinosaurs: Baryonyx</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchBaryonyx(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchBaryonyx(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="animals">animals</span>
+  <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
+  <span class="tag tag-style" data-tag="dinosaurs">dinosaurs</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="cinematic">cinematic</span>
+  <span class="tag tag-style" data-tag="journalistic">journalistic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="baryonyx_v1" data-src="generated-artwork/Baryonyx/v1-nano-banana-2-lite-_MEDIUM__Cinematic_w.png" alt="Baryonyx 1" class="baryonyx-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="baryonyx_v2" data-src="generated-artwork/Baryonyx/v2-nano-banana-2-_MEDIUM__Raw__journa.png" alt="Baryonyx 2" class="baryonyx-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="baryonyx_v3" data-src="generated-artwork/Baryonyx/v3-nano-banana-2-_MEDIUM__High_shutte.png" alt="Baryonyx 3" class="baryonyx-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Dinosaurs: Baryonyx</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-18-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>1. Cinematic</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human elements, modern artifacts, text, watermarks <strong>[MEDIUM]</strong> Cinematic wildlife documentary still. Shot on an anamorphic lens with a wide aperture (f/2.0), creating a shallow depth of field, subtle lens flares, and a dramatic, highly polished aesthetic. <strong>[SETTING]</strong> A roaring, white-water river gorge carved through dark, jagged slate rocks. Lighting: Dramatic, high-contrast golden hour backlighting piercing through heavy storm clouds, casting deep shadows and an intense rim-light glow on the splashing water. <strong>[ANIMALS BASE]</strong> Baryonyx. CRITICAL ANATOMY: Large spinosaurid. Very long, narrow, tubular crocodile-like snout with a rosette of teeth at the tip. Massive, heavily recurved thumb claws on robust arms. Hunched, semi-bipedal posture. No sail on the back. <strong>[EVENT MODIFIERS]</strong> Silhouetted powerfully against the dramatic light, standing firmly in the rapids. It snaps its crocodile-like jaws shut on a silver prehistoric fish, sending a cinematic explosion of glowing, crisp water droplets into the air. The scene captures a tranquil, observational nature documentary moment, expressly avoiding combat or large-scale violence.</p><p><strong>2. Journalistic</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human elements, modern artifacts, text, watermarks <strong>[MEDIUM]</strong> Raw, journalistic wildlife photography. Shot handheld with a 400mm telephoto lens from a concealed riverbank hide. Fast shutter speed to freeze chaotic motion, featuring authentic film grain and a slightly gritty, unpolished documentary feel. <strong>[SETTING]</strong> A muddy, fast-flowing riverbank scattered with debris, driftwood, and tangled prehistoric roots. Lighting: Harsh, unforgiving midday sun casting stark, realistic shadows and highlighting the thick mud and wet textures of the environment. <strong>[ANIMALS BASE]</strong> Baryonyx. CRITICAL ANATOMY: Large spinosaurid. Very long, narrow, tubular crocodile-like snout with a rosette of teeth at the tip. Massive, heavily recurved thumb claws on robust arms. Hunched, semi-bipedal posture. No sail on the back. <strong>[EVENT MODIFIERS]</strong> Caught in a candid, unposed moment of foraging, wading thigh-deep in the muddy rapids. It awkwardly but effectively lunges forward to pin a wriggling fish under its massive thumb claws, kicking up a chaotic splash of muddy water. The scene captures a tranquil, observational nature documentary moment, expressly avoiding combat or large-scale violence.</p><p><strong>3. Journalistic</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human elements, modern artifacts, text, watermarks <strong>[MEDIUM]</strong> High-shutter-speed river photography. Shot from the riverbank using a polarizing filter to completely cut the glare off the water's surface, revealing the underwater rocks and the creature's submerged feet. <strong>[SETTING]</strong> Standing in the middle of fast-moving, white-water river rapids surrounded by rocky pine forests. Lighting: Overcast, soft, diffused light preventing harsh shadows and highlighting the wet sheen on its scales. <strong>[ANIMALS BASE]</strong> Baryonyx. CRITICAL ANATOMY: Large spinosaurid. Very long, narrow, tubular crocodile-like snout with a rosette of teeth at the tip. Massive, heavily recurved thumb claws on robust arms. Hunched, semi-bipedal posture. No sail on the back. <strong>[EVENT MODIFIERS]</strong> Standing completely still in the rushing rapids, successfully snapping up a large, slippery prehistoric fish in its narrow crocodile-like jaws, with white-water spraying everywhere. The scene captures a tranquil, observational nature documentary moment, expressly avoiding combat or large-scale violence.</p></code></pre></div>
+  <div id="discuss-sep-18-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
+
 <article class="post-entry" data-tags="animals,contemporary,realistic,cinematic,ethereal">
 <h2 id="sep-17-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-17-26">Sep 17 // World Tilcayo Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTilcayo(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTilcayo(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -1644,6 +1672,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let tilcayoIndex = 0;
     function switchTilcayo(dir = 1) {
       tilcayoIndex = switchGallery(tilcayoIndex, '.tilcayo-img', dir);
+    }
+
+    
+    let baryonyxIndex = 0;
+    function switchBaryonyx(dir = 1) {
+      baryonyxIndex = switchGallery(baryonyxIndex, '.baryonyx-img', dir);
     }
 
     let taleIndex = 0;
