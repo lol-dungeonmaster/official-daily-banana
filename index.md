@@ -3,6 +3,34 @@
 <div class="container">
 
 
+<article class="post-entry" data-tags="animals,contemporary,realistic,cinematic,ethereal,journalistic">
+<h2 id="sep-19-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-19-26">Sep 19 // Intl. Red Panda Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchPanda(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchPanda(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="animals">animals</span>
+  <span class="tag tag-setting" data-tag="contemporary">contemporary</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="cinematic">cinematic</span>
+  <span class="tag tag-style" data-tag="ethereal">ethereal</span>
+  <span class="tag tag-style" data-tag="journalistic">journalistic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="panda_v1" data-src="generated-artwork/red_panda_day/v1-nano-banana-2-_MEDIUM__Cinematic_w.png" alt="Red Panda 1" class="panda-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="panda_v2" data-src="generated-artwork/red_panda_day/v2-nano-banana-2-_MEDIUM__Ethereal_fi.png" alt="Red Panda 2" class="panda-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="panda_v3" data-src="generated-artwork/red_panda_day/v3-nano-banana-2-_MEDIUM__Raw__journa.png" alt="Red Panda 3" class="panda-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Intl. Red Panda Day</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-19-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Cinematic</strong></p><p><strong>[NEGATIVE]</strong> giant panda, black and white markings, raccoon mask, fox, light colored belly, white belly, stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human elements, modern artifacts <strong>[MEDIUM]</strong> Cinematic wildlife documentary wide shot. Shot on an anamorphic 35mm lens, creating a deep depth of field with a beautifully blurred background of jagged Himalayan peaks and a dramatic, highly polished movie-still aesthetic. <strong>[SETTING]</strong> High in the Singalila Ridge, perched on a thick, moss-covered branch of an ancient Himalayan rhododendron tree. Lighting: Dramatic golden hour backlighting, with warm orange sunlight piercing the canopy, catching the animal's fur and creating a sharp, glowing rim-light effect against a soft orange sky. <strong>[ANIMALS BASE]</strong> Red Panda (Ailurus fulgens). CRITICAL ANATOMY: Cat-sized arboreal mammal. Vibrant reddish-brown (russet) fur on its back, with distinctly dark, blackish fur on its belly and legs. Face features white badges and tear-markings. Large pointed ears with white edges. Long, extremely bushy tail with alternating red and pale buff rings. <strong>[EVENT MODIFIERS]</strong> Perched powerfully yet gracefully on the branch, gazing out across the ridge. The scene captures a tranquil, observational nature documentary moment.</p><p><strong>Ethereal</strong></p><p><strong>[NEGATIVE]</strong> giant panda, black and white markings, raccoon mask, fox, light colored belly, white belly, stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human elements, modern artifacts <strong>[MEDIUM]</strong> Ethereal fine-art nature photography. Shot with a prime lens wide open for extremely soft bokeh, yielding a dreamy, muted color palette of soft greens, silvery greys, and vibrant russet orange. <strong>[SETTING]</strong> A misty, high-altitude Bhutanese cloud forest. Thick, gnarled limbs are draped heavily in hanging Old Man's Beard lichen (Usnea) above a dense bamboo understory. Lighting: Soft, diffused morning light filtering through the ancient canopy, creating distinct, shimmering god-rays (Tyndall effect) through the heavy, clinging fog. <strong>[ANIMALS BASE]</strong> Red Panda (Ailurus fulgens). CRITICAL ANATOMY: Cat-sized arboreal mammal. Vibrant reddish-brown (russet) fur on its back, with distinctly dark, blackish fur on its belly and legs. Face features white badges and tear-markings. Large pointed ears with white edges. Long, extremely bushy tail with alternating red and pale buff rings. <strong>[EVENT MODIFIERS]</strong> Curled up peacefully and asleep on a thick, lichen-covered limb. Its massive, bushy ringed tail is wrapped tightly around its face and body for warmth. The scene captures a tranquil, serene, and quiet nature documentary moment.</p><p><strong>Journalistic</strong></p><p><strong>[NEGATIVE]</strong> giant panda, black and white markings, raccoon mask, fox, light colored belly, white belly, stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human elements, modern artifacts <strong>[MEDIUM]</strong> Raw, journalistic wildlife photography. Shot handheld with a 400mm telephoto lens at f/4 from a concealed hide. Features authentic film grain, high contrast, and a slightly gritty, unpolished documentary feel. <strong>[SETTING]</strong> The rugged, steep terrain of the Langtang Valley. A natural, unstyled background of dense Himalayan bamboo (Thamnocalamus) and wet, grey mountain granite. Lighting: Natural, flat overcast lighting providing raw, realistic textures with no artificial enhancement. <strong>[ANIMALS BASE]</strong> Red Panda (Ailurus fulgens). CRITICAL ANATOMY: Cat-sized arboreal mammal. Vibrant reddish-brown (russet) fur on its back, with distinctly dark, blackish fur on its belly and legs. Face features white badges and tear-markings. Large pointed ears with white edges. Long, extremely bushy tail with alternating red and pale buff rings. Fur is thick and highly textured. <strong>[EVENT MODIFIERS]</strong> Caught in a candid, mid-action moment of foraging in a light drizzle. It is actively grasping a fresh bamboo shoot using its specialized 'false thumb', with a focused expression and tiny, crystal-clear rain droplets clinging to its white facial whiskers. The scene captures a tranquil, observational nature documentary moment.</p></code></pre></div>
+  <div id="discuss-sep-19-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
+
 <article class="post-entry" data-tags="animals,prehistoric,dinosaurs,realistic,cinematic,journalistic">
 <h2 id="sep-18-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-18-26">Sep 18 // Dinosaurs: Baryonyx</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchBaryonyx(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchBaryonyx(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -1678,6 +1706,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let baryonyxIndex = 0;
     function switchBaryonyx(dir = 1) {
       baryonyxIndex = switchGallery(baryonyxIndex, '.baryonyx-img', dir);
+    }
+
+    
+    let pandaIndex = 0;
+    function switchPanda(dir = 1) {
+      pandaIndex = switchGallery(pandaIndex, '.panda-img', dir);
     }
 
     let taleIndex = 0;
