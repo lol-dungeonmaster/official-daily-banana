@@ -3,6 +3,31 @@
 <div class="container">
 
 
+<article class="post-entry" data-tags="literature,fantasy,realistic,horror">
+<h2 id="sep-20-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-20-26">Sep 20 // Scenes from Literature V</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchNestMoment(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchNestMoment(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="literature">literature</span>
+  <span class="tag tag-setting" data-tag="fantasy">fantasy</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="horror">horror</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="nest_moment_v1" data-src="generated-artwork/nest-moment/v1-nano-banana-2-lite-Cinematic_dark_fanta.png" alt="Nest Moment 1" class="nest-moment-img lazy-img gallery-img active" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
+  <img id="nest_moment_v2" data-src="generated-artwork/nest-moment/v2-nano-banana-2-lite-Ethereal_fine_art_da.png" alt="Nest Moment 2" class="nest-moment-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Scenes from Literature V</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-20-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Cinematic</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, 3d render, illustration, modern artifacts, text, watermarks, beautiful woman, elegant features, clean, bright, generic fantasy tropes, healthy skin <strong>[MEDIUM]</strong> Cinematic dark fantasy still. Shot on an anamorphic 35mm lens, shallow depth of field, dramatic and highly realistic movie-still quality. <strong>[SETTING]</strong> The back of a rustic, wooden ox-drawn wagon traveling through a dense forest. Inside the wagon is a makeshift bed made of layered, worn quilts, squeezed tightly between the wooden edge of the wagon and a heavy wooden crate filled with yellowing books. Lighting: Moody, natural daylight filtering softly through the forest canopy above. <strong>[CHARACTERS BASE]</strong> Two characters. LEFT: Homily, a sturdy, broad-faced human woman with thick, curly brown hair, warm chocolate-brown eyes, and thick thighs, wearing practical, worn hunter clothing. RIGHT: Shesheshen, a terrifyingly withered, boneless humanoid frame resting in the quilts, wearing a noticeably tattered wig. She is completely hidden inside an enormous, threadbare gray dress that is heavily patched with rough red squares. The sleeves are wrapped twice around her arms to hide her boneless hands. <strong>[EVENT MODIFIERS]</strong> Homily is leaning over the crate of books with a kind smile, offering to trade a comically massive, pointed witch's hat with a brim so wide it could shade an entire torso. Shesheshen, looking frail and otherworldly, is reaching up from her nest of quilts, her sleeve-wrapped hands offering a blanket in trade. The massive brim of the hat dominates the space between them. Heartwarming yet gritty dark fantasy realism.</p><p><strong>Ethereal</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, 3d render, illustration, modern artifacts, text, watermarks, beautiful woman, elegant features, clean, bright, generic fantasy tropes, healthy skin <strong>[MEDIUM]</strong> Ethereal fine-art dark fantasy photography. Shot with a prime lens wide open for extremely soft bokeh, yielding a dreamy, muted color palette of soft greys, faded quilt colors, and earthy browns. Highly realistic textures. <strong>[SETTING]</strong> The cluttered back of a wooden ox-drawn wagon. A cozy but gritty makeshift bed of layered quilts rests beside a heavy crate of yellowing, ancient books. Lighting: Soft, diffused twilight creating a serene, hushed atmosphere inside the wagon. <strong>[CHARACTERS BASE]</strong> Two characters. LEFT: Homily, a sturdy, broad-faced human woman with thick, curly brown hair, warm chocolate-brown eyes, and thick thighs, wearing practical hunter clothing. RIGHT: Shesheshen, a terrifyingly withered, boneless humanoid frame resting in the quilts, wearing a noticeably tattered wig. She is swallowed by an enormous, threadbare gray dress heavily patched with rough red squares, its long sleeves wrapped twice around her arms. <strong>[EVENT MODIFIERS]</strong> In the quiet light, Homily gently leans over the crate of books, warmly extending a comically large, threadbare pointed witch's hat with an incredibly wide brim. Shesheshen reaches up from her quilt bed with sleeve-wrapped limbs, offering a blanket in trade. The hat casts a protective, shadowy silhouette between them. A quiet, profoundly tender moment amidst a haunting atmosphere.</p></code></pre></div>
+  <div id="discuss-sep-20-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
+
 <article class="post-entry" data-tags="animals,contemporary,realistic,cinematic,ethereal,journalistic">
 <h2 id="sep-19-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-19-26">Sep 19 // Intl. Red Panda Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchPanda(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchPanda(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -1712,6 +1737,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let pandaIndex = 0;
     function switchPanda(dir = 1) {
       pandaIndex = switchGallery(pandaIndex, '.panda-img', dir);
+    }
+
+    
+    let nestMomentIndex = 0;
+    function switchNestMoment(dir = 1) {
+      nestMomentIndex = switchGallery(nestMomentIndex, '.nest-moment-img', dir);
     }
 
     let taleIndex = 0;
