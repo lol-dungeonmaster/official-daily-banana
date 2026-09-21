@@ -86,6 +86,16 @@
     </div>
 </nav>
 
+
+<div id="mobile-sticky-header">
+  <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+    <img id="mobile-toc-icon" src="assets/icons/banana-dolphin-school.png" alt="TOC" class="mini-nav-icon no-lightbox">
+    <span class="mobile-site-title">Official Daily Banana</span>
+    <div style="width: 36px;"></div> <!-- Spacer -->
+  </div>
+</div>
+<div id="mobile-toc-popover"></div>
+
 <script>
   function adjustNavHeight() {
     var nav = document.querySelector('.main-nav');
@@ -103,4 +113,49 @@
   window.addEventListener('scroll', adjustNavHeight, {passive: true});
   window.addEventListener('resize', adjustNavHeight, {passive: true});
   document.addEventListener('DOMContentLoaded', adjustNavHeight);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const popover = document.getElementById('mobile-toc-popover');
+    if (popover) {
+      document.querySelectorAll('.main-nav .nav-month').forEach(month => {
+        popover.appendChild(month.cloneNode(true));
+      });
+    }
+
+    const stickyHeader = document.getElementById('mobile-sticky-header');
+    const tocIcon = document.getElementById('mobile-toc-icon');
+    
+    if (stickyHeader && tocIcon && popover) {
+      window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 768) {
+          const mainNav = document.querySelector(".main-nav");
+          const threshold = mainNav ? mainNav.offsetHeight + mainNav.offsetTop - 100 : 600;
+          if (window.scrollY > threshold) {
+            stickyHeader.classList.add('visible');
+          } else {
+            stickyHeader.classList.remove('visible');
+            popover.classList.remove('open');
+          }
+        }
+      }, { passive: true });
+
+      tocIcon.addEventListener('click', (e) => {
+        e.stopPropagation();
+        popover.classList.toggle('open');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (popover.classList.contains('open') && !popover.contains(e.target) && !stickyHeader.contains(e.target)) {
+          popover.classList.remove('open');
+        }
+      });
+
+      popover.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          popover.classList.remove('open');
+        });
+      });
+    }
+  });
+
 </script>
