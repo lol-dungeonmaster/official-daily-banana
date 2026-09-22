@@ -3,6 +3,32 @@
 <div class="container">
 
 
+<article class="post-entry" data-tags="animals,prehistoric,dinosaurs,realistic,ethereal">
+<h2 id="sep-21-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-21-26">Sep 21 // Dinosaurs: Microraptor</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchMicroraptor(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchMicroraptor(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="animals">animals</span>
+  <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
+  <span class="tag tag-style" data-tag="dinosaurs">dinosaurs</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="ethereal">ethereal</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="microraptor_v1" data-src="generated-artwork/Microraptor/v1-nano-banana-2-lite-Ethereal_fine_art_wi.png" alt="Microraptor 1" class="microraptor-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="microraptor_v2" data-src="generated-artwork/Microraptor/v2-nano-banana-2-lite-Ethereal_fine_art_wi.png" alt="Microraptor 2" class="microraptor-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Dinosaurs: Microraptor</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-21-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Variant A (Canopy Hunter)</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, 3d render, illustration, modern artifacts, text, watermarks, six wings, extra wings, four arms, extra limbs, mutated anatomy, crow beak <strong>[MEDIUM]</strong> Ethereal fine-art wildlife photography. Shot with a prime lens wide open for extremely soft bokeh, yielding a dreamy, muted background palette that makes the intensely iridescent black feathers pop. Highly realistic textures. <strong>[SETTING]</strong> A lush, temperate Early Cretaceous Chinese forest canopy (Jehol Biota). The environment is packed with the thick, textured branches of ancient Ginkgo trees and primitive needle-leaf conifers. A fine, gritty dusting of pale volcanic ash coats some of the upper leaves. Lighting: Bright, direct, dappled midday sunlight piercing the canopy, specifically angled to catch and intensely highlight the striking metallic iridescence (blues and purples) hiding within the dinosaur's glossy black feathers. <strong>[ANIMALS BASE]</strong> Microraptor. CRITICAL ANATOMY: A small, 35-inch (90 cm) long dinosaur. It MUST have exactly two feathered arms and exactly two feathered hind legs. It possesses long, stiff flight feathers on its front arms (like a standard bird) AND long, stiff flight feathers covering its hind legs (forming a unique lower set of wings). The entire body is covered in highly glossy, iridescent black plumage that flashes metallic blues and purples in the light. It has a long, stiff, bony tail ending in a diamond-shaped fan of feathers. Small, narrow snout filled with tiny sharp teeth. <strong>[EVENT MODIFIERS]</strong> Caught in mid-leap, launching dynamically from a thick, mossy Ginkgo branch. Both its front wings and feathered hind legs are splayed wide to catch the air as it glides gracefully through the sunlit canopy, sharply focused on hunting a small, mouse-sized primitive mammal scurrying along the bark. In the blurred background, a flock of primitive Confuciusornis birds (featuring toothless beaks and long, ribbon-like tail feathers) are scattering in chaotic flight, startled by the sudden ambush.</p><p><strong>Variant B (Lake Fisher)</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, 3d render, illustration, modern artifacts, text, watermarks, six wings, extra wings, four arms, extra limbs, mutated anatomy, crow beak <strong>[MEDIUM]</strong> Ethereal fine-art wildlife photography. Shot with a prime lens wide open for extremely soft bokeh, yielding a dreamy, muted background palette of soft lake-blues and morning mist. Highly realistic textures. <strong>[SETTING]</strong> A tranquil, mist-layered freshwater prehistoric lake bordered by a dense, temperate forest of towering conifers. In the shallows, clusters of Archaefructus (some of Earth's earliest primitive flowering plants) reach above the waterline. In the far distance, a massive, jagged volcano silently vents a plume of gray smoke into the sky. Lighting: Golden hour, low-angled morning sunlight reflecting brilliantly off the water's surface, perfectly illuminating the dinosaur's iridescent plumage against the dark background. <strong>[ANIMALS BASE]</strong> Microraptor. CRITICAL ANATOMY: A small, 35-inch (90 cm) long dinosaur. It MUST have exactly two feathered arms and exactly two feathered hind legs. It possesses long, stiff flight feathers on its front arms (like a standard bird) AND long, stiff flight feathers covering its hind legs (forming a unique lower set of wings). The entire body is covered in highly glossy, iridescent black plumage that flashes metallic blues and purples in the light. It has a long, stiff, bony tail ending in a diamond-shaped fan of feathers. Small, narrow snout filled with tiny sharp teeth. <strong>[EVENT MODIFIERS]</strong> Skimming just inches above the glassy lake surface. Both its front wings and feathered hind legs are fully extended in a controlled glide. Its clawed feet are reaching down to snatch a small, silver teleost fish swimming just below the surface, creating a delicate, crystal-clear splash of water. In the extreme, out-of-focus foreground, a prehistoric frog (Liaobatrachus) sits motionless on a piece of floating driftwood, watching the hunt unfold.</p></code></pre></div>
+  <div id="discuss-sep-21-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
+
 <article class="post-entry" data-tags="literature,fantasy,realistic,horror">
 <h2 id="sep-20-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-20-26">Sep 20 // Scenes from Literature V</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchNestMoment(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchNestMoment(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="literature">literature</span>
@@ -1743,6 +1769,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let nestMomentIndex = 0;
     function switchNestMoment(dir = 1) {
       nestMomentIndex = switchGallery(nestMomentIndex, '.nest-moment-img', dir);
+    }
+
+    
+    let microraptorIndex = 0;
+    function switchMicroraptor(dir = 1) {
+      microraptorIndex = switchGallery(microraptorIndex, '.microraptor-img', dir);
     }
 
     let taleIndex = 0;
