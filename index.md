@@ -3,6 +3,34 @@
 <div class="container">
 
 
+<article class="post-entry" data-tags="character-design,middle-earth,concept-art,van-gogh,lotro">
+<h2 id="sep-23-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-23-26">Sep 23 // Tolkien Week</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTolkien(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTolkien(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="character-design">character-design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="concept-art">concept-art</span>
+  <span class="tag tag-style" data-tag="van-gogh">van-gogh</span>
+  <span class="tag tag-style" data-tag="lotro">lotro</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="tolkien_v1" data-src="generated-artwork/tolkien_week/v1_maereldin_authentic_poster_lite_1_1790212062765.jpg" alt="Tolkien Week 1" class="tolkien-img lazy-img gallery-img active" style="aspect-ratio: 1024 / 1024; max-width: 1024px; width: 100%;">
+  <img id="tolkien_v2" data-src="generated-artwork/tolkien_week/v2_maereldin_widescreen_fixed_nb2_3_1790213137188.jpg" alt="Tolkien Week 2" class="tolkien-img lazy-img gallery-img" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
+  <img id="tolkien_v3" data-src="generated-artwork/tolkien_week/v3_maereldin_widescreen_fixed_lite_1_1790212939270.jpg" alt="Tolkien Week 3" class="tolkien-img lazy-img gallery-img" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
+  <img id="tolkien_v4" data-src="generated-artwork/tolkien_week/v4_maereldin_campsite_forest_front_lite_1790216892002.jpg" alt="Tolkien Week 4" class="tolkien-img lazy-img gallery-img" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Tolkien Week</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-23-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>The Flight (Van Gogh Post-Impressionist)</strong></p><p><strong>[NEGATIVE]</strong> Psychedelic, neon, flat shading, smooth digital render, 3D CGI, photography, untextured, overly bright daylight, cartoon, anime, generic character, missing animals, front view, facing camera, detailed face, multiple rivers, braided streams, delta <strong>[MEDIUM]</strong> A true post-impressionist masterpiece. The entire canvas is dominated by extremely thick, physical impasto texture applied with a palette knife. Every single element, the sky, the tall grass, the distant trees, and the characters, is built from heavy, sculptural strokes of wet oil paint. Directly inspired by the "van-gogh-sample.webp" reference, it uses optical color mixing, warm earth underpainting peeking through cool midnight blues, and stark chiaroscuro. <strong>[SETTING]</strong> A sweeping, panoramic vista of the 3rd Age Vales of Anduin near North Mirkwood. Wide rolling plains of tall wild grass leading to the singular, mighty winding river Anduin flanked by ancient stony outcroppings, stretching endlessly across the wide canvas, all rendered with aggressive tactile paint strokes. The background perfectly replicates the design of "van-gogh-sample.webp": a stark, imposing silhouette of a dark pine forest line representing the eaves of Mirkwood cutting aggressively across the wide horizon. A majestic, sprawling mountain range representing the Misty Mountains dominates the distant skyline, fading into misty atmospheric sfumato. <strong>[CHARACTERS BASE]</strong> Character_MA: A hobbit loremaster with subtly pointed ears, wearing an authentic layered leather tunic, a large wizard's hat, and a flowing traveling cloak. Her exact outfit design, armor geometry, and bodily proportions must strictly match the "Character_MA_master_reference_v2.png" guide. Companions: A massive brown bear, a sleek tundra lynx, and several ravens. <strong>[EVENT MODIFIERS]</strong> Crucially, exactly like the "van-gogh-sample.webp" reference, the camera is positioned behind the group as they run urgently away from the viewer toward the distant Mirkwood tree line. They are rendered as stark, dark, artistic silhouettes. While her armor geometry, large wizard's hat, and flowing cloak are recognizable by their distinct silhouetted shapes, all fine details are consumed by the heavy impasto shadows, perfectly preserving the moody, textured, and isolated atmosphere of the sample.</p><p><strong>The Campsite (Van Gogh Post-Impressionist)</strong></p><p><strong>[NEGATIVE]</strong> Psychedelic, neon, flat shading, smooth digital render, 3D CGI, photography, untextured, overly bright daylight, cartoon, anime, generic character, missing animals, multiple rivers, braided streams, delta, wearing hat, hat on head <strong>[MEDIUM]</strong> A true post-impressionist masterpiece. The entire canvas is dominated by extremely thick, physical impasto texture applied with a palette knife. Every single element, the sky, the tall grass, the distant trees, and the characters, is built from heavy, sculptural strokes of wet oil paint. Directly inspired by the "van-gogh-sample.webp" reference, it uses optical color mixing, warm earth underpainting peeking through cool midnight blues, and stark chiaroscuro. <strong>[SETTING]</strong> A secluded clearing deep within the ancient, dark pine forest of North Mirkwood during the 3rd Age. The forest floor is dotted with the soft, glowing yellow specks of floating fireflies. Beyond the edges of the clearing, tall, twisting pine trees loom as imposing, stark black silhouettes that cut aggressively into the night sky. Through a break in the heavy canopy, the sprawling peaks of the Misty Mountains dominate the distant skyline, their massive forms fading into dark, moody atmospheric shadows under a bright, glowing crescent moon. <strong>[CHARACTERS BASE]</strong> Character_MA: A hobbit loremaster with subtly pointed ears, wearing an authentic layered leather tunic and a flowing traveling cloak, but she is NOT wearing her hat. Her exact outfit design, armor geometry, and bodily proportions must strictly match the "campsite_master_reference.png" guide. Her braided side-bun hairstyle must precisely match the hairstyle shown in the "campsite_master_reference.png" sheet. Companions: A massive brown bear, a sleek tundra lynx, and several ravens. <strong>[EVENT MODIFIERS]</strong> The scene captures a peaceful respite at a small, flickering campsite. A small iron cooking pot hangs over the crackling campfire. The massive bear, lynx, and several ravens rest peacefully in the tall grass. Character_MA is resting comfortably, leaning her back against a large rock near the fire, holding a long wooden churchwarden pipe in one hand. She is not wearing her large wizard's hat; it rests on a nearby log within arms reach, with her loremaster's staff (anchored by the "campsite_master_reference.png" image) propped against the rock she is leaning on. The group is bathed in warm, inviting firelight, illuminating her face, authentic leather armor details, and braided side-bun hairstyle in thick impasto strokes. Beyond the glow of the campfire, the surrounding dark pine trees and distant mountains loom as deep, moody silhouettes against the cool night sky.</p></code></pre></div>
+  <div id="discuss-sep-23-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
+
 <article class="post-entry" data-tags="animals,contemporary,realistic,journalistic">
 <h2 id="sep-22-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-22-26">Sep 22 // World Rhino Day</a> </div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -1799,6 +1827,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let microraptorIndex = 0;
     function switchMicroraptor(dir = 1) {
       microraptorIndex = switchGallery(microraptorIndex, '.microraptor-img', dir);
+    }
+
+    
+    let tolkienIndex = 0;
+    function switchTolkien(dir = 1) {
+      tolkienIndex = switchGallery(tolkienIndex, '.tolkien-img', dir);
     }
 
     let taleIndex = 0;
