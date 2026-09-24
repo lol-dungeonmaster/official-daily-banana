@@ -3,6 +3,33 @@
 <div class="container">
 
 
+<article class="post-entry" data-tags="character-design,middle-earth,concept-art,realistic,lotro">
+<h2 id="sep-24-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-24-26">Sep 24 // Tolkien Week II</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTolkienUnreal(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTolkienUnreal(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="character-design">character-design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="concept-art">concept-art</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="lotro">lotro</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="tolkien_unreal_v1" data-src="generated-artwork/tolkien_week_unreal/v1_maereldin_ue5_campsite_nb2_3_1790226586025.jpg" alt="Tolkien Week II 1" class="tolkien-unreal-img lazy-img gallery-img active" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
+  <img id="tolkien_unreal_v2" data-src="generated-artwork/tolkien_week_unreal/v2_maereldin_ue5_campsite_lite_1_1790218315207.jpg" alt="Tolkien Week II 2" class="tolkien-unreal-img lazy-img gallery-img" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
+  <img id="tolkien_unreal_v3" data-src="generated-artwork/tolkien_week_unreal/v3_maereldin_ue5_campsite_pro_5_1790226993273.jpg" alt="Tolkien Week II 3" class="tolkien-unreal-img lazy-img gallery-img" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Tolkien Week II</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-24-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>The Campsite (Unreal Engine 5)</strong></p><p><strong>[NEGATIVE]</strong> oil painting, brush strokes, impasto, illustration, drawing, 2D, flat shading, cheap CGI, low poly, plastic, overly bright daylight, cartoon, anime, generic character, missing animals, multiple rivers, braided streams, delta, wearing hat, hat on head <strong>[MEDIUM]</strong> A hyper-realistic, stunning cinematic render straight out of a cutting-edge Unreal Engine 5 tech demo. The scene is dominated by breathtakingly detailed, lifelike textures, from individual blades of grass to the worn, micro-textured leather of traveling gear. It utilizes state-of-the-art path tracing, volumetric lighting, photorealistic subsurface scattering on skin, cinematic depth of field, and stark, dramatic chiaroscuro lighting. <strong>[SETTING]</strong> A secluded clearing deep within the ancient, dark pine forest of North Mirkwood during the 3rd Age. The forest floor is lush with highly detailed, dewy ferns and tall grass dotted with the soft, photorealistic glowing yellow specks of floating fireflies casting tiny volumetric point lights. Beyond the edges of the clearing, towering, highly detailed pine trees loom as imposing, stark silhouettes against the night sky. Through a break in the heavy canopy, the sprawling, snow-capped peaks of the Misty Mountains dominate the distant skyline, their massive forms fading into dark, moody atmospheric fog under a bright, glowing crescent moon. <strong>[CHARACTERS BASE]</strong> Character_MA: A hobbit loremaster with subtly pointed ears, wearing an authentic layered leather tunic and a flowing traveling cloak, but she is NOT wearing her hat. Her exact outfit design, armor geometry, and bodily proportions must strictly match the "campsite_master_reference.png" guide. Her braided side-bun hairstyle must precisely match the hairstyle shown in the "campsite_master_reference.png" sheet. Companions: A massive brown bear, a sleek tundra lynx, and several ravens. <strong>[EVENT MODIFIERS]</strong> The scene captures a peaceful respite at a small, flickering campsite. A highly detailed iron cooking pot hangs over the crackling campfire, emitting soft wisps of volumetric smoke. The massive bear, lynx, and several ravens rest peacefully in the tall grass, their fur and feathers rendered with stunning, individual strand realism. Character_MA is resting comfortably, leaning her back against a large rock near the fire, holding a long wooden churchwarden pipe in one hand. She is not wearing her large wizard's hat; it rests on a nearby highly textured wooden log within arms reach, with her loremaster's staff (anchored by the "campsite_master_reference.png" image) propped against the rock she is leaning on. The group is bathed in warm, dynamic firelight, illuminating the lifelike pores of her face, the micro-textures of her authentic leather armor, and her braided side-bun hairstyle in stunning 8k resolution. Beyond the glow of the campfire, the surrounding dark pine trees and distant mountains drop off into stark cinematic shadows, forming deep, imposing black silhouettes against the cool night sky.</p></code></pre></div>
+  <div id="discuss-sep-24-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
+
 <article class="post-entry" data-tags="character-design,middle-earth,concept-art,van-gogh,lotro">
 <h2 id="sep-23-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-23-26">Sep 23 // Tolkien Week</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTolkien(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTolkien(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="character-design">character-design</span>
@@ -1833,6 +1860,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let tolkienIndex = 0;
     function switchTolkien(dir = 1) {
       tolkienIndex = switchGallery(tolkienIndex, '.tolkien-img', dir);
+    }
+
+    
+    let tolkienUnrealIndex = 0;
+    function switchTolkienUnreal(dir = 1) {
+      tolkienUnrealIndex = switchGallery(tolkienUnrealIndex, '.tolkien-unreal-img', dir);
     }
 
     let taleIndex = 0;
