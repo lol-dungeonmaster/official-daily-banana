@@ -3,6 +3,31 @@
 <div class="container">
 
 
+<article class="post-entry" data-tags="design,middle-earth,concept-art,realistic">
+<h2 id="sep-25-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-25-26">Sep 25 // Tolkien Week III</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchForochel(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchForochel(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="design">design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="concept-art">concept-art</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="forochel_v1" data-src="generated-artwork/tolkien_week_forochel/v1-lite-forochel_village_sprawling.jpg" alt="Tolkien Week III 1" class="forochel-img lazy-img gallery-img active" style="aspect-ratio: 1264 / 848; max-width: 1264px; width: 100%;">
+  <img id="forochel_v2" data-src="generated-artwork/tolkien_week_forochel/v2-nano-banana-2-forochel_village_sprawling.jpg" alt="Tolkien Week III 2" class="forochel-img lazy-img gallery-img" style="aspect-ratio: 1264 / 848; max-width: 1264px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Tolkien Week III</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-25-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>The Fall of Arnor T.A. 1974</strong></p><p><strong>[NEGATIVE]</strong> people, humans, characters, crew, modern sailboat, modern rigging, bright sunny day, tropical, warm weather, cheerful, text, watermarks, signature, low quality, pixelated, deformed ice, warped reflections, bright blue sky, trees, pine trees, forests, foliage, vegetation, animals, birds, plastic texture, CGI feel, oversaturated, painted faces, literal animal heads, bird beaks, black masks, galleon, square stern, blocky hull, pirate ship, cannons, open sails, unfurled sails, billowing sails, dropped canvas, sails catching wind, docked at a pier, stacked sails, tiered rigging, complex square rigging, multi-tiered yardarms, cluttered masts <strong>[MEDIUM]</strong> Wide-angle landscape photography. 8k resolution, Unreal Engine 5 architectural rendering style, hyper-realistic, deep depth of field. Dramatic National Geographic environmental portrait with extreme sense of immense scale. <strong>[SETTING]</strong> A treacherous, frozen arctic bay. The bay is choked with jagged, sharp fragments of shattered pack-ice floating in dark, mirror-glassy water. Thick, freezing frost-fog rolls off the surface. The ice structures are hostile, sharp, and unforgiving, dominated by oppressive, freezing cyan and deep sapphire blues. On the expansive frozen shoreline sits a sprawling, established Lossoth survival village. The settlement features a hierarchical layout of rugged huts constructed from massive overlapping animal bones and thick, weathered hides, half-buried in deep snowdrifts. A massive central Chieftain's lodge sits in the middle, surrounded by communal gathering areas and large fire pits casting a flickering warm glow across the sprawling network of hide-tents. <strong>[BASE]</strong> A colossal, majestic, multi-masted Elven wooden deep-sea sailing ship safely moored out in the deeper, freezing waters of the bay, far from the shallow ice edge. The ship features an organic, sweeping crescent-moon profile, completely devoid of blocky architecture. Built entirely from ancient, pale ash wood. The continuous lateral planks of the hull itself warp and flare outward, sweeping backward to carve deeply fluted, overlapping horizontal ridges into the sides of the ship. These layered structural tiers give the entire hull a sweeping, aerodynamic silhouette, achieved purely through continuous, load-bearing nautical carpentry. The towering wooden prow sweeps upward into a highly stylized, abstract curving crest, maintaining the raw pale wood texture. Tall, pale wooden bare masts, each featuring a single, massive yardarm with its shimmering, silken white Elven sail completely rolled up and lashed tightly against the cold. The ship's rigging is strung with elegant, gleaming silver-grey hithlain rope, remaining unnaturally pristine. Down on the ice near the sprawling village, a small, elegant pale-wood Elven rowboat is pulled up onto the jagged frozen shoreline. <strong>[EVENT MODIFIERS]</strong> A deceptive, eerie calm before a supernatural blizzard. Cinematic, moody, foreboding tension radiating a sense of ancient malice in the air. Overhead, the skybox is ethereal and heavy; bruised, violent storm clouds are dramatically backlit by a hidden sun, creating glowing, translucent patches of luminescent amber light that bleed softly through the cloud layers. A single, piercing crack of this fiery golden light breaks through on the far horizon, casting a tragic, volumetric warm glow and blazing golden-amber rim-light directly onto the pale wood of the swan-ship and the sprawling village, reflecting perfectly on the dark glassy water.</p></code></pre></div>
+  <div id="discuss-sep-25-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
+
 <article class="post-entry" data-tags="character-design,middle-earth,concept-art,realistic,lotro">
 <h2 id="sep-24-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-24-26">Sep 24 // Tolkien Week II</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTolkienUnreal(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTolkienUnreal(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="character-design">character-design</span>
@@ -1866,6 +1891,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let tolkienUnrealIndex = 0;
     function switchTolkienUnreal(dir = 1) {
       tolkienUnrealIndex = switchGallery(tolkienUnrealIndex, '.tolkien-unreal-img', dir);
+    }
+
+    
+    let forochelIndex = 0;
+    function switchForochel(dir = 1) {
+      forochelIndex = switchGallery(forochelIndex, '.forochel-img', dir);
     }
 
     let taleIndex = 0;
