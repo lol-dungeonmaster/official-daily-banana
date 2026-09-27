@@ -4,6 +4,30 @@
 
 
 <article class="post-entry" data-tags="design,middle-earth,concept-art,realistic">
+<h2 id="sep-26-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-26-26">Sep 26 // Tolkien Week IV</a> </div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="design">design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="concept-art">concept-art</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="erebor_v1" data-src="generated-artwork/tolkien_week_erebor/v1-nano-banana-2-erebor_mountain.jpg" alt="Tolkien Week IV 1" class="erebor-img lazy-img gallery-img active" style="aspect-ratio: 1264 / 848; max-width: 1264px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Tolkien Week IV</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-26-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>[NEGATIVE]</strong> people, humans, characters, bright sunny day, cheerful, tropical, green grass, lush jungles, modern buildings, text, watermarks, signature, low quality, pixelated, continuous mountain range, rolling hills, soft hills, rounded peaks, CGI feel, oversaturated <strong>[MEDIUM]</strong> Wide-angle landscape photography. 8k resolution, Unreal Engine 5 architectural rendering style, hyper-realistic, deep depth of field. Dramatic National Geographic environmental portrait with extreme sense of immense scale. <strong>[SETTING]</strong> A sweeping, recovered natural landscape in the late Third Age. The immediate foreground is plunged into cold shadow, consisting of rugged foothills heavily blanketed by dark, ancient alpine pine forests. Nestled in the deep valley below is the rebuilt, thriving stone architecture of the city of Dale, featuring elegant towers, warm glowing windows, and a prominent, grand central bell tower rising above the slate roofs. The towering pine trees and the sprawling city architecture in the foreground provide an immediate, relatable anchor for immense scale. The atmosphere is deeply moody and freezing, dominated by deep indigo and cold slate-blue shadows. A thick, heavy collar of translucent, rolling morning mist hangs low in the valley, completely separating the foreground from the heights above and creating extreme atmospheric depth. <strong>[BASE]</strong> Rising abruptly from the mist and the pine-forested valley is a colossal, solitary monolithic peak (Erebor, The Lonely Mountain), completely disconnected from any other mountain ranges. The mountain features sharp, chiseled architectural geometry, characterized by a towering central snow-capped crown-peak and six massive, sheer-walled rocky ridges that sweep outward into the plains like the points of a gigantic star. Silhouetted on the end of the lower southwestern ridge stands an ancient, fortified dwarven stone watchtower (Ravenhill). Far below, nestled in a deep gorge between the two massive southern ridges, a rushing, crystal-clear river cascades down a steep waterfall directly out of a heavily fortified dwarven gateway (The Front Gate). A massive, master-crafted dwarven stone highway (The Great Paved Road) winds its way up the valley alongside the river, culminating in a grand, sweeping stone ramp that ascends the cliffside to reach the towering stone bulwarks and newly-forged iron doors of the fully restored stronghold. <strong>[EVENT MODIFIERS]</strong> The rare, fleeting astronomical phenomenon of late autumn alpenglow (Durin's Day). A single, piercing ray of extreme directional sunset lighting breaks through the atmospheric gloom to strike only the sheer, high western rock face of the mountain. The blazing golden-orange sunlight hits the peak, creating a fiery rim-light that perfectly contrasts against the freezing indigo sky. The sunlit rock glows with a hyper-realistic, metallic golden-amber warmth, echoing the hidden dwarven wealth inside, while the rest of the mountain and the world below remains plunged in cold, dark shadow. High in the freezing air, a massive flock of intelligent black ravens circles the lower ridges of the mountain.</p></code></pre></div>
+  <div id="discuss-sep-26-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
+
+<article class="post-entry" data-tags="design,middle-earth,concept-art,realistic">
 <h2 id="sep-25-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-25-26">Sep 25 // Tolkien Week III</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchForochel(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchForochel(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="design">design</span>
   <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
