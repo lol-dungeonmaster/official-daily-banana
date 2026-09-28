@@ -3,6 +3,31 @@
 <div class="container">
 
 
+<article class="post-entry" data-tags="animals,prehistoric,dinosaurs,realistic">
+<h2 id="sep-27-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-27-26">Sep 27 // Dinosaurs: Triceratops</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTriceratops(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTriceratops(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="animals">animals</span>
+  <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
+  <span class="tag tag-style" data-tag="dinosaurs">dinosaurs</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="triceratops_v1" data-src="generated-artwork/Triceratops/v1-nano-banana-2-triceratops_push.jpg" alt="Triceratops 1" class="triceratops-img lazy-img gallery-img active" style="aspect-ratio: 1264 / 848; max-width: 1264px; width: 100%;">
+  <img id="triceratops_v2" data-src="generated-artwork/Triceratops/v2-nano-banana-2-triceratops_prize.jpg" alt="Triceratops 2" class="triceratops-img lazy-img gallery-img" style="aspect-ratio: 1264 / 848; max-width: 1264px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Dinosaurs: Triceratops</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-27-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Triceratops (Sequential Image-to-Image Narrative)</strong></p><p><strong>[MEDIUM]</strong> A wide-angle landscape wildlife shot (24mm lens) capturing immense scale, utilizing a polarizing filter to deepen the sky and emphasize the swirling dust textures. <strong>[SETTING]</strong> A dense, lush Late Cretaceous North American coastal floodplain forest (Hell Creek ecosystem). The background is heavily packed with a towering, impenetrable wall of ancient timber, featuring massive Metasequoia (Dawn Redwoods), Ginkgo trees, and thick Araucaria conifers. The forest floor is lush and choked with thick Osmunda ferns and primitive ground-palmettos. In the blurred, out-of-focus background, a small flock of primitive, toothed Enantiornithine birds takes flight from the dense canopy. Lighting: Golden hour backlighting, casting long shadows and turning the dust kicked up from the forest floor into a glowing, fiery orange haze. <strong>[ANIMALS BASE]</strong> Triceratops. CRITICAL ANATOMY: Large, robust ceratopsian herbivore. Must have a massive, solid bone neck frill without large holes (fenestrae). Three distinct facial horns (two large above the eyes, one small on the nose). Quadrupedal, barrel-chested stance with a sharp, parrot-like beak. </p><p><strong>Scene 1: The Push (Base Image)</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human elements, modern artifacts, text, watermarks, combat, fighting, blood, predators, grass, charging, running, ramming <strong>[EVENT MODIFIERS]</strong> Using its immense mass to forage exactly like a modern elephant. It is leaning its massive, barrel-chested body and solid bone frill slowly and powerfully against a tough Cycad tree trunk, bending and pushing it over with sheer weight to reach the nutritious upper canopy leaves. It is completely stationary and pushing, not running or ramming. The slow, heavy movement kicks up a dramatic, beautifully lit cloud of dry dust. In the extreme, out-of-focus foreground, a tiny, rat-like primitive mammal (Alphadon) scurries frantically over the earth, startled by the massive shifting weight. The scene captures a tranquil, observational nature documentary moment.</p><p><strong>Scene 2: The Prize (Image-to-Image Reference)</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human elements, modern artifacts, text, watermarks, combat, fighting, blood, predators, grass, charging, running, ramming, identical pose, same posture, frozen action, standing tall, pushing, identical location, birds, flock, flying animals, mammals, rats, Alphadon <strong>[PIPELINE RULE]</strong> Pass the image generated in Scene 1 back into the generator as a strict reference image to lock the lighting, shadows, and background timber exactly in place. <strong>[EVENT MODIFIERS]</strong> CRITICAL SPATIAL SHIFT AND POSTURE CHANGE: The Triceratops has taken three heavy paces forward from its position in the reference image. It is now physically located further to the right side of the frame. The massive Cycad tree has been successfully completely pushed over and now lies flat on the cracked earth. The Triceratops is standing directly over the felled trunk, having lowered its massive head all the way down to the ground. It is using its sharp, parrot-like beak to delicately snip and shear the highly nutritious leaves. The swirling dust has settled, creating a crystal-clear, tranquil foraging moment. CRITICAL ERASURE: The flock of birds has flown away and the sky is completely empty. The small foreground mammal has fled and the dirt is completely empty.</p></code></pre></div>
+  <div id="discuss-sep-27-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
+
+
 <article class="post-entry" data-tags="design,middle-earth,concept-art,realistic">
 <h2 id="sep-26-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-26-26">Sep 26 // Tolkien Week IV</a> </div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="design">design</span>
@@ -1921,6 +1946,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
     let forochelIndex = 0;
     function switchForochel(dir = 1) {
       forochelIndex = switchGallery(forochelIndex, '.forochel-img', dir);
+    }
+
+    
+    let triceratopsIndex = 0;
+    function switchTriceratops(dir = 1) {
+      triceratopsIndex = switchGallery(triceratopsIndex, '.triceratops-img', dir);
     }
 
     let taleIndex = 0;
