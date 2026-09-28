@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const isHeader = (el) => {
          const strong = el.querySelector('strong');
          if (!strong) return false;
-         return strong.textContent.trim().match(/^(Scene \d+|Variant [A-Z]|\d+\.\s+[A-Za-z])/i);
+         return strong.textContent.trim().match(/^(Scene \d+|Variant [A-Z]|\d+\.\s+[A-Za-z]|[A-Za-z\s]+:\s*\[|[A-Za-z\s]+:)/i);
       };
 
       let basePrompt = [];
