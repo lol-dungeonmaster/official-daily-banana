@@ -3,12 +3,13 @@
 <div class="container">
 
 
-<article class="post-entry" data-tags="animals,prehistoric,dinosaurs,realistic">
+<article class="post-entry" data-tags="animals,prehistoric,dinosaurs,realistic,multi-step">
 <h2 id="sep-27-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-27-26">Sep 27 // Dinosaurs: Triceratops</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTriceratops(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTriceratops(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
   <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
   <span class="tag tag-style" data-tag="dinosaurs">dinosaurs</span>
   <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="multi-step">multi-step</span>
 </div></h2>
 
 <div class="gallery-frame">

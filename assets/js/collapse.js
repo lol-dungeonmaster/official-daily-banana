@@ -2,44 +2,127 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".collapsible-code").forEach((container) => {
     const button = container.querySelector("button");
     const pre = container.querySelector("pre");
+    const article = container.closest('article');
+    const hasMultiStep = article && article.dataset.tags && article.dataset.tags.includes('multi-step');
 
     pre.style.display = "none";
-    pre.style.position = "relative"; // Ensure absolute copy button anchors to pre
+    pre.style.position = "relative";
     const codeBlock = pre.querySelector("code");
+    
     if (codeBlock) {
       codeBlock.style.display = "block";
       codeBlock.style.paddingRight = "40px";
       codeBlock.style.boxSizing = "border-box";
 
-      // Enhanced Regex: Case-insensitive (/i) to catch [NEGATIVE] as well as [Negative]
+      // --- 1. Carousel Parsing Logic ---
+      const paragraphs = Array.from(codeBlock.children).filter(el => el.tagName === 'P' || el.textContent.trim() !== '');
+      const isHeader = (el) => {
+         const strong = el.querySelector('strong');
+         if (!strong) return false;
+         return strong.textContent.trim().match(/^(Scene \d+|Variant [A-Z]|\d+\.\s+[A-Za-z])/i);
+      };
+
+      let basePrompt = [];
+      let scenes = [];
+      let currentScene = null;
+      let appendixElements = [];
+
+      paragraphs.forEach(p => {
+          if (p.textContent.includes("Appendix:") || p.textContent.includes("**Appendix")) {
+              appendixElements.push(p);
+          } else if (isHeader(p) && appendixElements.length === 0) {
+              currentScene = { header: p, content: [] };
+              scenes.push(currentScene);
+          } else {
+              if (appendixElements.length > 0) {
+                  appendixElements.push(p);
+              } else if (currentScene) {
+                  currentScene.content.push(p);
+              } else {
+                  basePrompt.push(p);
+              }
+          }
+      });
+
+      if (scenes.length > 1) {
+          const tabBar = document.createElement('div');
+          tabBar.className = 'prompt-tab-bar';
+          tabBar.style.cssText = 'display: flex; gap: 5px; margin-bottom: 10px; flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px;';
+          
+          const tabs = [];
+          const contents = [];
+          
+          scenes.forEach((scene, index) => {
+              const tab = document.createElement('button');
+              tab.className = 'prompt-tab-btn';
+              tab.textContent = scene.header.textContent.replace(/(:|\().*/, '').trim();
+              tab.style.cssText = 'background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px;';
+              
+              const contentDiv = document.createElement('div');
+              contentDiv.className = 'sub-prompt';
+              contentDiv.dataset.index = index;
+              contentDiv.style.display = index === 0 ? 'block' : 'none';
+              
+              if (hasMultiStep) {
+                  basePrompt.forEach(bp => contentDiv.appendChild(bp.cloneNode(true)));
+              }
+              contentDiv.appendChild(scene.header.cloneNode(true));
+              scene.content.forEach(p => contentDiv.appendChild(p.cloneNode(true)));
+              
+              scene.header.remove();
+              scene.content.forEach(p => p.remove());
+              
+              codeBlock.insertBefore(contentDiv, appendixElements.length > 0 ? appendixElements[0] : null);
+              tabs.push(tab);
+              contents.push(contentDiv);
+              tabBar.appendChild(tab);
+              
+              tab.onclick = () => {
+                  tabs.forEach(t => {
+                      t.style.background = 'rgba(0,0,0,0.3)';
+                      t.style.border = '1px solid rgba(255,255,255,0.2)';
+                  });
+                  tab.style.background = 'rgba(0,255,136,0.1)';
+                  tab.style.border = '1px solid rgba(0,255,136,0.3)';
+                  contents.forEach(c => c.style.display = 'none');
+                  contentDiv.style.display = 'block';
+                  codeBlock.dataset.activeTab = index;
+                  pre.dispatchEvent(new Event('tabchanged'));
+              };
+          });
+          
+          if (hasMultiStep) {
+              basePrompt.forEach(p => p.remove());
+          }
+          
+          codeBlock.dataset.activeTab = 0;
+          tabs[0].onclick();
+          codeBlock.insertBefore(tabBar, codeBlock.firstChild);
+      }
+
+      // --- 2. Negative Prompt Hoisting ---
       const negativeRegex = /(?:<strong>)?(?:\[[^\]]*negative[^\]]*\]|negative\s*prompt\s*:)(?:<\/strong>)?\s*(?:<br\s*\/?>)?\s*([\s\S]*?)\s*(?=(?:<strong>)?(?:\[|\bnegative\b)|$)/i;
       
-      // Iterate over each child node (usually <p> tags) to keep negative prompts coupled to their original paragraphs
-      Array.from(codeBlock.children).forEach((child) => {
+      const elementsToProcess = scenes.length > 1 ? Array.from(codeBlock.querySelectorAll('.sub-prompt > p')) : Array.from(codeBlock.children);
+      
+      elementsToProcess.forEach((child) => {
         let match;
         while ((match = child.innerHTML.match(negativeRegex))) {
           const fullMatch = match[0];
           const negativeText = match[1].replace(/<[^>]+>/g, '').trim();
           
-          // Remove the negative prompt segment from the child's HTML
           child.innerHTML = child.innerHTML.replace(fullMatch, '');
-          
           let targetNode = child;
           
-          // If stripping the negative prompt left the paragraph completely empty (meaning it was isolated in its own <p> tag)
           if (child.innerHTML.replace(/<[^>]+>/g, '').trim() === '') {
-             // Redirect the target to the preceding paragraph (the positive prompt it belongs to)
              targetNode = child.previousElementSibling || child;
-             child.remove(); // Safely destroy the empty paragraph so it doesn't leave a gap
+             child.remove(); 
           }
           
-          // Build the isolated UI container (styles handled by style.scss)
           const negContainer = document.createElement("div");
           negContainer.className = "negative-prompt-container";
-          
           negContainer.innerHTML = `<strong style="color: #ff4a4a;">Negative prompt:</strong>\n${negativeText}`;
           
-          // Insert the negative prompt container immediately ABOVE the target paragraph, with its CSS arrow pointing down to it
           if (targetNode.parentNode) {
             targetNode.parentNode.insertBefore(negContainer, targetNode);
           }
@@ -47,8 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Inject copy to clipboard button for base prompt
-    // Extract clean text content, excluding the button's own text and any generated variants/negatives
     const extractCleanText = () => {
       const clone = pre.cloneNode(true);
       
@@ -57,28 +138,47 @@ document.addEventListener("DOMContentLoaded", () => {
       const tokensInClone = clone.querySelector(".token-estimator");
       if (tokensInClone) tokensInClone.remove();
       
-      const variantContainers = clone.querySelectorAll(".generate-ui-container");
-      variantContainers.forEach(c => c.remove());
-
-      const negativeContainers = clone.querySelectorAll(".negative-prompt-container");
-      negativeContainers.forEach(c => c.remove());
+      clone.querySelectorAll(".generate-ui-container, .negative-prompt-container").forEach(c => c.remove());
       
       let formattedText = "";
       const codeClone = clone.querySelector("code");
+      
       if (codeClone) {
-        codeClone.querySelectorAll("br").forEach(br => br.replaceWith("\n"));
+        // If there's an active tab, only copy that tab
+        const activeTabIdx = codeClone.dataset.activeTab;
+        let nodesToCopy = codeClone.childNodes;
+        if (activeTabIdx !== undefined) {
+           const activeSubPrompt = codeClone.querySelector(`.sub-prompt[data-index="${activeTabIdx}"]`);
+           if (activeSubPrompt) {
+               nodesToCopy = activeSubPrompt.childNodes;
+           }
+        }
+        
         const chunks = [];
-        codeClone.childNodes.forEach(node => {
+        nodesToCopy.forEach(node => {
           if (node.nodeType === Node.ELEMENT_NODE || node.nodeType === Node.TEXT_NODE) {
-            let text = node.textContent.trim();
-            text = text.replace(/[ \t]+/g, ' '); 
-            if (text) chunks.push(text);
+            if (node.tagName === 'BR') {
+              chunks.push('\n');
+            } else if (node.tagName === 'P' || node.tagName === 'DIV') {
+               let text = node.textContent.replace(/[ \t]+/g, ' ').trim();
+               if (text) chunks.push(text);
+            } else {
+               let text = node.textContent.trim();
+               if (text) chunks.push(text);
+            }
           }
         });
         formattedText = chunks.join("\n\n");
       } else {
         formattedText = clone.textContent.trim();
       }
+      
+      // Cut off Appendix
+      const appendixMatch = formattedText.match(/(\*\*|)Appendix:/i);
+      if (appendixMatch) {
+          formattedText = formattedText.substring(0, appendixMatch.index).trim();
+      }
+      
       return formattedText;
     };
 
@@ -103,7 +203,6 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => (copyBtn.innerHTML = "✂️"), 1500);
     };
     pre.appendChild(copyBtn);
-
 
     button.addEventListener("click", () => {
       const isOpen = pre.style.display === "block";

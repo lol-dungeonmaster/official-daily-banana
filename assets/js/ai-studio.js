@@ -455,26 +455,65 @@ document.addEventListener("DOMContentLoaded", () => {
       hash = (hash << 5) - hash + promptText.charCodeAt(i);
       hash |= 0;
     }
-    const storageKey = "variant_" + hash;
-    const customStorageKey = "custom_" + hash;
+    
+    const getActiveTabIdx = () => {
+        const code = pre.querySelector("code");
+        return code && code.dataset.activeTab !== undefined ? code.dataset.activeTab : "0";
+    };
+    const getStorageKey = (idx) => "variant_" + hash + "_tab_" + (idx !== undefined ? idx : getActiveTabIdx());
+    const getCustomStorageKey = (idx) => "custom_" + hash + "_tab_" + (idx !== undefined ? idx : getActiveTabIdx());
+    
+    pre.addEventListener('tabchanged', () => {
+        const activeTab = sessionStorage.getItem("odb_tab_" + getStorageKey());
+        updateCameraBtnState();
+        variantBtn.classList.remove("expanded");
+        customBtn.classList.remove("expanded");
+        outputArea.style.display = "none";
+        
+        if (activeTab === "custom") {
+           renderCustom();
+        } else if (activeTab === "variant" || sessionStorage.getItem(getStorageKey())) {
+           renderVariant();
+        } else {
+           const baseTokenUI = pre.querySelector(".token-estimator");
+           if (baseTokenUI) baseTokenUI.textContent = "";
+        }
+    });
+    
 
-    const extractCleanText = () => {
+    const extractCleanTextForTab = (tabIdx) => {
       const clone = pre.cloneNode(true);
       clone.querySelectorAll(".generate-ui-container, .negative-prompt-container, span[title='Copy to clipboard'], .token-estimator").forEach(c => c.remove());
       const codeClone = clone.querySelector("code");
+      
       if (codeClone) {
-        codeClone.querySelectorAll("br").forEach(br => br.replaceWith("\n"));
+        let nodesToCopy = codeClone.childNodes;
+        if (tabIdx !== undefined) {
+           const activeSubPrompt = codeClone.querySelector(`.sub-prompt[data-index="${tabIdx}"]`);
+           if (activeSubPrompt) {
+               nodesToCopy = activeSubPrompt.childNodes;
+           }
+        }
+        
         const chunks = [];
-        codeClone.childNodes.forEach(node => {
+        nodesToCopy.forEach(node => {
           if (node.nodeType === Node.ELEMENT_NODE || node.nodeType === Node.TEXT_NODE) {
-            let t = node.textContent.trim().replace(/[ \t]+/g, ' ');
-            if (t) chunks.push(t);
+            if (node.tagName === 'BR') { chunks.push('\n'); }
+            else if (node.tagName === 'P' || node.tagName === 'DIV') {
+               let t = node.textContent.replace(/[ 	]+/g, ' ').trim();
+               if (t) chunks.push(t);
+            } else {
+               let t = node.textContent.trim();
+               if (t) chunks.push(t);
+            }
           }
         });
-        return chunks.join("\n\n");
+        return chunks.join('\n\n').replace(/(\*\*|)Appendix:.*/is, '').trim();
       }
-      return clone.textContent.trim();
+      return clone.textContent.trim().replace(/(\*\*|)Appendix:.*/is, '').trim();
     };
+
+    const extractCleanText = () => extractCleanTextForTab(getActiveTabIdx());
 
     const container = document.createElement("div");
     container.className = "generate-ui-container";
@@ -636,7 +675,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const customBtn = controls.querySelector(".btn-custom");
 
     // Restore cached variant if it exists
-    const savedVariant = sessionStorage.getItem(storageKey);
+    const savedVariant = sessionStorage.getItem(getStorageKey());
     const addCopyButton = (text, exactTokens = null) => {
       const copyBtn = document.createElement("span");
       copyBtn.textContent = "✂️";
@@ -662,8 +701,12 @@ document.addEventListener("DOMContentLoaded", () => {
       outputArea.appendChild(tokenLabel);
     };
 
-    const extractNegativeText = () => {
-      const clone = pre.cloneNode(true);
+    const extractNegativeTextForTab = (tabIdx) => {
+      let containerNode = pre;
+      if (tabIdx !== undefined) {
+          containerNode = pre.querySelector(`.sub-prompt[data-index="${tabIdx}"]`) || pre;
+      }
+      const clone = containerNode.cloneNode(true);
       const negContainers = clone.querySelectorAll(".negative-prompt-container");
       let negText = "";
       negContainers.forEach(c => {
@@ -673,16 +716,17 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       return negText.trim();
     };
+    const extractNegativeText = () => extractNegativeTextForTab(getActiveTabIdx());
 
     const renderVariant = () => {
-      sessionStorage.setItem("odb_tab_" + storageKey, "variant");
+      sessionStorage.setItem("odb_tab_" + getStorageKey(), "variant");
       variantBtn.classList.add("expanded");
       customBtn.classList.remove("expanded");
       variantBtn.title = "Press to generate";
       customBtn.title = "Create edit";
       updateCameraBtnState();
       outputArea.innerHTML = "";
-      const savedVariantData = sessionStorage.getItem(storageKey);
+      const savedVariantData = sessionStorage.getItem(getStorageKey());
       if (savedVariantData) {
         let parsed = null;
         try {
@@ -703,7 +747,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const renderCustom = async () => {
-      sessionStorage.setItem("odb_tab_" + storageKey, "custom");
+      sessionStorage.setItem("odb_tab_" + getStorageKey(), "custom");
       customBtn.classList.add("expanded");
       variantBtn.classList.remove("expanded");
       customBtn.title = "Edit the prompt";
@@ -725,7 +769,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
 
       
-      const cachedCustom = sessionStorage.getItem(customStorageKey);
+      const cachedCustom = sessionStorage.getItem(getCustomStorageKey());
       let customTokens = null;
       
       if (cachedCustom) {
@@ -742,7 +786,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const baseTokenUI = pre.querySelector(".token-estimator");
         if (baseTokenUI && baseTokenUI.textContent) {
            customTokens = parseInt(baseTokenUI.textContent);
-           sessionStorage.setItem(customStorageKey, JSON.stringify({text: cleanPrompt, tokens: customTokens}));
+           sessionStorage.setItem(getCustomStorageKey(), JSON.stringify({text: cleanPrompt, tokens: customTokens}));
         } else {
            // We don't know the exact count, run countTokens just for the base prompt
            const key = sessionStorage.getItem("gemini_api_key");
@@ -759,7 +803,7 @@ document.addEventListener("DOMContentLoaded", () => {
                    const countData = await res.json();
                    customTokens = countData.totalTokens;
                    logAudit("info", `API Usage: ${customTokens} tokens counted`);
-                   sessionStorage.setItem(customStorageKey, JSON.stringify({text: cleanPrompt, tokens: customTokens}));
+                   sessionStorage.setItem(getCustomStorageKey(), JSON.stringify({text: cleanPrompt, tokens: customTokens}));
                    if (baseTokenUI) baseTokenUI.textContent = customTokens;
                  } else {
                    logAudit("warn", `API Error [${res.status}] during token count`);
@@ -812,7 +856,7 @@ document.addEventListener("DOMContentLoaded", () => {
                  logAudit("info", `API Usage: ${exactTokens} tokens counted`);
                  lastText = currentText;
                  
-                 sessionStorage.setItem(customStorageKey, JSON.stringify({text: currentText, tokens: exactTokens}));
+                 sessionStorage.setItem(getCustomStorageKey(), JSON.stringify({text: currentText, tokens: exactTokens}));
                  
                  const label = outputArea.querySelector('.variant-token-estimator');
                  if (label) label.textContent = exactTokens;
@@ -866,7 +910,113 @@ document.addEventListener("DOMContentLoaded", () => {
           logAudit("info", `Negative Prompt applied: "${activeNegativeText}"`);
       }
       
-      try {
+      
+      const article = pre.closest('article');
+      const isMultiStep = article && article.dataset.tags && article.dataset.tags.includes('multi-step');
+      
+      if (isMultiStep) {
+         const tabs = pre.querySelectorAll(".sub-prompt");
+         if (tabs.length === 0) return;
+         
+         let previousImageBytes = null;
+         
+         imgGenerateBtn.disabled = true;
+         imgGenerateBtn.style.opacity = "0.8";
+         imgGenerateBtn.classList.add("btn-generating");
+         imgGenerateBtn.title = "Pipeline running...";
+         
+         try {
+             for (let i = 0; i < tabs.length; i++) {
+                 showToast(`[Pipeline] Generating step ${i+1} of ${tabs.length}...`, false);
+                 
+                 const tabSKey = "variant_" + hash + "_tab_" + i;
+                 const tabCKey = "custom_" + hash + "_tab_" + i;
+                 
+                 const tabState = sessionStorage.getItem("odb_tab_" + tabSKey);
+                 let stagePromptText = "";
+                 
+                 if (tabState === "custom") {
+                     const cData = sessionStorage.getItem(tabCKey);
+                     stagePromptText = cData ? JSON.parse(cData).text : extractCleanTextForTab(i);
+                 } else if (tabState === "variant") {
+                     const vData = sessionStorage.getItem(tabSKey);
+                     stagePromptText = vData ? JSON.parse(vData).text : extractCleanTextForTab(i);
+                 } else {
+                     stagePromptText = extractCleanTextForTab(i);
+                 }
+                 
+                 const stageNegativeText = extractNegativeTextForTab(i);
+                 
+                 const payload = { contents: [{ parts: [{ text: stagePromptText }] }] };
+                 if (stageNegativeText) {
+                     payload.systemInstruction = { parts: [{ text: `DO NOT generate any of the following elements: ${stageNegativeText}` }] };
+                 }
+                 if (previousImageBytes && i > 0) {
+                     payload.contents[0].parts.unshift({ inlineData: { data: previousImageBytes, mimeType: "image/jpeg" } });
+                 }
+                 
+                 logAudit("info", `[Pipeline Step ${i+1}] Sending prompt: ${stagePromptText.substring(0, 50)}...`);
+                 
+                 let targetModel = "gemini-3.1-flash-lite-image"; 
+                 if (currentImgModel === "nano-banana-2") targetModel = "gemini-3.1-flash-image";
+                 
+                 const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${targetModel}:generateContent?key=${key}`, {
+                     method: "POST",
+                     headers: { "Content-Type": "application/json" },
+                     body: JSON.stringify(payload)
+                 });
+                 
+                 if (!res.ok) {
+                     showToast(`Pipeline Error at step ${i+1}`, true);
+                     throw new Error(`Step ${i+1} failed`);
+                 }
+                 
+                 const data = await res.json();
+                 const part = data.candidates[0].content.parts[0];
+                 if (part.inlineData) {
+                     previousImageBytes = part.inlineData.data;
+                 } else if (part.text) {
+                     previousImageBytes = part.text;
+                 }
+             }
+             
+             if (previousImageBytes) {
+                 const imgSrc = "data:image/jpeg;base64," + previousImageBytes;
+                 showToast("Pipeline complete!", false);
+                 const lightbox = document.createElement("div");
+                 lightbox.className = "ai-studio-lightbox";
+                 lightbox.style.cssText = "position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.9); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; cursor: pointer;";
+                 
+                 const img = document.createElement("img");
+                 img.src = imgSrc;
+                 img.style.cssText = "max-width: 90%; max-height: 90%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);";
+                 
+                 lightbox.appendChild(img);
+                 document.body.appendChild(lightbox);
+                 requestAnimationFrame(() => lightbox.style.opacity = "1");
+                 
+                 lightbox.addEventListener("click", () => {
+                     lightbox.style.opacity = "0";
+                     const a = document.createElement("a");
+                     a.href = imgSrc;
+                     a.download = `pipeline_${currentImgModel}_${Date.now()}.png`;
+                     document.body.appendChild(a);
+                     a.click();
+                     document.body.removeChild(a);
+                     setTimeout(() => { lightbox.remove(); }, 300);
+                 });
+             }
+         } catch(e) {
+             console.error(e);
+             showToast("Pipeline network error", true);
+         } finally {
+             imgGenerateBtn.classList.remove("btn-generating");
+             imgGenerateBtn.disabled = false;
+             updateCameraBtnState();
+         }
+         return;
+      }
+    try {
          const payload = {
              contents: [{ parts: [{ text: activePromptText }] }]
          };
@@ -957,10 +1107,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initial Load: Restore tab state, fallback to Variant if exists
     updateCameraBtnState();
-    const activeTab = sessionStorage.getItem("odb_tab_" + storageKey);
+    const activeTab = sessionStorage.getItem("odb_tab_" + getStorageKey());
     if (activeTab === "custom") {
        renderCustom();
-    } else if (activeTab === "variant" || sessionStorage.getItem(storageKey)) {
+    } else if (activeTab === "variant" || sessionStorage.getItem(getStorageKey())) {
        renderVariant();
     }
 
@@ -972,7 +1122,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     variantBtn.addEventListener("click", async (e) => {
       // If we are just toggling back from custom and have a cache, just render it
-      if (!variantBtn.classList.contains("expanded") && sessionStorage.getItem(storageKey)) {
+      if (!variantBtn.classList.contains("expanded") && sessionStorage.getItem(getStorageKey())) {
           renderVariant();
           return;
       }
@@ -1004,7 +1154,7 @@ document.addEventListener("DOMContentLoaded", () => {
       outputArea.textContent = "...";
       
       // Transfer known base tokens from Custom cache before generating
-      const cachedCustom = sessionStorage.getItem(customStorageKey);
+      const cachedCustom = sessionStorage.getItem(getCustomStorageKey());
       if (cachedCustom) {
          try {
            const parsedCustom = JSON.parse(cachedCustom);
@@ -1019,10 +1169,50 @@ document.addEventListener("DOMContentLoaded", () => {
         const key = sessionStorage.getItem("gemini_api_key");
         logAudit("info", `Generating variant using ${currentModel}...`);
         
-        const sysInstruction = "You are an introspective, expert AI prompt engineer. Deliberately construct a new, grounded variation of the following image generation prompt by thoughtfully reimagining the medium, setting, and event modifiers while strictly preserving the original core subject. Output ONLY the final raw prompt text, with no introductory or concluding commentary.\n\n";
+        const article = pre.closest('article');
+        const isMultiStep = article && article.dataset.tags && article.dataset.tags.includes('multi-step');
+        const activeTabIdx = parseInt(getActiveTabIdx(), 10);
         
-        // Hardcoded token count for the system instruction (must be updated if the instruction string above ever changes)
-        const sysTokens = 48;
+        let sysInstruction = "";
+        let sysTokens = 0;
+        
+        if (isMultiStep) {
+            if (activeTabIdx > 0) {
+                const prevSKey = "variant_" + hash + "_tab_" + (activeTabIdx - 1);
+                const prevCKey = "custom_" + hash + "_tab_" + (activeTabIdx - 1);
+                const prevTabState = sessionStorage.getItem("odb_tab_" + prevSKey);
+                
+                let prevPromptText = "";
+                if (prevTabState === "custom") {
+                    const cData = sessionStorage.getItem(prevCKey);
+                    prevPromptText = cData ? JSON.parse(cData).text : extractCleanTextForTab(activeTabIdx - 1);
+                } else if (prevTabState === "variant") {
+                    const vData = sessionStorage.getItem(prevSKey);
+                    prevPromptText = vData ? JSON.parse(vData).text : extractCleanTextForTab(activeTabIdx - 1);
+                } else {
+                    prevPromptText = extractCleanTextForTab(activeTabIdx - 1);
+                }
+                
+                const prevEventMatch = prevPromptText.match(/\[EVENT MODIFIERS\](.*?)(?=\[|$)/is);
+                const prevEventStr = prevEventMatch ? prevEventMatch[1].trim() : "";
+                
+                sysInstruction = "You are an expert AI narrative prompt engineer. Construct a grounded variation of this sequential image generation step. Strictly preserve the original core subject, [SETTING], [MEDIUM], [ANIMALS BASE], and [PIPELINE RULE] segments (do not change them). You MUST output the [EVENT MODIFIERS] segment tag in your response. Only thoughtfully reimagine the text inside the [EVENT MODIFIERS] segment, altering posture and spatial shifts to advance the scene's action. Output ONLY the final raw prompt text, with no introductory or concluding commentary.";
+                
+                if (prevEventStr) {
+                    sysInstruction += `\n\nHINT: To maintain narrative continuity, the [EVENT MODIFIERS] from the PREVIOUS scene were: "${prevEventStr}". Do not repeat them identically, but use them to inform what logically happens next.\n\n`;
+                } else {
+                    sysInstruction += "\n\n";
+                }
+                
+                sysTokens = 100;
+            } else {
+                sysInstruction = "You are an expert AI narrative prompt engineer. Construct a grounded variation of this sequential image generation base prompt. Strictly preserve the original core subject, [SETTING], [MEDIUM], and [ANIMALS BASE] segments (do not change them). You MUST output the [EVENT MODIFIERS] segment tag in your response. Only thoughtfully reimagine the text inside the [EVENT MODIFIERS] segment and initial posture to set up the scene's action. Output ONLY the final raw prompt text, with no introductory or concluding commentary.\n\n";
+                sysTokens = 75;
+            }
+        } else {
+            sysInstruction = "You are an introspective, expert AI prompt engineer. Deliberately construct a new, grounded variation of the following image generation prompt by thoughtfully reimagining the [MEDIUM], [SETTING], and [EVENT MODIFIERS] segments while strictly preserving the original core subject. Output ONLY the final raw prompt text, with no introductory or concluding commentary.\n\n";
+            sysTokens = 48;
+        }
         
         const res = await fetch(
           `https://generativelanguage.googleapis.com/v1beta/models/${currentModel}:generateContent?key=${key}`,
@@ -1030,7 +1220,7 @@ document.addEventListener("DOMContentLoaded", () => {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-              contents: [{ parts: [{ text: sysInstruction + promptText }] }],
+              contents: [{ parts: [{ text: sysInstruction + extractCleanText() }] }],
               generationConfig: { temperature: 0.6 },
             }),
           }
@@ -1054,7 +1244,7 @@ document.addEventListener("DOMContentLoaded", () => {
           addCopyButton(variant, exactVariant);
           
           // Persist the generated variant as JSON
-          sessionStorage.setItem(storageKey, JSON.stringify({
+          sessionStorage.setItem(getStorageKey(), JSON.stringify({
             text: variant,
             baseTokens: exactBase,
             variantTokens: exactVariant

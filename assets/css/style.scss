@@ -1025,3 +1025,8 @@ body.prompt-width-wide .collapsible-code .action-buttons {
   }
 }
 
+
+.collapsible-code button.prompt-tab-btn::after {
+  content: none;
+}
+
