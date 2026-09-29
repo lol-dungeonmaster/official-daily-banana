@@ -1030,3 +1030,13 @@ body.prompt-width-wide .collapsible-code .action-buttons {
   content: none;
 }
 
+
+.prompt-link {
+    color: #00ff88;
+    text-decoration: underline;
+    transition: all 0.2s ease;
+}
+.prompt-link:hover {
+    color: #00cc6a;
+    text-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+}

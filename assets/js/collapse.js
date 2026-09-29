@@ -16,10 +16,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // --- 1. Carousel Parsing Logic ---
       const paragraphs = Array.from(codeBlock.children).filter(el => el.tagName === 'P' || el.textContent.trim() !== '');
+      
+      const isSubheading = (el) => {
+         const em = el.querySelector('strong em') || el.querySelector('em strong');
+         if (em && em.textContent.trim() === el.textContent.trim()) return true;
+         return false;
+      };
       const isHeader = (el) => {
          const strong = el.querySelector('strong');
          if (!strong) return false;
-         return strong.textContent.trim().match(/^(Scene \d+|Variant [A-Z0-9]|\d+\.\s+[A-Za-z]|[A-Za-z0-9\s]+:\s*\[|[A-Za-z0-9\s]+:)/i);
+         return strong.textContent.trim().match(/^(Scene \d+|Variant [A-Z0-9]|\d+\.\s+[A-Za-z0-9]|[A-Za-z0-9\s]+:\s*\[|[A-Za-z0-9\s]+:)/i);
       };
 
       let basePrompt = [];
@@ -27,11 +33,27 @@ document.addEventListener("DOMContentLoaded", () => {
       let currentScene = null;
       let appendixElements = [];
 
-      paragraphs.forEach(p => {
+      paragraphs.forEach((p, index) => {
           if (p.textContent.includes("Appendix:") || p.textContent.includes("**Appendix")) {
               appendixElements.push(p);
           } else if (isHeader(p) && appendixElements.length === 0) {
               currentScene = { header: p, content: [] };
+              let j = index - 1;
+              const yanked = [];
+              while (j >= 0 && isSubheading(paragraphs[j])) {
+                  const prevP = paragraphs[j];
+                  if (scenes.length > 0) {
+                      const lastScene = scenes[scenes.length - 1];
+                      const idx = lastScene.content.indexOf(prevP);
+                      if (idx !== -1) lastScene.content.splice(idx, 1);
+                  } else {
+                      const idx = basePrompt.indexOf(prevP);
+                      if (idx !== -1) basePrompt.splice(idx, 1);
+                  }
+                  yanked.unshift(prevP);
+                  j--;
+              }
+              currentScene.content.push(...yanked);
               scenes.push(currentScene);
           } else {
               if (appendixElements.length > 0) {
@@ -113,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
           
           child.innerHTML = child.innerHTML.replace(fullMatch, '');
           let targetNode = child;
+          let parent = child.parentNode;
           
           if (child.innerHTML.replace(/<[^>]+>/g, '').trim() === '') {
              targetNode = child.previousElementSibling || child;
@@ -123,8 +146,10 @@ document.addEventListener("DOMContentLoaded", () => {
           negContainer.className = "negative-prompt-container";
           negContainer.innerHTML = `<strong style="color: #ff4a4a;">Negative prompt:</strong>\n${negativeText}`;
           
-          if (targetNode.parentNode) {
+          if (targetNode && targetNode.parentNode) {
             targetNode.parentNode.insertBefore(negContainer, targetNode);
+          } else if (parent) {
+            parent.insertBefore(negContainer, parent.firstChild);
           }
         }
       });
