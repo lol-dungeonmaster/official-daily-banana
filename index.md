@@ -3,6 +3,30 @@
 <div class="container">
 
 
+<article class="post-entry" data-tags="design,middle-earth,realistic">
+<h2 id="sep-29-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-29-26">Sep 29 // Ring Design II</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchRingDesignII(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchRingDesignII(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="design">design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="ringdesignii_v1" data-src="generated-artwork/ring_of_barahir/v1-nano-banana-2-lite-_MEDIUM__Extreme_mac.png" alt="Ring Design II 1" class="ringdesignii-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="ringdesignii_v2" data-src="generated-artwork/ring_of_barahir/v2-nano-banana-2-lite-_MEDIUM__Extreme_mac.png" alt="Ring Design II 2" class="ringdesignii-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="ringdesignii_v3" data-src="generated-artwork/ring_of_barahir/v3-nano-banana-2-lite-_MEDIUM__Extreme_mac.png" alt="Ring Design II 3" class="ringdesignii-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="ringdesignii_v4" data-src="generated-artwork/ring_of_barahir/v4-nano-banana-2-lite-_MEDIUM__Extreme_mac.png" alt="Ring Design II 4" class="ringdesignii-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Ring Design II</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('sep-29-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>[NEGATIVE]</strong> magical glow, glowing aura, laser beams, floating, modern jewelry, simple band, smooth metal, cartoon, stylized, low quality</p><p><strong>[MEDIUM]</strong> Extreme macro product photography, 100mm macro lens, Unreal Engine 5 render, 8k resolution, hyper-detailed. Shallow depth of field with the background softly blurred into bokeh to keep absolute focus on the intricate craftsmanship of the jewelry. Dramatic, highly directed studio lighting to catch the metallic highlights and the internal refraction of the jewels. <strong>[SETTING]</strong> Resting on a piece of dark, deeply weathered and scarred brown leather, symbolizing its long history carried by the Rangers of the North. The background is plunged into dark, moody shadow. <strong>[SUBJECT BASE]</strong> A masterfully crafted ancient elven ring acting as a robust, wide, heavy-gauge band of tarnished, antique silver. The robust band is composed of the thick bodies of two intertwined serpents wrapping around each other. The eyes of both serpents are set with brilliant, piercing green emeralds that catch the light. <strong>[EVENT MODIFIERS]</strong> The robust heads of the two twin serpents meet flush in the center of the ring's wide band. Recessed deeply between them is a breathtaking central gemstone complex acting as an abstract golden crown. This flush-set jewelry architecture holds a brilliant, intricate cluster of both faceted Imperial Topaz and translucent Golden Beryl, maintaining a consistent width across the ring so it does not protrude. The precise arrangement of these precious gems forms the abstract shape of a radiant golden crown within the metal. One serpent's head physically upholds the gemstone complex from below, while the other serpent's head strikes downward from above to devour it, both fully integrated into the smooth outer perimeter of the heavy band. The silver metal shows microscopic signs of ancient age and micro-scratches from thousands of years of history.</p></code></pre></div>
+  <div id="discuss-sep-29-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="character-design,middle-earth,concept-art,realistic,lotro">
 <h2 id="sep-28-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-28-26">Sep 28 // Accessories</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchAccessories(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchAccessories(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="character-design">character-design</span>
@@ -1784,7 +1808,12 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
       
       return currentIndex;
     }
-    let lionIndex = 0; // '.lion-img'
+    
+    let ringdesigniiIndex = 0;
+    function switchRingDesignII(dir = 1) {
+      ringdesigniiIndex = switchGallery(ringdesigniiIndex, '.ringdesignii-img', dir);
+    }
+let lionIndex = 0; // '.lion-img'
     function switchLion(dir = 1) {
       lionIndex = switchGallery(lionIndex, '.lion-img', dir);
     }
@@ -2106,7 +2135,8 @@ if (!(typeof event.data === 'object' && event.data.giscus)) return;
       const target = document.getElementById('discuss-' + currentDiscussion);
       // Add 40px extra height to preserve the visual gap between entries!
       target.style.height = (event.data.giscus.resizeHeight + 40) + 'px';
-      syncPosition(); // keep absolute container aligned
+
+    syncPosition(); // keep absolute container aligned
     }
 
 });
