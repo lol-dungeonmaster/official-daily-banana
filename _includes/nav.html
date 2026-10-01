@@ -170,6 +170,14 @@
         });
       });
     }
+
+    const topLink = document.querySelector('.nav-top-link');
+    const mainNav = document.querySelector('.main-nav');
+    if (topLink && mainNav) {
+      topLink.addEventListener('click', () => {
+        mainNav.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
   });
 
 </script>
