@@ -11,7 +11,7 @@ export default defineConfig({
         branches: 100,
         statements: 100
       },
-      include: ['assets/js/lazyimage.js', 'assets/js/tag-router.js', 'assets/js/lightbox.js', 'assets/js/collapse.js']
+      include: ['assets/js/lazyimage.js', 'assets/js/tag-router.js', 'assets/js/lightbox.js', 'assets/js/collapse.js', 'assets/js/audio-player.js']
     }
   }
 });
