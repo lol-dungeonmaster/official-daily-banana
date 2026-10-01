@@ -1,4 +1,3 @@
-/* istanbul ignore file */
 function initAiStudio(win, doc) {
 
 
