@@ -117,6 +117,10 @@ describe('collapse.js', () => {
     initCollapse(mockWindow, mockDocument);
     const broken = mockDocument.getElementById('broken-no-code');
     expect(broken.querySelector('pre').style.display).toBe('none');
+    // Also test copy button on broken code block
+    const brokenCopyBtn = broken.querySelector("span[title='Copy to clipboard']");
+    if (brokenCopyBtn) brokenCopyBtn.click();
+
   });
 
   it('toggles visibility when prompt button is clicked', () => {
@@ -184,11 +188,20 @@ describe('collapse.js', () => {
     const copyBtn = normal.querySelector("span[title='Copy to clipboard']");
     expect(copyBtn).not.toBeNull();
     
+    vi.useFakeTimers();
     copyBtn.click();
+    vi.runAllTimers();
     expect(clipboardSpy).toHaveBeenCalled();
     const normApp = mockDocument.getElementById('normal-appendix');
     const normAppCopyBtn = normApp.querySelector("span[title='Copy to clipboard']");
     normAppCopyBtn.click();
+    // Trigger mouse events on copy button for coverage
+    const hoverBtn = normApp.querySelector("span[title='Copy to clipboard']");
+    if (hoverBtn) {
+        if (hoverBtn.onmouseover) hoverBtn.onmouseover();
+        if (hoverBtn.onmouseout) hoverBtn.onmouseout();
+    }
+
 
     
     // Test multi-step copy
@@ -200,7 +213,7 @@ describe('collapse.js', () => {
     const multiSub = multi.querySelector(".sub-prompt");
     const br = mockDocument.createElement("br");
     const span = mockDocument.createElement("span");
-    span.textContent = " span-text "; const emptyP = mockDocument.createElement("p"); emptyP.textContent = "   "; multiSub.appendChild(emptyP); const emptyText = mockDocument.createTextNode("   "); multiSub.appendChild(emptyText);
+    span.textContent = " span-text "; const emptyP = mockDocument.createElement("p"); emptyP.textContent = "   "; multiSub.appendChild(emptyP); const negMock = mockDocument.createElement("div"); negMock.className = "negative-prompt-container"; multiSub.appendChild(negMock); const emptyText = mockDocument.createTextNode("   "); multiSub.appendChild(emptyText);
     multiSub.appendChild(br);
     multiSub.appendChild(span);
     multiCopyBtn.click();
