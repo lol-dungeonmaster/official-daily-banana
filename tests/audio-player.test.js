@@ -2,8 +2,8 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { initAudioPlayer } from '../assets/js/audio-player.js';
 
 describe('audio-player.js', () => {
-  let mockWindow;
-  let mockDocument;
+  
+  
   let fetchMock;
   let consoleErrorMock;
   let getBoundingClientRectMock;
@@ -20,7 +20,7 @@ describe('audio-player.js', () => {
     }));
 
     // Setup window mock
-    mockWindow = {
+    window = {
       innerHeight: 1000,
       addEventListener: vi.fn(),
       fetch: fetchMock,
@@ -33,15 +33,15 @@ describe('audio-player.js', () => {
     document.body.innerHTML = `
       <section id="downloads"></section>
     `;
-    mockDocument = document;
+    
 
     // Mock HTMLMediaElement prototype
-    window.HTMLMediaElement.prototype.play = vi.fn(() => Promise.resolve());
-    window.HTMLMediaElement.prototype.pause = vi.fn();
-    window.HTMLMediaElement.prototype.load = vi.fn();
+    HTMLMediaElement.prototype.play = vi.fn(() => Promise.resolve());
+    HTMLMediaElement.prototype.pause = vi.fn();
+    HTMLMediaElement.prototype.load = vi.fn();
 
     // Mock animate
-    window.HTMLElement.prototype.animate = vi.fn(() => ({
+    HTMLElement.prototype.animate = vi.fn(() => ({
       cancel: cancelAnimationMock
     }));
   });
@@ -52,9 +52,9 @@ describe('audio-player.js', () => {
 
   it('returns early if #downloads section is missing', () => {
     document.body.innerHTML = '';
-    initAudioPlayer(mockWindow, mockDocument);
+    initAudioPlayer(window, document);
     // The script adds event listeners BEFORE checking for #downloads
-    expect(mockWindow.addEventListener).toHaveBeenCalled();
+    expect(window.addEventListener).toHaveBeenCalled();
   });
 
   it('initializes and handles empty track list gracefully', async () => {
@@ -62,21 +62,21 @@ describe('audio-player.js', () => {
       json: () => Promise.resolve([])
     });
 
-    initAudioPlayer(mockWindow, mockDocument);
+    initAudioPlayer(window, document);
     await new Promise(r => setTimeout(r, 0));
     
-    const container = mockDocument.getElementById('flow-music-player');
+    const container = document.getElementById('flow-music-player');
     expect(container.style.display).toBe('none');
   });
   
   it('handles fetch failure gracefully', async () => {
     fetchMock.mockRejectedValueOnce(new Error('Network error'));
 
-    initAudioPlayer(mockWindow, mockDocument);
+    initAudioPlayer(window, document);
     await new Promise(r => setTimeout(r, 0));
     
     expect(consoleErrorMock).toHaveBeenCalled();
-    const container = mockDocument.getElementById('flow-music-player');
+    const container = document.getElementById('flow-music-player');
     expect(container).not.toBeNull();
   });
 
@@ -89,14 +89,14 @@ describe('audio-player.js', () => {
     });
 
     vi.useFakeTimers();
-    initAudioPlayer(mockWindow, mockDocument);
+    initAudioPlayer(window, document);
     
     await vi.runAllTimersAsync();
     
-    const container = mockDocument.getElementById('flow-music-player');
+    const container = document.getElementById('flow-music-player');
     expect(container.style.opacity).toBe('1');
     
-    const trackMenu = mockDocument.querySelector('.fade-dropdown');
+    const trackMenu = document.querySelector('.fade-dropdown');
     expect(trackMenu.children.length).toBe(2);
     
     // Test track menu selection
@@ -112,12 +112,12 @@ describe('audio-player.js', () => {
     });
 
     vi.useFakeTimers();
-    initAudioPlayer(mockWindow, mockDocument);
+    initAudioPlayer(window, document);
     await vi.runAllTimersAsync();
     
-    const playBtn = mockDocument.querySelector("a[title='Play']");
-    const stopBtn = mockDocument.querySelector("a[title='Stop']");
-    const audioEl = mockDocument.getElementById('flow-audio-el');
+    const playBtn = document.querySelector("a[title='Play']");
+    const stopBtn = document.querySelector("a[title='Stop']");
+    const audioEl = document.getElementById('flow-audio-el');
     
     // Test play
     Object.defineProperty(audioEl, 'paused', { value: true, configurable: true });
@@ -146,10 +146,10 @@ describe('audio-player.js', () => {
     });
 
     vi.useFakeTimers();
-    initAudioPlayer(mockWindow, mockDocument);
+    initAudioPlayer(window, document);
     await vi.runAllTimersAsync();
     
-    const audioEl = mockDocument.getElementById('flow-audio-el');
+    const audioEl = document.getElementById('flow-audio-el');
     audioEl.dispatchEvent(new Event('ended'));
     expect(audioEl.load).toHaveBeenCalled();
     
@@ -162,11 +162,11 @@ describe('audio-player.js', () => {
     });
 
     vi.useFakeTimers();
-    initAudioPlayer(mockWindow, mockDocument);
+    initAudioPlayer(window, document);
     await vi.runAllTimersAsync();
     
-    const trackBtn = mockDocument.querySelector("a[title='Change track']");
-    const trackMenu = mockDocument.querySelector('.fade-dropdown');
+    const trackBtn = document.querySelector("a[title='Change track']");
+    const trackMenu = document.querySelector('.fade-dropdown');
     
     // Hover effects
     trackBtn.dispatchEvent(new Event('mouseover'));
@@ -178,17 +178,17 @@ describe('audio-player.js', () => {
     trackBtn.click(); // Click when already open to hit !wasOpen == false branch
     
     // Close All Popovers
-    mockDocument.dispatchEvent(new Event('closeAllPopovers'));
+    document.dispatchEvent(new Event('closeAllPopovers'));
     expect(trackMenu.classList.contains('show')).toBe(false);
     
     // Click Body
     trackBtn.click();
-    mockDocument.dispatchEvent(new Event('click'));
+    document.dispatchEvent(new Event('click'));
     expect(trackMenu.classList.contains('show')).toBe(false);
     
     // Scroll event when open
     trackBtn.click();
-    const scrollHandler = mockWindow.addEventListener.mock.calls.find(c => c[0] === 'scroll')[1];
+    const scrollHandler = window.addEventListener.mock.calls.find(c => c[0] === 'scroll')[1];
     
     // Mock rect to be out of bounds
     trackMenu.getBoundingClientRect = vi.fn(() => ({ top: -100, bottom: -50 }));
@@ -207,20 +207,20 @@ describe('audio-player.js', () => {
     vi.useFakeTimers();
     
     // Mock getters for all HTMLElements globally since the nodes are created dynamically
-    const scrollWidthSpy = vi.spyOn(window.HTMLElement.prototype, 'scrollWidth', 'get').mockReturnValue(200);
-    const clientWidthSpy = vi.spyOn(window.HTMLElement.prototype, 'clientWidth', 'get').mockReturnValue(100);
-    const offsetWidthSpy = vi.spyOn(window.HTMLElement.prototype, 'offsetWidth', 'get').mockReturnValue(150);
+    const scrollWidthSpy = vi.spyOn(HTMLElement.prototype, 'scrollWidth', 'get').mockReturnValue(200);
+    const clientWidthSpy = vi.spyOn(HTMLElement.prototype, 'clientWidth', 'get').mockReturnValue(100);
+    const offsetWidthSpy = vi.spyOn(HTMLElement.prototype, 'offsetWidth', 'get').mockReturnValue(150);
     
-    initAudioPlayer(mockWindow, mockDocument);
+    initAudioPlayer(window, document);
     await vi.runAllTimersAsync();
     
     // Test that the animation was created
-    const label = mockDocument.querySelector('.track-label');
+    const label = document.querySelector('.track-label');
     expect(label.innerHTML).toContain('scroll-part-1');
-    expect(window.HTMLElement.prototype.animate).toHaveBeenCalled();
+    expect(HTMLElement.prototype.animate).toHaveBeenCalled();
     
     // Load track again to test animation cancellation
-    const trackMenu = mockDocument.querySelector('.fade-dropdown');
+    const trackMenu = document.querySelector('.fade-dropdown');
     trackMenu.children[0].click();
     await vi.runAllTimersAsync();
     
@@ -238,11 +238,11 @@ describe('audio-player.js', () => {
     });
 
     vi.useFakeTimers();
-    initAudioPlayer(mockWindow, mockDocument);
+    initAudioPlayer(window, document);
     await vi.runAllTimersAsync();
     
-    const playBtn = mockDocument.querySelector("a[title='Play']");
-    const audioEl = mockDocument.getElementById('flow-audio-el');
+    const playBtn = document.querySelector("a[title='Play']");
+    const audioEl = document.getElementById('flow-audio-el');
     
     // Mock play to reject
     audioEl.play.mockRejectedValueOnce(new Error('Autoplay blocked'));

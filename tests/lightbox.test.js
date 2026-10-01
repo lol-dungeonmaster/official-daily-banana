@@ -2,11 +2,11 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { initLightbox } from '../assets/js/lightbox.js';
 
 describe('lightbox.js', () => {
-  let mockWindow;
-  let mockDocument;
+  
+  
   
   beforeEach(() => {
-    mockWindow = {
+    window = {
       getComputedStyle: vi.fn(() => ({ objectFit: 'contain' }))
     };
     
@@ -69,67 +69,67 @@ describe('lightbox.js', () => {
         <img class="gallery-img" src="w2.jpg" />
       </div>
     `;
-    mockDocument = document;
+    
     vi.useFakeTimers();
   });
 
   it('opens lightbox for normal image', () => {
-    initLightbox(mockWindow, mockDocument);
-    const img = mockDocument.getElementById('img-normal');
+    initLightbox(window, document);
+    const img = document.getElementById('img-normal');
     img.click();
     
-    const lightbox = mockDocument.getElementById('lightbox');
-    const lightboxImg = mockDocument.getElementById('lightbox-img');
-    const lightboxLink = mockDocument.getElementById('lightbox-link');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxLink = document.getElementById('lightbox-link');
     
     expect(lightbox.classList.contains('active')).toBe(true);
     expect(lightboxImg.src).toContain('normal.jpg');
     expect(lightboxLink.href).toContain('normal.jpg');
     expect(lightboxImg.classList.contains('no-upscale')).toBe(false);
-    expect(mockDocument.body.style.overflow).toBe('hidden');
+    expect(document.body.style.overflow).toBe('hidden');
   });
 
   it('adds no-upscale class if source image has it', () => {
-    initLightbox(mockWindow, mockDocument);
-    mockDocument.getElementById('img-no-upscale').click();
-    expect(mockDocument.getElementById('lightbox-img').classList.contains('no-upscale')).toBe(true);
+    initLightbox(window, document);
+    document.getElementById('img-no-upscale').click();
+    expect(document.getElementById('lightbox-img').classList.contains('no-upscale')).toBe(true);
   });
   
   it('does not attach clicks to excluded images', () => {
-    initLightbox(mockWindow, mockDocument);
-    mockDocument.getElementById('img-excluded').click();
-    expect(mockDocument.getElementById('lightbox').classList.contains('active')).toBe(false);
+    initLightbox(window, document);
+    document.getElementById('img-excluded').click();
+    expect(document.getElementById('lightbox').classList.contains('active')).toBe(false);
   });
   
   it('hides toggle group for single image gallery', () => {
-    initLightbox(mockWindow, mockDocument);
-    mockDocument.getElementById('img-single-gallery').click();
-    expect(mockDocument.getElementById('lightbox-toggle-group').style.display).toBe('none');
+    initLightbox(window, document);
+    document.getElementById('img-single-gallery').click();
+    expect(document.getElementById('lightbox-toggle-group').style.display).toBe('none');
   });
 
   it('shows toggle group and registers buttons for standard gallery', () => {
-    initLightbox(mockWindow, mockDocument);
-    const galImg = mockDocument.querySelector('#std-gallery .gallery-img');
+    initLightbox(window, document);
+    const galImg = document.querySelector('#std-gallery .gallery-img');
     galImg.click();
     
-    expect(mockDocument.getElementById('lightbox-toggle-group').style.display).toBe('flex');
+    expect(document.getElementById('lightbox-toggle-group').style.display).toBe('flex');
     
     // Test navigation
-    const nextBtn = mockDocument.getElementById('lightbox-next-btn');
-    const prevBtn = mockDocument.getElementById('lightbox-prev-btn');
+    const nextBtn = document.getElementById('lightbox-next-btn');
+    const prevBtn = document.getElementById('lightbox-prev-btn');
     
     // Also ensure we remove no-upscale when navigating to an image without it
-    const activeImg = mockDocument.querySelector('.gallery-img.active');
+    const activeImg = document.querySelector('.gallery-img.active');
     activeImg.classList.remove('no-upscale');
     
     // Mock the click on the gallery's native toggle buttons
-    const nativeNext = mockDocument.querySelector('h2 .toggle-next');
+    const nativeNext = document.querySelector('h2 .toggle-next');
     nativeNext.click = vi.fn();
     
     nextBtn.click();
     expect(nativeNext.click).toHaveBeenCalled();
     
-    const nativePrev = mockDocument.querySelector('h2 .toggle-prev');
+    const nativePrev = document.querySelector('h2 .toggle-prev');
     nativePrev.click = vi.fn();
     prevBtn.click();
     expect(nativePrev.click).toHaveBeenCalled();
@@ -143,49 +143,49 @@ describe('lightbox.js', () => {
   });
 
   it('handles gallery with wrong header type (H4)', () => {
-    initLightbox(mockWindow, mockDocument);
-    const wImg = mockDocument.querySelectorAll('h4 + .gallery-frame .gallery-img')[0];
+    initLightbox(window, document);
+    const wImg = document.querySelectorAll('h4 + .gallery-frame .gallery-img')[0];
     wImg.click();
     
-    expect(mockDocument.getElementById('lightbox-toggle-group').style.display).toBe('flex');
+    expect(document.getElementById('lightbox-toggle-group').style.display).toBe('flex');
     
-    const nextBtn = mockDocument.getElementById('lightbox-next-btn');
+    const nextBtn = document.getElementById('lightbox-next-btn');
     nextBtn.click(); // Should do nothing gracefully because btn is null
   });
   
   it('handles gallery missing active image gracefully', () => {
-    initLightbox(mockWindow, mockDocument);
-    const wImg = mockDocument.querySelector('#no-active-gallery .gallery-img');
+    initLightbox(window, document);
+    const wImg = document.querySelector('#no-active-gallery .gallery-img');
     wImg.click();
     
-    const nextBtn = mockDocument.getElementById('lightbox-next-btn');
+    const nextBtn = document.getElementById('lightbox-next-btn');
     nextBtn.click(); // Should not throw
   });
   
   it('handles missing next/prev buttons gracefully', () => {
-    mockDocument.getElementById('lightbox-next-btn').remove();
-    mockDocument.getElementById('lightbox-prev-btn').remove();
-    initLightbox(mockWindow, mockDocument);
+    document.getElementById('lightbox-next-btn').remove();
+    document.getElementById('lightbox-prev-btn').remove();
+    initLightbox(window, document);
     
-    const galImg = mockDocument.querySelector('#std-gallery .gallery-img');
+    const galImg = document.querySelector('#std-gallery .gallery-img');
     galImg.click(); // Should not throw when attempting to check UI state
   });
 
   it('closes lightbox via close button', () => {
-    initLightbox(mockWindow, mockDocument);
-    mockDocument.getElementById('img-normal').click();
-    mockDocument.querySelector('.lightbox-close').click();
+    initLightbox(window, document);
+    document.getElementById('img-normal').click();
+    document.querySelector('.lightbox-close').click();
     
-    expect(mockDocument.getElementById('lightbox').classList.contains('active')).toBe(false);
-    expect(mockDocument.body.style.overflow).toBe('auto');
+    expect(document.getElementById('lightbox').classList.contains('active')).toBe(false);
+    expect(document.body.style.overflow).toBe('auto');
   });
   
   it('closes lightbox via background click', () => {
-    initLightbox(mockWindow, mockDocument);
-    mockDocument.getElementById('img-normal').click();
+    initLightbox(window, document);
+    document.getElementById('img-normal').click();
     
     // Simulate click on lightbox background
-    const lightbox = mockDocument.getElementById('lightbox');
+    const lightbox = document.getElementById('lightbox');
     const event = new MouseEvent('click', { bubbles: true });
     Object.defineProperty(event, 'target', { value: lightbox, enumerable: true });
     lightbox.dispatchEvent(event);
@@ -194,11 +194,11 @@ describe('lightbox.js', () => {
   });
   
   it('does NOT close lightbox via content click', () => {
-    initLightbox(mockWindow, mockDocument);
-    mockDocument.getElementById('img-normal').click();
+    initLightbox(window, document);
+    document.getElementById('img-normal').click();
     
-    const lightbox = mockDocument.getElementById('lightbox');
-    const lightboxImg = mockDocument.getElementById('lightbox-img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
     const event = new MouseEvent('click', { bubbles: true });
     Object.defineProperty(event, 'target', { value: lightboxImg, enumerable: true });
     lightbox.dispatchEvent(event);
@@ -207,45 +207,45 @@ describe('lightbox.js', () => {
   });
   
   it('closes lightbox via Escape key', () => {
-    initLightbox(mockWindow, mockDocument);
-    mockDocument.getElementById('img-normal').click();
+    initLightbox(window, document);
+    document.getElementById('img-normal').click();
     
     const event = new KeyboardEvent('keydown', { key: 'Escape' });
-    mockDocument.dispatchEvent(event);
+    document.dispatchEvent(event);
     
-    expect(mockDocument.getElementById('lightbox').classList.contains('active')).toBe(false);
+    expect(document.getElementById('lightbox').classList.contains('active')).toBe(false);
   });
   
   it('ignores other keydown events', () => {
-    initLightbox(mockWindow, mockDocument);
-    mockDocument.getElementById('img-normal').click();
+    initLightbox(window, document);
+    document.getElementById('img-normal').click();
     
     const event = new KeyboardEvent('keydown', { key: 'Enter' });
-    mockDocument.dispatchEvent(event);
+    document.dispatchEvent(event);
     
-    expect(mockDocument.getElementById('lightbox').classList.contains('active')).toBe(true);
+    expect(document.getElementById('lightbox').classList.contains('active')).toBe(true);
   });
 
   it('handles gallery with missing gallery-frame class gracefully', () => {
-    initLightbox(mockWindow, mockDocument);
-    const wImg = mockDocument.querySelector('.broken-img');
+    initLightbox(window, document);
+    const wImg = document.querySelector('.broken-img');
     wImg.click();
     
-    const nextBtn = mockDocument.getElementById('lightbox-next-btn');
+    const nextBtn = document.getElementById('lightbox-next-btn');
     nextBtn.click(); // Should not throw
   });
 
   it('hits false branch when gallery-frame class is removed after opening', () => {
-    initLightbox(mockWindow, mockDocument);
-    const galImg = mockDocument.querySelector('#std-gallery .gallery-img');
+    initLightbox(window, document);
+    const galImg = document.querySelector('#std-gallery .gallery-img');
     galImg.click(); // Opens lightbox, wires up nextBtn to the H2
     
     // Mutate the DOM to remove the class
-    const gallery = mockDocument.getElementById('std-gallery');
+    const gallery = document.getElementById('std-gallery');
     gallery.classList.remove('gallery-frame');
     
     // Click next btn
-    const nextBtn = mockDocument.getElementById('lightbox-next-btn');
+    const nextBtn = document.getElementById('lightbox-next-btn');
     nextBtn.click(); // Should hit the false branch for classList.contains!
   });
 });

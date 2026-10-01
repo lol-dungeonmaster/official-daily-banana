@@ -2,20 +2,14 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { initCollapse } from '../assets/js/collapse.js';
 
 describe('collapse.js', () => {
-  let mockWindow;
-  let mockDocument;
+  
+  
   let clipboardSpy;
   
   beforeEach(() => {
     clipboardSpy = vi.fn(() => Promise.resolve());
     
-    mockWindow = {
-      navigator: {
-        clipboard: {
-          writeText: clipboardSpy
-        }
-      }
-    };
+    vi.stubGlobal('navigator', { clipboard: { writeText: clipboardSpy } });
     
     document.body.innerHTML = `
       <!-- 1. Normal single code block -->
@@ -110,12 +104,12 @@ describe('collapse.js', () => {
       </article>
     `;
     
-    mockDocument = document;
+    
   });
 
   it('initializes and handles missing code block gracefully', () => {
-    initCollapse(mockWindow, mockDocument);
-    const broken = mockDocument.getElementById('broken-no-code');
+    initCollapse(window, document);
+    const broken = document.getElementById('broken-no-code');
     expect(broken.querySelector('pre').style.display).toBe('none');
     // Also test copy button on broken code block
     const brokenCopyBtn = broken.querySelector("span[title='Copy to clipboard']");
@@ -124,8 +118,8 @@ describe('collapse.js', () => {
   });
 
   it('toggles visibility when prompt button is clicked', () => {
-    initCollapse(mockWindow, mockDocument);
-    const normal = mockDocument.getElementById('normal');
+    initCollapse(window, document);
+    const normal = document.getElementById('normal');
     const btn = normal.querySelector('.toggle');
     const pre = normal.querySelector('pre');
     
@@ -139,8 +133,8 @@ describe('collapse.js', () => {
   });
   
   it('builds tabbed interface for multi-step articles', () => {
-    initCollapse(mockWindow, mockDocument);
-    const multi = mockDocument.getElementById('multi');
+    initCollapse(window, document);
+    const multi = document.getElementById('multi');
     const tabs = multi.querySelectorAll('.prompt-tab-btn');
     
     // Base prompt + Scene 1 + Variant A + 1. Alpha = 4 tabs!
@@ -153,8 +147,8 @@ describe('collapse.js', () => {
   });
   
   it('extracts and hoists standalone negative prompts', () => {
-    initCollapse(mockWindow, mockDocument);
-    const neg1 = mockDocument.getElementById('negative-single');
+    initCollapse(window, document);
+    const neg1 = document.getElementById('negative-single');
     
     const uiBox = neg1.querySelector('.negative-prompt-container');
     expect(uiBox).not.toBeNull();
@@ -162,8 +156,8 @@ describe('collapse.js', () => {
   });
   
   it('extracts mixed negative prompts', () => {
-    initCollapse(mockWindow, mockDocument);
-    const neg2 = mockDocument.getElementById('negative-mixed');
+    initCollapse(window, document);
+    const neg2 = document.getElementById('negative-mixed');
     
     const uiBox = neg2.querySelector('.negative-prompt-container');
     expect(uiBox).not.toBeNull();
@@ -174,16 +168,16 @@ describe('collapse.js', () => {
   });
   
   it('extracts bare negative prompts (no wrapping P)', () => {
-    initCollapse(mockWindow, mockDocument);
-    const neg3 = mockDocument.getElementById('negative-first');
+    initCollapse(window, document);
+    const neg3 = document.getElementById('negative-first');
     
     const uiBox = neg3.querySelector('.negative-prompt-container');
     expect(uiBox).not.toBeNull();
   });
 
   it('adds and handles copy button', () => {
-    initCollapse(mockWindow, mockDocument);
-    const normal = mockDocument.getElementById('copy-test');
+    initCollapse(window, document);
+    const normal = document.getElementById('copy-test');
     
     const copyBtn = normal.querySelector("span[title='Copy to clipboard']");
     expect(copyBtn).not.toBeNull();
@@ -192,7 +186,7 @@ describe('collapse.js', () => {
     copyBtn.click();
     vi.runAllTimers();
     expect(clipboardSpy).toHaveBeenCalled();
-    const normApp = mockDocument.getElementById('normal-appendix');
+    const normApp = document.getElementById('normal-appendix');
     const normAppCopyBtn = normApp.querySelector("span[title='Copy to clipboard']");
     normAppCopyBtn.click();
     // Trigger mouse events on copy button for coverage
@@ -205,15 +199,15 @@ describe('collapse.js', () => {
 
     
     // Test multi-step copy
-    const multi = mockDocument.getElementById('multi');
+    const multi = document.getElementById('multi');
     const multiCopyBtn = multi.querySelector("span[title='Copy to clipboard']");
     multiCopyBtn.click();
     
     // Add a br and span to multi to test formatting
     const multiSub = multi.querySelector(".sub-prompt");
-    const br = mockDocument.createElement("br");
-    const span = mockDocument.createElement("span");
-    span.textContent = " span-text "; const emptyP = mockDocument.createElement("p"); emptyP.textContent = "   "; multiSub.appendChild(emptyP); const negMock = mockDocument.createElement("div"); negMock.className = "negative-prompt-container"; multiSub.appendChild(negMock); const emptyText = mockDocument.createTextNode("   "); multiSub.appendChild(emptyText);
+    const br = document.createElement("br");
+    const span = document.createElement("span");
+    span.textContent = " span-text "; const emptyP = document.createElement("p"); emptyP.textContent = "   "; multiSub.appendChild(emptyP); const negMock = document.createElement("div"); negMock.className = "negative-prompt-container"; multiSub.appendChild(negMock); const emptyText = document.createTextNode("   "); multiSub.appendChild(emptyText);
     multiSub.appendChild(br);
     multiSub.appendChild(span);
     multiCopyBtn.click();
