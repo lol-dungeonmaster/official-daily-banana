@@ -1,19 +1,23 @@
 function initAudioPlayer(win, doc) {
-    let trackMenu = null;
+  let trackMenu = null;
 
-    doc.addEventListener("closeAllPopovers", () => {
-        if (trackMenu) trackMenu.classList.remove("show");
-    });
+  doc.addEventListener("closeAllPopovers", () => {
+    if (trackMenu) trackMenu.classList.remove("show");
+  });
 
-    win.addEventListener("scroll", () => {
-        if (trackMenu && trackMenu.classList.contains("show")) {
-            const rect = trackMenu.getBoundingClientRect();
-            /* v8 ignore next 3 */
-            if (rect.bottom < 0 || rect.top > win.innerHeight) {
-                trackMenu.classList.remove("show");
-            }
+  win.addEventListener(
+    "scroll",
+    () => {
+      if (trackMenu && trackMenu.classList.contains("show")) {
+        const rect = trackMenu.getBoundingClientRect();
+        /* v8 ignore next 3 */
+        if (rect.bottom < 0 || rect.top > win.innerHeight) {
+          trackMenu.classList.remove("show");
         }
-    }, { passive: true });
+      }
+    },
+    { passive: true },
+  );
 
   const downloadsSection = doc.getElementById("downloads");
   if (!downloadsSection) return;
@@ -54,7 +58,8 @@ function initAudioPlayer(win, doc) {
   const playerContainer = doc.createElement("div");
   playerContainer.id = "flow-music-player";
   playerContainer.className = "toggle-group";
-  playerContainer.style.cssText = "display: inline-flex; align-items: stretch; gap: 0; height: 38px; pointer-events: none; opacity: 0.5; transition: opacity 0.3s ease;";
+  playerContainer.style.cssText =
+    "display: inline-flex; align-items: stretch; gap: 0; height: 38px; pointer-events: none; opacity: 0.5; transition: opacity 0.3s ease;";
 
   // Audio Element (hidden)
   const audioEl = doc.createElement("audio");
@@ -65,7 +70,8 @@ function initAudioPlayer(win, doc) {
   // Play/Pause Button
   const playBtn = doc.createElement("a");
   playBtn.className = "btn";
-  playBtn.style.cssText = "margin: 0; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border-right: none; border-top-right-radius: 0; border-bottom-right-radius: 0;";
+  playBtn.style.cssText =
+    "margin: 0; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border-right: none; border-top-right-radius: 0; border-bottom-right-radius: 0;";
   playBtn.innerHTML = playIcon;
   playBtn.title = "Play";
   playBtn.href = "javascript:void(0)";
@@ -73,24 +79,28 @@ function initAudioPlayer(win, doc) {
   // Stop Button
   const stopBtn = doc.createElement("a");
   stopBtn.className = "btn";
-  stopBtn.style.cssText = "margin: 0; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border-radius: 0; border-right: none;";
+  stopBtn.style.cssText =
+    "margin: 0; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border-radius: 0; border-right: none;";
   stopBtn.innerHTML = stopIcon;
   stopBtn.title = "Stop";
   stopBtn.href = "javascript:void(0)";
 
   // Custom Track Dropdown Container
   const dropdownContainer = doc.createElement("div");
-  dropdownContainer.style.cssText = "position: relative; display: inline-flex; align-items: stretch;";
+  dropdownContainer.style.cssText =
+    "position: relative; display: inline-flex; align-items: stretch;";
 
   // Dropdown Button
   const trackBtn = doc.createElement("a");
   trackBtn.className = "btn";
-  trackBtn.style.cssText = "margin: 0; padding: 0 6px; display: inline-flex; align-items: center; justify-content: space-between; gap: 4px; border-radius: 0; border-right: none; font-size: 0.85em; font-family: Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace; cursor: pointer; text-decoration: none; overflow: hidden;";
+  trackBtn.style.cssText =
+    "margin: 0; padding: 0 6px; display: inline-flex; align-items: center; justify-content: space-between; gap: 4px; border-radius: 0; border-right: none; font-size: 0.85em; font-family: Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace; cursor: pointer; text-decoration: none; overflow: hidden;";
   trackBtn.title = "Change track";
-  
+
   // Track Label Scroller
   const labelMask = doc.createElement("div");
-  labelMask.style.cssText = "width: 100px; overflow: hidden; white-space: nowrap; display: inline-flex; align-items: center;";
+  labelMask.style.cssText =
+    "width: 100px; overflow: hidden; white-space: nowrap; display: inline-flex; align-items: center;";
   const trackLabel = doc.createElement("span");
   trackLabel.className = "track-label";
   trackLabel.style.cssText = "display: inline-block;";
@@ -98,7 +108,8 @@ function initAudioPlayer(win, doc) {
   labelMask.appendChild(trackLabel);
 
   const caret = doc.createElement("span");
-  caret.style.cssText = "font-size: 0.8em; opacity: 0.7; pointer-events: none; transition: all 0.2s ease;";
+  caret.style.cssText =
+    "font-size: 0.8em; opacity: 0.7; pointer-events: none; transition: all 0.2s ease;";
   caret.textContent = "▼";
 
   // Hover Glow Effect
@@ -119,7 +130,8 @@ function initAudioPlayer(win, doc) {
   // Dropdown Menu
   trackMenu = doc.createElement("div");
   trackMenu.className = "fade-dropdown";
-  trackMenu.style.cssText = " position: absolute; top: 100%; left: 0; margin-top: 4px; background: rgba(0, 49, 43, 0.95); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 4px 0; flex-direction: column; z-index: 2000; min-width: max-content; box-shadow: 0 4px 12px rgba(0,0,0,0.5);";
+  trackMenu.style.cssText =
+    " position: absolute; top: 100%; left: 0; margin-top: 4px; background: rgba(0, 49, 43, 0.95); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 4px 0; flex-direction: column; z-index: 2000; min-width: max-content; box-shadow: 0 4px 12px rgba(0,0,0,0.5);";
 
   dropdownContainer.appendChild(trackBtn);
   dropdownContainer.appendChild(trackMenu);
@@ -127,7 +139,8 @@ function initAudioPlayer(win, doc) {
   // Download Button
   const downloadBtn = doc.createElement("a");
   downloadBtn.className = "btn";
-  downloadBtn.style.cssText = "margin: 0; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border-radius: 0; border-right: none; text-decoration: none;";
+  downloadBtn.style.cssText =
+    "margin: 0; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border-radius: 0; border-right: none; text-decoration: none;";
   downloadBtn.innerHTML = downloadIcon;
   downloadBtn.title = "Download";
   downloadBtn.setAttribute("download", "");
@@ -135,7 +148,8 @@ function initAudioPlayer(win, doc) {
   // Space Button
   const spaceBtn = doc.createElement("a");
   spaceBtn.className = "btn";
-  spaceBtn.style.cssText = "margin: 0; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border-top-left-radius: 0; border-bottom-left-radius: 0; text-decoration: none;";
+  spaceBtn.style.cssText =
+    "margin: 0; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border-top-left-radius: 0; border-bottom-left-radius: 0; text-decoration: none;";
   spaceBtn.innerHTML = spaceIcon;
   spaceBtn.title = "Remix this track";
   spaceBtn.target = "_blank";
@@ -165,9 +179,10 @@ function initAudioPlayer(win, doc) {
   let currentAnimation = null;
 
   // Load JSON and initialize
-  win.fetch("assets/data/tracks.json")
-    .then(response => response.json())
-    .then(tracks => {
+  win
+    .fetch("assets/data/tracks.json")
+    .then((response) => response.json())
+    .then((tracks) => {
       if (!tracks || tracks.length === 0) {
         playerContainer.style.display = "none";
         return;
@@ -194,49 +209,53 @@ function initAudioPlayer(win, doc) {
       const loadTrack = (index) => {
         const track = tracks[index];
         trackLabel.textContent = track.title;
-        
+
         // Handle Scrolling Logic
         /* v8 ignore next */
         if (currentAnimation) currentAnimation.cancel();
         trackLabel.style.transform = "translateX(0)";
-        
+
         // Wait a tick for the DOM to update width
         setTimeout(() => {
-          const overflowDistance = trackLabel.scrollWidth - labelMask.clientWidth;
+          const overflowDistance =
+            trackLabel.scrollWidth - labelMask.clientWidth;
           if (overflowDistance > 0) {
             // It overflows, so let's set up a seamless infinite scroll.
             const originalText = track.title;
             const spacer = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"; // 6 spaces
-            
+
             trackLabel.innerHTML = `<span id="scroll-part-1">${originalText}${spacer}</span><span>${originalText}</span>`;
-            
+
             // Wait another tick for the DOM to render the new innerHTML
             setTimeout(() => {
               const part1 = trackLabel.querySelector("#scroll-part-1");
               /* v8 ignore next */
               if (!part1) return;
               const loopDistance = part1.offsetWidth;
-              
-              currentAnimation = trackLabel.animate([
-                { transform: 'translateX(0)' },
-                { transform: `translateX(-${loopDistance}px)` }
-              ], {
-                duration: loopDistance * 45, // Speed based on length (slower)
-                direction: 'normal',
-                iterations: Infinity,
-                easing: 'linear',
-                delay: 1000 // Wait 1 second before first scroll
-              });
+
+              currentAnimation = trackLabel.animate(
+                [
+                  { transform: "translateX(0)" },
+                  { transform: `translateX(-${loopDistance}px)` },
+                ],
+                {
+                  duration: loopDistance * 45, // Speed based on length (slower)
+                  direction: "normal",
+                  iterations: Infinity,
+                  easing: "linear",
+                  delay: 1000, // Wait 1 second before first scroll
+                },
+              );
             }, 20);
           }
         }, 50);
-        
+
         // Stop any currently playing track
         audioEl.pause();
         audioEl.currentTime = 0;
         playBtn.innerHTML = playIcon;
         playBtn.title = "Play";
-        
+
         // Update DOM elements
         audioEl.src = track.file;
         downloadBtn.href = track.file;
@@ -249,7 +268,9 @@ function initAudioPlayer(win, doc) {
       // Handle Play/Pause
       playBtn.addEventListener("click", () => {
         if (audioEl.paused) {
-          audioEl.play().catch(err => win.console.error("Playback failed:", err));
+          audioEl
+            .play()
+            .catch((err) => win.console.error("Playback failed:", err));
           playBtn.innerHTML = pauseIcon;
           playBtn.title = "Pause";
         } else {
@@ -264,7 +285,7 @@ function initAudioPlayer(win, doc) {
         audioEl.pause();
         try {
           audioEl.currentTime = 0;
-        } catch(e) {}
+        } catch (e) {}
         audioEl.load(); // Force a hard reset of the media buffer to guarantee it starts from 0 next time
         playBtn.innerHTML = playIcon;
         playBtn.title = "Play";
@@ -276,18 +297,18 @@ function initAudioPlayer(win, doc) {
         playBtn.title = "Play";
         try {
           audioEl.currentTime = 0;
-        } catch(e) {}
+        } catch (e) {}
         audioEl.load(); // Flush buffer to fix browser playhead caching at the end of track
       });
     })
-    .catch(err => {
+    .catch((err) => {
       win.console.error("Failed to load Flow Music tracks:", err);
       trackLabel.textContent = "Error";
     });
 }
 
 /* v8 ignore next 7 */
-if (typeof module !== 'undefined' && module.exports) {
+if (typeof module !== "undefined" && module.exports) {
   module.exports = { initAudioPlayer };
 } else {
   document.addEventListener("DOMContentLoaded", function () {

@@ -1,16 +1,14 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { initCollapse } from '../assets/js/collapse.js';
+import { describe, it, expect, vi, beforeEach } from "vitest";
+import { initCollapse } from "../assets/js/collapse.js";
 
-describe('collapse.js', () => {
-  
-  
+describe("collapse.js", () => {
   let clipboardSpy;
-  
+
   beforeEach(() => {
     clipboardSpy = vi.fn(() => Promise.resolve());
-    
-    vi.stubGlobal('navigator', { clipboard: { writeText: clipboardSpy } });
-    
+
+    vi.stubGlobal("navigator", { clipboard: { writeText: clipboardSpy } });
+
     document.body.innerHTML = `
       <!-- 1. Normal single code block -->
       <article>
@@ -103,114 +101,120 @@ describe('collapse.js', () => {
         </div>
       </article>
     `;
-    
-    
   });
 
-  it('initializes and handles missing code block gracefully', () => {
+  it("initializes and handles missing code block gracefully", () => {
     initCollapse(window, document);
-    const broken = document.getElementById('broken-no-code');
-    expect(broken.querySelector('pre').style.display).toBe('none');
+    const broken = document.getElementById("broken-no-code");
+    expect(broken.querySelector("pre").style.display).toBe("none");
     // Also test copy button on broken code block
-    const brokenCopyBtn = broken.querySelector("span[title='Copy to clipboard']");
+    const brokenCopyBtn = broken.querySelector(
+      "span[title='Copy to clipboard']",
+    );
     if (brokenCopyBtn) brokenCopyBtn.click();
-
   });
 
-  it('toggles visibility when prompt button is clicked', () => {
+  it("toggles visibility when prompt button is clicked", () => {
     initCollapse(window, document);
-    const normal = document.getElementById('normal');
-    const btn = normal.querySelector('.toggle');
-    const pre = normal.querySelector('pre');
-    
+    const normal = document.getElementById("normal");
+    const btn = normal.querySelector(".toggle");
+    const pre = normal.querySelector("pre");
+
     btn.click();
-    expect(pre.style.display).toBe('block');
-    expect(btn.classList.contains('expanded')).toBe(true);
-    
+    expect(pre.style.display).toBe("block");
+    expect(btn.classList.contains("expanded")).toBe(true);
+
     btn.click();
-    expect(pre.style.display).toBe('none');
-    expect(btn.classList.contains('expanded')).toBe(false);
+    expect(pre.style.display).toBe("none");
+    expect(btn.classList.contains("expanded")).toBe(false);
   });
-  
-  it('builds tabbed interface for multi-step articles', () => {
+
+  it("builds tabbed interface for multi-step articles", () => {
     initCollapse(window, document);
-    const multi = document.getElementById('multi');
-    const tabs = multi.querySelectorAll('.prompt-tab-btn');
-    
+    const multi = document.getElementById("multi");
+    const tabs = multi.querySelectorAll(".prompt-tab-btn");
+
     // Base prompt + Scene 1 + Variant A + 1. Alpha = 4 tabs!
     expect(tabs.length).toBe(3);
-    
+
     // Click a tab
     tabs[1].click();
-    expect(tabs[1].style.background).toContain('rgba(0, 255, 136, 0.1)');
-    expect(tabs[0].style.background).toContain('rgba(0, 0, 0, 0.3)');
+    expect(tabs[1].style.background).toContain("rgba(0, 255, 136, 0.1)");
+    expect(tabs[0].style.background).toContain("rgba(0, 0, 0, 0.3)");
   });
-  
-  it('extracts and hoists standalone negative prompts', () => {
+
+  it("extracts and hoists standalone negative prompts", () => {
     initCollapse(window, document);
-    const neg1 = document.getElementById('negative-single');
-    
-    const uiBox = neg1.querySelector('.negative-prompt-container');
+    const neg1 = document.getElementById("negative-single");
+
+    const uiBox = neg1.querySelector(".negative-prompt-container");
     expect(uiBox).not.toBeNull();
-    expect(uiBox.textContent).toContain('bad hands, ugly');
+    expect(uiBox.textContent).toContain("bad hands, ugly");
   });
-  
-  it('extracts mixed negative prompts', () => {
+
+  it("extracts mixed negative prompts", () => {
     initCollapse(window, document);
-    const neg2 = document.getElementById('negative-mixed');
-    
-    const uiBox = neg2.querySelector('.negative-prompt-container');
+    const neg2 = document.getElementById("negative-mixed");
+
+    const uiBox = neg2.querySelector(".negative-prompt-container");
     expect(uiBox).not.toBeNull();
-    expect(uiBox.textContent).toContain('bad stuff');
-    
+    expect(uiBox.textContent).toContain("bad stuff");
+
     // Ensure [SETTING] remains
-    expect(neg2.querySelector('code').textContent).toContain('[SETTING]');
+    expect(neg2.querySelector("code").textContent).toContain("[SETTING]");
   });
-  
-  it('extracts bare negative prompts (no wrapping P)', () => {
+
+  it("extracts bare negative prompts (no wrapping P)", () => {
     initCollapse(window, document);
-    const neg3 = document.getElementById('negative-first');
-    
-    const uiBox = neg3.querySelector('.negative-prompt-container');
+    const neg3 = document.getElementById("negative-first");
+
+    const uiBox = neg3.querySelector(".negative-prompt-container");
     expect(uiBox).not.toBeNull();
   });
 
-  it('adds and handles copy button', () => {
+  it("adds and handles copy button", () => {
     initCollapse(window, document);
-    const normal = document.getElementById('copy-test');
-    
+    const normal = document.getElementById("copy-test");
+
     const copyBtn = normal.querySelector("span[title='Copy to clipboard']");
     expect(copyBtn).not.toBeNull();
-    
+
     vi.useFakeTimers();
     copyBtn.click();
     vi.runAllTimers();
     expect(clipboardSpy).toHaveBeenCalled();
-    const normApp = document.getElementById('normal-appendix');
-    const normAppCopyBtn = normApp.querySelector("span[title='Copy to clipboard']");
+    const normApp = document.getElementById("normal-appendix");
+    const normAppCopyBtn = normApp.querySelector(
+      "span[title='Copy to clipboard']",
+    );
     normAppCopyBtn.click();
     // Trigger mouse events on copy button for coverage
     const hoverBtn = normApp.querySelector("span[title='Copy to clipboard']");
     if (hoverBtn) {
-        if (hoverBtn.onmouseover) hoverBtn.onmouseover();
-        if (hoverBtn.onmouseout) hoverBtn.onmouseout();
+      if (hoverBtn.onmouseover) hoverBtn.onmouseover();
+      if (hoverBtn.onmouseout) hoverBtn.onmouseout();
     }
 
-
-    
     // Test multi-step copy
-    const multi = document.getElementById('multi');
+    const multi = document.getElementById("multi");
     const multiCopyBtn = multi.querySelector("span[title='Copy to clipboard']");
     multiCopyBtn.click();
-    
+
     // Add a br and span to multi to test formatting
     const multiSub = multi.querySelector(".sub-prompt");
     const br = document.createElement("br");
     const span = document.createElement("span");
-    span.textContent = " span-text "; const emptyP = document.createElement("p"); emptyP.textContent = "   "; multiSub.appendChild(emptyP); const negMock = document.createElement("div"); negMock.className = "negative-prompt-container"; multiSub.appendChild(negMock); const emptyText = document.createTextNode("   "); multiSub.appendChild(emptyText);
+    span.textContent = " span-text ";
+    const emptyP = document.createElement("p");
+    emptyP.textContent = "   ";
+    multiSub.appendChild(emptyP);
+    const negMock = document.createElement("div");
+    negMock.className = "negative-prompt-container";
+    multiSub.appendChild(negMock);
+    const emptyText = document.createTextNode("   ");
+    multiSub.appendChild(emptyText);
     multiSub.appendChild(br);
     multiSub.appendChild(span);
     multiCopyBtn.click();
-
   });
 });

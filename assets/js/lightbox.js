@@ -141,7 +141,7 @@ function initLightbox(win, doc) {
 }
 
 /* v8 ignore next 7 */
-if (typeof module !== 'undefined' && module.exports) {
+if (typeof module !== "undefined" && module.exports) {
   module.exports = { initLightbox };
 } else {
   document.addEventListener("DOMContentLoaded", function () {

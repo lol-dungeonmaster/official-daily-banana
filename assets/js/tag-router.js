@@ -166,7 +166,7 @@ function initTagRouter(win, doc) {
 }
 
 /* v8 ignore next 7 */
-if (typeof module !== 'undefined' && module.exports) {
+if (typeof module !== "undefined" && module.exports) {
   module.exports = { initTagRouter };
 } else {
   document.addEventListener("DOMContentLoaded", function () {

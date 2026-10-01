@@ -16,20 +16,22 @@ To use the interactive "Generate Variant" and image generation features on this 
 
 ### Pricing & Free Tier Rate Limits
 
-Generating text-based variant prompts through this site relies on Google's Gemini Flash model family. 
+Generating text-based variant prompts through this site relies on Google's Gemini Flash model family.
 The rates are fixed by Google's API pricing model and are not promotional. For the most up-to-date information, always refer to the official [Gemini API Pricing Page](https://ai.google.dev/gemini-api/docs/pricing) and [Rate Limits Page](https://ai.google.dev/gemini-api/docs/rate-limits).
 
 **Free Tier (No Billing Account):**
-*   **Cost:** $0.00
-*   **Data Privacy:** For transparency, the [Gemini API Terms of Service](https://ai.google.dev/gemini-api/terms) explicitly states that for the free tier (Unpaid Services): *"To help with quality and improve our products, human reviewers may read, annotate, and process your API input and output... Do not submit sensitive, confidential, or personal information."* (This data collection does *not* apply to API keys connected to [an active Google Cloud billing account](#nano-banana-image-generation-billing-requirements)).
-*   **Rate Limits:** Capped at **15 Requests Per Minute (RPM)**, 1 million Tokens Per Minute (TPM), and 1,500 Requests Per Day (RPD). If you click the Variant button too rapidly, the site will catch a `429 Rate Limit Exceeded` error and notify you to wait.
+
+- **Cost:** $0.00
+- **Data Privacy:** For transparency, the [Gemini API Terms of Service](https://ai.google.dev/gemini-api/terms) explicitly states that for the free tier (Unpaid Services): _"To help with quality and improve our products, human reviewers may read, annotate, and process your API input and output... Do not submit sensitive, confidential, or personal information."_ (This data collection does _not_ apply to API keys connected to [an active Google Cloud billing account](#nano-banana-image-generation-billing-requirements)).
+- **Rate Limits:** Capped at **15 Requests Per Minute (RPM)**, 1 million Tokens Per Minute (TPM), and 1,500 Requests Per Day (RPD). If you click the Variant button too rapidly, the site will catch a `429 Rate Limit Exceeded` error and notify you to wait.
 
 **Cost Breakdown per Model:**
 If you attach a billing account to bypass the rate limits, generating short text variants is staggeringly inexpensive. Because our prompts are highly structured and short (averaging ~250 input tokens and ~150 output tokens):
-*   **2.5 Flash Lite ($):** ~15,000 variants per $1.00
-*   **3.1 Flash Lite ($$):** ~8,000 variants per $1.00
-*   **3.5 Flash Lite ($$$):** ~6,000 variants per $1.00
-*   **2.5 Flash ($$$$):** ~4,000 variants per $1.00
+
+- **2.5 Flash Lite ($):** ~15,000 variants per $1.00
+- **3.1 Flash Lite ($$):** ~8,000 variants per $1.00
+- **3.5 Flash Lite ($$$):** ~6,000 variants per $1.00
+- **2.5 Flash ($$$$):** ~4,000 variants per $1.00
 
 ### Nano Banana (Image Generation) Billing Requirements
 

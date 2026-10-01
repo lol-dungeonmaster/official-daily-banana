@@ -2,7 +2,6 @@
 {% include nav.html %}
 <div class="container">
 
-
 <article class="post-entry" data-tags="literature,fantasy,realistic,multi-step">
 <h2 id="sep-30-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-30-26">Sep 30 // Scenes from Literature VI</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchScenesFromLiteratureVI(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchScenesFromLiteratureVI(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="literature">literature</span>
@@ -25,8 +24,6 @@
   <div id="discuss-sep-30-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-
-
 
 <article class="post-entry" data-tags="design,middle-earth,realistic">
 <h2 id="sep-29-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-29-26">Sep 29 // Ring Design II</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchRingDesignII(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchRingDesignII(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -78,7 +75,6 @@
 </div>
 </article>
 
-
 <article class="post-entry" data-tags="animals,prehistoric,dinosaurs,realistic,multi-step">
 <h2 id="sep-27-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-27-26">Sep 27 // Dinosaurs: Triceratops</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTriceratops(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTriceratops(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -103,8 +99,6 @@
 </div>
 </article>
 
-
-
 <article class="post-entry" data-tags="design,middle-earth,concept-art,realistic">
 <h2 id="sep-26-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-26-26">Sep 26 // Tolkien Week IV</a> </div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="design">design</span>
@@ -126,8 +120,6 @@
   <div id="discuss-sep-26-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-
-
 
 <article class="post-entry" data-tags="design,middle-earth,concept-art,realistic">
 <h2 id="sep-25-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-25-26">Sep 25 // Tolkien Week III</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchForochel(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchForochel(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -151,8 +143,6 @@
   <div id="discuss-sep-25-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-
-
 
 <article class="post-entry" data-tags="character-design,middle-earth,concept-art,realistic,lotro">
 <h2 id="sep-24-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-24-26">Sep 24 // Tolkien Week II</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTolkienUnreal(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTolkienUnreal(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -178,8 +168,6 @@
   <div id="discuss-sep-24-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-
-
 
 <article class="post-entry" data-tags="character-design,middle-earth,concept-art,van-gogh,lotro">
 <h2 id="sep-23-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-23-26">Sep 23 // Tolkien Week</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTolkien(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTolkien(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -207,8 +195,6 @@
 </div>
 </article>
 
-
-
 <article class="post-entry" data-tags="animals,contemporary,realistic,journalistic">
 <h2 id="sep-22-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-22-26">Sep 22 // World Rhino Day</a> </div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -230,8 +216,6 @@
   <div id="discuss-sep-22-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-
-
 
 <article class="post-entry" data-tags="animals,prehistoric,dinosaurs,realistic,ethereal">
 <h2 id="sep-21-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-21-26">Sep 21 // Dinosaurs: Microraptor</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchMicroraptor(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchMicroraptor(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -257,8 +241,6 @@
 </div>
 </article>
 
-
-
 <article class="post-entry" data-tags="literature,fantasy,realistic,horror">
 <h2 id="sep-20-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-20-26">Sep 20 // Scenes from Literature V</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchNestMoment(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchNestMoment(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="literature">literature</span>
@@ -281,8 +263,6 @@
   <div id="discuss-sep-20-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-
-
 
 <article class="post-entry" data-tags="animals,contemporary,realistic,cinematic,ethereal,journalistic">
 <h2 id="sep-19-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-19-26">Sep 19 // Intl. Red Panda Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchPanda(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchPanda(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -310,8 +290,6 @@
 </div>
 </article>
 
-
-
 <article class="post-entry" data-tags="animals,prehistoric,dinosaurs,realistic,cinematic,journalistic">
 <h2 id="sep-18-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-18-26">Sep 18 // Dinosaurs: Baryonyx</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchBaryonyx(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchBaryonyx(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -338,8 +316,6 @@
 </div>
 </article>
 
-
-
 <article class="post-entry" data-tags="animals,contemporary,realistic,cinematic,ethereal">
 <h2 id="sep-17-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-17-26">Sep 17 // World Tilcayo Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTilcayo(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTilcayo(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -365,8 +341,6 @@
 </div>
 </article>
 
-
-
 <article class="post-entry" data-tags="food-drink,contemporary,infographic">
 <h2 id="sep-16-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-16-26">Sep 16 // Some Assembly Required II</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchTomato(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchTomato(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="food-drink">food-drink</span>
@@ -389,8 +363,6 @@
 </div>
 </article>
 
-
-
 <article class="post-entry" data-tags="animals,contemporary,realistic,journalistic">
 <h2 id="sep-15-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-15-26">Sep 15 // Intl. Colugo Day</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -410,8 +382,6 @@
   <div id="discuss-sep-15-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-
-
 
 <article class="post-entry" data-tags="literature,fantasy,realistic,horror">
 <h2 id="sep-14-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-14-26">Sep 14 // Scenes from Literature IV</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchFeeding(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchFeeding(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -441,7 +411,6 @@
   <img id="defeat_v3" data-src="generated-artwork/bogeyman-outsiders/the_outsider-defeat/v3-nano-banana-2.png" alt="The Defeat 3" class="defeat-img lazy-img gallery-img" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
 </div>
 
-
 <div class="collapsible-code">
   <div class="action-buttons">
     <button type="button">Scenes from Literature IV</button>
@@ -451,8 +420,6 @@
   <div id="discuss-sep-14-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-
-
 
 <article class="post-entry" data-tags="character-design,middle-earth,realistic,ethereal,concept-art">
 <h2 id="sep-13-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-13-26">Sep 13 // Silhouettes</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -474,8 +441,6 @@
   <div id="discuss-sep-13-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-
-
 
 <article class="post-entry" data-tags="animals,contemporary,realistic,ethereal">
 <h2 id="sep-12-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-12-26">Sep 12 // World Dolphin Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchDolphin(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchDolphin(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -500,8 +465,6 @@
   <div id="discuss-sep-12-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-
-
 
 <article class="post-entry" data-tags="design,middle-earth,split-tone,realistic,concept-art">
 <h2 id="sep-11-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-11-26">Sep 11 // Split-Toning</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchSplit(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchSplit(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
@@ -528,9 +491,6 @@
 </div>
 </article>
 
-
-
-
 <article class="post-entry" data-tags="animals,prehistoric,insects,realistic">
 <h2 id="sep-10-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-10-26">Sep 10 // Insects: Meganeura</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchMeganeura(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchMeganeura(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -554,7 +514,6 @@
   <div id="discuss-sep-10-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
 </div>
 </article>
-
 
 <article class="post-entry" data-tags="character-design,contemporary,webcomic,lotro">
 <h2 id="sep-09-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-09-26">Sep 09 // Webcomics</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">

@@ -13,8 +13,7 @@ function initLayoutHacks(win, doc) {
 
     // Inject AI Studio Button
     const aiContainer = doc.createElement("div");
-    aiContainer.style.cssText =
-      "display: contents;";
+    aiContainer.style.cssText = "display: contents;";
     aiContainer.innerHTML = `
       <a href="javascript:void(0)" id="gemini-key-btn" class="btn btn-gemini" style="margin-bottom: 0;">
         <svg class="gemini-icon" viewBox="0 0 25 25" fill="currentColor"><path d="M19 2.5C19.5 5.5 21.5 7.5 24.5 8C21.5 8.5 19.5 10.5 19 13.5C18.5 10.5 16.5 8.5 13.5 8C16.5 7.5 18.5 5.5 19 2.5ZM9.5 5C10.1 9.7 13.8 13.4 18.5 14C13.8 14.6 10.1 18.3 9.5 23C8.9 18.3 5.2 14.6 0.5 14C5.2 13.4 8.9 9.7 9.5 5Z" /></svg>
@@ -58,7 +57,7 @@ function initLayoutHacks(win, doc) {
       <div id="gemini-popover" class="gemini-popover">
         <label style="font-size:0.85em; margin-bottom: 5px; color:#fff;">Gemini / Nano Banana API Key</label>
         <div style="position: relative; width: 330px;">
-          <input type="text" id="gemini-key-input" placeholder="AIzaSy..." style="padding: 8px; padding-right: 30px; border-radius: 4px; border: 1px solid #555; background: rgba(0,0,0,0.3); color: #fff; width: 100%; box-sizing: border-box;" />
+          <input type="text" id="gemini-key-input" aria-label="Gemini API Key" placeholder="AIzaSy..." style="padding: 8px; padding-right: 30px; border-radius: 4px; border: 1px solid #555; background: rgba(0,0,0,0.3); color: #fff; width: 100%; box-sizing: border-box;" />
           <span id="gemini-key-eye" title="Show key" style="position: absolute; right: 8px; top: 0; bottom: 0; margin: auto; height: 16px; display: flex; align-items: center; cursor: pointer;" onmouseover="this.querySelector('svg').style.stroke='#fff'" onmouseout="this.querySelector('svg').style.stroke='#aaa'"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: stroke 0.2s;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
         </div>
         <div id="gemini-key-indicators" style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.8em; color: #aaa; background: rgba(0,0,0,0.2); padding: 6px 8px; border-radius: 4px;">
@@ -90,10 +89,7 @@ function initLayoutHacks(win, doc) {
 
   if (btnStandard && btnWide && btnWider) {
     const clearClasses = () => {
-      doc.body.classList.remove(
-        "prompt-width-standard",
-        "prompt-width-wide",
-      );
+      doc.body.classList.remove("prompt-width-standard", "prompt-width-wide");
       btnStandard.classList.remove("prompt-btn-active");
       btnWide.classList.remove("prompt-btn-active");
       btnWider.classList.remove("prompt-btn-active");
@@ -134,7 +130,7 @@ function initLayoutHacks(win, doc) {
 // stride-ignore: Hardcoded UI template HTML is safe from XSS
 
 /* v8 ignore next 7 */
-if (typeof module !== 'undefined' && module.exports) {
+if (typeof module !== "undefined" && module.exports) {
   module.exports = { initLayoutHacks };
 } else {
   document.addEventListener("DOMContentLoaded", function () {

@@ -1,25 +1,22 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { initTagRouter } from '../assets/js/tag-router.js';
+import { describe, it, expect, vi, beforeEach } from "vitest";
+import { initTagRouter } from "../assets/js/tag-router.js";
 
-describe('tag-router.js', () => {
-  
-  
-  
+describe("tag-router.js", () => {
   beforeEach(() => {
     window = {
-      location: new URL('http://localhost/?tags=style1,topic1'),
+      location: new URL("http://localhost/?tags=style1,topic1"),
       history: {
         pushState: vi.fn((state, title, url) => {
           window.location = new URL(url.toString());
-        })
+        }),
       },
       innerWidth: 1024,
       addEventListener: vi.fn(),
       requestAnimationFrame: vi.fn((cb) => {
         cb(); // Execute immediately for tests
-      })
+      }),
     };
-    
+
     // Set up full JSDOM structure to hit every branch
     document.body.innerHTML = `
       <div class="nav-top-wrapper">
@@ -80,120 +77,129 @@ describe('tag-router.js', () => {
         <!-- H2 exists, but no matching TOC link in the nav grid -->
       </article>
 `;
-    
-    
+
     // Mock offsetHeight for wrapping tests
-    Object.defineProperty(HTMLElement.prototype, 'offsetHeight', {
+    Object.defineProperty(HTMLElement.prototype, "offsetHeight", {
       configurable: true,
-      value: 100
+      value: 100,
     });
   });
 
-  it('filters posts based on initial URL parameters', () => {
+  it("filters posts based on initial URL parameters", () => {
     initTagRouter(window, document);
-    
+
     // URL has style1,topic1 -> post1 matches, post2 hidden, post3 hidden
     const post1 = document.querySelector('article[data-tags="style1, topic1"]');
-    const post2 = document.querySelector('article[data-tags="style1, setting1"]');
-    
-    expect(post1.classList.contains('hidden')).toBe(false);
-    expect(post2.classList.contains('hidden')).toBe(true);
+    const post2 = document.querySelector(
+      'article[data-tags="style1, setting1"]',
+    );
+
+    expect(post1.classList.contains("hidden")).toBe(false);
+    expect(post2.classList.contains("hidden")).toBe(true);
   });
-  
-  it('toggles tags correctly (adds and removes)', () => {
+
+  it("toggles tags correctly (adds and removes)", () => {
     // Start with empty URL
-    window.location = new URL('http://localhost/');
+    window.location = new URL("http://localhost/");
     initTagRouter(window, document);
-    
+
     const style1Btn = document.querySelector('.tag[data-tag="style1"]');
-    
+
     // Click to add
     style1Btn.click();
-    expect(window.location.searchParams.get('tags')).toBe('style1');
-    
+    expect(window.location.searchParams.get("tags")).toBe("style1");
+
     // Click again to remove
     style1Btn.click();
-    expect(window.location.searchParams.get('tags')).toBeNull();
+    expect(window.location.searchParams.get("tags")).toBeNull();
   });
-  
-  it('renders active tags with correct css classes and allows removal', () => {
-    window.location = new URL('http://localhost/?tags=style1,topic1,setting1,unknown1');
+
+  it("renders active tags with correct css classes and allows removal", () => {
+    window.location = new URL(
+      "http://localhost/?tags=style1,topic1,setting1,unknown1",
+    );
     initTagRouter(window, document);
-    
-    const container = document.getElementById('active-tags-container');
-    const spans = container.querySelectorAll('span');
+
+    const container = document.getElementById("active-tags-container");
+    const spans = container.querySelectorAll("span");
     expect(spans.length).toBe(4);
-    
-    expect(spans[0].className).toBe('tag tag-style'); // Default / matched style
-    expect(spans[1].className).toBe('tag tag-topic');
-    expect(spans[2].className).toBe('tag tag-setting');
-    expect(spans[3].className).toBe('tag tag-style'); // Fallback when example has unknown class
-    
+
+    expect(spans[0].className).toBe("tag tag-style"); // Default / matched style
+    expect(spans[1].className).toBe("tag tag-topic");
+    expect(spans[2].className).toBe("tag tag-setting");
+    expect(spans[3].className).toBe("tag tag-style"); // Fallback when example has unknown class
+
     // Click active tag to remove
     spans[1].click();
-    expect(window.location.searchParams.get('tags')).toBe('style1,setting1,unknown1');
+    expect(window.location.searchParams.get("tags")).toBe(
+      "style1,setting1,unknown1",
+    );
   });
-  
-  it('handles mobile wrap logic (innerWidth <= 768)', () => {
+
+  it("handles mobile wrap logic (innerWidth <= 768)", () => {
     window.innerWidth = 500;
-    window.location = new URL('http://localhost/?tags=style1');
+    window.location = new URL("http://localhost/?tags=style1");
     initTagRouter(window, document);
-    
-    const navTop = document.querySelector('.nav-top-wrapper');
-    expect(navTop.classList.contains('has-tags')).toBe(true);
-    expect(navTop.classList.contains('tags-wrapped')).toBe(false);
+
+    const navTop = document.querySelector(".nav-top-wrapper");
+    expect(navTop.classList.contains("has-tags")).toBe(true);
+    expect(navTop.classList.contains("tags-wrapped")).toBe(false);
   });
-  
-  it('handles desktop wrap logic (height > 155)', () => {
-    Object.defineProperty(HTMLElement.prototype, 'offsetHeight', {
+
+  it("handles desktop wrap logic (height > 155)", () => {
+    Object.defineProperty(HTMLElement.prototype, "offsetHeight", {
       configurable: true,
-      value: 160 // > 155
+      value: 160, // > 155
     });
-    window.location = new URL('http://localhost/?tags=style1');
+    window.location = new URL("http://localhost/?tags=style1");
     initTagRouter(window, document);
-    
-    const navTop = document.querySelector('.nav-top-wrapper');
-    expect(navTop.classList.contains('tags-wrapped')).toBe(true);
+
+    const navTop = document.querySelector(".nav-top-wrapper");
+    expect(navTop.classList.contains("tags-wrapped")).toBe(true);
   });
-  
-  it('removes wrap logic if no tags are active', () => {
-    window.location = new URL('http://localhost/');
+
+  it("removes wrap logic if no tags are active", () => {
+    window.location = new URL("http://localhost/");
     initTagRouter(window, document);
-    
-    const navTop = document.querySelector('.nav-top-wrapper');
-    expect(navTop.classList.contains('tags-wrapped')).toBe(false);
-    expect(navTop.classList.contains('has-tags')).toBe(false);
+
+    const navTop = document.querySelector(".nav-top-wrapper");
+    expect(navTop.classList.contains("tags-wrapped")).toBe(false);
+    expect(navTop.classList.contains("has-tags")).toBe(false);
   });
-  
-  it('hides empty nav-month containers', () => {
-    window.location = new URL('http://localhost/?tags=impossible_tag');
+
+  it("hides empty nav-month containers", () => {
+    window.location = new URL("http://localhost/?tags=impossible_tag");
     initTagRouter(window, document);
-    
-    const emptyMonth = document.getElementById('empty-month');
-    expect(emptyMonth.style.display).toBe('none');
+
+    const emptyMonth = document.getElementById("empty-month");
+    expect(emptyMonth.style.display).toBe("none");
   });
-  
-  it('gracefully exits checkWrap if missing DOM elements', () => {
-    document.querySelector('.nav-top-wrapper').remove();
-    window.location = new URL('http://localhost/?tags=style1');
+
+  it("gracefully exits checkWrap if missing DOM elements", () => {
+    document.querySelector(".nav-top-wrapper").remove();
+    window.location = new URL("http://localhost/?tags=style1");
     expect(() => initTagRouter(window, document)).not.toThrow();
   });
-  
-  it('gracefully exits renderActiveTags if missing container', () => {
-    document.getElementById('active-tags-container').remove();
-    window.location = new URL('http://localhost/?tags=style1');
+
+  it("gracefully exits renderActiveTags if missing container", () => {
+    document.getElementById("active-tags-container").remove();
+    window.location = new URL("http://localhost/?tags=style1");
     expect(() => initTagRouter(window, document)).not.toThrow();
   });
-  
-  it('simulates popstate and resize events', () => {
+
+  it("simulates popstate and resize events", () => {
     initTagRouter(window, document);
-    
-    const popstateCb = window.addEventListener.mock.calls.find(c => c[0] === 'popstate')[1];
-    const resizeCb = window.addEventListener.mock.calls.find(c => c[0] === 'resize')[1];
-    
+
+    const popstateCb = window.addEventListener.mock.calls.find(
+      (c) => c[0] === "popstate",
+    )[1];
+    const resizeCb = window.addEventListener.mock.calls.find(
+      (c) => c[0] === "resize",
+    )[1];
+
     expect(popstateCb).toBeDefined();
     expect(resizeCb).toBeDefined();
-    
+
     // Execute them to ensure no throw
     popstateCb();
     resizeCb();
