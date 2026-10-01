@@ -32,6 +32,6 @@ The remaining uncovered branches consist exclusively of:
 3. **API Rate Limit Debouncers:** Millisecond-level cooldown logic designed to prevent API spam, which inherently conflicts and deadlocks with Vitest's `vi.useFakeTimers()` mock system.
 
 **The Decision:**
-To achieve 100% native coverage on these final lines, we would have to fundamentally refactor and remove these defensive checks from the source code. We have explicitly decided **not** to weaken the security, stability, or rate-limiting architecture of the AI Studio merely to satisfy a vanity coverage metric. 
+To achieve 100% native coverage on these final lines, we would have to fundamentally refactor and remove these defensive checks from the source code. 
 
 We choose absolute transparency over false perfection. We have documented this limitation and are intentionally preserving the uncovered security tripwires in `ai-studio.js` to ensure production robustness.
