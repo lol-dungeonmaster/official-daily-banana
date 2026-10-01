@@ -1,23 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const posts = document.querySelectorAll(".post-entry");
-  const activeTagsContainer = document.getElementById("active-tags-container");
+function initTagRouter(win, doc) {
+  const posts = doc.querySelectorAll(".post-entry");
+  const activeTagsContainer = doc.getElementById("active-tags-container");
 
   // Get active tags from URL
   function getActiveTags() {
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(win.location.search);
     const tagsParam = params.get("tags");
     if (!tagsParam) return [];
     return tagsParam.split(",").filter((t) => t.trim() !== "");
   }
 
   function setActiveTags(tags) {
-    const url = new URL(window.location);
+    const url = new URL(win.location);
     if (tags.length === 0) {
       url.searchParams.delete("tags");
     } else {
       url.searchParams.set("tags", tags.join(","));
     }
-    window.history.pushState({}, "", url);
+    win.history.pushState({}, "", url);
     applyFilters();
   }
 
@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function checkWrap() {
-    const navTop = document.querySelector(".nav-top-wrapper");
-    const navLink = document.querySelector(".nav-top-link");
-    const tagsContainer = document.getElementById("active-tags-container");
+    const navTop = doc.querySelector(".nav-top-wrapper");
+    const navLink = doc.querySelector(".nav-top-link");
+    const tagsContainer = doc.getElementById("active-tags-container");
     const currentTags = getActiveTags();
 
     if (!navTop || !navLink || !tagsContainer) return;
-    if (window.innerWidth <= 768) {
+    if (win.innerWidth <= 768) {
       navTop.classList.add("has-tags");
       navTop.classList.remove("tags-wrapped");
       return;
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // The easiest way is to find a rendered tag in the DOM with that data-tag and copy its class.
     currentTags.forEach((tag) => {
       let cssClass = "tag-style"; // default
-      const example = document.querySelector(
+      const example = doc.querySelector(
         `.post-tags-container .tag[data-tag="${tag}"]`,
       );
       if (example) {
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
           cssClass = "tag-setting";
       }
 
-      const span = document.createElement("span");
+      const span = doc.createElement("span");
       span.className = `tag ${cssClass}`;
       span.title = "Click to remove filter";
       span.textContent = tag;
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Get the h2 ID to find the matching TOC link
       const heading = post.querySelector("h2");
       const tocLink = heading
-        ? document.querySelector(`.nav-days-grid a[href="#${heading.id}"]`)
+        ? doc.querySelector(`.nav-days-grid a[href="#${heading.id}"]`)
         : null;
 
       if (currentTags.length === 0 || matchesAll) {
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Hide empty month containers in the TOC
-    document.querySelectorAll(".nav-month").forEach((monthDiv) => {
+    doc.querySelectorAll(".nav-month").forEach((monthDiv) => {
       const grid = monthDiv.querySelector(".nav-days-grid");
       if (grid) {
         const visibleLinks = Array.from(grid.querySelectorAll("a")).filter(
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Attach click handlers to all tags in posts
-  document.querySelectorAll(".post-tags-container .tag").forEach((tagEl) => {
+  doc.querySelectorAll(".post-tags-container .tag").forEach((tagEl) => {
     tagEl.addEventListener("click", (e) => {
       e.preventDefault();
       toggleTag(tagEl.getAttribute("data-tag"));
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Handle browser back/forward buttons
-  window.addEventListener("popstate", () => {
+  win.addEventListener("popstate", () => {
     applyFilters();
   });
 
@@ -154,13 +154,22 @@ document.addEventListener("DOMContentLoaded", () => {
   applyFilters();
 
   // Enable CSS transitions after initial layout paint
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      const navTop = document.querySelector(".nav-top-wrapper");
+  win.requestAnimationFrame(() => {
+    win.requestAnimationFrame(() => {
+      const navTop = doc.querySelector(".nav-top-wrapper");
       if (navTop) navTop.classList.add("ready");
     });
   });
 
   // Re-evaluate wrap state on window resize
-  window.addEventListener("resize", checkWrap);
-});
+  win.addEventListener("resize", checkWrap);
+}
+
+/* v8 ignore next 7 */
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { initTagRouter };
+} else {
+  document.addEventListener("DOMContentLoaded", function () {
+    initTagRouter(window, document);
+  });
+}

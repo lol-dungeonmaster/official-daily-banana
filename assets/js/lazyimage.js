@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const lazyImages = document.querySelectorAll(".lazy-img");
+function initLazyImages(root, IntersectionObserverClass) {
+  const lazyImages = root.querySelectorAll(".lazy-img");
   let isInitialLoad = true;
   
-  const observer = new IntersectionObserver((entries, observer) => {
+  const observer = new IntersectionObserverClass((entries, obs) => {
     entries.forEach((entry) => {
       const img = entry.target;
       
@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
           // Instant load for the first images seen on page load (handles anchor links perfectly)
           img.onload = () => { img.classList.add("loaded"); };
           img.src = img.dataset.src;
-          observer.unobserve(img);
+          obs.unobserve(img);
         } else {
           // Debounce for all subsequent scrolls
           img.dataset.scrollTimeout = setTimeout(() => {
             img.onload = () => { img.classList.add("loaded"); };
             img.src = img.dataset.src;
-            observer.unobserve(img);
+            obs.unobserve(img);
           }, 500);
         }
       } else {
@@ -37,4 +37,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   lazyImages.forEach((img) => observer.observe(img));
-});
+  return observer;
+}
+
+/* v8 ignore next 7 */
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { initLazyImages };
+} else {
+  document.addEventListener("DOMContentLoaded", function () {
+    initLazyImages(document, window.IntersectionObserver);
+  });
+}

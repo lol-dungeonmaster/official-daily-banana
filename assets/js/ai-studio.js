@@ -1,14 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
+function initAiStudio(win, doc) {
+
 
   const updateIndicators = () => {
-    const indBasic = document.getElementById("indicator-basic");
-    const indImage = document.getElementById("indicator-image");
-    const indDelay = document.getElementById("indicator-delay");
+    const indBasic = doc.getElementById("indicator-basic");
+    const indImage = doc.getElementById("indicator-image");
+    const indDelay = doc.getElementById("indicator-delay");
     if (!indBasic || !indImage || !indDelay) return;
-    const existingKey = sessionStorage.getItem("gemini_api_key");
+    const existingKey = win.sessionStorage.getItem("gemini_api_key");
     if (existingKey) {
       indBasic.textContent = "✅";
-      const hasBilling = sessionStorage.getItem("has_billing") !== "false";
+      const hasBilling = win.sessionStorage.getItem("has_billing") !== "false";
       indImage.textContent = hasBilling ? "✅" : "❌";
       indDelay.textContent = hasBilling ? "3s" : "5s";
     } else {
@@ -19,26 +20,26 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
 
-  document.addEventListener("closeAllPopovers", () => {
+  doc.addEventListener("closeAllPopovers", () => {
     if (popover) popover.classList.remove("show");
     if (ledgerPopover) ledgerPopover.classList.remove("show");
-    document.querySelectorAll(".model-options-menu, .image-model-options-menu").forEach(m => m.classList.remove("show"));
+    doc.querySelectorAll(".model-options-menu, .image-model-options-menu").forEach(m => m.classList.remove("show"));
   });
 
-  window.addEventListener("scroll", () => {
-    document.querySelectorAll(".model-options-menu.show").forEach((menu) => {
+  win.addEventListener("scroll", () => {
+    doc.querySelectorAll(".model-options-menu.show").forEach((menu) => {
       const rect = menu.getBoundingClientRect();
-      if (rect.bottom < 0 || rect.top > window.innerHeight) {
+      if (rect.bottom < 0 || rect.top > win.innerHeight) {
         menu.classList.remove("show");
       }
     });
   }, { passive: true });
 
-  const btn = document.getElementById("gemini-key-btn");
-  const popover = document.getElementById("gemini-popover");
-  const input = document.getElementById("gemini-key-input");
-  const confirmBtn = document.getElementById("gemini-key-confirm");
-  const eyeBtn = document.getElementById("gemini-key-eye");
+  const btn = doc.getElementById("gemini-key-btn");
+  const popover = doc.getElementById("gemini-popover");
+  const input = doc.getElementById("gemini-key-input");
+  const confirmBtn = doc.getElementById("gemini-key-confirm");
+  const eyeBtn = doc.getElementById("gemini-key-eye");
 
   const getObfuscatedKey = (k) => {
     if (!k || k.length < 10) return k;
@@ -59,11 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!real) return;
       if (input.value === real && real !== getObfuscatedKey(real)) {
         input.value = getObfuscatedKey(real);
-        clearTimeout(eyeTimeout);
+        win.clearTimeout(eyeTimeout);
       } else {
         input.value = real;
-        clearTimeout(eyeTimeout);
-        eyeTimeout = setTimeout(() => {
+        win.clearTimeout(eyeTimeout);
+        eyeTimeout = win.setTimeout(() => {
           if (input.dataset.realKey === real) {
             input.value = getObfuscatedKey(real);
           }
@@ -74,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (input) {
   input.addEventListener("dblclick", () => {
-    const existingKey = sessionStorage.getItem("gemini_api_key");
+    const existingKey = win.sessionStorage.getItem("gemini_api_key");
     if (existingKey && input.readOnly) {
       input.readOnly = false;
       input.style.cursor = "text";
@@ -93,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentRealKey = input.dataset.realKey;
     confirmBtn.disabled = currentRealKey.trim() === "";
 
-    const existingKey = sessionStorage.getItem("gemini_api_key");
+    const existingKey = win.sessionStorage.getItem("gemini_api_key");
     if (existingKey) {
       if (currentRealKey.trim() !== existingKey) {
         icon.classList.remove("activated");
@@ -105,22 +106,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
-  const ledgerBtn = document.getElementById("ledger-btn");
-  const ledgerPopover = document.getElementById("ledger-popover");
-  const ledgerTabs = document.querySelectorAll(".ledger-tab");
-  const ledgerContent = document.getElementById("ledger-content");
+  const ledgerBtn = doc.getElementById("ledger-btn");
+  const ledgerPopover = doc.getElementById("ledger-popover");
+  const ledgerTabs = doc.querySelectorAll(".ledger-tab");
+  const ledgerContent = doc.getElementById("ledger-content");
 
   let currentLedgerTab = "info";
 
-  const ledgerBadge = document.getElementById("ledger-badge");
-  if (ledgerBadge && sessionStorage.getItem("odb_ledger_unread") === "true") {
+  const ledgerBadge = doc.getElementById("ledger-badge");
+  if (ledgerBadge && win.sessionStorage.getItem("odb_ledger_unread") === "true") {
     ledgerBadge.style.display = "block";
   }
 
   function renderLedger() {
     if (!ledgerContent) return;
     try {
-      const logs = JSON.parse(sessionStorage.getItem("odb_audit_log") || "[]");
+      const logs = JSON.parse(win.sessionStorage.getItem("odb_audit_log") || "[]");
 
       const counts = { info: 0, warn: 0, error: 0 };
       logs.forEach((l) => {
@@ -139,21 +140,21 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
       filtered.reverse().forEach((l) => {
-        const div = document.createElement("div");
+        const div = doc.createElement("div");
         div.style.cssText =
           "margin-bottom: 8px; border-bottom: 1px solid #444; padding-bottom: 8px;";
 
-        const timeDiv = document.createElement("div");
+        const timeDiv = doc.createElement("div");
         timeDiv.style.cssText = "color: #888; margin-bottom:2px;";
         timeDiv.textContent = new Date(l.timestamp).toLocaleString();
         div.appendChild(timeDiv);
 
-        const msgDiv = document.createElement("div");
+        const msgDiv = doc.createElement("div");
         const lines = l.message.split("\n");
         lines.forEach((line, i) => {
-          msgDiv.appendChild(document.createTextNode(line));
+          msgDiv.appendChild(doc.createTextNode(line));
           if (i < lines.length - 1)
-            msgDiv.appendChild(document.createElement("br"));
+            msgDiv.appendChild(doc.createElement("br"));
         });
         div.appendChild(msgDiv);
 
@@ -164,8 +165,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function logAudit(type, message) {
     try {
-      const logs = JSON.parse(sessionStorage.getItem("odb_audit_log") || "[]");
-      const key = sessionStorage.getItem("gemini_api_key");
+      const logs = JSON.parse(win.sessionStorage.getItem("odb_audit_log") || "[]");
+      const key = win.sessionStorage.getItem("gemini_api_key");
       let redacted = false;
       if (key && key.length > 5 && message.includes(key)) {
         message = message.split(key).join("[REDACTED_API_KEY]");
@@ -185,11 +186,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
       if (logs.length > 50) logs.shift();
-      sessionStorage.setItem("odb_audit_log", JSON.stringify(logs));
+      win.sessionStorage.setItem("odb_audit_log", JSON.stringify(logs));
       if (ledgerPopover && ledgerPopover.classList.contains("show")) {
         renderLedger();
       } else {
-        sessionStorage.setItem("odb_ledger_unread", "true");
+        win.sessionStorage.setItem("odb_ledger_unread", "true");
         if (ledgerBadge) ledgerBadge.style.display = "block";
       }
     } catch (e) {}
@@ -199,11 +200,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ledgerBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       const wasOpen = ledgerPopover.classList.contains("show");
-      document.dispatchEvent(new CustomEvent("closeAllPopovers"));
+      doc.dispatchEvent(new CustomEvent("closeAllPopovers"));
       if (!wasOpen) {
         ledgerPopover.classList.add("show");
         renderLedger();
-        sessionStorage.removeItem("odb_ledger_unread");
+        win.sessionStorage.removeItem("odb_ledger_unread");
         if (ledgerBadge) ledgerBadge.style.display = "none";
       }
     });
@@ -227,22 +228,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     ledgerPopover.addEventListener("click", (e) => e.stopPropagation());
-    const clearBtn = document.getElementById("ledger-clear-btn");
+    const clearBtn = doc.getElementById("ledger-clear-btn");
     if (clearBtn) {
       clearBtn.addEventListener("click", (e) => {
         e.stopPropagation();
-        sessionStorage.removeItem("odb_audit_log");
+        win.sessionStorage.removeItem("odb_audit_log");
         renderLedger();
       });
     }
 
     // Close on scroll if off screen
-    window.addEventListener(
+    win.addEventListener(
       "scroll",
       () => {
         if (ledgerPopover.classList.contains("show")) {
           const rect = ledgerPopover.getBoundingClientRect();
-          if (rect.bottom < 0 || rect.top > window.innerHeight) {
+          if (rect.bottom < 0 || rect.top > win.innerHeight) {
             ledgerPopover.classList.remove("show");
           }
         }
@@ -252,16 +253,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Hook clicking outside for ledger
-  document.addEventListener("click", () => {
+  doc.addEventListener("click", () => {
     if (ledgerPopover) ledgerPopover.classList.remove("show");
   });
 
-  const cancelBtn = document.getElementById("gemini-key-cancel");
-  const icon = document.querySelector(".gemini-icon");
+  const cancelBtn = doc.getElementById("gemini-key-cancel");
+  const icon = doc.querySelector(".gemini-icon");
 
-  const toast = document.createElement("div");
+  const toast = doc.createElement("div");
   toast.id = "ai-toast";
-  document.body.appendChild(toast);
+  doc.body.appendChild(toast);
 
   function showToast(message, isWarning = false) {
     logAudit(isWarning ? "error" : "info", message);
@@ -270,7 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toast.style.background = isWarning ? "#ff4444" : "#00ff88";
     toast.style.color = isWarning ? "#fff" : "#000";
     toast.classList.add("show");
-    setTimeout(() => {
+    win.setTimeout(() => {
       toast.classList.remove("show");
     }, 3000);
   }
@@ -278,10 +279,10 @@ document.addEventListener("DOMContentLoaded", () => {
   btn.addEventListener("click", (e) => {
     e.stopPropagation();
     const wasOpen = popover.classList.contains("show");
-    document.dispatchEvent(new CustomEvent("closeAllPopovers"));
+    doc.dispatchEvent(new CustomEvent("closeAllPopovers"));
     if (wasOpen) return;
 
-    const existingKey = sessionStorage.getItem("gemini_api_key");
+    const existingKey = win.sessionStorage.getItem("gemini_api_key");
     if (existingKey) {
       input.dataset.realKey = existingKey;
       input.value = getObfuscatedKey(existingKey);
@@ -305,16 +306,16 @@ document.addEventListener("DOMContentLoaded", () => {
     e.stopPropagation();
   });
 
-  window.addEventListener("scroll", () => {
+  win.addEventListener("scroll", () => {
     if (popover.classList.contains("show")) {
       const rect = popover.getBoundingClientRect();
-      if (rect.bottom < 0 || rect.top > window.innerHeight) {
+      if (rect.bottom < 0 || rect.top > win.innerHeight) {
         popover.classList.remove("show");
       }
     }
   }, { passive: true });
 
-  document.addEventListener("click", () => {
+  doc.addEventListener("click", () => {
     popover.classList.remove("show");
   });
 
@@ -330,11 +331,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const key = (input.dataset.realKey || input.value).trim();
 
     // STRIDE Mitigation: Promise-based Minimum Delay
-    const minDelay = new Promise((resolve) => setTimeout(resolve, 3000));
+    const minDelay = new Promise((resolve) => win.setTimeout(resolve, 3000));
 
     if (!key) {
-      sessionStorage.removeItem("gemini_api_key");
-      document.querySelector(".gemini-icon").classList.remove("activated");
+      win.sessionStorage.removeItem("gemini_api_key");
+      doc.querySelector(".gemini-icon").classList.remove("activated");
       document
         .querySelectorAll(".generate-ui-container")
         .forEach((el) => el.remove());
@@ -348,7 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       // 1. Verify the key is structurally valid by checking the master endpoint
-      const res = await fetch(
+      const res = await win.fetch(
         `https://generativelanguage.googleapis.com/v1beta/models?key=${key}`,
       );
 
@@ -356,7 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // 2. The key is valid! Now force Google to evaluate billing status by sending a dummy generation POST request.
         // If billing is disabled, Google intercepts and throws 403 Forbidden.
         // If billing is active, the request passes to the model, which throws 400 Bad Request due to the empty payload.
-        const billingRes = await fetch(
+        const billingRes = await win.fetch(
           `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-image:generateContent?key=${key}`,
           {
             method: "POST",
@@ -381,13 +382,13 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
 
-        sessionStorage.setItem("gemini_api_key", key);
-        sessionStorage.setItem("has_billing", hasBilling ? "true" : "false");
+        win.sessionStorage.setItem("gemini_api_key", key);
+        win.sessionStorage.setItem("has_billing", hasBilling ? "true" : "false");
         updateIndicators();
         icon.classList.add("activated");
         popover.classList.remove("show");
 
-        document.querySelectorAll(".collapsible-code pre").forEach((pre) => {
+        doc.querySelectorAll(".collapsible-code pre").forEach((pre) => {
           if (pre.style.display === "block") {
             injectGenerateUI(pre.closest(".collapsible-code"));
           }
@@ -402,20 +403,20 @@ document.addEventListener("DOMContentLoaded", () => {
           toast.style.color = "#000";
           toast.classList.add("show");
 
-          let toast2 = document.getElementById("ai-toast-2");
+          let toast2 = doc.getElementById("ai-toast-2");
           if (!toast2) {
-            toast2 = document.createElement("div");
+            toast2 = doc.createElement("div");
             toast2.id = "ai-toast-2";
             toast2.style.cssText =
               "position: fixed; bottom: 70px; right: 20px; background: #ff4444; color: #fff; padding: 10px 20px; border-radius: 4px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.5); z-index: 9999; opacity: 0; transform: translateY(20px); transition: all 0.3s ease; pointer-events: none;";
-            document.body.appendChild(toast2);
+            doc.body.appendChild(toast2);
           }
           toast2.textContent = "Image generation is disabled.";
           void toast2.offsetWidth;
           toast2.style.opacity = "1";
           toast2.style.transform = "translateY(0)";
 
-          setTimeout(() => {
+          win.setTimeout(() => {
             toast.classList.remove("show");
             toast2.style.opacity = "0";
             toast2.style.transform = "translateY(20px)";
@@ -423,7 +424,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       } else {
         // Entirely invalid key
-        sessionStorage.removeItem("gemini_api_key");
+        win.sessionStorage.removeItem("gemini_api_key");
         icon.classList.remove("activated");
         document
           .querySelectorAll(".generate-ui-container")
@@ -439,8 +440,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  function injectGenerateUI(block) {
-    if (!sessionStorage.getItem("gemini_api_key")) return;
+    function injectGenerateUI(block) {
+    if (!win.sessionStorage.getItem("gemini_api_key")) return;
     if (block.querySelector(".generate-ui-container")) return;
 
     const pre = block.querySelector("pre");
@@ -464,7 +465,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const getCustomStorageKey = (idx) => "custom_" + hash + "_tab_" + (idx !== undefined ? idx : getActiveTabIdx());
     
     pre.addEventListener('tabchanged', () => {
-        const activeTab = sessionStorage.getItem("odb_tab_" + getStorageKey());
+        const activeTab = win.sessionStorage.getItem("odb_tab_" + getStorageKey());
         updateCameraBtnState();
         variantBtn.classList.remove("expanded");
         customBtn.classList.remove("expanded");
@@ -472,7 +473,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         if (activeTab === "custom") {
            renderCustom();
-        } else if (activeTab === "variant" || sessionStorage.getItem(getStorageKey())) {
+        } else if (activeTab === "variant" || win.sessionStorage.getItem(getStorageKey())) {
            renderVariant();
         } else {
            const baseTokenUI = pre.querySelector(".token-estimator");
@@ -515,29 +516,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const extractCleanText = () => extractCleanTextForTab(getActiveTabIdx());
 
-    const container = document.createElement("div");
+    const container = doc.createElement("div");
     container.className = "generate-ui-container";
     container.style.cssText =
       "margin-top: 15px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.2); display: flex; flex-direction: column; gap: 10px;";
 
-    const controls = document.createElement("div");
+    const controls = doc.createElement("div");
     controls.style.cssText =
       "display: flex; align-items: center; flex-wrap: wrap; gap: 10px;";
 
     // NATIVE BUTTON CLASSES: These inherit .collapsible-code button styles
     const savedModel =
-      sessionStorage.getItem("preferred_model") || "gemini-2.5-flash-lite";
+      win.sessionStorage.getItem("preferred_model") || "gemini-2.5-flash-lite";
     const savedLabel =
-      sessionStorage.getItem("preferred_model_label") || "<span>2.5 Flash Lite</span> <span>($<span style=\"opacity: 0.3\">$$$</span>)</span>";
+      win.sessionStorage.getItem("preferred_model_label") || "<span>2.5 Flash Lite</span> <span>($<span style=\"opacity: 0.3\">$$$</span>)</span>";
 
-    const hasBilling = sessionStorage.getItem("has_billing") !== "false";
+    const hasBilling = win.sessionStorage.getItem("has_billing") !== "false";
     const imgTooltip = hasBilling ? "Change image model" : "No image generation with free tier";
     const cameraTooltip = hasBilling ? "Generate image" : "No image generation with free tier";
     const imgOpacity = hasBilling ? "1" : "0.5";
     const imgCursor = hasBilling ? "pointer" : "not-allowed";
     
-    const savedImgModel = sessionStorage.getItem("preferred_image_model") || "nano-banana-2-lite";
-    const savedImgLabel = sessionStorage.getItem("preferred_image_model_label") || "<span>NB 2 Lite</span> <span>($<span style=\"opacity: 0.3\">$$$</span>)</span>";
+    const savedImgModel = win.sessionStorage.getItem("preferred_image_model") || "nano-banana-2-lite";
+    const savedImgLabel = win.sessionStorage.getItem("preferred_image_model_label") || "<span>NB 2 Lite</span> <span>($<span style=\"opacity: 0.3\">$$$</span>)</span>";
 
     controls.innerHTML = `
       <strong style="color: #cbcbcb; font-family: inherit; font-size: 20px;">Generate:</strong>
@@ -588,14 +589,14 @@ document.addEventListener("DOMContentLoaded", () => {
     dropdownBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       const wasOpen = dropdownMenu.classList.contains("show");
-      document.dispatchEvent(new CustomEvent("closeAllPopovers"));
+      doc.dispatchEvent(new CustomEvent("closeAllPopovers"));
       if (!wasOpen) dropdownMenu.classList.add("show");
     });
     
     const imgGenerateBtn = controls.querySelector(".btn-generate-image");
     
     const updateCameraBtnState = () => {
-      const hasBilling = sessionStorage.getItem("has_billing") !== "false";
+      const hasBilling = win.sessionStorage.getItem("has_billing") !== "false";
       if (!hasBilling) {
          imgGenerateBtn.style.opacity = "0.5";
          imgGenerateBtn.style.cursor = "not-allowed";
@@ -617,9 +618,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     imgDropdownBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      if (sessionStorage.getItem("has_billing") === "false") return;
+      if (win.sessionStorage.getItem("has_billing") === "false") return;
       const wasOpen = imgDropdownMenu.classList.contains("show");
-      document.dispatchEvent(new CustomEvent("closeAllPopovers"));
+      doc.dispatchEvent(new CustomEvent("closeAllPopovers"));
       if (!wasOpen) imgDropdownMenu.classList.add("show");
     });
 
@@ -628,8 +629,8 @@ document.addEventListener("DOMContentLoaded", () => {
         e.stopPropagation();
         currentModel = opt.getAttribute("data-value");
         modelLabel.innerHTML = opt.innerHTML;
-        sessionStorage.setItem("preferred_model", currentModel);
-        sessionStorage.setItem("preferred_model_label", opt.innerHTML);
+        win.sessionStorage.setItem("preferred_model", currentModel);
+        win.sessionStorage.setItem("preferred_model_label", opt.innerHTML);
         dropdownMenu.classList.remove("show");
       });
       opt.addEventListener(
@@ -647,8 +648,8 @@ document.addEventListener("DOMContentLoaded", () => {
         e.stopPropagation();
         currentImgModel = opt.getAttribute("data-value");
         imgModelLabel.innerHTML = opt.innerHTML;
-        sessionStorage.setItem("preferred_image_model", currentImgModel);
-        sessionStorage.setItem("preferred_image_model_label", opt.innerHTML);
+        win.sessionStorage.setItem("preferred_image_model", currentImgModel);
+        win.sessionStorage.setItem("preferred_image_model_label", opt.innerHTML);
         imgDropdownMenu.classList.remove("show");
       });
       opt.addEventListener(
@@ -661,11 +662,11 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
 
-    document.addEventListener("click", () => {
+    doc.addEventListener("click", () => {
       if (dropdownMenu) dropdownMenu.classList.remove("show");
     });
 
-    const outputArea = document.createElement("div");
+    const outputArea = doc.createElement("div");
     outputArea.className = "variant-output";
     outputArea.style.cssText =
       "display: none; position: relative; padding: 10px; padding-right: 35px; background: rgba(0,255,136,0.1); border: 1px solid rgba(0,255,136,0.3); border-radius: 4px; color: #fff; font-size: 0.9em; line-height: 1.5; font-family: Monaco, 'Bitstream Vera Sans Mono', monospace;";
@@ -675,9 +676,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const customBtn = controls.querySelector(".btn-custom");
 
     // Restore cached variant if it exists
-    const savedVariant = sessionStorage.getItem(getStorageKey());
+    const savedVariant = win.sessionStorage.getItem(getStorageKey());
     const addCopyButton = (text, exactTokens = null) => {
-      const copyBtn = document.createElement("span");
+      const copyBtn = doc.createElement("span");
       copyBtn.textContent = "✂️";
       copyBtn.title = "Copy to clipboard";
       copyBtn.style.cssText =
@@ -688,11 +689,11 @@ document.addEventListener("DOMContentLoaded", () => {
       copyBtn.onclick = () => {
         navigator.clipboard.writeText(typeof text === 'function' ? text() : text);
         copyBtn.textContent = "✓";
-        setTimeout(() => (copyBtn.innerHTML = "✂️"), 1500);
+        win.setTimeout(() => (copyBtn.innerHTML = "✂️"), 1500);
       };
       outputArea.appendChild(copyBtn);
       
-      const tokenLabel = document.createElement("div");
+      const tokenLabel = doc.createElement("div");
       tokenLabel.className = "variant-token-estimator";
       if (exactTokens !== null) {
           tokenLabel.textContent = exactTokens;
@@ -719,14 +720,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const extractNegativeText = () => extractNegativeTextForTab(getActiveTabIdx());
 
     const renderVariant = () => {
-      sessionStorage.setItem("odb_tab_" + getStorageKey(), "variant");
+      win.sessionStorage.setItem("odb_tab_" + getStorageKey(), "variant");
       variantBtn.classList.add("expanded");
       customBtn.classList.remove("expanded");
       variantBtn.title = "Press to generate";
       customBtn.title = "Create edit";
       updateCameraBtnState();
       outputArea.innerHTML = "";
-      const savedVariantData = sessionStorage.getItem(getStorageKey());
+      const savedVariantData = win.sessionStorage.getItem(getStorageKey());
       if (savedVariantData) {
         let parsed = null;
         try {
@@ -747,7 +748,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const renderCustom = async () => {
-      sessionStorage.setItem("odb_tab_" + getStorageKey(), "custom");
+      win.sessionStorage.setItem("odb_tab_" + getStorageKey(), "custom");
       customBtn.classList.add("expanded");
       variantBtn.classList.remove("expanded");
       customBtn.title = "Edit the prompt";
@@ -761,7 +762,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const cleanNegative = extractNegativeText();
       
       // Inject editable area
-      const editArea = document.createElement("div");
+      const editArea = doc.createElement("div");
       editArea.className = "custom-edit-area";
       editArea.contentEditable = "plaintext-only";
       editArea.style.cssText = "outline: none; min-height: 20px; width: 100%; white-space: pre-wrap;";
@@ -769,7 +770,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
 
       
-      const cachedCustom = sessionStorage.getItem(getCustomStorageKey());
+      const cachedCustom = win.sessionStorage.getItem(getCustomStorageKey());
       let customTokens = null;
       
       if (cachedCustom) {
@@ -786,15 +787,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const baseTokenUI = pre.querySelector(".token-estimator");
         if (baseTokenUI && baseTokenUI.textContent) {
            customTokens = parseInt(baseTokenUI.textContent);
-           sessionStorage.setItem(getCustomStorageKey(), JSON.stringify({text: cleanPrompt, tokens: customTokens}));
+           win.sessionStorage.setItem(getCustomStorageKey(), JSON.stringify({text: cleanPrompt, tokens: customTokens}));
         } else {
            // We don't know the exact count, run countTokens just for the base prompt
-           const key = sessionStorage.getItem("gemini_api_key");
+           const key = win.sessionStorage.getItem("gemini_api_key");
            if (key) {
                editArea.style.opacity = "0.5";
                try {
                  logAudit("info", "Counting base prompt tokens...");
-                 const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:countTokens?key=${key}`, {
+                 const res = await win.fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:countTokens?key=${key}`, {
                    method: "POST",
                    headers: { "Content-Type": "application/json" },
                    body: JSON.stringify({ contents: [{ parts: [{ text: cleanPrompt + (cleanNegative ? "\nNegative prompt:\n" + cleanNegative : "") }] }] })
@@ -803,7 +804,7 @@ document.addEventListener("DOMContentLoaded", () => {
                    const countData = await res.json();
                    customTokens = countData.totalTokens;
                    logAudit("info", `API Usage: ${customTokens} tokens counted`);
-                   sessionStorage.setItem(getCustomStorageKey(), JSON.stringify({text: cleanPrompt, tokens: customTokens}));
+                   win.sessionStorage.setItem(getCustomStorageKey(), JSON.stringify({text: cleanPrompt, tokens: customTokens}));
                    if (baseTokenUI) baseTokenUI.textContent = customTokens;
                  } else {
                    logAudit("warn", `API Error [${res.status}] during token count`);
@@ -827,25 +828,25 @@ document.addEventListener("DOMContentLoaded", () => {
          if (currentText === lastText) return;
          const currentNegative = extractNegativeText();
          
-         const hasBilling = sessionStorage.getItem("has_billing") !== "false";
+         const hasBilling = win.sessionStorage.getItem("has_billing") !== "false";
          const debounceMs = hasBilling ? 3000 : 5000;
          
-         if (customTypingTimeout) clearTimeout(customTypingTimeout);
+         if (customTypingTimeout) win.clearTimeout(customTypingTimeout);
          
-         customTypingTimeout = setTimeout(async () => {
-            const key = sessionStorage.getItem("gemini_api_key");
+         customTypingTimeout = win.setTimeout(async () => {
+            const key = win.sessionStorage.getItem("gemini_api_key");
             if (!key) return;
             
             // Strictly obey global delay
             const now = Date.now();
-            window._lastVariantTime = window._lastVariantTime || 0;
-            if (now - window._lastVariantTime < debounceMs) return; // Drop if another API call just happened
+            win._lastVariantTime = win._lastVariantTime || 0;
+            if (now - win._lastVariantTime < debounceMs) return; // Drop if another API call just happened
             
-            window._lastVariantTime = now; // Lock global API usage
+            win._lastVariantTime = now; // Lock global API usage
             
             try {
                logAudit("info", "Counting prompt edit tokens...");
-               const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:countTokens?key=${key}`, {
+               const res = await win.fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:countTokens?key=${key}`, {
                  method: "POST",
                  headers: { "Content-Type": "application/json" },
                  body: JSON.stringify({ contents: [{ parts: [{ text: currentText + (currentNegative ? "\nNegative prompt:\n" + currentNegative : "") }] }] })
@@ -856,7 +857,7 @@ document.addEventListener("DOMContentLoaded", () => {
                  logAudit("info", `API Usage: ${exactTokens} tokens counted`);
                  lastText = currentText;
                  
-                 sessionStorage.setItem(getCustomStorageKey(), JSON.stringify({text: currentText, tokens: exactTokens}));
+                 win.sessionStorage.setItem(getCustomStorageKey(), JSON.stringify({text: currentText, tokens: exactTokens}));
                  
                  const label = outputArea.querySelector('.variant-token-estimator');
                  if (label) label.textContent = exactTokens;
@@ -875,7 +876,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Wire up Image Generation
     imgGenerateBtn.addEventListener("click", async (e) => {
       e.stopPropagation();
-      const hasBilling = sessionStorage.getItem("has_billing") !== "false";
+      const hasBilling = win.sessionStorage.getItem("has_billing") !== "false";
       if (!hasBilling) return; // Disabled on free tier
       
       if (!customBtn.classList.contains("expanded") && !variantBtn.classList.contains("expanded")) {
@@ -883,7 +884,7 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
       }
       
-      const key = sessionStorage.getItem("gemini_api_key");
+      const key = win.sessionStorage.getItem("gemini_api_key");
       if (!key) return;
       
       // Determine what prompt to send
@@ -932,14 +933,14 @@ document.addEventListener("DOMContentLoaded", () => {
                  const tabSKey = "variant_" + hash + "_tab_" + i;
                  const tabCKey = "custom_" + hash + "_tab_" + i;
                  
-                 const tabState = sessionStorage.getItem("odb_tab_" + tabSKey);
+                 const tabState = win.sessionStorage.getItem("odb_tab_" + tabSKey);
                  let stagePromptText = "";
                  
                  if (tabState === "custom") {
-                     const cData = sessionStorage.getItem(tabCKey);
+                     const cData = win.sessionStorage.getItem(tabCKey);
                      stagePromptText = cData ? JSON.parse(cData).text : extractCleanTextForTab(i);
                  } else if (tabState === "variant") {
-                     const vData = sessionStorage.getItem(tabSKey);
+                     const vData = win.sessionStorage.getItem(tabSKey);
                      stagePromptText = vData ? JSON.parse(vData).text : extractCleanTextForTab(i);
                  } else {
                      stagePromptText = extractCleanTextForTab(i);
@@ -960,7 +961,7 @@ document.addEventListener("DOMContentLoaded", () => {
                  let targetModel = "gemini-3.1-flash-lite-image"; 
                  if (currentImgModel === "nano-banana-2") targetModel = "gemini-3.1-flash-image";
                  
-                 const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${targetModel}:generateContent?key=${key}`, {
+                 const res = await win.fetch(`https://generativelanguage.googleapis.com/v1beta/models/${targetModel}:generateContent?key=${key}`, {
                      method: "POST",
                      headers: { "Content-Type": "application/json" },
                      body: JSON.stringify(payload)
@@ -983,31 +984,31 @@ document.addEventListener("DOMContentLoaded", () => {
              if (previousImageBytes) {
                  const imgSrc = "data:image/jpeg;base64," + previousImageBytes;
                  showToast("Pipeline complete!", false);
-                 const lightbox = document.createElement("div");
+                 const lightbox = doc.createElement("div");
                  lightbox.className = "ai-studio-lightbox";
                  lightbox.style.cssText = "position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.9); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; cursor: pointer;";
                  
-                 const img = document.createElement("img");
+                 const img = doc.createElement("img");
                  img.src = imgSrc;
                  img.style.cssText = "max-width: 90%; max-height: 90%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);";
                  
                  lightbox.appendChild(img);
-                 document.body.appendChild(lightbox);
+                 doc.body.appendChild(lightbox);
                  requestAnimationFrame(() => lightbox.style.opacity = "1");
                  
                  lightbox.addEventListener("click", () => {
                      lightbox.style.opacity = "0";
-                     const a = document.createElement("a");
+                     const a = doc.createElement("a");
                      a.href = imgSrc;
                      a.download = `pipeline_${currentImgModel}_${Date.now()}.png`;
-                     document.body.appendChild(a);
+                     doc.body.appendChild(a);
                      a.click();
-                     document.body.removeChild(a);
-                     setTimeout(() => { lightbox.remove(); }, 300);
+                     doc.body.removeChild(a);
+                     win.setTimeout(() => { lightbox.remove(); }, 300);
                  });
              }
          } catch(e) {
-             console.error(e);
+             win.console.error(e);
              showToast("Pipeline network error", true);
          } finally {
              imgGenerateBtn.classList.remove("btn-generating");
@@ -1033,7 +1034,7 @@ document.addEventListener("DOMContentLoaded", () => {
          if (currentImgModel === "nano-banana-2") targetModel = "gemini-3.1-flash-image";
          if (currentImgModel === "nano-banana-pro") targetModel = "gemini-3.1-pro-image";
          
-         const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${targetModel}:generateContent?key=${key}`, {
+         const res = await win.fetch(`https://generativelanguage.googleapis.com/v1beta/models/${targetModel}:generateContent?key=${key}`, {
              method: "POST",
              headers: { "Content-Type": "application/json" },
              body: JSON.stringify(payload)
@@ -1062,15 +1063,15 @@ document.addEventListener("DOMContentLoaded", () => {
              
              if (imgSrc) {
                  // Display full-screen lightbox
-                 const lightbox = document.createElement("div");
+                 const lightbox = doc.createElement("div");
                  lightbox.style.cssText = "position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.9); display: flex; justify-content: center; align-items: center; z-index: 9999; cursor: pointer; opacity: 0; transition: opacity 0.3s ease;";
                  
-                 const imgDisplay = document.createElement("img");
+                 const imgDisplay = doc.createElement("img");
                  imgDisplay.src = imgSrc;
                  imgDisplay.style.cssText = "max-width: 90%; max-height: 90%; border: 2px solid #00ff88; box-shadow: 0 0 30px rgba(0, 255, 136, 0.4); border-radius: 4px;";
                  
                  lightbox.appendChild(imgDisplay);
-                 document.body.appendChild(lightbox);
+                 doc.body.appendChild(lightbox);
                  
                  // Fade in
                  requestAnimationFrame(() => lightbox.style.opacity = "1");
@@ -1079,14 +1080,14 @@ document.addEventListener("DOMContentLoaded", () => {
                      lightbox.style.opacity = "0";
                      
                      // Trigger background download on close
-                     const a = document.createElement("a");
+                     const a = doc.createElement("a");
                      a.href = imgSrc;
                      a.download = `generated_${currentImgModel}_${Date.now()}.png`;
-                     document.body.appendChild(a);
+                     doc.body.appendChild(a);
                      a.click();
-                     document.body.removeChild(a);
+                     doc.body.removeChild(a);
                      
-                     setTimeout(() => {
+                     win.setTimeout(() => {
                          lightbox.remove();
                          showToast("Image downloaded to default location", false);
                      }, 300);
@@ -1107,10 +1108,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initial Load: Restore tab state, fallback to Variant if exists
     updateCameraBtnState();
-    const activeTab = sessionStorage.getItem("odb_tab_" + getStorageKey());
+    const activeTab = win.sessionStorage.getItem("odb_tab_" + getStorageKey());
     if (activeTab === "custom") {
        renderCustom();
-    } else if (activeTab === "variant" || sessionStorage.getItem(getStorageKey())) {
+    } else if (activeTab === "variant" || win.sessionStorage.getItem(getStorageKey())) {
        renderVariant();
     }
 
@@ -1122,23 +1123,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     variantBtn.addEventListener("click", async (e) => {
       // If we are just toggling back from custom and have a cache, just render it
-      if (!variantBtn.classList.contains("expanded") && sessionStorage.getItem(getStorageKey())) {
+      if (!variantBtn.classList.contains("expanded") && win.sessionStorage.getItem(getStorageKey())) {
           renderVariant();
           return;
       }
       
       // Global Debounce Lock (Cross-Entry Protection)
-      const hasBilling = sessionStorage.getItem("has_billing") !== "false";
+      const hasBilling = win.sessionStorage.getItem("has_billing") !== "false";
       const debounceMs = hasBilling ? 3000 : 5000;
       const now = Date.now();
-      window._lastVariantTime = window._lastVariantTime || 0;
+      win._lastVariantTime = win._lastVariantTime || 0;
       
-      if (now - window._lastVariantTime < debounceMs) {
-         const remaining = Math.ceil((debounceMs - (now - window._lastVariantTime)) / 1000);
+      if (now - win._lastVariantTime < debounceMs) {
+         const remaining = Math.ceil((debounceMs - (now - win._lastVariantTime)) / 1000);
          showToast(hasBilling ? `Please wait ${remaining}s.` : `Free Tier cooldown. Please wait ${remaining}s.`, true);
          return;
       }
-      window._lastVariantTime = now;
+      win._lastVariantTime = now;
 
       // Toggle arrows
       variantBtn.classList.add("expanded");
@@ -1154,7 +1155,7 @@ document.addEventListener("DOMContentLoaded", () => {
       outputArea.textContent = "...";
       
       // Transfer known base tokens from Custom cache before generating
-      const cachedCustom = sessionStorage.getItem(getCustomStorageKey());
+      const cachedCustom = win.sessionStorage.getItem(getCustomStorageKey());
       if (cachedCustom) {
          try {
            const parsedCustom = JSON.parse(cachedCustom);
@@ -1166,7 +1167,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       try {
-        const key = sessionStorage.getItem("gemini_api_key");
+        const key = win.sessionStorage.getItem("gemini_api_key");
         logAudit("info", `Generating variant using ${currentModel}...`);
         
         const article = pre.closest('article');
@@ -1180,14 +1181,14 @@ document.addEventListener("DOMContentLoaded", () => {
             if (activeTabIdx > 0) {
                 const prevSKey = "variant_" + hash + "_tab_" + (activeTabIdx - 1);
                 const prevCKey = "custom_" + hash + "_tab_" + (activeTabIdx - 1);
-                const prevTabState = sessionStorage.getItem("odb_tab_" + prevSKey);
+                const prevTabState = win.sessionStorage.getItem("odb_tab_" + prevSKey);
                 
                 let prevPromptText = "";
                 if (prevTabState === "custom") {
-                    const cData = sessionStorage.getItem(prevCKey);
+                    const cData = win.sessionStorage.getItem(prevCKey);
                     prevPromptText = cData ? JSON.parse(cData).text : extractCleanTextForTab(activeTabIdx - 1);
                 } else if (prevTabState === "variant") {
-                    const vData = sessionStorage.getItem(prevSKey);
+                    const vData = win.sessionStorage.getItem(prevSKey);
                     prevPromptText = vData ? JSON.parse(vData).text : extractCleanTextForTab(activeTabIdx - 1);
                 } else {
                     prevPromptText = extractCleanTextForTab(activeTabIdx - 1);
@@ -1214,7 +1215,7 @@ document.addEventListener("DOMContentLoaded", () => {
             sysTokens = 48;
         }
         
-        const res = await fetch(
+        const res = await win.fetch(
           `https://generativelanguage.googleapis.com/v1beta/models/${currentModel}:generateContent?key=${key}`,
           {
             method: "POST",
@@ -1244,7 +1245,7 @@ document.addEventListener("DOMContentLoaded", () => {
           addCopyButton(variant, exactVariant);
           
           // Persist the generated variant as JSON
-          sessionStorage.setItem(getStorageKey(), JSON.stringify({
+          win.sessionStorage.setItem(getStorageKey(), JSON.stringify({
             text: variant,
             baseTokens: exactBase,
             variantTokens: exactVariant
@@ -1257,9 +1258,9 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         } else {
           const errText = await res.text();
-          console.error("Gemini API Error [" + res.status + "]:", errText);
+          win.console.error("Gemini API Error [" + res.status + "]:", errText);
           if (res.status === 429) {
-            sessionStorage.setItem("has_billing", "false");
+            win.sessionStorage.setItem("has_billing", "false");
             showToast("Rate limit reached. Switching to 5s cooldown.", true);
           } else if (
             res.status === 400 ||
@@ -1267,17 +1268,17 @@ document.addEventListener("DOMContentLoaded", () => {
             res.status === 403
           ) {
             showToast("Invalid API Key.", true);
-            sessionStorage.removeItem("gemini_api_key");
-            document.querySelectorAll(".generate-ui-container").forEach((el) => {
+            win.sessionStorage.removeItem("gemini_api_key");
+            doc.querySelectorAll(".generate-ui-container").forEach((el) => {
               el.style.display = "none";
             });
             openKeyModal(true);
           } else {
-            showToast("API Error. Check console.", true);
+            showToast("API Error. Check win.console.", true);
           }
         }
       } catch (e) {
-        console.error("Gemini API Network Exception:", e);
+        win.console.error("Gemini API Network Exception:", e);
         showToast("Network Error", true);
       } finally {
         variantBtn.classList.remove("btn-generating");
@@ -1289,11 +1290,11 @@ document.addEventListener("DOMContentLoaded", () => {
     pre.appendChild(container);
   }
 
-  document.addEventListener("click", (e) => {
-    const revealBtn = e.target.closest(".collapsible-code button");
+  doc.addEventListener("click", (e) => {
+    const revealBtn = e.target.closest && e.target.closest(".collapsible-code button");
     if (revealBtn) {
       const block = revealBtn.closest(".collapsible-code");
-      setTimeout(() => {
+      win.setTimeout(() => {
         const pre = block.querySelector("pre");
         if (pre && pre.style.display === "block" && !block.querySelector(".generate-ui-container")) {
           injectGenerateUI(block);
@@ -1302,13 +1303,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  if (sessionStorage.getItem("gemini_api_key")) {
+  if (win.sessionStorage.getItem("gemini_api_key")) {
     icon.classList.add("activated");
-    document.querySelectorAll(".collapsible-code pre").forEach((pre) => {
+    doc.querySelectorAll(".collapsible-code pre").forEach((pre) => {
       if (pre.style.display === "block") {
         injectGenerateUI(pre.closest(".collapsible-code"));
       }
     });
   }
-});
+
+  return {
+    updateIndicators: typeof updateIndicators !== 'undefined' ? updateIndicators : null,
+    getObfuscatedKey: typeof getObfuscatedKey !== 'undefined' ? getObfuscatedKey : null,
+    renderLedger: typeof renderLedger !== 'undefined' ? renderLedger : null,
+    logAudit: typeof logAudit !== 'undefined' ? logAudit : null,
+    showToast: typeof showToast !== 'undefined' ? showToast : null,
+    injectGenerateUI: typeof injectGenerateUI !== 'undefined' ? injectGenerateUI : null
+  };
+}
 // stride-ignore: Hardcoded UI template HTML is safe from XSS
+
+
+
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { initAiStudio };
+} else {
+  document.addEventListener("DOMContentLoaded", function () {
+    initAiStudio(window, document);
+  });
+}

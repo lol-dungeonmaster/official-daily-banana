@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+function initLayoutHacks(win, doc) {
   // dynamically modify the github pages default layout so it bypasses build restrictions
-  const downloadsSection = document.getElementById("downloads");
+  const downloadsSection = doc.getElementById("downloads");
   if (downloadsSection) {
     downloadsSection.style.cssText =
       "position: relative; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;";
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Inject AI Studio Button
-    const aiContainer = document.createElement("div");
+    const aiContainer = doc.createElement("div");
     aiContainer.style.cssText =
       "display: contents;";
     aiContainer.innerHTML = `
@@ -81,16 +81,16 @@ document.addEventListener("DOMContentLoaded", () => {
     downloadsSection.appendChild(aiContainer);
   }
 
-  document.body.id = "top";
+  doc.body.id = "top";
 
   // Prompt Width Toggle Logic
-  const btnStandard = document.getElementById("prompt-width-standard");
-  const btnWide = document.getElementById("prompt-width-wide");
-  const btnWider = document.getElementById("prompt-width-wider");
+  const btnStandard = doc.getElementById("prompt-width-standard");
+  const btnWide = doc.getElementById("prompt-width-wide");
+  const btnWider = doc.getElementById("prompt-width-wider");
 
   if (btnStandard && btnWide && btnWider) {
     const clearClasses = () => {
-      document.body.classList.remove(
+      doc.body.classList.remove(
         "prompt-width-standard",
         "prompt-width-wide",
       );
@@ -101,26 +101,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btnStandard.addEventListener("click", () => {
       clearClasses();
-      document.body.classList.add("prompt-width-standard");
+      doc.body.classList.add("prompt-width-standard");
       btnStandard.classList.add("prompt-btn-active");
-      sessionStorage.setItem("odb_prompt_width", "standard");
+      win.sessionStorage.setItem("odb_prompt_width", "standard");
     });
 
     btnWide.addEventListener("click", () => {
       clearClasses();
-      document.body.classList.add("prompt-width-wide");
+      doc.body.classList.add("prompt-width-wide");
       btnWide.classList.add("prompt-btn-active");
-      sessionStorage.setItem("odb_prompt_width", "wide");
+      win.sessionStorage.setItem("odb_prompt_width", "wide");
     });
 
     btnWider.addEventListener("click", () => {
       clearClasses();
       btnWider.classList.add("prompt-btn-active");
-      sessionStorage.setItem("odb_prompt_width", "wider");
+      win.sessionStorage.setItem("odb_prompt_width", "wider");
     });
 
-    // Restore state from sessionStorage (Default to 1200px Wide)
-    const savedWidth = sessionStorage.getItem("odb_prompt_width");
+    // Restore state from win.sessionStorage (Default to 1200px Wide)
+    const savedWidth = win.sessionStorage.getItem("odb_prompt_width");
     if (savedWidth === "standard") {
       btnStandard.click();
     } else if (savedWidth === "wider") {
@@ -130,5 +130,14 @@ document.addEventListener("DOMContentLoaded", () => {
       btnWide.click();
     }
   }
-});
+}
 // stride-ignore: Hardcoded UI template HTML is safe from XSS
+
+/* v8 ignore next 7 */
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { initLayoutHacks };
+} else {
+  document.addEventListener("DOMContentLoaded", function () {
+    initLayoutHacks(window, document);
+  });
+}

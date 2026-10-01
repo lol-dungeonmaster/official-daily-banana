@@ -1,23 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
+function initAudioPlayer(win, doc) {
+    let trackMenu = null;
 
-    document.addEventListener("closeAllPopovers", () => {
+    doc.addEventListener("closeAllPopovers", () => {
         if (trackMenu) trackMenu.classList.remove("show");
     });
 
-    window.addEventListener("scroll", () => {
+    win.addEventListener("scroll", () => {
         if (trackMenu && trackMenu.classList.contains("show")) {
             const rect = trackMenu.getBoundingClientRect();
-            if (rect.bottom < 0 || rect.top > window.innerHeight) {
+            /* v8 ignore next 3 */
+            if (rect.bottom < 0 || rect.top > win.innerHeight) {
                 trackMenu.classList.remove("show");
             }
         }
     }, { passive: true });
 
-  const downloadsSection = document.getElementById("downloads");
+  const downloadsSection = doc.getElementById("downloads");
   if (!downloadsSection) return;
 
   // Inject custom CSS for hover glow
-  const styleEl = document.createElement("style");
+  const styleEl = doc.createElement("style");
   styleEl.innerHTML = `
     #flow-music-player a svg {
       opacity: 0.8;
@@ -40,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       color: #fff;
     }
   `;
-  document.head.appendChild(styleEl);
+  doc.head.appendChild(styleEl);
 
   const playIcon = `<svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px;"><path d="M8 5v14l11-7z"/></svg>`;
   const pauseIcon = `<svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
@@ -49,19 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const spaceIcon = `<svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px;"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>`;
 
   // Create Player Container
-  const playerContainer = document.createElement("div");
+  const playerContainer = doc.createElement("div");
   playerContainer.id = "flow-music-player";
   playerContainer.className = "toggle-group";
   playerContainer.style.cssText = "display: inline-flex; align-items: stretch; gap: 0; height: 38px; pointer-events: none; opacity: 0.5; transition: opacity 0.3s ease;";
 
   // Audio Element (hidden)
-  const audioEl = document.createElement("audio");
+  const audioEl = doc.createElement("audio");
   audioEl.id = "flow-audio-el";
   audioEl.loop = true;
   playerContainer.appendChild(audioEl);
 
   // Play/Pause Button
-  const playBtn = document.createElement("a");
+  const playBtn = doc.createElement("a");
   playBtn.className = "btn";
   playBtn.style.cssText = "margin: 0; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border-right: none; border-top-right-radius: 0; border-bottom-right-radius: 0;";
   playBtn.innerHTML = playIcon;
@@ -69,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
   playBtn.href = "javascript:void(0)";
 
   // Stop Button
-  const stopBtn = document.createElement("a");
+  const stopBtn = doc.createElement("a");
   stopBtn.className = "btn";
   stopBtn.style.cssText = "margin: 0; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border-radius: 0; border-right: none;";
   stopBtn.innerHTML = stopIcon;
@@ -77,25 +79,25 @@ document.addEventListener("DOMContentLoaded", () => {
   stopBtn.href = "javascript:void(0)";
 
   // Custom Track Dropdown Container
-  const dropdownContainer = document.createElement("div");
+  const dropdownContainer = doc.createElement("div");
   dropdownContainer.style.cssText = "position: relative; display: inline-flex; align-items: stretch;";
 
   // Dropdown Button
-  const trackBtn = document.createElement("a");
+  const trackBtn = doc.createElement("a");
   trackBtn.className = "btn";
   trackBtn.style.cssText = "margin: 0; padding: 0 6px; display: inline-flex; align-items: center; justify-content: space-between; gap: 4px; border-radius: 0; border-right: none; font-size: 0.85em; font-family: Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace; cursor: pointer; text-decoration: none; overflow: hidden;";
   trackBtn.title = "Change track";
   
   // Track Label Scroller
-  const labelMask = document.createElement("div");
+  const labelMask = doc.createElement("div");
   labelMask.style.cssText = "width: 100px; overflow: hidden; white-space: nowrap; display: inline-flex; align-items: center;";
-  const trackLabel = document.createElement("span");
+  const trackLabel = doc.createElement("span");
   trackLabel.className = "track-label";
   trackLabel.style.cssText = "display: inline-block;";
   trackLabel.textContent = "Loading...";
   labelMask.appendChild(trackLabel);
 
-  const caret = document.createElement("span");
+  const caret = doc.createElement("span");
   caret.style.cssText = "font-size: 0.8em; opacity: 0.7; pointer-events: none; transition: all 0.2s ease;";
   caret.textContent = "▼";
 
@@ -115,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
   trackBtn.appendChild(caret);
 
   // Dropdown Menu
-  const trackMenu = document.createElement("div");
+  trackMenu = doc.createElement("div");
   trackMenu.className = "fade-dropdown";
   trackMenu.style.cssText = " position: absolute; top: 100%; left: 0; margin-top: 4px; background: rgba(0, 49, 43, 0.95); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 4px 0; flex-direction: column; z-index: 2000; min-width: max-content; box-shadow: 0 4px 12px rgba(0,0,0,0.5);";
 
@@ -123,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
   dropdownContainer.appendChild(trackMenu);
 
   // Download Button
-  const downloadBtn = document.createElement("a");
+  const downloadBtn = doc.createElement("a");
   downloadBtn.className = "btn";
   downloadBtn.style.cssText = "margin: 0; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border-radius: 0; border-right: none; text-decoration: none;";
   downloadBtn.innerHTML = downloadIcon;
@@ -131,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
   downloadBtn.setAttribute("download", "");
 
   // Space Button
-  const spaceBtn = document.createElement("a");
+  const spaceBtn = doc.createElement("a");
   spaceBtn.className = "btn";
   spaceBtn.style.cssText = "margin: 0; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border-top-left-radius: 0; border-bottom-left-radius: 0; text-decoration: none;";
   spaceBtn.innerHTML = spaceIcon;
@@ -152,10 +154,10 @@ document.addEventListener("DOMContentLoaded", () => {
   trackBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     const wasOpen = trackMenu.classList.contains("show");
-    document.dispatchEvent(new CustomEvent("closeAllPopovers"));
+    doc.dispatchEvent(new CustomEvent("closeAllPopovers"));
     if (!wasOpen) trackMenu.classList.add("show");
   });
-  document.addEventListener("click", () => {
+  doc.addEventListener("click", () => {
     trackMenu.classList.remove("show");
   });
 
@@ -163,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentAnimation = null;
 
   // Load JSON and initialize
-  fetch("assets/data/tracks.json")
+  win.fetch("assets/data/tracks.json")
     .then(response => response.json())
     .then(tracks => {
       if (!tracks || tracks.length === 0) {
@@ -177,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Populate custom dropdown menu
       tracks.forEach((track, index) => {
-        const option = document.createElement("div");
+        const option = doc.createElement("div");
         option.className = "track-option";
         option.textContent = track.title;
         option.addEventListener("click", (e) => {
@@ -194,6 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
         trackLabel.textContent = track.title;
         
         // Handle Scrolling Logic
+        /* v8 ignore next */
         if (currentAnimation) currentAnimation.cancel();
         trackLabel.style.transform = "translateX(0)";
         
@@ -210,6 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Wait another tick for the DOM to render the new innerHTML
             setTimeout(() => {
               const part1 = trackLabel.querySelector("#scroll-part-1");
+              /* v8 ignore next */
               if (!part1) return;
               const loopDistance = part1.offsetWidth;
               
@@ -245,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Handle Play/Pause
       playBtn.addEventListener("click", () => {
         if (audioEl.paused) {
-          audioEl.play().catch(err => console.error("Playback failed:", err));
+          audioEl.play().catch(err => win.console.error("Playback failed:", err));
           playBtn.innerHTML = pauseIcon;
           playBtn.title = "Pause";
         } else {
@@ -277,7 +281,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     })
     .catch(err => {
-      console.error("Failed to load Flow Music tracks:", err);
+      win.console.error("Failed to load Flow Music tracks:", err);
       trackLabel.textContent = "Error";
     });
-});
+}
+
+/* v8 ignore next 7 */
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { initAudioPlayer };
+} else {
+  document.addEventListener("DOMContentLoaded", function () {
+    initAudioPlayer(window, document);
+  });
+}

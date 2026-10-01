@@ -8,18 +8,22 @@
     "lint:md": "markdownlint '**/*.md' --ignore node_modules --ignore _site",
     "lint:format": "prettier --check '**/*.{js,css,json,md,html}'",
     "format": "prettier --write '**/*.{js,css,json,md,html}'",
-    "test": "npm run lint && npm run test:links && npm run test:a11y && npm run test:stride",
+    "test": "npm run lint && npm run test:links && npm run test:a11y && npm run test:stride && npm run test:unit",
     "test:links": "find . -name \"*.md\" ! -path \"./node_modules/*\" ! -path \"./_site/*\" -exec markdown-link-check {} +",
     "test:stride": "node scripts/stride-lint.js",
-    "test:a11y": "pa11y -c pa11y.json https://github.oswind.xyz/official-daily-banana/"
+    "test:a11y": "pa11y -c pa11y.json https://github.oswind.xyz/official-daily-banana/",
+    "test:unit": "vitest run --coverage"
   },
   "devDependencies": {
+    "@vitest/coverage-v8": "^5.0.3",
     "eslint": "^10.9.0",
     "eslint-config-prettier": "^10.1.8",
     "htmlhint": "^1.9.2",
+    "jsdom": "^30.1.1",
     "markdown-link-check": "^3.15.0",
     "markdownlint-cli": "^0.49.1",
     "pa11y": "^9.1.1",
-    "prettier": "^3.9.6"
+    "prettier": "^3.9.6",
+    "vitest": "^5.0.3"
   }
 }

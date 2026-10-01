@@ -1,11 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const closeBtn = document.querySelector(".lightbox-close");
-  const lightboxLink = document.getElementById("lightbox-link");
-  const lightboxNextBtn = document.getElementById("lightbox-next-btn");
-  const lightboxToggleGroup = document.getElementById("lightbox-toggle-group");
-  const lightboxPrevBtn = document.getElementById("lightbox-prev-btn");
+function initLightbox(win, doc) {
+  const lightbox = doc.getElementById("lightbox");
+  const lightboxImg = doc.getElementById("lightbox-img");
+  const closeBtn = doc.querySelector(".lightbox-close");
+  const lightboxLink = doc.getElementById("lightbox-link");
+  const lightboxNextBtn = doc.getElementById("lightbox-next-btn");
+  const lightboxToggleGroup = doc.getElementById("lightbox-toggle-group");
+  const lightboxPrevBtn = doc.getElementById("lightbox-prev-btn");
 
   let currentGalleryBtnNext = null;
   let currentGalleryBtnPrev = null;
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         lightbox.classList.add("active");
-        document.body.style.overflow = "hidden"; // Prevent background scrolling while open
+        doc.body.style.overflow = "hidden"; // Prevent background scrolling while open
       });
     });
 
@@ -63,12 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.click(); // Trigger the gallery's native toggle function
       // Update lightbox image source based on the newly active image
       const h2 = btn.closest("h2, h3");
-      const galleryFrame = h2 ? h2.nextElementSibling : null;
+      const galleryFrame = h2.nextElementSibling;
       if (galleryFrame && galleryFrame.classList.contains("gallery-frame")) {
         const activeImg = galleryFrame.querySelector(".gallery-img.active");
         if (activeImg) {
           // Get the current object-fit before we make changes
-          const currentFit = window.getComputedStyle(lightboxImg).objectFit;
+          const currentFit = win.getComputedStyle(lightboxImg).objectFit;
 
           // Create a temporary clone for the crossfade effect
           const clone = lightboxImg.cloneNode();
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // 4. Close lightbox when pressing the "Escape" key
-  document.addEventListener("keydown", (e) => {
+  doc.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeLightbox();
     }
@@ -136,6 +136,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function closeLightbox() {
     lightbox.classList.remove("active");
-    document.body.style.overflow = "auto"; // Restore scrolling
+    doc.body.style.overflow = "auto"; // Restore scrolling
   }
-});
+}
+
+/* v8 ignore next 7 */
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { initLightbox };
+} else {
+  document.addEventListener("DOMContentLoaded", function () {
+    initLightbox(window, document);
+  });
+}
