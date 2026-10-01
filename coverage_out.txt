@@ -1,0 +1,24 @@
+
+ RUN  v5.0.3 /home/chuubi/Desktop/official-daily-banana
+      Coverage enabled with v8
+
+ ✓ tests/lazyimage.test.js (5 tests) 34ms
+ ✓ tests/tag-router.test.js (10 tests) 122ms
+ ✓ tests/lightbox.test.js (15 tests) 141ms
+ ✓ tests/collapse.test.js (7 tests) 373ms
+
+ Test Files  4 passed (4)
+      Tests  37 passed (37)
+   Start at  20:02:49
+   Duration  1.46s (environment 51%, transform 29%, tests 16%, worker 2%, import 2%)
+
+ % Coverage report from v8
+---------------|---------|----------|---------|---------|-----------------------
+File           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s     
+---------------|---------|----------|---------|---------|-----------------------
+All files      |   95.21 |    85.45 |   93.44 |    96.5 |                       
+ collapse.js   |   89.94 |    71.76 |    82.6 |   92.54 | ...86,191-192,198,204 
+ lazyimage.js  |     100 |      100 |     100 |     100 |                       
+ lightbox.js   |     100 |      100 |     100 |     100 |                       
+ tag-router.js |     100 |      100 |     100 |     100 |                       
+---------------|---------|----------|---------|---------|-----------------------

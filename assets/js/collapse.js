@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".collapsible-code").forEach((container) => {
+function initCollapse(win, doc) {
+  doc.querySelectorAll(".collapsible-code").forEach((container) => {
     const button = container.querySelector("button");
     const pre = container.querySelector("pre");
     const article = container.closest('article');
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (scenes.length > 1) {
-          const tabBar = document.createElement('div');
+          const tabBar = doc.createElement('div');
           tabBar.className = 'prompt-tab-bar';
           tabBar.style.cssText = 'display: flex; gap: 5px; margin-bottom: 10px; flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px;';
           
@@ -75,12 +75,12 @@ document.addEventListener("DOMContentLoaded", () => {
           const contents = [];
           
           scenes.forEach((scene, index) => {
-              const tab = document.createElement('button');
+              const tab = doc.createElement('button');
               tab.className = 'prompt-tab-btn';
               tab.textContent = scene.header.textContent.replace(/(:|\().*/, '').trim();
               tab.style.cssText = 'background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px;';
               
-              const contentDiv = document.createElement('div');
+              const contentDiv = doc.createElement('div');
               contentDiv.className = 'sub-prompt';
               contentDiv.dataset.index = index;
               contentDiv.style.display = index === 0 ? 'block' : 'none';
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
              child.remove(); 
           }
           
-          const negContainer = document.createElement("div");
+          const negContainer = doc.createElement("div");
           negContainer.className = "negative-prompt-container";
           negContainer.innerHTML = `<strong style="color: #ff4a4a;">Negative prompt:</strong>\n${negativeText}`;
           
@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         formattedText = chunks.join("\n\n");
       } else {
-        formattedText = clone.textContent.trim();
+        console.log("hasMultiStep is: ", hasMultiStep); formattedText = clone.textContent.trim();
       }
       
       // Cut off Appendix
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return formattedText;
     };
 
-    const copyBtn = document.createElement("span");
+    const copyBtn = doc.createElement("span");
     copyBtn.textContent = "✂️";
     copyBtn.title = "Copy to clipboard";
     copyBtn.style.cssText =
@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
     copyBtn.onmouseover = () => (copyBtn.style.background = "rgba(0,0,0,0.6)");
     copyBtn.onmouseout = () => (copyBtn.style.background = "rgba(0,0,0,0.3)");
     
-    const tokenLabel = document.createElement("div");
+    const tokenLabel = doc.createElement("div");
     tokenLabel.className = "token-estimator";
     tokenLabel.textContent = "";
     tokenLabel.style.cssText = "position: absolute; top: 35px; right: 5px; width: 24px; text-align: center; font-size: 10px; color: rgba(255,255,255,0.8); pointer-events: none; font-family: inherit; z-index: 10;";
@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     copyBtn.onclick = (e) => {
       e.stopPropagation();
-      navigator.clipboard.writeText(extractCleanText());
+      win.navigator.clipboard.writeText(extractCleanText());
       copyBtn.textContent = "✓";
       setTimeout(() => (copyBtn.innerHTML = "✂️"), 1500);
     };
@@ -235,4 +235,13 @@ document.addEventListener("DOMContentLoaded", () => {
       button.classList.toggle("expanded", !isOpen);
     });
   });
-});
+}
+
+/* v8 ignore next 7 */
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { initCollapse };
+} else {
+  document.addEventListener("DOMContentLoaded", function () {
+    initCollapse(window, document);
+  });
+}
