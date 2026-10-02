@@ -2,6 +2,28 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="design,middle-earth,realistic,ethereal">
+<h2 id="oct-01-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-01-26">Oct 01 // Dual-tone Lighting</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="design">design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="ethereal">ethereal</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="dualtone_v1" data-src="generated-artwork/Calenardhon/v1-nano-banana-2-lite-_MEDIUM__High_end_st.png" alt="Dual-tone Lighting 1" class="dualtone-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Dual-tone Lighting</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('oct-01-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>The Golden Age of Gondor</strong></p><p><strong>[NEGATIVE]</strong> CGI, 3d render, cartoon, painting, illustration, fantasy magic, ruined, harsh sunlight, clear sky, muddy water, swamp, s-curve, military, fortress, overly sharp, harsh contrast, cluster of windmills, multiple windmills on same bank, town, village, flat horizon, low mountains <strong>[MEDIUM]</strong> High-end studio-quality landscape photography with a deeply ethereal, dreamy cinematic quality. Shot on medium format Fujifilm Velvia 50 film. The image utilizes a long exposure and a 1/4 Black Pro-Mist lens filter to create a soft, glowing, blooming effect on all the light sources and the sunrise. The landscape is processed with a subtle Orton Effect, giving the entire scene a magical, smooth, and breathtakingly tranquil ethereal atmosphere while retaining rich, vivid earth tones. A masterclass in landscape composition, utilizing a drone/crane elevated perspective and deep depth of field. <strong>[SETTING]</strong> A vast, sweeping, unbelievably fertile green river valley frontier (the historical Eastfold of Calenardhon). The layout is an elevated, high-angle shot looking down along a massive, deep, mile-wide crystal-clear major river (the mighty River Entwash). The massive river follows a single, sweeping, gentle curve through the landscape before naturally splitting into a breathtaking, massive river delta (the Mouths of the Entwash) deep in the distance. This delta is depicted as many distinct, heavily branching river channels spreading wide across the flat plains like a massive root system. The land between these distant delta branches is heavily overgrown with lush, green weeping willow trees and thick foliage. This distant delta is dramatically framed by three prominent mountain ranges: to the right, the massive, snow-capped peaks of the White Mountains; to the left, the jagged, rocky highlands of the Emyn Muil; and silhouetted in the extreme farthest distance beyond the Emyn Muil on the left horizon, the impossibly tall, dark, foreboding mountains of Mordor (the Ephel Dúath) rising massively high into the sky, forming a jagged, menacing black silhouette. The shores in the foreground and midground are lined with sprawling, highly cultivated agricultural croftlands. The crops are a vibrant autumn mix: fenced-in lush emerald grazing pastures, vast fields of golden-yellow mature wheat, dark purple cabbage patches, and sprawling fruit orchards turning deep crimson red and burnt russet. In the sharp foreground, built solidly on the near riverbank, stands exactly one single humble, rustic Gondorian farmer's windmill and its adjacent stone granary. Spanning the massive width of the river is a heavy, thick rope serving as a guide for a large, rustic wooden ferry-barge currently crossing the glass-still water. On the far opposite riverbank, connected by the ferry crossing, exactly one more single rustic windmill and its own sprawling croftland mirrors the foreground structure. All structures are built using weathered local fieldstone masonry and sturdy, dark timber. <strong>[EVENT MODIFIERS]</strong> The lighting and mood of the entire scene captures a breathtaking, dual-tone ethereal sunrise. The ambient, low-level ground-fog and the vast sky are bathed in soft, dreamy pastel hues of deep magenta, lavender, and pink. Piercing directly through this pastel fog is a brilliant, blazing golden-hour sun on the horizon. The intense, warm golden-orange sunlight acts as a massive rim-light, hitting the single windmills on each bank, the towering mountains, and the vividly colored crops, perfectly contrasting against the cool, hazy pastel pink fog. The towering, jagged black silhouette of Mordor stands out sharply against the bright pastel sky. The low-level fog realistically and softly obscures the distant delta, while allowing the towering mountain ranges to remain clear. The glass-still river perfectly mirrors this magical blend of warm gold and soft purple. Down in the misty, fenced-in emerald pastures, the dark silhouettes of domestic Gondorian farm horses and grazing cattle can be seen peacefully grazing in the fog.</p></code></pre></div>
+  <div id="discuss-oct-01-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="literature,fantasy,realistic,multi-step">
 <h2 id="sep-30-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#sep-30-26">Sep 30 // Scenes from Literature VI</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchScenesFromLiteratureVI(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchScenesFromLiteratureVI(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="literature">literature</span>
@@ -2053,6 +2075,19 @@ let lionIndex = 0; // '.lion-img'
       scenesFromLiteratureVIIndex = switchGallery(scenesFromLiteratureVIIndex, '.scenesfromliteraturevi-img', dir);
     }
 
+
+function switchDualToneLighting(direction) {
+  const images = document.querySelectorAll('.dualtone-img');
+  if (!images.length) return;
+  let activeIndex = -1;
+  images.forEach((img, index) => {
+    if (img.classList.contains('active')) activeIndex = index;
+    img.classList.remove('active');
+  });
+  if (activeIndex === -1) activeIndex = 0;
+  activeIndex = (activeIndex + direction + images.length) % images.length;
+  images[activeIndex].classList.add('active');
+}
 </script>
 
 <div id="giscus-master-container" style="position: absolute; top: -9999px; left: 0; z-index: 10; width: 100%;"></div>
@@ -2225,6 +2260,19 @@ let serverTime = 0;
 // Poll immediately on load, then every 5 minutes
 pollCommentCounts();
 setInterval(pollCommentCounts, 300000);
+
+function switchDualToneLighting(direction) {
+const images = document.querySelectorAll('.dualtone-img');
+if (!images.length) return;
+let activeIndex = -1;
+images.forEach((img, index) => {
+if (img.classList.contains('active')) activeIndex = index;
+img.classList.remove('active');
+});
+if (activeIndex === -1) activeIndex = 0;
+activeIndex = (activeIndex + direction + images.length) % images.length;
+images[activeIndex].classList.add('active');
+}
 </script>
 
 {% include nav-footer.html %}
