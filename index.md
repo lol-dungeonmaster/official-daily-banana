@@ -2,6 +2,33 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="animals,prehistoric,reptiles,realistic,cinematic,ethereal,journalistic">
+<h2 id="oct-02-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-02-26">Oct 02 // Reptiles: Pteranodon</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchReptilesPteranodon(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchReptilesPteranodon(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="animals">animals</span>
+  <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
+  <span class="tag tag-style" data-tag="reptiles">reptiles</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="cinematic">cinematic</span>
+  <span class="tag tag-style" data-tag="ethereal">ethereal</span>
+  <span class="tag tag-style" data-tag="journalistic">journalistic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="pteranodon_v1" data-src="generated-artwork/Pteranodon/v1-nano-banana-pro-_MEDIUM__Cinematic_n.png" alt="Reptiles: Pteranodon 1" class="pteranodon-img lazy-img gallery-img active" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+  <img id="pteranodon_v2" data-src="generated-artwork/Pteranodon/v2-nano-banana-2-lite-_MEDIUM__Ethereal_fi.png" alt="Reptiles: Pteranodon 2" class="pteranodon-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="pteranodon_v3" data-src="generated-artwork/Pteranodon/v3-nano-banana-2-lite-_MEDIUM__Raw__journa.png" alt="Reptiles: Pteranodon 3" class="pteranodon-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Reptiles: Pteranodon</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('oct-02-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Scene 1 (The Plunge Dive)</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human elements, modern artifacts, text, watermarks, combat, gore, feathers on wings <strong>[MEDIUM]</strong> Cinematic nature documentary still. Shot on an anamorphic 35mm lens, shallow depth of field, dramatic and highly realistic movie-still quality. <strong>[SETTING]</strong> The rough, rolling waves of the Late Cretaceous Western Interior Seaway. The sky is dark and stormy, with dramatic shafts of sunlight piercing through heavy clouds. In the extreme, out-of-focus background, the distant asymmetrical tail fluke of a Mosasaur breaches the surface. Lighting: Dramatic, high-contrast cinematic lighting with deep shadows and intense highlights on the crashing water. <strong>[ANIMALS BASE]</strong> Pteranodon. CRITICAL ANATOMY: Large flying reptile. Prominent, long backward-pointing cranial crest. Completely toothless, pointed beak. Massive leathery wings supported by a single hyper-elongated finger. Body covered in fine fuzz (pycnofibers), NO feathers. <strong>[EVENT MODIFIERS]</strong> Caught in mid-air just inches above the water, performing a high-speed plunge dive. Its massive leathery wings are folded tightly against its body for aerodynamics, its toothless beak wide open as it expertly snatches a silver, needle-toothed prehistoric fish (Enchodus) directly from the crest of a wave, kicking up a cinematic explosion of crisp water droplets.</p><p><strong>Scene 2 (The Cliffside Sunbathers)</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human elements, modern artifacts, text, watermarks, combat, gore, feathers on wings, clustered together, tightly packed, overlapping <strong>[MEDIUM]</strong> Ethereal fine-art wildlife photography. Shot with a prime lens wide open for soft bokeh, yielding a dreamy, misty background palette of soft oceanic blues. Highly realistic textures. <strong>[SETTING]</strong> A towering, mist-shrouded coastal sea-stack overlooking the prehistoric ocean, acting as a massive coastal rookery. The rocky cliff is dotted with tough coastal conifers (Araucaria). Lighting: Ethereal early morning golden hour. A brilliant, low-angled morning sun pierces the coastal fog, casting intense, warm golden rays directly onto the cliff edge. <strong>[ANIMALS BASE]</strong> Pteranodon. CRITICAL ANATOMY: Large flying reptile. Prominent, long backward-pointing cranial crest. Completely toothless, pointed beak. Massive leathery wings supported by a single hyper-elongated finger. Body covered in fine fuzz (pycnofibers), NO feathers. <strong>[EVENT MODIFIERS]</strong> A massive Pteranodon stands firmly in the sharp foreground on the very edge of the rocky cliff, spreading its massive leathery wings fully open to thermoregulate and soak up the intense morning sun. The direct sunlight hits the creature from behind, causing its translucent leathery wing membranes to blaze with a warm, glowing amber backlight. Dispersed realistically on various lower rocks and adjacent cliff ledges in the background are several other Pteranodons, creating a sense of depth and a living colony. Resting peacefully on the rocks directly beside the main pterosaur's feet are several tiny, pigeon-sized primitive seabirds (Ichthyornis).</p><p><strong>Scene 3 (The Beach Scavenger)</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human elements, modern artifacts, text, watermarks, combat, gore, feathers on wings <strong>[MEDIUM]</strong> Raw, journalistic wildlife photography. Shot handheld with a fast 400mm telephoto lens, featuring authentic film grain and a slightly gritty, unpolished documentary feel. <strong>[SETTING]</strong> A rugged, sandy shoreline littered with washed-up tangles of prehistoric kelp, driftwood, and broken shells. In the shallow surf behind the subject, a massive, flightless diving bird (Hesperornis) waddles awkwardly ashore. Lighting: Harsh, unforgiving midday sun casting stark, realistic shadows and highlighting the wet sand and gritty textures of the beach. <strong>[ANIMALS BASE]</strong> Pteranodon. CRITICAL ANATOMY: Large flying reptile. Prominent, long backward-pointing cranial crest. Completely toothless, pointed beak. Massive leathery wings supported by a single hyper-elongated finger. Body covered in fine fuzz (pycnofibers), NO feathers. <strong>[EVENT MODIFIERS]</strong> Caught in a candid, unposed moment of foraging. It is walking awkwardly but powerfully on all fours across the wet sand, using its massive folded wings as front legs. It has its head lowered, using its long toothless beak to delicately pick at a stranded, spiral-shelled ammonite washed up in the seaweed.</p></code></pre></div>
+  <div id="discuss-oct-02-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="design,middle-earth,realistic,ethereal">
 <h2 id="oct-01-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-01-26">Oct 01 // Dual-tone Lighting</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="design">design</span>
@@ -2088,6 +2115,7 @@ function switchDualToneLighting(direction) {
   activeIndex = (activeIndex + direction + images.length) % images.length;
   images[activeIndex].classList.add('active');
 }
+
 </script>
 
 <div id="giscus-master-container" style="position: absolute; top: -9999px; left: 0; z-index: 10; width: 100%;"></div>
@@ -2263,6 +2291,19 @@ setInterval(pollCommentCounts, 300000);
 
 function switchDualToneLighting(direction) {
 const images = document.querySelectorAll('.dualtone-img');
+if (!images.length) return;
+let activeIndex = -1;
+images.forEach((img, index) => {
+if (img.classList.contains('active')) activeIndex = index;
+img.classList.remove('active');
+});
+if (activeIndex === -1) activeIndex = 0;
+activeIndex = (activeIndex + direction + images.length) % images.length;
+images[activeIndex].classList.add('active');
+}
+
+function switchReptilesPteranodon(direction) {
+const images = document.querySelectorAll('.pteranodon-img');
 if (!images.length) return;
 let activeIndex = -1;
 images.forEach((img, index) => {

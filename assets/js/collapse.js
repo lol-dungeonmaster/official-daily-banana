@@ -145,6 +145,19 @@ function initCollapse(win, doc) {
           basePrompt.forEach((p) => p.remove());
         }
 
+        // --- NEW: Clean up orphaned whitespace TextNodes ---
+        const codeEl = pre.querySelector("code");
+        if (codeEl) {
+          Array.from(codeEl.childNodes).forEach((node) => {
+            if (
+              node.nodeType === Node.TEXT_NODE &&
+              node.textContent.trim() === ""
+            ) {
+              node.remove();
+            }
+          });
+        }
+
         codeBlock.dataset.activeTab = 0;
         tabs[0].onclick();
         codeBlock.insertBefore(tabBar, codeBlock.firstChild);
