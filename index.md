@@ -2103,19 +2103,14 @@ let lionIndex = 0; // '.lion-img'
     }
 
 
-function switchDualToneLighting(direction) {
-  const images = document.querySelectorAll('.dualtone-img');
-  if (!images.length) return;
-  let activeIndex = -1;
-  images.forEach((img, index) => {
-    if (img.classList.contains('active')) activeIndex = index;
-    img.classList.remove('active');
-  });
-  if (activeIndex === -1) activeIndex = 0;
-  activeIndex = (activeIndex + direction + images.length) % images.length;
-  images[activeIndex].classList.add('active');
-}
-
+let dualToneLightingIndex = 0;
+    function switchDualToneLighting(dir = 1) {
+      dualToneLightingIndex = switchGallery(dualToneLightingIndex, '.dualtone-img', dir);
+    }
+let reptilesPteranodonIndex = 0;
+    function switchReptilesPteranodon(dir = 1) {
+      reptilesPteranodonIndex = switchGallery(reptilesPteranodonIndex, '.pteranodon-img', dir);
+    }
 </script>
 
 <div id="giscus-master-container" style="position: absolute; top: -9999px; left: 0; z-index: 10; width: 100%;"></div>
@@ -2289,31 +2284,7 @@ let serverTime = 0;
 pollCommentCounts();
 setInterval(pollCommentCounts, 300000);
 
-function switchDualToneLighting(direction) {
-const images = document.querySelectorAll('.dualtone-img');
-if (!images.length) return;
-let activeIndex = -1;
-images.forEach((img, index) => {
-if (img.classList.contains('active')) activeIndex = index;
-img.classList.remove('active');
-});
-if (activeIndex === -1) activeIndex = 0;
-activeIndex = (activeIndex + direction + images.length) % images.length;
-images[activeIndex].classList.add('active');
-}
 
-function switchReptilesPteranodon(direction) {
-const images = document.querySelectorAll('.pteranodon-img');
-if (!images.length) return;
-let activeIndex = -1;
-images.forEach((img, index) => {
-if (img.classList.contains('active')) activeIndex = index;
-img.classList.remove('active');
-});
-if (activeIndex === -1) activeIndex = 0;
-activeIndex = (activeIndex + direction + images.length) % images.length;
-images[activeIndex].classList.add('active');
-}
 </script>
 
 {% include nav-footer.html %}
