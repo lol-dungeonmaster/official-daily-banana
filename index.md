@@ -2,6 +2,29 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="character-design, middle-earth, realistic, lotro, concept-art">
+<h2 id="oct-03-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-03-26">Oct 03 // Remasters</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="character-design">character-design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="lotro">lotro</span>
+  <span class="tag tag-style" data-tag="concept-art">concept-art</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="remasters_v1" data-src="generated-artwork/Remasters/v3-nano-banana-2-lite-_MEDIUM__A_hyper_rea.png" alt="Remasters 1" class="lazy-img gallery-img active" style="aspect-ratio: 1265 / 832; max-width: 1265px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Remasters</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('oct-03-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Step 1: The Character Remaster</strong></p><p><strong>[NEGATIVE]</strong> low poly, ps2 graphics, bad textures, old game engine, cartoon, stylized, messy anatomy <strong>[MEDIUM]</strong> A hyper-realistic, modern Unreal Engine 5 character showcase render. Studio lighting. <strong>[CHARACTERS BASE]</strong> A Spotted Shrew of Middle-earth. A large, rabbit-sized creature with rodent-like features. CRITICAL ANATOMY: It features a very long, pointed, highly elongated snout, large, expressive, rounded ears that stand upright, and a long, thin, bare tail. Its body is covered in coarse, reddish-brown and tan fur, heavily marked with distinct dark spots scattered across its back and flanks. It has thin, delicate limbs with small, pinkish paws. <strong>[EVENT MODIFIERS]</strong> Standing naturally on all fours, showcasing its highly detailed, photorealistic fur, glistening eyes, and modern high-fidelity PBR textures. Complete photorealistic remaster of a classic creature.</p><p><strong>Step 2: The Scene Injection</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human, man, person, anthropomorphic, clothes, weapons, bright daylight, cheerful, clean <strong>[MEDIUM]</strong> A hyper-realistic, dark-fantasy cinematic still. Shot on a 35mm anamorphic lens at T/2.8, providing crystalline sharp focus on the central subject in the foreground with a smooth, atmospheric background blur. Masterpiece artwork rendered in Unreal Engine 5 and Octane Render, utilizing ray tracing and physically based rendering (PBR). HDR cinematic color grading balances cool, misty morning blues with the soft, warming yellow light of dawn and the harsh, flickering orange of burning embers. Extreme micro-level detailing captures the coarse texture of splintered wood, glowing ash, and the individual strands of spotted fur. <strong>[SETTING]</strong> The claustrophobic interior of a sprawling, rustic timber lodge in the Vales of Anduin, devastated and in total ruin. The time is early morning, just before the golden hour. The ambient lighting transitions from a cool, misty blue to a soft, warming yellow. The massive, unhewn log support beams have partially collapsed inward, deeply charred and violently shattered from a catastrophic storm. The air is thick with volumetric smoke and a chaotic flurry of glowing, fiery orange embers drifting through the destroyed gathering hall. <strong>[CHARACTERS BASE]</strong> Character MB: A Spotted Shrew of Middle-earth. A large, rabbit-sized creature with rodent-like features. CRITICAL ANATOMY: It features a very long, pointed, highly elongated snout, large, expressive, rounded ears that stand upright, and a long, thin, bare tail. Its body is covered in coarse, reddish-brown and tan fur, heavily marked with distinct dark spots scattered across its back and flanks. It has thin, delicate limbs with small, pinkish paws. <strong>[EVENT MODIFIERS]</strong> The scene takes place deep inside the ruined lodge. Character MB is hiding inside the dark, confined space of a splintered, overturned wooden cupboard. The spotted shrew is hunched deep in the corner of the overturned furniture, bathed in the cool morning light mixed with the dramatic, flickering orange rim-light of the drifting embers outside. It has its head bowed, staring directly down into its tiny, upheld forelimbs which are held palm up, its posture radiating a profound sense of despair and resignation, as if accepting exactly how powerless it is to stop the inevitable.</p></code></pre></div>
+  <div id="discuss-oct-03-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="animals,prehistoric,reptiles,realistic,cinematic,ethereal,journalistic">
 <h2 id="oct-02-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-02-26">Oct 02 // Reptiles: Pteranodon</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchReptilesPteranodon(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchReptilesPteranodon(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -2283,7 +2306,6 @@ let serverTime = 0;
 // Poll immediately on load, then every 5 minutes
 pollCommentCounts();
 setInterval(pollCommentCounts, 300000);
-
 
 </script>
 
