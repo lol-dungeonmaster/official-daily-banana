@@ -2,6 +2,32 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="animals, prehistoric, dinosaurs, realistic, journalistic">
+<h2 id="oct-04-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-04-26">Oct 04 // Dinosaurs: Dilophosaurus</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchDinosaursDilophosaurus(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchDinosaursDilophosaurus(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="animals">animals</span>
+  <span class="tag tag-setting" data-tag="prehistoric">prehistoric</span>
+  <span class="tag tag-style" data-tag="dinosaurs">dinosaurs</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="journalistic">journalistic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="dilophosaurus_v1" data-src="generated-artwork/Dilophosaurus/v1-nano-banana-pro-_MEDIUM__Raw__journa.png" alt="Dinosaurs: Dilophosaurus 1" class="dilophosaurus-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="dilophosaurus_v2" data-src="generated-artwork/Dilophosaurus/v2-nano-banana-pro-_MEDIUM__Raw__journa.png" alt="Dinosaurs: Dilophosaurus 2" class="dilophosaurus-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="dilophosaurus_v3" data-src="generated-artwork/Dilophosaurus/v3-nano-banana-2-_MEDIUM__Raw__journa.png" alt="Dinosaurs: Dilophosaurus 3" class="dilophosaurus-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="dilophosaurus_v4" data-src="generated-artwork/Dilophosaurus/v4-nano-banana-2-lite-_MEDIUM__Raw__journa.png" alt="Dinosaurs: Dilophosaurus 4" class="dilophosaurus-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Dinosaurs: Dilophosaurus</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('oct-04-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, messy anatomy, inaccurate anatomy, human elements, modern artifacts, neck frill, spitting venom, tiny size, soft lighting, posed, artificial <strong>[MEDIUM]</strong> Raw, journalistic wildlife photography. Shot handheld with a fast 200mm telephoto lens, featuring authentic film grain and a slightly gritty, unpolished documentary feel. Fast shutter speed freezing chaotic mid-air motion perfectly. <strong>[SETTING]</strong> A harsh, sun-baked Early Jurassic scrubland. The terrain is dry and dusty, dotted with spiky, tough cycads and scattered, fallen Araucaria branches. The harsh midday sun casts sharp, deep shadows across the uneven ground, highlighting the dry, dusty textures of the environment. <strong>[ANIMALS BASE]</strong> Dilophosaurus. CRITICAL ANATOMY: Medium-sized theropod (20 feet long). Distinct dual, semi-circular plate-like crests running parallel along the top of its snout. No neck frill. Powerful jaws with a distinct kink in the upper jaw. <strong>[EVENT MODIFIERS]</strong> The Dilophosaurus is captured mid-stride in a high-speed sprint, kicking up a chaotic cloud of dust and debris behind its massive, clawed feet. Its head is held high, its dual crests fully displayed as it charges directly across the frame. Just ahead of its snapping, kinked jaws, a panicked herd of primitive herbivorous dinosaurs (Sarahsaurus) is scattering and sprinting frantically for their lives in all directions. The predator's gaze is hyper-focused on one unfortunate straggler right in front of it. The raw, handheld camera angle gives the viewer an intense, grounding sense of speed, scale, and raw predatory power.</p></code></pre></div>
+  <div id="discuss-oct-04-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="character-design, middle-earth, realistic, lotro, concept-art">
 <h2 id="oct-03-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-03-26">Oct 03 // Remasters</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="character-design">character-design</span>
@@ -2134,6 +2160,12 @@ let reptilesPteranodonIndex = 0;
     function switchReptilesPteranodon(dir = 1) {
       reptilesPteranodonIndex = switchGallery(reptilesPteranodonIndex, '.pteranodon-img', dir);
     }
+
+    let dinosaursDilophosaurusIndex = 0;
+    function switchDinosaursDilophosaurus(dir = 1) {
+      dinosaursDilophosaurusIndex = switchGallery(dinosaursDilophosaurusIndex, '.dilophosaurus-img', dir);
+    }
+
 </script>
 
 <div id="giscus-master-container" style="position: absolute; top: -9999px; left: 0; z-index: 10; width: 100%;"></div>
