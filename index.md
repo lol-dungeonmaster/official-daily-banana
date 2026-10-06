@@ -2,6 +2,32 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="literature, sci-fi, cinematic, realistic, gothic, b-film">
+<h2 id="oct-05-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-05-26">Oct 05 // Stage Plays</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchStagePlays(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchStagePlays(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="literature">literature</span>
+  <span class="tag tag-setting" data-tag="sci-fi">sci-fi</span>
+  <span class="tag tag-style" data-tag="cinematic">cinematic</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="gothic">gothic</span>
+  <span class="tag tag-style" data-tag="b-film">b-film</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="stageplays_v1" data-src="generated-artwork/stage_plays/v1-nano-banana-2-lite-_MEDIUM__A_hyper_rea.png" alt="Stage Plays 1" class="stageplays-img lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="stageplays_v2" data-src="generated-artwork/stage_plays/v2-nano-banana-2-_MEDIUM__A_hyper_rea.png" alt="Stage Plays 2" class="stageplays-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="stageplays_v3" data-src="generated-artwork/stage_plays/v3-nano-banana-pro-_MEDIUM__A_hyper_rea.png" alt="Stage Plays 3" class="stageplays-img lazy-img gallery-img" style="aspect-ratio: 1584 / 672; max-width: 1584px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Stage Plays</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('oct-05-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>Over at the Frankenstein Place</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, modern elements, daytime, bright, cheerful, colorful, cozy, crowded, bustling city <strong>[MEDIUM]</strong> A hyper-realistic, moody cinematic still. Shot on 35mm film with a wide anamorphic lens to capture immense scale. Deep, high-contrast shadows with a gritty, classic horror film grain. <strong>[SETTING]</strong> A pitch-black, torrential rainstorm in the dead of night. The framing is heavily obscured by towering, dead, twisting oak trees in the foreground. In the distance, looming menacingly through the heavy, driving rain and thick ground mist, is a massive, decaying gothic stone castle. The architecture is imposing and archaic. A single, eerie, warm amber light glows ominously from a high tower window, providing the only source of warmth in the freezing, slate-blue darkness. A sudden fork of brilliant white lightning illuminates the sky, casting sharp, dramatic silhouettes of the castle spires. <strong>[CHARACTERS BASE]</strong> In the extreme, muddy foreground, two tiny, silhouetted human figures huddle together closely. The dark shapes of a conservative mid-length dress hem and a standard suit jacket flap violently in the wind behind them. They are holding a soaked daily newspaper over their heads as a makeshift umbrella to block the freezing rain. <strong>[EVENT MODIFIERS]</strong> The tiny figures are looking up in awe and terror at the looming gothic structure in the distance. The torrential rain bounces off the newspaper and the muddy ground. The atmosphere captures a deeply isolating, spooky, and quintessential 1930s haunted house aesthetic.</p></code></pre></div>
+  <div id="discuss-oct-05-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="animals, prehistoric, dinosaurs, realistic, journalistic">
 <h2 id="oct-04-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-04-26">Oct 04 // Dinosaurs: Dilophosaurus</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchDinosaursDilophosaurus(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchDinosaursDilophosaurus(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
@@ -2164,6 +2190,12 @@ let reptilesPteranodonIndex = 0;
     let dinosaursDilophosaurusIndex = 0;
     function switchDinosaursDilophosaurus(dir = 1) {
       dinosaursDilophosaurusIndex = switchGallery(dinosaursDilophosaurusIndex, '.dilophosaurus-img', dir);
+    }
+
+
+    let stagePlaysIndex = 0;
+    function switchStagePlays(dir = 1) {
+      stagePlaysIndex = switchGallery(stagePlaysIndex, '.stageplays-img', dir);
     }
 
 </script>
