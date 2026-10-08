@@ -2,6 +2,29 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="pop-culture, southern-gothic, cinematic, noir, macabre">
+<h2 id="oct-07-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-07-26">Oct 07 // Popular Culture</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="pop-culture">pop-culture</span>
+  <span class="tag tag-setting" data-tag="southern-gothic">southern-gothic</span>
+  <span class="tag tag-style" data-tag="cinematic">cinematic</span>
+  <span class="tag tag-style" data-tag="noir">noir</span>
+  <span class="tag tag-style" data-tag="macabre">macabre</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="pop_culture_v1" data-src="generated-artwork/pop_culture/v2-nano-banana-2-lite-_MEDIUM__A_hyper_rea.png" alt="Popular Culture 1" class="lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Popular Culture</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('oct-07-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>The Twilight Zone, "The Masks"</strong></p><p><strong>[NEGATIVE]</strong> color, daylight, cheerful, modern, futuristic, casual clothes, cartoon, stylized, CGI, soft lighting, happy, bustling, clean, low resolution <strong>[MEDIUM]</strong> A hyper-realistic, moody cinematic still. Shot on vintage 35mm black-and-white film. Extreme high-contrast chiaroscuro lighting, deep harsh shadows, and classic 1960s horror film grain. Masterpiece, highly detailed. <strong>[SETTING]</strong> A lavish, suffocatingly cluttered 1960s Southern Gothic mansion study in New Orleans, overflowing with dusty antiques and hoarded wealth. Dark mahogany wood paneling, heavy floor-to-ceiling velvet drapes, and antique Victorian furniture. A massive, imposing grandfather clock looms in the background. The primary light source is a roaring fireplace in a marble hearth, casting harsh, flickering directional light and long, distorted shadows across the patterned wallpaper. <strong>[CHARACTERS BASE]</strong> CRITICAL INSTRUCTION: Adhere to strict 1960s upper-class formal wear and grotesque papier-mâché masks. A group of four wealthy people stand rigidly in the gloom. An older, thin, gaunt man in a crisp business suit wears a greedy, bulging-eyed miser mask. An older woman in a formal dress and pearls wears a pathetic, weeping coward mask. A young woman in a chic 1960s evening gown wears a horribly twisted, asymmetrical, deformed mask. A heavily-built, broad-shouldered, bulky young man in a 1960s tweed suit jacket and necktie wears a bloated, piggish glutton mask. Nearby, an elderly dying man sits in a wheelchair wearing a silk dressing gown and a skull mask. <strong>[EVENT MODIFIERS]</strong> The masked figures stand in an eerie, dreadful stillness, waiting for the grandfather clock to strike midnight. The harsh, directional lighting from the fireplace dramatically illuminates the horrifying, lumpy textures of their masks while plunging their bodies and the rest of the room into pitch-black shadow, capturing a moment of pure psychological horror.</p></code></pre></div>
+  <div id="discuss-oct-07-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="character-design, middle-earth, realistic, concept-art">
 <h2 id="oct-06-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-06-26">Oct 06 // Remasters II</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="character-design">character-design</span>
