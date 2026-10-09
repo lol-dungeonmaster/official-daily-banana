@@ -2,6 +2,32 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="animals, contemporary, realistic, cinematic, ethereal, journalistic">
+<h2 id="oct-08-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-08-26">Oct 08 // World Octopus Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchWorldOctopusDay(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchWorldOctopusDay(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="animals">animals</span>
+  <span class="tag tag-setting" data-tag="contemporary">contemporary</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="cinematic">cinematic</span>
+  <span class="tag tag-style" data-tag="ethereal">ethereal</span>
+  <span class="tag tag-style" data-tag="journalistic">journalistic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="world_octopus_day_v1" data-src="generated-artwork/octopus_day/v1-nano-banana-2-lite-Cinematic.png" alt="World Octopus Day 1" class="worldoctopusday-img lazy-img gallery-img active" style="aspect-ratio: 768 / 1376; max-width: 768px; width: 100%;">
+  <img id="world_octopus_day_v2" data-src="generated-artwork/octopus_day/v2-nano-banana-2-lite-Ethereal.png" alt="World Octopus Day 2" class="worldoctopusday-img lazy-img gallery-img" style="aspect-ratio: 768 / 1376; max-width: 768px; width: 100%;">
+  <img id="world_octopus_day_v3" data-src="generated-artwork/octopus_day/v3-nano-banana-2-lite-Journalistic.png" alt="World Octopus Day 3" class="worldoctopusday-img lazy-img gallery-img" style="aspect-ratio: 768 / 1376; max-width: 768px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">World Octopus Day</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('oct-08-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>1. Cinematic (Day Octopus)</strong></p><p><strong>[NEGATIVE]</strong> cartoon, 3d render, CGI, stylized, people, divers, murky water, dark, deep ocean, typo, misspelled <strong>[MEDIUM]</strong> Ultra-high-resolution underwater macro-landscape photography poster. Vivid, popping colors, crystal clear visibility, dramatic localized lighting emphasizing the reef's complexity. <strong>[SETTING]</strong> A pristine, shallow coral reef in Raja Ampat. The background is a chaotic, vibrant explosion of life: neon-tipped staghorn corals, massive purple sea fans, and a giant clam with a glowing blue mantle. Clouds of tiny, bright orange Anthias fish dart around the coral heads. <strong>[ANIMALS BASE]</strong> Day Octopus (Octopus cyanea). Highly intelligent, with complex, dynamic skin capable of extreme color shifting. <strong>[EVENT MODIFIERS]</strong> The octopus is draped over the center of the reef, demonstrating mind-bending active camouflage. The left half of its body has turned a vibrant, textured purple to perfectly match the sea fan it is touching, while the right half of its body has shifted to a smooth, bright cyan blue to perfectly blend in with the open water behind it.</p><p><strong>2. Ethereal (Mimic Octopus)</strong></p><p><strong>[NEGATIVE]</strong> cartoon, 3d render, CGI, stylized, people, divers, bright sunny, vibrant coral, overexposed, chaotic, messy, typo, misspelled <strong>[MEDIUM]</strong> Fine-art underwater macro photography poster. Soft, diffused directional lighting. Shallow depth of field creating a creamy, dreamy bokeh in the background. <strong>[SETTING]</strong> Suspended slightly above the black volcanic sand of the Lembeh Strait. Soft, glowing bioluminescence or ambient moonlight filters down, catching tiny, floating particulates in the water like falling snow. <strong>[ANIMALS BASE]</strong> Mimic Octopus (Thaumoctopus mimicus). Slender body with striking dark brown and stark white banding. <strong>[EVENT MODIFIERS]</strong> Drifting weightlessly in the water column, it has splayed all eight tentacles wide open and rigid, mimicking the venomous spines of a lionfish. The soft lighting makes its white bands glow ethereally against the pitch-black water.</p><p><strong>3. Journalistic (Day Octopus)</strong></p><p><strong>[NEGATIVE]</strong> cartoon, 3d render, CGI, stylized, people, divers, dark, murky, overexposed, slow motion, posed, typo, misspelled <strong>[MEDIUM]</strong> Action-oriented documentary wildlife photography poster. Fast shutter speed, wide angle, capturing a dynamic behavioral response. <strong>[SETTING]</strong> A sunlit, bustling coral reef drop-off. The shadow of a passing Blacktip Reef Shark falls across the coral in the upper frame. <strong>[ANIMALS BASE]</strong> Day Octopus (Octopus cyanea). <strong>[EVENT MODIFIERS]</strong> Caught in a split-second defensive reaction to the shark's shadow overhead. The octopus has instantly compressed itself into a tight ball within a crevice, its skin flashing from bright reef colors to a dark, jagged, spiky brown texture that perfectly mimics a dead piece of coral rock, practically vanishing in plain sight.</p></code></pre></div>
+  <div id="discuss-oct-08-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="pop-culture, southern-gothic, cinematic, noir, macabre">
 <h2 id="oct-07-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-07-26">Oct 07 // Popular Culture</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="pop-culture">pop-culture</span>
@@ -2241,6 +2267,12 @@ let reptilesPteranodonIndex = 0;
     let stagePlaysIndex = 0;
     function switchStagePlays(dir = 1) {
       stagePlaysIndex = switchGallery(stagePlaysIndex, '.stageplays-img', dir);
+    }
+
+
+    let worldOctopusDayIndex = 0;
+    function switchWorldOctopusDay(dir = 1) {
+      worldOctopusDayIndex = switchGallery(worldOctopusDayIndex, '.worldoctopusday-img', dir);
     }
 
 </script>
