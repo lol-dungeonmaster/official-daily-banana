@@ -2,6 +2,28 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="design, middle-earth, realistic, concept-art">
+<h2 id="oct-09-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-09-26">Oct 09 // Outpainting II</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="design">design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="concept-art">concept-art</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="outpainting_ii_v1" data-src="generated-artwork/ambaróna/v2-nano-banana-2-___MEDIUM____Etherea.png" alt="Outpainting II 1" class="lazy-img gallery-img active" style="aspect-ratio: 848 / 1264; max-width: 848px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Outpainting II</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('oct-09-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>[NEGATIVE]</strong> cartoon, 3d render, CGI, stylized, people, dark, gloomy, dead, wasteland, chaotic foreground, messy, watermark, text <strong>[MEDIUM]</strong> Ethereal, fine-art landscape photography. High-angle, elevated panoramic view to capture an immense aerial scale and vertical depth. Portrait orientation. Soft, diffused lighting, masterpiece, incredibly detailed. <strong>[SETTING]</strong> The immense, sprawling agricultural paradise of the Entwives in the Second Age. Shot from a towering vantage point, the landscape stacks vertically in vast, sweeping layers receding toward a deep valley. The foreground and midground are blanketed in thick, rolling bands of ethereal morning fog that catch the golden-hour sunlight, casting a warm amber glow. In the far distance, near the top third of the frame, the mist breaks to reveal the wide, rushing waters of the Great River Anduin cutting horizontally across the scene. <strong>[EVENT MODIFIERS]</strong> A beautifully ordered and cultivated world stretching deep into the background. Confined to a prominent hill in the extreme near-left foreground is an ancient, sprawling terraced vineyard complex masterfully built from carved stone, heavily laden with vines. This stone vineyard hill is completely surrounded on all sides by the rest of the immense garden. Ascending vertically through the sweeping midground are expansive agricultural fields, geometric plots of golden wheat, and perfectly aligned rows of blooming fruit orchards tracing the contours of the misty hills. Interspersed between these agricultural zones, and forming a thick, elegant buffer zone lining the near edge of the river, are majestic groves of deciduous trees planted in orderly rows, matching the striking silhouetted style of misty windbreaks. On the far western bank across the river near the top of the image, the agriculture abruptly stops, replaced by a dense, dark, impenetrable wall of towering, wild evergreen pine forest looming in the background mist.</p></code></pre></div>
+  <div id="discuss-oct-09-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="animals, contemporary, realistic, cinematic, ethereal, journalistic">
 <h2 id="oct-08-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-08-26">Oct 08 // World Octopus Day</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchWorldOctopusDay(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchWorldOctopusDay(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="animals">animals</span>
