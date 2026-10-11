@@ -2,6 +2,27 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="literature, fantasy, realistic">
+<h2 id="oct-10-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-10-26">Oct 10 // Scenes from Literature VII</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="literature">literature</span>
+  <span class="tag tag-setting" data-tag="fantasy">fantasy</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="scenes_from_literature_vii_v1" data-src="generated-artwork/the_awakening/v1-nano-banana-pro-_MEDIUM__Dark_fantas.png" alt="Scenes from Literature VII 1" class="lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Scenes from Literature VII</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('oct-10-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>[NEGATIVE]</strong> female, girl, woman, daytime, bright, cheerful, cartoon, modern city, cars, text, watermarks, signature, low quality, pixelated, normal eyes, plain tree, green leaves, flat lighting, floating pumpkins, exaggerated wings, unbelievably dramatic cloak, cartoonish cape, toddlers, adults, older teenagers, moon, moonlight <strong>[MEDIUM]</strong> Dark fantasy cinematic photography. 8k resolution, hyper-realistic, deep depth of field. Shot with a 35mm lens, using foreground framing (shooting past the tree). Rich, moody color grading with high-contrast chiaroscuro lighting, emphasizing deep blacks, vivid pumpkin oranges, and eerie glowing greens. Heavy volumetric fog (mist) rolling over the ground, creating extreme atmospheric depth and a sense of cold, chilling autumn air. The ONLY major source of light in the entire scene is the fiery orange glow from the tree on the left, standing out against a pitch-black sky sprinkled with dim, strange stars. <strong>[SETTING]</strong> A dark, chilling Halloween night in an immense, deep ravine that feels like a dank cellar. The overgrown ravine floor is choked with dead bronze and fiery-colored autumn leaves, giant overgrown mushrooms, toadstools, and creeping spiders. A dark, black-ink creek flows along the right side of the frame. Above, the sky is completely devoid of a moon, illuminated only by the dim, eerie light of strange stars. In the deep background, an immense, towering, multi-story Victorian haunted house looms in the absolute shadows, its silhouette jagged against the starlit night sky, with a dark dirt path leading up to it. <strong>[CHARACTERS BASE]</strong> In the midground stand exactly eight young adolescent boys, around age 12, in 1920s-style homemade Halloween costumes (a skeleton, a mummy, a boy dressed as a haggard witch, a sheet ghost, a devil, a grim reaper with a scythe, a gargoyle, and a beggar). They are facing the camera, staring up in awe at the tree on the left. Standing behind them is Mr. Carapace Clavicle Moundshroud, an incredibly tall, gaunt, skeletal figure wearing a dark suit and a long, heavy dark Victorian cape. The cape catches the cold autumn wind realistically, trailing behind him with a subtle, elegant swoop rather than giant wings. His face has sharp features with deep charred sockets containing small, glowing pinpoints of green fire for eyes. <strong>[EVENT MODIFIERS]</strong> In the extreme nearground on the left side of the frame, dominating the foreground, is the colossal, ancient Halloween Tree. Its barren, skeletal branches reach inward toward the center, heavily laden with glowing, carved Jack-o'-Lanterns. The pumpkins are suspended tightly from the branches with thick rustic twine, dangling heavily. The intense, fiery orange light from the pumpkins on the left is the exclusive lighting for the scene, strongly illuminating the awe-struck faces of the twelve-year-old boys, revealing the bronze autumn leaves and giant toadstools at their feet, reflecting off the black-ink creek on the right, and casting long, dramatic shadows diagonally across the dark ravine ground, contrasting with the chilling green fire of Moundshroud's eyes in the background.</p></code></pre></div>
+  <div id="discuss-oct-10-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="design, middle-earth, realistic, concept-art">
 <h2 id="oct-09-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-09-26">Oct 09 // Outpainting II</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="design">design</span>
