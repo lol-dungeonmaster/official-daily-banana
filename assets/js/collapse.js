@@ -34,7 +34,7 @@ function initCollapse(win, doc) {
         return strong.textContent
           .trim()
           .match(
-            /^(Scene \d+|Variant [A-Z0-9]|\d+\.\s+[A-Za-z0-9]|[A-Za-z0-9\s]+:\s*\[|[A-Za-z0-9\s]+:)/i,
+            /^(Scene \d+|Step \d+|Variant [A-Z0-9]|\d+\.\s+[A-Za-z0-9]|[A-Za-z0-9\s]+:\s*\[|[A-Za-z0-9\s]+:)/i,
           );
       };
 
