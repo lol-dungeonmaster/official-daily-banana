@@ -2,6 +2,27 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="literature, victorian, horror">
+<h2 id="oct-11-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-11-26">Oct 11 // Scenes from Literature #8</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="literature">literature</span>
+  <span class="tag tag-setting" data-tag="victorian">victorian</span>
+  <span class="tag tag-style" data-tag="horror">horror</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="scenes_from_literature_8_v1" data-src="generated-artwork/dorian_gray/v1-nano-banana-pro-_MEDIUM__Dark_Victor.png" alt="Scenes from Literature 8 1" class="lazy-img gallery-img active" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Scenes from Literature #8</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('oct-11-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>[NEGATIVE]</strong> painter's easel, A-frame easel, ambient lighting, fill light, moonlight, window light, cinematic lighting, studio lighting, multiple light sources, bright room, flat lighting, dark hair, black hair, brunette, standing straight, curtain on rod, modern, daytime, cheerful, clean room, pristine furniture, poorly drawn faces, cartoon, stylized, watermark, signature, vibrant colors, sunlight <strong>[MEDIUM]</strong> Dark Victorian gothic cinematic photography. 8k resolution, hyper-realistic, deep depth of field. Shot with a 35mm lens. PITCH BLACK ROOM. The ONLY sources of light in the entire scene are the warm, flickering candlelight and the murky orange glow of the oil lamp. Masterful chiaroscuro lighting, emphasizing extreme, dusty, pitch-black shadows pierced ONLY by the small flames. ABSOLUTELY NO AMBIENT OR FILL LIGHTING. Rich, moody, and atmospheric color grading. <strong>[SETTING]</strong> A neglected, abandoned attic room at the top landing of a Victorian London mansion on a windy, misty night. In the deep background, a cold, mist-stained attic window rattles in the rising wind. The atmosphere is oppressive, dusty, and damp. The wooden floorboards are covered by an old carpet riddled with holes. The room is sparsely furnished with dilapidated antiques: a faded Flemish tapestry hanging on the wall, an old Italian cassone (wooden chest), an almost empty bookcase, a wooden table, and a single rickety chair. A glass oil lamp rests on the table, casting long, fantastic shadows across the peeling walls. <strong>[CHARACTERS BASE]</strong> There are two men in the room. Character 1 (Dorian Gray): An impossibly beautiful, pristine, youthful Victorian gentleman in his twenties with bright golden blonde hair, wearing an elegant, impeccably tailored evening coat. He is physically leaning his weight casually against the fireplace mantelshelf in the dark shadows, holding a plucked flower to his nose. His expression is cold, detached, and observant, like a spectator watching a play, with a subtle flicker of cruel triumph in his eyes. Character 2 (Basil Hallward): A slightly older Victorian gentleman (the painter). He looks physically sick, pale, and terrified, with clammy sweat on his forehead. He is crouching slightly, actively holding a sputtering, half-burned candle close to a large canvas painting to examine it in the dim light. <strong>[EVENT MODIFIERS]</strong> The focal point of the scene is the large framed canvas painting resting prominently on an ornate Victorian mahogany display stand (NOT a painter's easel). Attached directly to the top of the painting's heavy golden frame is a brass curtain rod. A dark velvet curtain has been violently ripped off this rod and lies crumpled in a heap on the dusty floorboards beneath the painting. The painting is illuminated exclusively by the harsh, flickering candlelight held by Basil. The painting depicts Dorian Gray, but the face on the canvas is monstrous and corrupted. The painted face features a wicked, hideous grin, thinning golden blonde hair, sodden blue eyes, and a sensual scarlet mouth. The painted flesh looks as if it is being slowly eaten away by a leprosy of sin, resembling a rotting corpse. The warm candlelight sharply illuminates the horrifying painting and Basil's shocked, horrified face, while the real, flawlessly youthful golden-haired Dorian Gray remains safe in the pitch-black atmospheric shadows of the background, smelling his flower.</p></code></pre></div>
+  <div id="discuss-oct-11-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="literature, fantasy, realistic">
 <h2 id="oct-10-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-10-26">Oct 10 // Scenes from Literature VII</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="literature">literature</span>
