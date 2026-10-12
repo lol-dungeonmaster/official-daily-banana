@@ -2,6 +2,31 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="literature,fantasy,horror,multi-step">
+<h2 id="oct-12-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-12-26">Oct 12 // Scenes from Literature #9</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchQueen(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchQueen(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="literature">literature</span>
+  <span class="tag tag-setting" data-tag="fantasy">fantasy</span>
+  <span class="tag tag-style" data-tag="horror">horror</span>
+  <span class="tag tag-style" data-tag="multi-step">multi-step</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="queen_v1" data-src="generated-artwork/oh_time_thy_pyramids_leblanc/v1-scene3_queen_step_0.jpg" alt="The Queen 1" class="queen-img lazy-img gallery-img active" style="aspect-ratio: 768 / 1376; max-width: 768px; width: 100%;">
+  <img id="queen_v2" data-src="generated-artwork/oh_time_thy_pyramids_leblanc/v2-scene3_queen_step_0.jpg" alt="The Queen 2" class="queen-img lazy-img gallery-img" style="aspect-ratio: 768 / 1376; max-width: 768px; width: 100%;">
+  <img id="queen_v3" data-src="generated-artwork/oh_time_thy_pyramids_leblanc/v3-scene3_queen_step_0.jpg" alt="The Queen 3" class="queen-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+  <img id="queen_v4" data-src="generated-artwork/oh_time_thy_pyramids_leblanc/v3-scene3_queen_step_1.jpg" alt="The Queen 4" class="queen-img lazy-img gallery-img" style="aspect-ratio: 1408 / 768; max-width: 1408px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Scenes from Literature #9</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('oct-12-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>The Futility of the Spear King</strong></p><p><strong>Step 1: The Queen (Base Image)</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, messy anatomy, text, watermark, normal humans, bright sunny day, cheerful, narrator, small figures <strong>[MEDIUM]</strong> Cosmic horror portrait, epic scale, deep shadows, bioluminescence. <strong>[SETTING]</strong> A false vacuum of nuclear fire at the end of the universe, where reality frays inward and matter becomes ductile like molten glass. Deep gravity wells are visible in the cosmic drain. <strong>[CHARACTERS BASE]</strong> The Queen, a terrifying omnipotent cosmic deity smeared across the accretion disk of an impossible singularity. She features neutronium talons and an infinite mirrored array of fractal arms making holy, symbolic finger-poses. <strong>[EVENT MODIFIERS]</strong> The Queen hovers at the center of the cosmic drain. Her infinite fractal fingers stretch to grip the 'Spear King'—a massive, infinitely long cylinder of rotting, sparking negative energy. She twirls the colossal weapon effortlessly.</p><p><strong>Step 2: The End (Image-to-Image Reference)</strong></p><p><strong>[NEGATIVE]</strong> stylized, cartoon, anime, low resolution, messy anatomy, text, watermark, normal humans, bright sunny day, cheerful, closed eye, full body, zoomed out, identical camera angle, same shot, frozen action, twirling spear <strong>[MEDIUM]</strong> Extreme close-up macro photography, cosmic horror, dynamic dutch angle, blinding luminescence. <strong>[SETTING]</strong> A false vacuum of nuclear fire at the end of the universe, where reality frays inward and matter becomes ductile like molten glass. Deep gravity wells are visible in the cosmic drain. <strong>[CHARACTERS BASE]</strong> The Queen, a terrifying omnipotent cosmic deity smeared across the accretion disk of an impossible singularity. <strong>[EVENT MODIFIERS]</strong> CRITICAL CAMERA SHIFT: The camera perspective punches in dramatically to a terrifying extreme close-up of the Queen's face. CRITICAL POSTURE CHANGE: The Queen opens her single, unlidded cosmic eye, which contains a terrifying black hole. From within the black hole, a massive mouth opens wide to sing a single, universe-ending note. The note creates a blinding shockwave of golden light that obliterates the camera's view.</p><p><strong>Appendix: Sequential Image-to-Image Narrative Pipeline (Gemini API)</strong><br/><a href="https://gist.github.com/lol-dungeonmaster/2a0adf76479895b45a8664ca7c0602e3" target="_blank" class="prompt-link">sequential_image_pipeline.py</a></p></code></pre></div>
+  <div id="discuss-oct-12-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="literature, victorian, horror">
 <h2 id="oct-11-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#oct-11-26">Oct 11 // Scenes from Literature #8</a></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="literature">literature</span>
@@ -2008,6 +2033,10 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <script>
+    let currentQueenIndex = 0;
+    function switchQueen(dir = 1) {
+      currentQueenIndex = switchGallery(currentQueenIndex, '.queen-img', dir);
+    }
     let currentFortIndex = 0;
     function switchFort(dir = 1) {
       currentFortIndex = switchGallery(currentFortIndex, '.fort-img', dir);
