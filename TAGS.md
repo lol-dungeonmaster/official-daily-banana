@@ -106,6 +106,7 @@ Entries can include **one or more** style, medium, artist, or technical modifier
 - `macabre`
 - `mask-art`
 - `noir`
+- `oil-painting`
 - `pixel-art`
 - `realistic`
 - `sand-art`
@@ -126,6 +127,7 @@ Entries can include **one or more** style, medium, artist, or technical modifier
 
 ### Sub-Themes, Regions & Technical Modifiers
 
+- `celtic`
 - `dinosaurs`
 - `insects`
 - `lotro`
@@ -137,4 +139,4 @@ Entries can include **one or more** style, medium, artist, or technical modifier
 
 ---
 
-**Last Updated:** October 16, 2026
+**Last Updated:** October 22, 2026
