@@ -3,3 +3,21 @@ layout: agents
 show_downloads: false
 title: Official Daily Banana
 description: "Daily prompts to inspire nano banana generation"
+exclude:
+  - node_modules
+  - coverage
+  - tests
+  - scripts
+  - base-materials
+  - db26.ipynb
+  - package.json
+  - package-lock.json
+  - vitest.config.js
+  - vitest.config.mjs
+  - pa11y.json
+  - GEMINI.md
+  - PROMPTS.md
+  - README.md
+  - TAGS.md
+  - TESTING.md
+  - stride-report.md

@@ -40,11 +40,15 @@ try:
 except Exception as e:
     print(f"Warning: Could not parse index.md: {e}")
 
-# 2. Fetch all existing discussions from GitHub
+# 2. Fetch all existing discussions from GitHub (with cursor pagination)
 QUERY = """
-query {
+query($cursor: String) {
   repository(owner: "lol-dungeonmaster", name: "official-daily-banana") {
-    discussions(first: 100, categoryId: "DIC_kwDOTznXWM4DDBk5") {
+    discussions(first: 100, after: $cursor, categoryId: "DIC_kwDOTznXWM4DDBk5") {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
       nodes {
         title
         comments {
@@ -58,14 +62,29 @@ query {
   }
 }
 """
-result = graphql_request(QUERY)
-nodes = result.get("data", {}).get("repository", {}).get("discussions", {}).get("nodes", [])
+
+nodes = []
+cursor = None
+while True:
+    result = graphql_request(QUERY, {"cursor": cursor})
+    if "errors" in result:
+        print(f"GraphQL query error: {result['errors']}")
+        break
+    discussions_Obj = result.get("data", {}).get("repository", {}).get("discussions", {})
+    page_nodes = discussions_Obj.get("nodes", [])
+    nodes.extend(page_nodes)
+    page_info = discussions_Obj.get("pageInfo", {})
+    if page_info.get("hasNextPage") and page_info.get("endCursor"):
+        cursor = page_info["endCursor"]
+    else:
+        break
 
 new_counts = {}
 existing_titles = set()
 for node in nodes:
     title = node.get("title")
-    if not title: continue
+    if not title:
+        continue
     existing_titles.add(title)
     comments_count = node.get("comments", {}).get("totalCount", 0)
     reactions_count = node.get("reactions", {}).get("totalCount", 0)
@@ -82,7 +101,7 @@ mutation CreateDiscussion($repoId: ID!, $catId: ID!, $title: String!, $body: Str
 }
 """
 created_count = 0
-for pid in post_ids:
+for pid in sorted(post_ids):
     if pid not in existing_titles:
         print(f"Creating missing discussion for {pid}...")
         variables = {
@@ -92,13 +111,22 @@ for pid in post_ids:
             "body": f"Automated discussion thread for blog post: {pid}"
         }
         try:
-            graphql_request(CREATE_MUTATION, variables)
+            res = graphql_request(CREATE_MUTATION, variables)
+            if "errors" in res:
+                print(f"GraphQL error creating {pid}: {res['errors']}")
+                new_counts[pid] = 0
+                # Stop retrying if token lacks permission or hits rate limit
+                if any(err.get("type") in ("FORBIDDEN", "INSUFFICIENT_SCOPES", "RATE_LIMITED") for err in res["errors"]):
+                    print("Aborting remaining discussion creations due to permission/rate-limit error.")
+                    break
+                continue
             new_counts[pid] = 0
             created_count += 1
             # Sleep slightly to avoid GraphQL abuse rate limits
             time.sleep(1)
         except Exception as e:
             print(f"Failed to create {pid}: {e}")
+            new_counts[pid] = 0
 
 output_path = "assets/data/comments.json"
 
@@ -113,6 +141,11 @@ if os.path.exists(output_path):
                 existing_timestamp = existing_data["_meta"]["lastUpdated"]
     except Exception:
         pass
+
+# Ensure all post_ids present in index.md have an entry in new_counts
+for pid in post_ids:
+    if pid not in new_counts:
+        new_counts[pid] = existing_data.get(pid, 0)
 
 # Compare without _meta
 old_counts = {k: v for k, v in existing_data.items() if k != "_meta"}
