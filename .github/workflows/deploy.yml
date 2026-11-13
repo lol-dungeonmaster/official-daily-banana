@@ -7,31 +7,26 @@ on:
     - cron: '*/15 * * * *'
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages and access Discussions
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-  discussions: write
-
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  sync-comments:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      discussions: write
+    outputs:
+      comments_changed: ${{ steps.commit_comments.outputs.changed }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: main
-      
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -43,12 +38,14 @@ jobs:
         run: python scripts/fetch_comments.py
 
       - name: Commit Comment Counts
+        id: commit_comments
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add assets/data/comments.json
-          
+
           if ! git diff --staged --quiet; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
             LAST_COMMIT_MSG=$(git log -1 --pretty=%s)
             if [ "$LAST_COMMIT_MSG" = "chore: auto-update comment counts" ]; then
               git commit --amend --no-edit
@@ -57,7 +54,26 @@ jobs:
               git commit -m "chore: auto-update comment counts"
               git push origin main
             fi
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
+
+  build-and-deploy:
+    needs: sync-comments
+    if: github.event_name != 'schedule' || needs.sync-comments.outputs.comments_changed == 'true'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
