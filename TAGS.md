@@ -114,6 +114,7 @@ Entries can include **one or more** style, medium, artist, or technical modifier
 - `sprite-sheet`
 - `still-life`
 - `table-top`
+- `watercolor`
 - `webcomic`
 
 ### Artist & Homage Styles
@@ -139,4 +140,4 @@ Entries can include **one or more** style, medium, artist, or technical modifier
 
 ---
 
-**Last Updated:** October 22, 2026
+**Last Updated:** November 13, 2026
