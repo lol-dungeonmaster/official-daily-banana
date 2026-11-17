@@ -274,7 +274,7 @@
 </div></h2>
 
 <div class="gallery-frame">
-  <img id="bttf_clocktower_v1" data-src="generated-artwork/bttf_clocktower/bttf_lite.jpg" alt="Popular Culture 5 1" class="lazy-img gallery-img active" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
+  <img id="bttf_clocktower_1_v1" data-src="generated-artwork/bttf_clocktower_1/bttf_lite.jpg" alt="Popular Culture 5 1" class="lazy-img gallery-img active" style="aspect-ratio: 1376 / 768; max-width: 1376px; width: 100%;">
 </div>
 
 <div class="collapsible-code">
