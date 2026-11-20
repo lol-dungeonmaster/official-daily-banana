@@ -2,6 +2,30 @@
 {% include nav.html %}
 <div class="container">
 
+<article class="post-entry" data-tags="design, middle-earth, realistic, concept-art, lotro">
+<h2 id="nov-20-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#nov-20-26">Nov 20 // Remasters #8</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchDoorsOfDurinI(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchDoorsOfDurinI(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
+  <span class="tag tag-topic" data-tag="design">design</span>
+  <span class="tag tag-setting" data-tag="middle-earth">middle-earth</span>
+  <span class="tag tag-style" data-tag="realistic">realistic</span>
+  <span class="tag tag-style" data-tag="concept-art">concept-art</span>
+  <span class="tag tag-style" data-tag="lotro">lotro</span>
+</div></h2>
+
+<div class="gallery-frame">
+  <img id="doors_of_durin_1_v1" data-src="generated-artwork/doors_of_durin_1/v1-lotro_ithildin_stage2r_nb21.png" alt="Remasters 8 1" class="doorsofdurini-img lazy-img gallery-img active" style="aspect-ratio: 1200 / 896; max-width: 1200px; width: 100%;">
+  <img id="doors_of_durin_1_v2" data-src="generated-artwork/doors_of_durin_1/v2-lotro_ithildin_stage2r_lite.png" alt="Remasters 8 2" class="doorsofdurini-img lazy-img gallery-img" style="aspect-ratio: 1200 / 896; max-width: 1200px; width: 100%;">
+</div>
+
+<div class="collapsible-code">
+  <div class="action-buttons">
+    <button type="button">Remasters #8</button>
+    <button type="button" class="discuss-btn" onclick="openDiscussion('nov-20-26')">Comments</button>
+  </div>
+  <div class="language-python highlighter-rouge"><pre class="highlight"><code><p><strong>[NEGATIVE]</strong> 2D illustration, digital painting, matte painting, drawing, cartoon, stylized game art, dimmed image, grey veil, washed out blacks, lowered brightness filter, flat muddy contrast, daytime, overcast daylight, bright sky gap at top, cliff top rim, trees above cliff, bright mist at top, spotlight, stage lighting, warm orange light, campfire glow, torchlight, lantern, harsh white rim light, vertical concrete seams, man-made wall blocks, doorway, arch, runes, carvings, large diagonal crack, stone steps, stairs, sky, stars, moon, people, characters, animals, watermark, logo, text, inset box, callout, CHARACTER 1, ENTITY 1, ANIMAL 1, MODIFIER 1, MODIFIER 2, MODIFIER 3 <strong>[MEDIUM]</strong> Single continuous full-bleed horizontal 4:3 frame with zero inset boxes, zero callouts, and zero text or labels. Cutting-edge Unreal Engine 5.5.4 path-traced Lumen and Nanite Quixel Megascans 3D environment render and 8K live-action night-exterior cinema frame captured on a Sony VENICE 2 / ARRI Alexa 65 large-format camera with a 28mm Zeiss Master Prime lens at T/1.8 in genuine dead-of-night conditions. Ultra-clean, noise-free full-dynamic-range 3D night rendering—deep rich ambient-occlusion blacks in root hollows and crevices alongside crisp, physically ray-traced wet specular micro-glints on water ripples and damp stone. <strong>[SETTING]</strong> True 3D recreation of an ordinary, non-descript, secluded mountain cliff-base pool caught in the dead of night: CRITICAL TOWERING CLIFF LOCK (ZERO CLIFF TOP OR SKY AT UPPER EDGE): The sheer dark rock wall rises hundreds of feet above the camera, so 100% of the upper frame edge from left to right is solid dark vertical cliff rock and overhanging foreground Holly boughs—ZERO cliff-top rim, ZERO sky gap, and ZERO bright mist at the top! ON THE LEFT SIDE: A colossal, ancient gnarled Holly (<em>Ilex aquifolium</em>) tree trunk with deeply fissured 3D wet dark bark, cushions of damp dark moss, massive twisting surface roots gripping the rocky bank, dark glossy holly foliage in the upper-left canopy, and real woody liana vines hanging and looping naturally down from the upper boughs. ON THE RIGHT SIDE: A second colossal, ancient gnarled Holly tree trunk with a thick V-forked inner limb rising toward the upper-center, deeply furrowed wet dark bark, damp moss, hanging woody liana vines looping across the upper gap, and sprawling 3D roots anchoring into the wet rocky bank. STRAIGHT AHEAD IN THE CENTER (BETWEEN THE TWO TREES): Behind a flat, wet dark slate bedrock and damp pebble shore threshold (with zero stone steps) rises a continuous, monolithic, unbroken sheer vertical face of natural flat-cleaved dark wet metamorphic slate rock—featuring organic fine mineral texture and tiny shallow natural micro-crevices ONLY (zero man-made vertical block joints, zero large diagonal crack, zero alcove, zero doorway, and zero carvings). IN THE FOREGROUND: A fringe of dark wet sedge reeds along the bank edge above calm, dark mountain pool water spanning the bottom 18% of the frame, with a low waterlogged deadwood branch snag resting low in the lower-left foreground water (staying below the shore bank so the center rock threshold is completely unobstructed). <strong>[CHARACTERS BASE]</strong> Unpopulated nocturnal 3D wilderness environment with zero characters, zero figures, and zero animals. <strong>[EVENT MODIFIERS]</strong> AUTHENTIC 3D DEAD-OF-NIGHT AMBIENT LIGHTING (ZERO SPOTLIGHTS): Genuine middle-of-the-night nocturnal atmosphere in deep midnight indigo-slate, cold wet charcoal stone, dark forest moss, and abyssal dark teal-slate water—lit exclusively by quiet, diffuse ambient night-sky light filtering from high unseen space overhead, with ZERO directional spotlights, ZERO warm orange light, ZERO bright rim lights, and ZERO glowing wall, while preserving crisp 3D depth, wet condensation sheen, and delicate nocturnal Fresnel reflections on the dark water micro-ripples.</p></code></pre></div>
+  <div id="discuss-nov-20-26" class="discuss-container" style="display: none; margin-top: 20px;"></div>
+</div>
+</article>
+
 <article class="post-entry" data-tags="food-drink, historical, infographic">
 <h2 id="nov-19-26" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 25px;"><div style="display: flex; align-items: center; gap: 25px; flex-wrap: wrap;"><a href="#nov-19-26">Nov 19 // Some Assembly Required #13</a> <div class="toggle-group" style="display: flex; gap: 0;"><button onclick="switchChriststollenIV(-1)" class="toggle-btn toggle-prev" style="position: static; border-right: 1px solid #777; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-right: 0;" title="Previous Image">◀</button><button onclick="switchChriststollenIV(1)" class="toggle-btn toggle-next" style="position: static; border-top-left-radius: 0; border-bottom-left-radius: 0; border-left: none; margin-left: 0;" title="Next Image">▶</button></div></div> <div class="post-tags-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0; justify-content: flex-start;">
   <span class="tag tag-topic" data-tag="food-drink">food-drink</span>
@@ -2949,6 +2973,11 @@ Variant 2 (Dramatic): Lighting/Environment: Dramatic, moody late afternoon golde
 </div>
 
 <script>
+    let currentDoorsOfDurinIIndex = 0;
+    function switchDoorsOfDurinI(dir = 1) {
+      currentDoorsOfDurinIIndex = switchGallery(currentDoorsOfDurinIIndex, '.doorsofdurini-img', dir);
+    }
+
     let currentChriststollenIVIndex = 0;
     function switchChriststollenIV(dir = 1) {
       currentChriststollenIVIndex = switchGallery(currentChriststollenIVIndex, '.christstolleniv-img', dir);
