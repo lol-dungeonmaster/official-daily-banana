@@ -22,13 +22,13 @@ jobs:
       comments_changed: ${{ steps.commit_comments.outputs.changed }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: main
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.x'
 
@@ -58,12 +58,9 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
-  build-and-deploy:
+  build:
     needs: sync-comments
     if: github.event_name != 'schedule' || needs.sync-comments.outputs.comments_changed == 'true'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -71,12 +68,12 @@ jobs:
       id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: main
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
@@ -85,10 +82,68 @@ jobs:
           destination: ./_site
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Wait for Pages artifact indexing
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+        run: |
+          python3 - <<'PY'
+          import datetime, json, os, sys, time, urllib.request
+
+          repo = os.environ["GITHUB_REPOSITORY"]
+          run_id = os.environ["GITHUB_RUN_ID"]
+          token = os.environ["GITHUB_TOKEN"]
+          url = f"https://api.github.com/repos/{repo}/actions/runs/{run_id}/artifacts?name=github-pages"
+          headers = {
+              "Authorization": f"Bearer {token}",
+              "Accept": "application/vnd.github+json",
+              "User-Agent": "official-daily-banana-pages-deploy",
+          }
+
+          delays = [2, 4, 8, 8, 8, 10]
+          artifact = None
+          for attempt, delay in enumerate(delays, start=1):
+              req = urllib.request.Request(url, headers=headers)
+              with urllib.request.urlopen(req, timeout=15) as resp:
+                  data = json.loads(resp.read().decode("utf-8"))
+              matches = [
+                  a for a in data.get("artifacts", [])
+                  if a.get("name") == "github-pages" and not a.get("expired")
+              ]
+              if matches:
+                  artifact = matches[0]
+                  print(f"Found artifact id={artifact['id']} ({artifact['size_in_bytes']} bytes) on attempt {attempt}.")
+                  break
+              print(f"Attempt {attempt}: artifact not visible yet; retrying in {delay}s...")
+              time.sleep(delay)
+
+          if not artifact:
+              print("ERROR: github-pages artifact never became visible.", file=sys.stderr)
+              sys.exit(1)
+
+          updated = datetime.datetime.fromisoformat(artifact["updated_at"].replace("Z", "+00:00"))
+          age = (datetime.datetime.now(datetime.timezone.utc) - updated).total_seconds()
+          min_age = 10.0
+          if age < min_age:
+              wait_s = round(min_age - age, 2)
+              print(f"Artifact age is {age:.2f}s (< {min_age}s); waiting {wait_s}s for Twirp replica sync...")
+              time.sleep(wait_s)
+          PY
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          timeout: 900000
+        uses: actions/deploy-pages@v5
