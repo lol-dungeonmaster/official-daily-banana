@@ -137,7 +137,8 @@ Entries can include **one or more** style, medium, artist, or technical modifier
 - `reptiles`
 - `scotland`
 - `sri-lanka`
+- `thailand`
 
 ---
 
-**Last Updated:** November 13, 2026
+**Last Updated:** November 25, 2026
