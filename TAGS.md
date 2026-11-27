@@ -128,12 +128,16 @@ Entries can include **one or more** style, medium, artist, or technical modifier
 
 ### Sub-Themes, Regions & Technical Modifiers
 
+- `cambodia`
 - `celtic`
 - `dinosaurs`
+- `india`
 - `insects`
+- `laos`
 - `lotro`
 - `morocco`
 - `multi-step` _(enables automatic base-prompt cloning across tabs in [`assets/js/collapse.js`](assets/js/collapse.js))_
+- `myanmar`
 - `reptiles`
 - `scotland`
 - `sri-lanka`
@@ -141,4 +145,4 @@ Entries can include **one or more** style, medium, artist, or technical modifier
 
 ---
 
-**Last Updated:** November 25, 2026
+**Last Updated:** November 26, 2026
